@@ -11,5 +11,5 @@
 #import <ParseUI/ParseUI.h>
 
 @interface AttractionsTableViewController : PFQueryTableViewController
-
+@property (nonatomic) NSDictionary* preferences;
 @end

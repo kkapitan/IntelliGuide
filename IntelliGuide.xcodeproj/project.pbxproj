@@ -26,6 +26,8 @@
 		0211961B1AE0047600C367C6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196191AE0047600C367C6 /* Parse.framework */; };
 		0211961D1AE004C700C367C6 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0211961C1AE004C700C367C6 /* ParseUI.framework */; };
 		0211961F1AE0065D00C367C6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0211961E1AE0065D00C367C6 /* libsqlite3.0.dylib */; };
+		0211962A1AE0197B00C367C6 /* CategorySwitcherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 021196291AE0197B00C367C6 /* CategorySwitcherView.xib */; };
+		0211962D1AE019AD00C367C6 /* CategorySwitcherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0211962C1AE019AD00C367C6 /* CategorySwitcherView.m */; };
 		028F4ABD1AD7FD5700C63973 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABC1AD7FD5700C63973 /* main.m */; };
 		028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABF1AD7FD5700C63973 /* AppDelegate.m */; };
 		028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC41AD7FD5700C63973 /* Main.storyboard */; };
@@ -67,6 +69,9 @@
 		021196191AE0047600C367C6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0211961C1AE004C700C367C6 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		0211961E1AE0065D00C367C6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		021196291AE0197B00C367C6 /* CategorySwitcherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherView.xib; sourceTree = "<group>"; };
+		0211962B1AE019AD00C367C6 /* CategorySwitcherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherView.h; sourceTree = "<group>"; };
+		0211962C1AE019AD00C367C6 /* CategorySwitcherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherView.m; sourceTree = "<group>"; };
 		028F4AB71AD7FD5700C63973 /* IntelliGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028F4ABB1AD7FD5700C63973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028F4ABC1AD7FD5700C63973 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -137,6 +142,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		021196241AE0178000C367C6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				021195F71ADFF32D00C367C6 /* AttractionsTableViewController.h */,
+				021195F81ADFF32D00C367C6 /* AttractionsTableViewController.m */,
+				021195FA1ADFF36000C367C6 /* PreferencesViewController.h */,
+				021195FB1ADFF36000C367C6 /* PreferencesViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		021196251AE0178C00C367C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				021195FD1ADFF80A00C367C6 /* Attraction.h */,
+				021195FE1ADFF80A00C367C6 /* Attraction.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		021196261AE0179E00C367C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				021196291AE0197B00C367C6 /* CategorySwitcherView.xib */,
+				0211962B1AE019AD00C367C6 /* CategorySwitcherView.h */,
+				0211962C1AE019AD00C367C6 /* CategorySwitcherView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		028F4AAE1AD7FD5700C63973 = {
 			isa = PBXGroup;
 			children = (
@@ -165,12 +200,9 @@
 				028F4AC71AD7FD5700C63973 /* Images.xcassets */,
 				028F4AC91AD7FD5700C63973 /* LaunchScreen.xib */,
 				028F4ABA1AD7FD5700C63973 /* Supporting Files */,
-				021195FD1ADFF80A00C367C6 /* Attraction.h */,
-				021195FE1ADFF80A00C367C6 /* Attraction.m */,
-				021195F71ADFF32D00C367C6 /* AttractionsTableViewController.h */,
-				021195F81ADFF32D00C367C6 /* AttractionsTableViewController.m */,
-				021195FA1ADFF36000C367C6 /* PreferencesViewController.h */,
-				021195FB1ADFF36000C367C6 /* PreferencesViewController.m */,
+				021196251AE0178C00C367C6 /* Model */,
+				021196241AE0178000C367C6 /* ViewControllers */,
+				021196261AE0179E00C367C6 /* Views */,
 			);
 			path = IntelliGuide;
 			sourceTree = "<group>";
@@ -284,6 +316,7 @@
 				028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */,
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
+				0211962A1AE0197B00C367C6 /* CategorySwitcherView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +337,7 @@
 				021195FF1ADFF80A00C367C6 /* Attraction.m in Sources */,
 				028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
+				0211962D1AE019AD00C367C6 /* CategorySwitcherView.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
 			);
