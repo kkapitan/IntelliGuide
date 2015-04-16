@@ -16,7 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    NSLog(@"Skoki narciarskie 2002. Serdecznie polecam, Adam Małysz.");
     // Override point for customization after application launch.
     return YES;
 }
