@@ -14,13 +14,6 @@
 
 @property NSMutableArray* selectedCategories;
 
-@property (weak, nonatomic) IBOutlet CategorySwitcherView *categorySwitcher1;
-@property (weak, nonatomic) IBOutlet CategorySwitcherView *categorySwitcher2;
-@property (weak, nonatomic) IBOutlet CategorySwitcherView *categorySwitcher3;
-@property (weak, nonatomic) IBOutlet CategorySwitcherView *categorySwitcher4;
-@property (weak, nonatomic) IBOutlet CategorySwitcherView *categorySwitcher5;
-@property (weak, nonatomic) IBOutlet CategorySwitcherView *categorySwitcher6;
-
 @end
 
 @implementation PreferencesViewController

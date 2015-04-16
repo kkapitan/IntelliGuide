@@ -93,14 +93,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="H7Q-PS-lyb"/>
-                    <connections>
-                        <outlet property="categorySwitcher1" destination="tph-1d-VoG" id="mzo-Ya-rZg"/>
-                        <outlet property="categorySwitcher2" destination="I3i-xs-1zr" id="Kvk-HV-jQ5"/>
-                        <outlet property="categorySwitcher3" destination="LeF-yf-Pw5" id="FF5-lW-dve"/>
-                        <outlet property="categorySwitcher4" destination="xkR-WW-kdd" id="c0P-q4-1HI"/>
-                        <outlet property="categorySwitcher5" destination="uTX-gL-AzD" id="tfq-q4-smc"/>
-                        <outlet property="categorySwitcher6" destination="HCT-mC-ru9" id="oBz-jJ-oBH"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
