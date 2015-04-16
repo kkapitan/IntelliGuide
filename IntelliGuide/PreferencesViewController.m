@@ -65,10 +65,6 @@
         
         AttractionsTableViewController *destinationViewController = [segue destinationViewController];
         destinationViewController.preferences = [self buildPreferences];
-    }else if ([segue.identifier isEqualToString: @"Park"]){
-        
-    }else {
-        
     }
 }
 
