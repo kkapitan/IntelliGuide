@@ -36,6 +36,8 @@
 		028F4AD71AD7FD5700C63973 /* IntelliGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */; };
 		0858724D1AE13EE000DA97AD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0858724C1AE13EE000DA97AD /* Social.framework */; };
 		0858724F1AE13F1800DA97AD /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0858724E1AE13F1800DA97AD /* Accounts.framework */; };
+		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
+		085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */; };
 		70917389E3EDD4331EB8A38E /* libPods-IntelliGuide.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6688838217C7CDEB9E184F /* libPods-IntelliGuide.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,9 @@
 		028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntelliGuideTests.m; sourceTree = "<group>"; };
 		0858724C1AE13EE000DA97AD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0858724E1AE13F1800DA97AD /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherTableCell.xib; sourceTree = "<group>"; };
+		085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherTableCell.h; sourceTree = "<group>"; };
+		085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCell.m; sourceTree = "<group>"; };
 		0CC0136481EA6252D3093A5D /* Pods-IntelliGuide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliGuide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IntelliGuide/Pods-IntelliGuide.debug.xcconfig"; sourceTree = "<group>"; };
 		0E6688838217C7CDEB9E184F /* libPods-IntelliGuide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IntelliGuide.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95643B9883C0D58FF5F4769E /* Pods-IntelliGuide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntelliGuide.release.xcconfig"; path = "Pods/Target Support Files/Pods-IntelliGuide/Pods-IntelliGuide.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +187,9 @@
 				021196291AE0197B00C367C6 /* CategorySwitcherView.xib */,
 				0211962B1AE019AD00C367C6 /* CategorySwitcherView.h */,
 				0211962C1AE019AD00C367C6 /* CategorySwitcherView.m */,
+				085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */,
+				085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */,
+				085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -343,6 +351,7 @@
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
 				0211962A1AE0197B00C367C6 /* CategorySwitcherView.xib in Resources */,
+				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +408,7 @@
 				0211962D1AE019AD00C367C6 /* CategorySwitcherView.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
+				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

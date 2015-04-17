@@ -8,11 +8,15 @@
 
 #import "PreferencesViewController.h"
 #import "AttractionsTableViewController.h"
-#import "CategorySwitcherView.h"
+//#import "CategorySwitcherView.h"
+#import "CategorySwitcherTableCell.h"
 
-@interface PreferencesViewController () <CategorySwitcherDelegate>
+@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property NSArray *categories;
 @property NSMutableArray* selectedCategories;
+@property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
+
 - (IBAction)didToggleCustomLocation:(id)sender;
 
 @end
@@ -43,18 +47,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *categories = @[@"Park",@"Muzeum",@"Zabytek",@"Kino",@"Teatr",@"Cmentarz"];
+    _categories = @[@"Park",@"Muzeum",@"Zabytek",@"Kino",@"Teatr",@"Cmentarz"];
     
     self.selectedCategories = [NSMutableArray array];
+    self.categoriesTableView.delegate = self;
+    self.categoriesTableView.dataSource = self;
+    [self.categoriesTableView registerNib:[UINib nibWithNibName:@"CategorySwitcherTableCell" bundle:nil] forCellReuseIdentifier:@"CategorySwitcherCell"];
     
-    int i = 0;
-    for(UIView* view in [self.view subviews]){
-        if([view.class isSubclassOfClass:[CategorySwitcherView class]]){
-            CategorySwitcherView* categorySwitcherView = (CategorySwitcherView*)view;
-            categorySwitcherView.delegate = self;
-            categorySwitcherView.categoryName = categories[i++];
-        }
-    }
+//    int i = 0;
+//    for(UIView* view in [self.view subviews]){
+//        if([view.class isSubclassOfClass:[CategorySwitcherView class]]){
+//            CategorySwitcherView* categorySwitcherView = (CategorySwitcherView*)view;
+//            categorySwitcherView.delegate = self;
+//            categorySwitcherView.categoryName = _categories[i++];
+//        }
+//    }
     
     // Do any additional setup after loading the view.
 }
@@ -68,6 +75,27 @@
 - (NSDictionary*)buildPreferences{
     NSDictionary* preferences = @{@"categories":self.selectedCategories};
     return preferences;
+}
+
+#pragma mark TableView
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _categories.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CategorySwitcherTableCell *cell = [self.categoriesTableView dequeueReusableCellWithIdentifier:@"CategorySwitcherCell"];
+    
+    cell.categoryName = _categories[indexPath.row];
+    cell.delegate = self;
+    
+    return cell;
+    
 }
 
 #pragma mark - Navigation
