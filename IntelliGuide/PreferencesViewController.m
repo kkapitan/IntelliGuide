@@ -13,11 +13,13 @@
 @interface PreferencesViewController () <CategorySwitcherDelegate>
 
 @property NSMutableArray* selectedCategories;
+- (IBAction)didToggleCustomLocation:(id)sender;
 
 @end
 
 @implementation PreferencesViewController
 
+#pragma mark Switches
 
 -(void)didEnableCategory:(NSString *)category{
     [self.selectedCategories addObject:category];
@@ -26,6 +28,17 @@
 -(void)didDisableCategory:(NSString *)category{
     [self.selectedCategories removeObjectIdenticalTo:category];
 }
+
+- (IBAction)didToggleCustomLocation:(id)sender {
+    UISwitch *locationSwitch = (UISwitch*)sender;
+    if (locationSwitch.isOn) {
+        NSLog(@"My location");
+    } else {
+        NSLog(@"Custom location");
+    }
+}
+
+#pragma mark Lifecycle callbacks
 
 - (void)viewDidLoad {
     [super viewDidLoad];
