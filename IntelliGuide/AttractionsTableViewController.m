@@ -25,7 +25,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
-    self.parseClassName = @"Miejsce";
+    self.parseClassName = @"Place";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,10 +42,10 @@
 
 - (PFQuery *)queryForTable {
     
-    PFQuery *categoryQuery = [PFQuery queryWithClassName:@"Kategoria"];
+    PFQuery *categoryQuery = [PFQuery queryWithClassName:@"Category"];
     [categoryQuery whereKey:@"nazwa" containedIn:self.preferences[@"categories"]];
     
-    PFQuery *attractionQuery = [PFQuery queryWithClassName:@"Miejsce"];
+    PFQuery *attractionQuery = [PFQuery queryWithClassName:@"Place"];
     [attractionQuery includeKey:@"category"];
     [attractionQuery whereKey:@"category" matchesQuery:categoryQuery];
     

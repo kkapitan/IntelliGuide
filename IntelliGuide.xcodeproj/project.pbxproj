@@ -34,6 +34,8 @@
 		028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC71AD7FD5700C63973 /* Images.xcassets */; };
 		028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC91AD7FD5700C63973 /* LaunchScreen.xib */; };
 		028F4AD71AD7FD5700C63973 /* IntelliGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */; };
+		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
+		085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,9 @@
 		028F4AD01AD7FD5700C63973 /* IntelliGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntelliGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		028F4AD51AD7FD5700C63973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntelliGuideTests.m; sourceTree = "<group>"; };
+		085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherTableCell.xib; sourceTree = "<group>"; };
+		085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherTableCell.h; sourceTree = "<group>"; };
+		085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +173,9 @@
 				021196291AE0197B00C367C6 /* CategorySwitcherView.xib */,
 				0211962B1AE019AD00C367C6 /* CategorySwitcherView.h */,
 				0211962C1AE019AD00C367C6 /* CategorySwitcherView.m */,
+				085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */,
+				085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */,
+				085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
 				0211962A1AE0197B00C367C6 /* CategorySwitcherView.xib in Resources */,
+				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 				0211962D1AE019AD00C367C6 /* CategorySwitcherView.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
+				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
