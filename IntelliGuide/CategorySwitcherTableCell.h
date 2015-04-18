@@ -7,17 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IGCategory.h"
 
 @protocol CategorySwitcherDelegate <NSObject>
 
--(void)didEnableCategory:(NSString*)category;
--(void)didDisableCategory:(NSString*)category;
+-(void)didEnableCategory:(IGCategory*)category;
+-(void)didDisableCategory:(IGCategory*)category;
 
 @end
 
 @interface CategorySwitcherTableCell : UITableViewCell
 
-@property (nonatomic) NSString* categoryName;
+@property (nonatomic) IGCategory *category;
 @property (weak,nonatomic) id<CategorySwitcherDelegate> delegate;
 
 

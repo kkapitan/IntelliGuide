@@ -16,7 +16,7 @@
     _placeDescription = [object valueForKey:@"description"];
     PFObject *category = [object valueForKey:@"category"];
 
-    _categoryName = [category valueForKey:@"nazwa"];
+    _categoryName = [category valueForKey:@"name"];
     return self;
 }
 

@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *switchControl;
+@property (weak, nonatomic) IBOutlet UIImageView *categoryImage;
 
 @end
 
@@ -32,18 +33,22 @@
 - (void) categorySwitched:(id)sender {
     
     UISwitch *switchControl = (UISwitch*)sender;
-    NSString *categoryName = self.categoryLabel.text;
     
     if(switchControl.on){
-        [self.delegate didEnableCategory:categoryName];
-    }else {
-        [self.delegate didDisableCategory:categoryName];
+        [self.delegate didEnableCategory:_category];
+    } else {
+        [self.delegate didDisableCategory:_category];
     }
 }
 
--(void)setCategoryName:(NSString *)categoryName{
-    _categoryName = categoryName;
-    self.categoryLabel.text = categoryName;
+- (void) setCategory:(IGCategory *)category {
+    _category = category;
+    self.categoryLabel.text = category.name;
+    self.categoryImage.image = category.image;
+}
+
+- (void) setImage:(UIImage *)image {
+    self.categoryImage.image = image;
 }
 
 @end

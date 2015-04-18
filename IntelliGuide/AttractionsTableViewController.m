@@ -43,7 +43,7 @@
 - (PFQuery *)queryForTable {
     
     PFQuery *categoryQuery = [PFQuery queryWithClassName:@"Category"];
-    [categoryQuery whereKey:@"nazwa" containedIn:self.preferences[@"categories"]];
+    [categoryQuery whereKey:@"name" containedIn:[self.preferences[@"categories"] valueForKeyPath:@"name"]];
     
     PFQuery *attractionQuery = [PFQuery queryWithClassName:@"Place"];
     [attractionQuery includeKey:@"category"];

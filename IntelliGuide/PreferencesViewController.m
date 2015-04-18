@@ -8,12 +8,12 @@
 
 #import "PreferencesViewController.h"
 #import "AttractionsTableViewController.h"
-//#import "CategorySwitcherView.h"
 #import "CategorySwitcherTableCell.h"
+#import "IGCategory.h"
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property NSArray *categories;
+@property NSMutableArray *categories;
 @property NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 
@@ -25,11 +25,11 @@
 
 #pragma mark Switches
 
--(void)didEnableCategory:(NSString *)category{
+- (void) didEnableCategory:(IGCategory *)category {
     [self.selectedCategories addObject:category];
 }
 
--(void)didDisableCategory:(NSString *)category{
+- (void)didDisableCategory:(IGCategory *)category {
     [self.selectedCategories removeObjectIdenticalTo:category];
 }
 
@@ -47,23 +47,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _categories = @[@"Park",@"Muzeum",@"Zabytek",@"Kino",@"Teatr",@"Cmentarz"];
+    //_categories = @[@"Park",@"Muzeum",@"Zabytek",@"Kino",@"Teatr",@"Cmentarz"];
     
+    self.categories = [[NSMutableArray alloc] init];
     self.selectedCategories = [NSMutableArray array];
     self.categoriesTableView.delegate = self;
     self.categoriesTableView.dataSource = self;
     [self.categoriesTableView registerNib:[UINib nibWithNibName:@"CategorySwitcherTableCell" bundle:nil] forCellReuseIdentifier:@"CategorySwitcherCell"];
     
-//    int i = 0;
-//    for(UIView* view in [self.view subviews]){
-//        if([view.class isSubclassOfClass:[CategorySwitcherView class]]){
-//            CategorySwitcherView* categorySwitcherView = (CategorySwitcherView*)view;
-//            categorySwitcherView.delegate = self;
-//            categorySwitcherView.categoryName = _categories[i++];
-//        }
-//    }
+    PFQuery *categoriesQuery = [PFQuery queryWithClassName:@"Category"];
+    [categoriesQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        for (PFObject *o in objects) {
+            IGCategory *category = [IGCategory categoryWithParseObject:o];
+            [self.categories addObject:category];
+        }
+        [self.categoriesTableView reloadData];
+    }];
     
-    // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"DownloadedCategoryImage" object:nil];
+    
 }
 
 
@@ -91,11 +93,16 @@
     
     CategorySwitcherTableCell *cell = [self.categoriesTableView dequeueReusableCellWithIdentifier:@"CategorySwitcherCell"];
     
-    cell.categoryName = _categories[indexPath.row];
+    IGCategory *category = _categories[indexPath.row];
     cell.delegate = self;
+    cell.category = category;
     
     return cell;
     
+}
+
+- (void) reloadTable {
+    [self.categoriesTableView reloadData];
 }
 
 #pragma mark - Navigation
