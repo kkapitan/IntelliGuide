@@ -8,6 +8,8 @@
 
 #import "IGCategory.h"
 
+static NSMutableDictionary *storage = nil;
+
 @implementation IGCategory
 
 -initWithParseObject:(PFObject*)object {
@@ -24,7 +26,9 @@
 }
 
 +categoryWithParseObject:(PFObject*)object {
-    return [[IGCategory alloc] initWithParseObject:object];
+    if (storage == nil) storage = [NSMutableDictionary new];
+    if (storage[object[@"name"]] == nil) [storage setObject:[[IGCategory alloc] initWithParseObject:object] forKey:object[@"name"]];
+    return storage[object[@"name"]];
 }
 
 @end

@@ -21,5 +21,7 @@
 @property (nonatomic) IGCategory *category;
 @property (weak,nonatomic) id<CategorySwitcherDelegate> delegate;
 
+@property (weak, nonatomic) IBOutlet UISwitch *switchControl;
+
 
 @end

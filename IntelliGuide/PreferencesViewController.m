@@ -96,6 +96,8 @@
     IGCategory *category = _categories[indexPath.row];
     cell.delegate = self;
     cell.category = category;
+    if ([self.selectedCategories containsObject:cell.category]) [cell.switchControl setOn:YES];
+    else [cell.switchControl setOn:NO];
     
     return cell;
     

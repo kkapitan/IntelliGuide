@@ -62,7 +62,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell...
     cell.textLabel.text = attraction.name;
-    cell.detailTextLabel.text = attraction.categoryName;//attraction.categoryName;
+    cell.detailTextLabel.text = attraction.category.name;//attraction.categoryName;
+    cell.imageView.image = attraction.category.image;
     
     return cell;
 }

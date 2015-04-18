@@ -8,13 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <Parse/Parse.h>
+#import "IGCategory.h"
 
 @interface Attraction : NSObject
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *placeDescription;
-@property (nonatomic) NSString *categoryName;
-
+//@property (nonatomic) NSString *categoryName;
+@property (nonatomic) IGCategory *category;
 
 
 +attractionWithParseObject:(PFObject*)object;

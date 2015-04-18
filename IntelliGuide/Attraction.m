@@ -14,9 +14,9 @@
     self = [super init];
     _name = [object valueForKey:@"name"];
     _placeDescription = [object valueForKey:@"description"];
-    PFObject *category = [object valueForKey:@"category"];
+    _category = [IGCategory categoryWithParseObject:[object valueForKey:@"category"]];
 
-    _categoryName = [category valueForKey:@"name"];
+    //_categoryName = [category valueForKey:@"name"];
     return self;
 }
 
