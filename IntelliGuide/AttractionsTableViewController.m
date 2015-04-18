@@ -7,6 +7,7 @@
 //
 
 #import "AttractionsTableViewController.h"
+#import "AttractionCell.h"
 #import "Attraction.h"
 
 @interface AttractionsTableViewController ()
@@ -59,11 +60,11 @@
     
     Attraction *attraction = [Attraction attractionWithParseObject:object];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    AttractionCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell...
-    cell.textLabel.text = attraction.name;
-    cell.detailTextLabel.text = attraction.category.name;//attraction.categoryName;
-    cell.imageView.image = attraction.category.image;
+    cell.name.text = attraction.name;
+    //cell.detailTextLabel.text = attraction.category.name;//attraction.categoryName;
+    cell.categoryIcon.image = attraction.category.image;
     
     return cell;
 }

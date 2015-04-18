@@ -32,6 +32,7 @@
 		028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC91AD7FD5700C63973 /* LaunchScreen.xib */; };
 		028F4AD71AD7FD5700C63973 /* IntelliGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
+		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
 		085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */; };
 		089486121AE169D600B966E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0894860F1AE169D600B966E2 /* Bolts.framework */; };
@@ -85,6 +86,8 @@
 		028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntelliGuideTests.m; sourceTree = "<group>"; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
+		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
+		0822024F1AE30B1700921149 /* AttractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionCell.m; sourceTree = "<group>"; };
 		085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherTableCell.xib; sourceTree = "<group>"; };
 		085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherTableCell.h; sourceTree = "<group>"; };
 		085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCell.m; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */,
 				085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */,
 				085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */,
+				0822024E1AE30B1700921149 /* AttractionCell.h */,
+				0822024F1AE30B1700921149 /* AttractionCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
+				082202501AE30B1700921149 /* AttractionCell.m in Sources */,
 				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
