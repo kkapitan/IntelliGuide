@@ -41,8 +41,6 @@
     // Pass the selected object to the new view controller.
     PageViewController *pageViewController = (PageViewController*)[segue destinationViewController];
     pageViewController.attraction = _attraction;
-//    NSLog(@"%@", pageViewController.myViewControllers);
-//    NSLog(@"%@ to: %@", sender, [segue destinationViewController]);
 }
 
 @end
