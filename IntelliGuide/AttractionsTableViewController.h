@@ -12,4 +12,5 @@
 
 @interface AttractionsTableViewController : PFQueryTableViewController
 @property (nonatomic) NSDictionary* preferences;
+@property (nonatomic) BOOL moderationMode;
 @end

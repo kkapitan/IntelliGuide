@@ -115,6 +115,7 @@
         
         AttractionsTableViewController *destinationViewController = [segue destinationViewController];
         destinationViewController.preferences = [self buildPreferences];
+        destinationViewController.moderationMode = NO;
     }
 }
 

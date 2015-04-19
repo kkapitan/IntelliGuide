@@ -49,6 +49,7 @@
     PFQuery *attractionQuery = [PFQuery queryWithClassName:@"Place"];
     [attractionQuery includeKey:@"category"];
     [attractionQuery whereKey:@"category" matchesQuery:categoryQuery];
+    [attractionQuery whereKey:@"verified" equalTo:[NSNumber numberWithBool:!self.moderationMode]];
     
     return attractionQuery;
 };
