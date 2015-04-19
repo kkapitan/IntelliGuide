@@ -24,6 +24,6 @@
 @property (weak,nonatomic) id<CategorySwitcherDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UISwitch *switchControl;
-
+@property (weak, nonatomic) IBOutlet UIImageView *categoryImage;
 
 @end
