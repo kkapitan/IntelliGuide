@@ -16,11 +16,13 @@ typedef NS_ENUM(NSInteger, IGReviewKey){
     IGReviewKeyObjectId = 0,
     IGReviewKeyReviewerName,
     IGReviewKeyContent,
+    IGReviewKeyRating,
 };
 
 @property NSString *objectId;
 @property NSString *reviewerName;
 @property NSString *content;
+@property NSNumber *rating;
 
 +reviewWithParseObject:(PFObject*)object;
 +(NSString*)stringForKey:(IGReviewKey)key;

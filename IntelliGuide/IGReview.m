@@ -17,6 +17,7 @@
     _objectId = object.objectId;
     _reviewerName = reviewer[[IGReview stringForKey:IGReviewKeyReviewerName]];
     _content = object[[IGReview stringForKey:IGReviewKeyContent]];
+    _rating = [NSNumber numberWithFloat:[object[[IGReview stringForKey:IGReviewKeyRating]] floatValue]];
     
     return self;
 }
@@ -29,7 +30,7 @@
     static NSArray *strings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        strings = @[@"objectId",@"username",@"content"];
+        strings = @[@"objectId",@"username",@"content",@"stars"];
     });
     return strings[key];
 }

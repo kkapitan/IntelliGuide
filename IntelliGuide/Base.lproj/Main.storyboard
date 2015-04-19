@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Intelliguide-->
+        <!--Preferences View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="PreferencesViewController" sceneMemberID="viewController">
@@ -282,10 +282,20 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PU-kg-bgb" customClass="ASStarRatingView">
+                                            <rect key="frame" x="63" y="8" width="100" height="21"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="SQt-r1-x3V"/>
+                                                <constraint firstAttribute="width" constant="100" id="w0O-Cq-pDH"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="8" id="78q-Aw-ayR"/>
                                         <constraint firstItem="GHk-26-hYB" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="8" id="8wh-hp-xhu"/>
+                                        <constraint firstItem="1PU-kg-bgb" firstAttribute="leading" secondItem="9h2-2k-NGv" secondAttribute="trailing" constant="13" id="9xk-N7-wpP"/>
+                                        <constraint firstItem="9h2-2k-NGv" firstAttribute="centerY" secondItem="1PU-kg-bgb" secondAttribute="centerY" id="Zfw-bK-go7"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="top" secondItem="nKV-xP-8tk" secondAttribute="top" constant="8" id="eJm-Ec-lSo"/>
                                         <constraint firstAttribute="bottom" secondItem="GHk-26-hYB" secondAttribute="bottom" constant="8" id="tDm-mU-JaP"/>
                                     </constraints>
@@ -293,6 +303,7 @@
                                 <connections>
                                     <outlet property="reviewContent" destination="GHk-26-hYB" id="Jt5-ws-JAl"/>
                                     <outlet property="reviewerName" destination="9h2-2k-NGv" id="lXQ-o6-I8o"/>
+                                    <outlet property="starRatingView" destination="1PU-kg-bgb" id="oyf-ch-zze"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
