@@ -45,7 +45,7 @@
 }
 
 -(void)didPickCategory:(IGCategory *)category{
-    self.categoryPickerButton.titleLabel.text = category.name;
+    [self.categoryPickerButton setTitle:category.name forState:UIControlStateNormal];
     self.category = category;
 }
 
