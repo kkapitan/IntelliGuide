@@ -13,7 +13,7 @@
 -initWithParseObject:(PFObject*)object{
     self = [super init];
     _name = [object valueForKey:@"name"];
-    _placeDescription = [object valueForKey:@"description"];
+    _placeDescription = object[@"description"];
     _category = [IGCategory categoryWithParseObject:[object valueForKey:@"category"]];
 
     //_categoryName = [category valueForKey:@"name"];

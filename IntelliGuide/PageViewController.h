@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Attraction.h"
 
 @interface PageViewController : UIPageViewController
+
+@property (nonatomic) Attraction *attraction;
 
 @end

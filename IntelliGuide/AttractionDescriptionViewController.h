@@ -10,4 +10,6 @@
 
 @interface AttractionDescriptionViewController : UIViewController
 
+@property NSString *descriptionText;
+
 @end

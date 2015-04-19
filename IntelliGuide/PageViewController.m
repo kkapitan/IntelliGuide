@@ -12,7 +12,7 @@
 
 @interface PageViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
-@property NSArray *myViewControllers;
+@property (nonatomic) NSArray *myViewControllers;
 
 @end
 
@@ -29,6 +29,7 @@
     self.dataSource = self;
     
     AttractionDescriptionViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionDescriptionVC"];
+    vc1.descriptionText = self.attraction.placeDescription;
     AttractionReviewsViewController *vc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionReviewsVC"];
     
     self.myViewControllers = @[vc1, vc2];

@@ -7,6 +7,7 @@
 //
 
 #import "AttractionsTableViewController.h"
+#import "AttractionDetailsViewController.h"
 #import "AttractionCell.h"
 #import "Attraction.h"
 
@@ -62,9 +63,10 @@
     
     AttractionCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell...
-    cell.name.text = attraction.name;
+//    cell.name.text = attraction.name;
     //cell.detailTextLabel.text = attraction.category.name;//attraction.categoryName;
-    cell.categoryIcon.image = attraction.category.image;
+//    cell.categoryIcon.image = attraction.category.image;
+    cell.attraction = attraction;
     
     return cell;
 }
@@ -103,14 +105,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+//     Get the new view controller using [segue destinationViewController].
+//     Pass the selected object to the new view controller.
+    AttractionCell *senderCell = (AttractionCell*)sender;
+    AttractionDetailsViewController *destinationViewController = [segue destinationViewController];
+    destinationViewController.attraction = senderCell.attraction;
 }
-*/
+
 
 @end

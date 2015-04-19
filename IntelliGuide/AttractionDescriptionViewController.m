@@ -9,6 +9,7 @@
 #import "AttractionDescriptionViewController.h"
 
 @interface AttractionDescriptionViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -17,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.textView.text = self.descriptionText;
 }
 
 - (void)didReceiveMemoryWarning {
