@@ -11,7 +11,6 @@
 @interface CategorySwitcherTableCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *categoryImage;
 
 @end
 

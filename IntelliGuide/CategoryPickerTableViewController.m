@@ -47,6 +47,7 @@
 - (PFTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
     
     CategorySwitcherTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategorySwitcherCell" forIndexPath:indexPath];
+    [[[cell.categoryImage constraintsAffectingLayoutForAxis:UILayoutConstraintAxisHorizontal] objectAtIndex:0] setConstant:8];
     cell.switchControl.hidden = YES;
     cell.category = [IGCategory categoryWithParseObject:object];
     return cell;
