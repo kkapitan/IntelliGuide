@@ -38,6 +38,10 @@
 		089486121AE169D600B966E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0894860F1AE169D600B966E2 /* Bolts.framework */; };
 		089486131AE169D600B966E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089486101AE169D600B966E2 /* Parse.framework */; };
 		089486141AE169D600B966E2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089486111AE169D600B966E2 /* ParseUI.framework */; };
+		08C80D601AE3C2D10033296F /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D5F1AE3C2D10033296F /* PageViewController.m */; };
+		08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D651AE3C3D20033296F /* AttractionDetailsViewController.m */; };
+		08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D681AE3C4D60033296F /* AttractionDescriptionViewController.m */; };
+		08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D6B1AE3C4E70033296F /* AttractionReviewsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +98,14 @@
 		0894860F1AE169D600B966E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		089486101AE169D600B966E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		089486111AE169D600B966E2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		08C80D5E1AE3C2D10033296F /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		08C80D5F1AE3C2D10033296F /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		08C80D641AE3C3D20033296F /* AttractionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionDetailsViewController.h; sourceTree = "<group>"; };
+		08C80D651AE3C3D20033296F /* AttractionDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionDetailsViewController.m; sourceTree = "<group>"; };
+		08C80D671AE3C4D60033296F /* AttractionDescriptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionDescriptionViewController.h; sourceTree = "<group>"; };
+		08C80D681AE3C4D60033296F /* AttractionDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionDescriptionViewController.m; sourceTree = "<group>"; };
+		08C80D6A1AE3C4E70033296F /* AttractionReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionReviewsViewController.h; sourceTree = "<group>"; };
+		08C80D6B1AE3C4E70033296F /* AttractionReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionReviewsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +172,14 @@
 				021195F81ADFF32D00C367C6 /* AttractionsTableViewController.m */,
 				021195FA1ADFF36000C367C6 /* PreferencesViewController.h */,
 				021195FB1ADFF36000C367C6 /* PreferencesViewController.m */,
+				08C80D5E1AE3C2D10033296F /* PageViewController.h */,
+				08C80D5F1AE3C2D10033296F /* PageViewController.m */,
+				08C80D641AE3C3D20033296F /* AttractionDetailsViewController.h */,
+				08C80D651AE3C3D20033296F /* AttractionDetailsViewController.m */,
+				08C80D671AE3C4D60033296F /* AttractionDescriptionViewController.h */,
+				08C80D681AE3C4D60033296F /* AttractionDescriptionViewController.m */,
+				08C80D6A1AE3C4E70033296F /* AttractionReviewsViewController.h */,
+				08C80D6B1AE3C4E70033296F /* AttractionReviewsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -353,14 +373,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */,
 				021195FF1ADFF80A00C367C6 /* Attraction.m in Sources */,
 				028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
+				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
+				08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */,
 				0211962D1AE019AD00C367C6 /* CategorySwitcherView.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
 				082202501AE30B1700921149 /* AttractionCell.m in Sources */,
+				08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */,
 				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
