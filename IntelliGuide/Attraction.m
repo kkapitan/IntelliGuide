@@ -15,6 +15,7 @@
     _name = [object valueForKey:@"name"];
     _placeDescription = object[@"description"];
     _category = [IGCategory categoryWithParseObject:[object valueForKey:@"category"]];
+    _objectId = object.objectId;
 
     //_categoryName = [category valueForKey:@"name"];
     return self;

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
+#import <Parse/Parse.h>
+#import "Attraction.h"
 
-@interface AttractionReviewsViewController : UIViewController
+@interface AttractionReviewsViewController : PFQueryTableViewController
+
+@property (nonatomic) Attraction *attraction;
 
 @end

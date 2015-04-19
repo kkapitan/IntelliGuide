@@ -42,6 +42,8 @@
 		08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D651AE3C3D20033296F /* AttractionDetailsViewController.m */; };
 		08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D681AE3C4D60033296F /* AttractionDescriptionViewController.m */; };
 		08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D6B1AE3C4E70033296F /* AttractionReviewsViewController.m */; };
+		08C80D6F1AE3DC120033296F /* ReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D6E1AE3DC120033296F /* ReviewCell.m */; };
+		08C80D721AE3DDD40033296F /* IGReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D711AE3DDD40033296F /* IGReview.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,10 @@
 		08C80D681AE3C4D60033296F /* AttractionDescriptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionDescriptionViewController.m; sourceTree = "<group>"; };
 		08C80D6A1AE3C4E70033296F /* AttractionReviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionReviewsViewController.h; sourceTree = "<group>"; };
 		08C80D6B1AE3C4E70033296F /* AttractionReviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionReviewsViewController.m; sourceTree = "<group>"; };
+		08C80D6D1AE3DC120033296F /* ReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCell.h; sourceTree = "<group>"; };
+		08C80D6E1AE3DC120033296F /* ReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCell.m; sourceTree = "<group>"; };
+		08C80D701AE3DDD40033296F /* IGReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGReview.h; sourceTree = "<group>"; };
+		08C80D711AE3DDD40033296F /* IGReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReview.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +197,8 @@
 				021195FE1ADFF80A00C367C6 /* Attraction.m */,
 				0822024B1AE2DB2500921149 /* IGCategory.h */,
 				0822024C1AE2DB2500921149 /* IGCategory.m */,
+				08C80D701AE3DDD40033296F /* IGReview.h */,
+				08C80D711AE3DDD40033296F /* IGReview.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -206,6 +214,8 @@
 				085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */,
 				0822024E1AE30B1700921149 /* AttractionCell.h */,
 				0822024F1AE30B1700921149 /* AttractionCell.m */,
+				08C80D6D1AE3DC120033296F /* ReviewCell.h */,
+				08C80D6E1AE3DC120033296F /* ReviewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -381,11 +391,13 @@
 				08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */,
 				0211962D1AE019AD00C367C6 /* CategorySwitcherView.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
+				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
 				082202501AE30B1700921149 /* AttractionCell.m in Sources */,
 				08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */,
 				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,
+				08C80D6F1AE3DC120033296F /* ReviewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

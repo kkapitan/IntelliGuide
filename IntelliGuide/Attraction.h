@@ -16,6 +16,7 @@
 @property (nonatomic) NSString *placeDescription;
 //@property (nonatomic) NSString *categoryName;
 @property (nonatomic) IGCategory *category;
+@property (nonatomic) NSString *objectId;
 
 
 +attractionWithParseObject:(PFObject*)object;
