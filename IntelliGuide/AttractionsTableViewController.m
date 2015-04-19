@@ -53,6 +53,7 @@
     
     PFQuery *attractionQuery = [PFQuery queryWithClassName:@"Place"];
     [attractionQuery includeKey:categoryKey];
+
     [attractionQuery whereKey:categoryKey matchesQuery:categoryQuery];
     [attractionQuery whereKey:verifiedKey equalTo:[NSNumber numberWithBool:!self.moderationMode]];
     
@@ -76,15 +77,38 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
+// Override to support conditional editing of the table view.
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return self.moderationMode;
+}
+
+-(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewRowAction *discardAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Odrzuć" handler:^(UITableViewRowAction *action,NSIndexPath *indexPath){
+            AttractionCell *cell = (AttractionCell*)[tableView cellForRowAtIndexPath:indexPath];
+            PFObject *attractionObject = [cell.attraction parseObject];
+            [attractionObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if(succeeded)[self loadObjects];
+            }];
+        }];
+    
+    UITableViewRowAction *acceptAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Akceptuj" handler:^(UITableViewRowAction *action,NSIndexPath *indexPath){
+            AttractionCell *cell = (AttractionCell*)[tableView cellForRowAtIndexPath:indexPath];
+            PFObject *attractionObject = [cell.attraction parseObject];
+            attractionObject[@"verified"] = @YES;
+            [attractionObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if(succeeded)[self loadObjects];
+            }];
+        
+        
+        }];
+    acceptAction.backgroundColor = [UIColor greenColor];
+    
+    return @[acceptAction,discardAction];
+}
+
+
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -94,7 +118,6 @@
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.

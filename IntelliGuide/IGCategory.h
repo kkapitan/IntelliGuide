@@ -15,14 +15,14 @@
 @interface IGCategory : NSObject
 
 typedef NS_ENUM(NSInteger, IGCategoryKey){
-    IGCategoryKeyObjectId = 0,
-    IGCategoryKeyName,
+    IGCategoryKeyName = 0,
     IGCategoryKeyIcon,
 };
 
 @property NSString *objectId;
 @property NSString *name;
 @property UIImage *image;
+@property PFObject *parseObject;
 
 +(instancetype)categoryWithParseObject:(PFObject*)object;
 +(NSString*)stringForKey:(IGCategoryKey)key;

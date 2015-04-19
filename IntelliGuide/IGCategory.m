@@ -15,14 +15,14 @@ static NSMutableDictionary *storage = nil;
 -initWithParseObject:(PFObject*)object {
     self = [super init];
     _name = [object valueForKey:[IGCategory stringForKey:IGCategoryKeyName]];
-    _objectId = [object valueForKey:[IGCategory stringForKey:IGCategoryKeyObjectId]];
+    _objectId = object.objectId;
     PFFile *iconFile = object[[IGCategory stringForKey:IGCategoryKeyIcon]];
     [iconFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         _image = [UIImage imageWithData:data];
         //to na pewno nie jest najlepszy sposób na powiadamianie komórki o tym, że ma się odświeżyć
         [[NSNotificationCenter defaultCenter] postNotificationName:@"DownloadedCategoryImage" object:self];
     }];
-    
+    _parseObject = object;
     return self;
 }
 
@@ -38,10 +38,9 @@ static NSMutableDictionary *storage = nil;
     static NSArray *strings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        strings = @[@"objectId",@"name",@"icon"];
+        strings = @[@"name",@"icon"];
     });
     return strings[key];
 }
-
 
 @end

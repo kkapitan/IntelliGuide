@@ -17,7 +17,8 @@
     _category = [IGCategory categoryWithParseObject:
                  object[[Attraction stringForKey:IGAttractionKeyCategory]]];
     
-    _objectId = object[[Attraction stringForKey:IGAttractionKeyObjectId]];
+    _objectId = object.objectId;
+    
     //_categoryName = [category valueForKey:@"name"];
     return self;
 }
@@ -30,15 +31,15 @@
     static NSArray *strings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        strings = @[@"objectId",@"name",@"description",@"category",@"verified"];
+        strings = @[@"name",@"description",@"category",@"verified"];
     });
     return strings[key];
 }
 
 -(PFObject*)parseObject{
-    PFObject *attraction = [PFObject objectWithClassName:@"Places"];
-    attraction[[Attraction stringForKey:IGAttractionKeyObjectId]] = self.objectId;
-    attraction[[Attraction stringForKey:IGAttractionKeyCategory]] = self.category.objectId;
+    PFObject *attraction = [PFObject objectWithClassName:@"Place"];
+    attraction.objectId = self.objectId;
+    attraction[[Attraction stringForKey:IGAttractionKeyCategory]] = self.category.parseObject;
     attraction[[Attraction stringForKey:IGAttractionKeyDescription]] = self.placeDescription;
     attraction[[Attraction stringForKey:IGAttractionKeyName]] = self.name;
     return attraction;

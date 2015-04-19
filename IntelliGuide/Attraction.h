@@ -13,8 +13,7 @@
 @interface Attraction : NSObject
 
 typedef NS_ENUM(NSInteger, IGAttractionKey){
-    IGAttractionKeyObjectId = 0,
-    IGAttractionKeyName,
+    IGAttractionKeyName = 0,
     IGAttractionKeyDescription,
     IGAttractionKeyCategory,
     IGAttractionKeyVerified,
