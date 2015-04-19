@@ -15,7 +15,7 @@ static NSMutableDictionary *storage = nil;
 -initWithParseObject:(PFObject*)object {
     self = [super init];
     _name = [object valueForKey:[IGCategory stringForKey:IGCategoryKeyName]];
-    _objectId = [object valueForKey:[IGCategory stringForKey:IGCategoryKeyObjectId]];
+    _objectId = object.objectId;
     PFFile *iconFile = object[[IGCategory stringForKey:IGCategoryKeyIcon]];
     [iconFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         _image = [UIImage imageWithData:data];

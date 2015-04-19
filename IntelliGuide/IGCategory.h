@@ -10,8 +10,6 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-
-
 @interface IGCategory : NSObject
 
 typedef NS_ENUM(NSInteger, IGCategoryKey){

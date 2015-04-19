@@ -12,9 +12,17 @@
 
 @interface IGReview : NSObject
 
+typedef NS_ENUM(NSInteger, IGReviewKey){
+    IGReviewKeyObjectId = 0,
+    IGReviewKeyReviewerName,
+    IGReviewKeyContent,
+};
+
+@property NSString *objectId;
 @property NSString *reviewerName;
 @property NSString *content;
 
 +reviewWithParseObject:(PFObject*)object;
++(NSString*)stringForKey:(IGReviewKey)key;
 
 @end

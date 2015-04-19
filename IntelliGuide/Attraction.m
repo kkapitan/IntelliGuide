@@ -17,8 +17,7 @@
     _category = [IGCategory categoryWithParseObject:
                  object[[Attraction stringForKey:IGAttractionKeyCategory]]];
     
-    _objectId = object[[Attraction stringForKey:IGAttractionKeyObjectId]];
-    //_categoryName = [category valueForKey:@"name"];
+    _objectId = object.objectId;
     return self;
 }
 
