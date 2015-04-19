@@ -68,10 +68,6 @@
     Attraction *attraction = [Attraction attractionWithParseObject:object];
     
     AttractionCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
-    // Configure the cell...
-//    cell.name.text = attraction.name;
-    //cell.detailTextLabel.text = attraction.category.name;//attraction.categoryName;
-//    cell.categoryIcon.image = attraction.category.image;
     cell.attraction = attraction;
     
     return cell;

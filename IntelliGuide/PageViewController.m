@@ -31,6 +31,7 @@
     AttractionDescriptionViewController *vc1 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionDescriptionVC"];
     vc1.descriptionText = self.attraction.placeDescription;
     AttractionReviewsViewController *vc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionReviewsVC"];
+    vc2.attraction = self.attraction;
     
     self.myViewControllers = @[vc1, vc2];
     
