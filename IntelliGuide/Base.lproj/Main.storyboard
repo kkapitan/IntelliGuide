@@ -127,6 +127,7 @@
                                 <connections>
                                     <outlet property="categoryIcon" destination="g05-Cn-VTb" id="9x0-yd-76R"/>
                                     <outlet property="name" destination="7Bt-0Z-cGe" id="NxI-av-3oT"/>
+                                    <segue destination="9mo-6w-aF3" kind="push" id="jz6-DE-sZu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -140,6 +141,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVV-fh-qMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1127" y="250"/>
+        </scene>
+        <!--Attraction Details View Controller-->
+        <scene sceneID="xfB-64-ZE7">
+            <objects>
+                <viewController id="9mo-6w-aF3" customClass="AttractionDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gqv-P5-1bt"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5P-Qg-PHo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hL4-sR-zId">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3mp-cX-cv1">
+                                <rect key="frame" x="16" y="72" width="288" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="FJD-A4-X6T"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tytuł atrakcji" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SuP-dx-7V7">
+                                <rect key="frame" x="112" y="230" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B13-LK-blw">
+                                <rect key="frame" x="0.0" y="259" width="320" height="309"/>
+                                <connections>
+                                    <segue destination="AQC-tY-cS5" kind="embed" id="U0D-0c-2sU"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B13-LK-blw" firstAttribute="top" secondItem="SuP-dx-7V7" secondAttribute="bottom" constant="8" id="C2G-m8-VXP"/>
+                            <constraint firstItem="3mp-cX-cv1" firstAttribute="leading" secondItem="hL4-sR-zId" secondAttribute="leading" constant="16" id="EQF-5W-vD1"/>
+                            <constraint firstAttribute="trailing" secondItem="B13-LK-blw" secondAttribute="trailing" id="J8N-lu-yF3"/>
+                            <constraint firstItem="SuP-dx-7V7" firstAttribute="top" secondItem="3mp-cX-cv1" secondAttribute="bottom" constant="8" id="Jwn-I9-e9T"/>
+                            <constraint firstItem="b5P-Qg-PHo" firstAttribute="top" secondItem="B13-LK-blw" secondAttribute="bottom" id="XOv-uN-Nb2"/>
+                            <constraint firstItem="B13-LK-blw" firstAttribute="leading" secondItem="hL4-sR-zId" secondAttribute="leading" id="YHb-Oi-msb"/>
+                            <constraint firstAttribute="centerX" secondItem="SuP-dx-7V7" secondAttribute="centerX" id="uf6-ic-ABu"/>
+                            <constraint firstAttribute="trailing" secondItem="3mp-cX-cv1" secondAttribute="trailing" constant="16" id="wiO-EF-yZg"/>
+                            <constraint firstItem="3mp-cX-cv1" firstAttribute="top" secondItem="Gqv-P5-1bt" secondAttribute="bottom" constant="8" id="zmH-cf-Cpj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="x3v-fC-jZE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WAt-5V-GrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1594" y="250"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="knE-u9-I5i">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="AQC-tY-cS5" customClass="PageViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sn9-aO-7YJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2129" y="379.5"/>
+        </scene>
+        <!--Attraction Description View Controller-->
+        <scene sceneID="ZpE-1F-Azy">
+            <objects>
+                <viewController storyboardIdentifier="AttractionDescriptionVC" id="vAd-8H-Cb8" customClass="AttractionDescriptionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VGy-1V-iue"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fgf-mR-MFz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cRq-jN-rxA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis atrakcji" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QB4-Ee-vmC">
+                                <rect key="frame" x="112" y="273" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="QB4-Ee-vmC" secondAttribute="centerY" constant="0.5" id="tWS-YN-UNI"/>
+                            <constraint firstAttribute="centerX" secondItem="QB4-Ee-vmC" secondAttribute="centerX" id="v9i-Rc-4Wv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aky-ZV-Qlm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="918"/>
+        </scene>
+        <!--Attraction Reviews View Controller-->
+        <scene sceneID="iEM-9L-nHV">
+            <objects>
+                <viewController storyboardIdentifier="AttractionReviewsVC" id="4cf-e9-cH3" customClass="AttractionReviewsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z9j-1K-53w"/>
+                        <viewControllerLayoutGuide type="bottom" id="2sx-6p-QMI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IJD-Bd-ca1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recenzje" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld6-WJ-q4D">
+                                <rect key="frame" x="125" y="273" width="71" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Ld6-WJ-q4D" secondAttribute="centerX" id="ocl-dS-bVy"/>
+                            <constraint firstAttribute="centerY" secondItem="Ld6-WJ-q4D" secondAttribute="centerY" constant="0.5" id="qL7-GB-gf4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="992-5r-865" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2335" y="918"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Eku-19-MAi">
