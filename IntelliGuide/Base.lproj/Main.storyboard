@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -33,7 +33,7 @@
                                     <segue destination="xn6-px-oqg" kind="push" identifier="QueryForAttractions" id="4qC-nI-jNW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Witaj &lt;username&gt;, co chcesz  dziś zwiedzić?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-gc-1Hl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Witaj &lt;username&gt;, co chcesz dziś zwiedzić?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-gc-1Hl">
                                 <rect key="frame" x="47" y="72" width="227" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,7 +56,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TjD-s6-3uc">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TjD-s6-3uc">
                                 <rect key="frame" x="16" y="121" width="288" height="308"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -407,10 +407,20 @@
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PU-kg-bgb" customClass="ASStarRatingView">
+                                            <rect key="frame" x="63" y="8" width="100" height="21"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="SQt-r1-x3V"/>
+                                                <constraint firstAttribute="width" constant="100" id="w0O-Cq-pDH"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="8" id="78q-Aw-ayR"/>
                                         <constraint firstItem="GHk-26-hYB" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="8" id="8wh-hp-xhu"/>
+                                        <constraint firstItem="1PU-kg-bgb" firstAttribute="leading" secondItem="9h2-2k-NGv" secondAttribute="trailing" constant="13" id="9xk-N7-wpP"/>
+                                        <constraint firstItem="9h2-2k-NGv" firstAttribute="centerY" secondItem="1PU-kg-bgb" secondAttribute="centerY" id="Zfw-bK-go7"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="top" secondItem="nKV-xP-8tk" secondAttribute="top" constant="8" id="eJm-Ec-lSo"/>
                                         <constraint firstAttribute="bottom" secondItem="GHk-26-hYB" secondAttribute="bottom" constant="8" id="tDm-mU-JaP"/>
                                     </constraints>
@@ -418,6 +428,7 @@
                                 <connections>
                                     <outlet property="reviewContent" destination="GHk-26-hYB" id="Jt5-ws-JAl"/>
                                     <outlet property="reviewerName" destination="9h2-2k-NGv" id="lXQ-o6-I8o"/>
+                                    <outlet property="starRatingView" destination="1PU-kg-bgb" id="oyf-ch-zze"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

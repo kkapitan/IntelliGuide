@@ -7,11 +7,13 @@
 //
 
 #import "ReviewCell.h"
+#import "ASStarRatingView.h"
 
 @interface ReviewCell()
 
 @property (weak, nonatomic) IBOutlet UILabel *reviewerName;
 @property (weak, nonatomic) IBOutlet UILabel *reviewContent;
+@property (weak, nonatomic) IBOutlet ASStarRatingView *starRatingView;
 
 @end
 
@@ -19,6 +21,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    _starRatingView.canEdit = NO;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -31,6 +34,8 @@
     _review = review;
     _reviewerName.text = review.reviewerName;
     _reviewContent.text = review.content;
+    
+    _starRatingView.rating = [review.rating floatValue];
 }
 
 @end

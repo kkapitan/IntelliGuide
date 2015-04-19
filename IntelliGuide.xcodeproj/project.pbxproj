@@ -46,6 +46,7 @@
 		08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D6B1AE3C4E70033296F /* AttractionReviewsViewController.m */; };
 		08C80D6F1AE3DC120033296F /* ReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D6E1AE3DC120033296F /* ReviewCell.m */; };
 		08C80D721AE3DDD40033296F /* IGReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D711AE3DDD40033296F /* IGReview.m */; };
+		08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D771AE3F4650033296F /* ASStarRatingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		08C80D6E1AE3DC120033296F /* ReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCell.m; sourceTree = "<group>"; };
 		08C80D701AE3DDD40033296F /* IGReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGReview.h; sourceTree = "<group>"; };
 		08C80D711AE3DDD40033296F /* IGReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReview.m; sourceTree = "<group>"; };
+		08C80D761AE3F4650033296F /* ASStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASStarRatingView.h; sourceTree = "<group>"; };
+		08C80D771AE3F4650033296F /* ASStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASStarRatingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +229,8 @@
 				0822024F1AE30B1700921149 /* AttractionCell.m */,
 				08C80D6D1AE3DC120033296F /* ReviewCell.h */,
 				08C80D6E1AE3DC120033296F /* ReviewCell.m */,
+				08C80D761AE3F4650033296F /* ASStarRatingView.h */,
+				08C80D771AE3F4650033296F /* ASStarRatingView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -405,6 +410,7 @@
 				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
+				08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */,
 				082202501AE30B1700921149 /* AttractionCell.m in Sources */,
 				08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */,
 				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,

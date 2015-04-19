@@ -55,7 +55,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
     
     static NSString *reuseIdentifier = @"ReviewCell";
-    NSLog(@"%@", object[@"writtenBy"]);
     
     //Attraction *attraction = [Attraction attractionWithParseObject:object];
     
