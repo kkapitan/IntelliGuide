@@ -10,12 +10,22 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
+
+
 @interface IGCategory : NSObject
 
+typedef NS_ENUM(NSInteger, IGCategoryKey){
+    IGCategoryKeyObjectId = 0,
+    IGCategoryKeyName,
+    IGCategoryKeyIcon,
+};
+
+@property NSString *objectId;
 @property NSString *name;
 @property UIImage *image;
 
-+categoryWithParseObject:(PFObject*)object;
--initWithParseObject:(PFObject*)object;
++(instancetype)categoryWithParseObject:(PFObject*)object;
++(NSString*)stringForKey:(IGCategoryKey)key;
+-(instancetype)initWithParseObject:(PFObject*)object;
 
 @end

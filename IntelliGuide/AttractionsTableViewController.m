@@ -43,13 +43,17 @@
 
 - (PFQuery *)queryForTable {
     
+    NSString *categoryKey = [Attraction stringForKey:IGAttractionKeyCategory];
+    NSString *verifiedKey = [Attraction stringForKey:IGAttractionKeyVerified];
+    NSString *categoryNameKey = [IGCategory stringForKey:IGCategoryKeyName] ;
+    
     PFQuery *categoryQuery = [PFQuery queryWithClassName:@"Category"];
-    [categoryQuery whereKey:@"name" containedIn:[self.preferences[@"categories"] valueForKeyPath:@"name"]];
+    [categoryQuery whereKey:categoryNameKey containedIn:[self.preferences[@"categories"] valueForKeyPath:@"name"]];
     
     PFQuery *attractionQuery = [PFQuery queryWithClassName:@"Place"];
-    [attractionQuery includeKey:@"category"];
-    [attractionQuery whereKey:@"category" matchesQuery:categoryQuery];
-    [attractionQuery whereKey:@"verified" equalTo:[NSNumber numberWithBool:!self.moderationMode]];
+    [attractionQuery includeKey:categoryKey];
+    [attractionQuery whereKey:categoryKey matchesQuery:categoryQuery];
+    [attractionQuery whereKey:verifiedKey equalTo:[NSNumber numberWithBool:!self.moderationMode]];
     
     return attractionQuery;
 };
