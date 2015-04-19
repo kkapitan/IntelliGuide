@@ -22,7 +22,7 @@ static NSMutableDictionary *storage = nil;
         //to na pewno nie jest najlepszy sposób na powiadamianie komórki o tym, że ma się odświeżyć
         [[NSNotificationCenter defaultCenter] postNotificationName:@"DownloadedCategoryImage" object:self];
     }];
-    
+    _parseObject = object;
     return self;
 }
 
@@ -38,10 +38,9 @@ static NSMutableDictionary *storage = nil;
     static NSArray *strings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        strings = @[@"objectId",@"name",@"icon"];
+        strings = @[@"name",@"icon"];
     });
     return strings[key];
 }
-
 
 @end
