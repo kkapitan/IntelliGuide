@@ -12,10 +12,12 @@
 
 -(instancetype)initWithParseObject:(PFObject*)object{
     self = [super init];
-    _name = [object valueForKey:[Attraction stringForKey:IGAttractionKeyName]];
-    _placeDescription = [object valueForKey:[Attraction stringForKey:IGAttractionKeyDescription]];
-    _category = [IGCategory categoryWithParseObject:[object valueForKey:[Attraction stringForKey:IGAttractionKeyCategory]]];
-    _objectId = [object valueForKey:[Attraction stringForKey:IGAttractionKeyObjectId]];
+    _name = object[[Attraction stringForKey:IGAttractionKeyName]];
+    _placeDescription = object[[Attraction stringForKey:IGAttractionKeyDescription]];
+    _category = [IGCategory categoryWithParseObject:
+                 object[[Attraction stringForKey:IGAttractionKeyCategory]]];
+    
+    _objectId = object[[Attraction stringForKey:IGAttractionKeyObjectId]];
     //_categoryName = [category valueForKey:@"name"];
     return self;
 }
