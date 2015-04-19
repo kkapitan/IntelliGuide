@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
 #import "IGCategory.h"
+
 
 @protocol CategorySwitcherDelegate <NSObject>
 
@@ -16,7 +18,7 @@
 
 @end
 
-@interface CategorySwitcherTableCell : UITableViewCell
+@interface CategorySwitcherTableCell : PFTableViewCell
 
 @property (nonatomic) IGCategory *category;
 @property (weak,nonatomic) id<CategorySwitcherDelegate> delegate;

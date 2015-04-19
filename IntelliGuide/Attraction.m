@@ -38,7 +38,9 @@
 
 -(PFObject*)parseObject{
     PFObject *attraction = [PFObject objectWithClassName:@"Place"];
-    attraction.objectId = self.objectId;
+    if(self.objectId){
+        attraction.objectId = self.objectId;
+    }
     attraction[[Attraction stringForKey:IGAttractionKeyCategory]] = self.category.parseObject;
     attraction[[Attraction stringForKey:IGAttractionKeyDescription]] = self.placeDescription;
     attraction[[Attraction stringForKey:IGAttractionKeyName]] = self.name;
