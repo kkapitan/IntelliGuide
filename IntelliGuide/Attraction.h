@@ -12,14 +12,24 @@
 
 @interface Attraction : NSObject
 
+typedef NS_ENUM(NSInteger, IGAttractionKey){
+    IGAttractionKeyObjectId = 0,
+    IGAttractionKeyName,
+    IGAttractionKeyDescription,
+    IGAttractionKeyCategory,
+    IGAttractionKeyVerified,
+};
+
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *placeDescription;
 //@property (nonatomic) NSString *categoryName;
 @property (nonatomic) IGCategory *category;
 @property (nonatomic) NSString *objectId;
 
++(instancetype)attractionWithParseObject:(PFObject*)object;
++(NSString*)stringForKey:(IGAttractionKey)key;
 
-+attractionWithParseObject:(PFObject*)object;
--initWithParseObject:(PFObject*)object;
+-(instancetype)initWithParseObject:(PFObject*)object;
+-(PFObject*)parseObject;
 
 @end

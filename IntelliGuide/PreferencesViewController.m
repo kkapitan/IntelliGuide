@@ -13,8 +13,9 @@
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property NSMutableArray *categories;
-@property NSMutableArray* selectedCategories;
+@property (nonatomic) BOOL moderationMode;
+@property (nonatomic) NSMutableArray *categories;
+@property (nonatomic )NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 
 - (IBAction)didToggleCustomLocation:(id)sender;
@@ -39,6 +40,17 @@
         NSLog(@"My location");
     } else {
         NSLog(@"Custom location");
+    }
+}
+
+- (IBAction)didSwitchMode:(id)sender {
+    UIBarButtonItem* barButton = (UIBarButtonItem*)sender;
+    if(self.moderationMode){
+        self.moderationMode = NO;
+        barButton.title = @"Tryb moderacji";
+    }else{
+        barButton.title = @"Tryb użytkownika";
+        self.moderationMode = YES;
     }
 }
 
@@ -115,6 +127,7 @@
         
         AttractionsTableViewController *destinationViewController = [segue destinationViewController];
         destinationViewController.preferences = [self buildPreferences];
+        destinationViewController.moderationMode = self.moderationMode;
     }
 }
 

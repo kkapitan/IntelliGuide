@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Intelliguide-->
@@ -80,8 +80,12 @@
                             <constraint firstItem="Nww-Vo-ahQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="z0F-qO-Plf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Intelliguide" id="H7Q-PS-lyb">
-                        <barButtonItem key="backBarButtonItem" title="Preferences" id="klU-GC-8WF"/>
+                    <navigationItem key="navigationItem" id="H7Q-PS-lyb">
+                        <barButtonItem key="rightBarButtonItem" title="Tryb moderacji" id="W7f-nt-Out">
+                            <connections>
+                                <action selector="didSwitchMode:" destination="vXZ-lx-hvc" id="r05-GS-kqz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="categoriesTableView" destination="TjD-s6-3uc" id="zs3-Zn-M2w"/>
