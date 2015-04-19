@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Attraction.h"
 
 @interface AttractionDetailsViewController : UIViewController
+
+@property Attraction *attraction;
 
 @end

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Attraction.h"
 
 @interface AttractionCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *name;
-@property (weak, nonatomic) IBOutlet UIImageView *categoryIcon;
+@property (nonatomic) Attraction *attraction;
 
 @end

@@ -8,6 +8,13 @@
 
 #import "AttractionCell.h"
 
+@interface AttractionCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UIImageView *categoryIcon;
+
+@end
+
 @implementation AttractionCell
 
 - (void)awakeFromNib {
@@ -18,6 +25,12 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setAttraction:(Attraction *)attraction {
+    _attraction = attraction;
+    _name.text = _attraction.name;
+    _categoryIcon.image = _attraction.category.image;
 }
 
 @end
