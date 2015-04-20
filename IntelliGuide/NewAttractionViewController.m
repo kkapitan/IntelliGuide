@@ -50,7 +50,8 @@
 
 
 -(void)didTap{
-    [self.descriptionTextView endEditing:YES];
+    [self.view endEditing:YES];
+    //[self.descriptionTextView endEditing:YES];
 }
 
 -(void)textViewDidBeginEditing:(UITextView *)textView{
