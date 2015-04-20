@@ -10,12 +10,15 @@
 #import "CategoryPickerTableViewController.h"
 #import "Attraction.h"
 
-@interface NewAttractionViewController () <CategoryPickerDelegate>
+@interface NewAttractionViewController () <CategoryPickerDelegate,UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UIButton *categoryPickerButton;
 @property (nonatomic) IGCategory* category;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property  (nonatomic) UITapGestureRecognizer* gestureRecognizer;
 
 @end
 
@@ -29,15 +32,46 @@
         attractionObject[[Attraction stringForKey:IGAttractionKeyVerified]] = @NO;
         [attractionObject save];
         [self displayAlertWithTitle:@"Dodawanie zakończone!" message:@"Proszę czekać na weryfikację atrakcji przez moderatora"];
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
 
+-(void)keyboardWillShow{
+    [self.view addGestureRecognizer:self.gestureRecognizer];
+}
+
+-(void)keyboardWillHide{
+    [self.view removeGestureRecognizer:self.gestureRecognizer];
+}
+
+
+-(void)didTap{
+    [self.descriptionTextView endEditing:YES];
+}
+
+-(void)textViewDidBeginEditing:(UITextView *)textView{
+    [self.scrollView setContentOffset:CGPointMake(0,self.descriptionTextView.frame.origin.y) animated:YES];
+}
+
+-(void)textViewDidEndEditing:(UITextView *)textView{
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.descriptionTextView.delegate = self;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
+    self.gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap) ];
+    
     // Do any additional setup after loading the view.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -45,7 +79,7 @@
 }
 
 -(void)didPickCategory:(IGCategory *)category{
-    self.categoryPickerButton.titleLabel.text = category.name;
+    [self.categoryPickerButton setTitle:category.name forState:UIControlStateNormal];
     self.category = category;
 }
 
