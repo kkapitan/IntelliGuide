@@ -12,6 +12,11 @@
 
 -(instancetype)initWithParseObject:(PFObject*)object{
     self = [super init];
+    
+    //TODO idealnie by było, gdyby było jeszcze jakieś sprawdzanie klasy
+    //PFObject i wywalanie nila w przypadku złej klasy, bo na razie
+    //zwróci po prostu nowy obiekt z pustymi polami
+    
     _name = object[[Attraction stringForKey:IGAttractionKeyName]];
     _placeDescription = object[[Attraction stringForKey:IGAttractionKeyDescription]];
     _category = [IGCategory categoryWithParseObject:
