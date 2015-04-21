@@ -21,7 +21,7 @@
     _placeDescription = object[[IGAttraction stringForKey:IGAttractionKeyDescription]];
     _category = [IGCategory categoryWithParseObject:
                  object[[IGAttraction stringForKey:IGAttractionKeyCategory]]];
-    
+    _imageFile = object[@"image"];
     _objectId = object.objectId;
     
     //_categoryName = [category valueForKey:@"name"];

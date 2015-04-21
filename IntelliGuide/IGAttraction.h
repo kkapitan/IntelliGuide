@@ -74,6 +74,8 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
  */
 @property (nonatomic,readonly) NSString *objectId;
 
+@property PFFile *imageFile;
+
 //------
 //@name Class methods
 //------

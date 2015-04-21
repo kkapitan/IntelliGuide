@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *attractionImage;
 @property (weak, nonatomic) IBOutlet UILabel *attractionName;
+@property (weak, nonatomic) IBOutlet UILabel *placeholderLabel;
 
 @end
 
@@ -26,6 +27,13 @@
 //    self.attractionImage =
     
     self.attractionName.text = self.attraction.name;
+    
+    [self.attraction.imageFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+        if (data) {
+            self.attractionImage.image = [UIImage imageWithData:data];
+            self.placeholderLabel.hidden = YES;
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

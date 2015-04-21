@@ -301,7 +301,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3mp-cX-cv1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3mp-cX-cv1">
                                 <rect key="frame" x="16" y="72" width="288" height="150"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -347,6 +347,7 @@
                     <connections>
                         <outlet property="attractionImage" destination="3mp-cX-cv1" id="qO9-4s-6KH"/>
                         <outlet property="attractionName" destination="SuP-dx-7V7" id="GcD-Yn-Fbr"/>
+                        <outlet property="placeholderLabel" destination="Quj-D3-ao8" id="TnH-EV-zdo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAt-5V-GrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
