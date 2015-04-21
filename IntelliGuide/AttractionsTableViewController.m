@@ -42,6 +42,11 @@
     return 1;
 }
 
+/**
+ This callback method is responsible for creating and configuring query which will be
+ used to fetch attraction list. Here we use self.preferences to configure query
+ and return it to caller.
+ */
 - (PFQuery *)queryForTable {
     
     NSString *categoryKey = [IGAttraction stringForKey:IGAttractionKeyCategory];
@@ -74,7 +79,9 @@
 }
 
 
-// Override to support conditional editing of the table view.
+/**
+ Tells view controller whether it should enable swiping on cell to reveal accept/reject buttons.
+ */
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return self.moderationMode;

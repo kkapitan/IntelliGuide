@@ -9,10 +9,8 @@
 /* Begin PBXBuildFile section */
 		021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021195F81ADFF32D00C367C6 /* AttractionsTableViewController.m */; };
 		021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021195FB1ADFF36000C367C6 /* PreferencesViewController.m */; };
-		021195FF1ADFF80A00C367C6 /* IGAttraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 021195FE1ADFF80A00C367C6 /* IGAttraction.m */; };
 		021196011AE0031D00C367C6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196001AE0031D00C367C6 /* MobileCoreServices.framework */; };
 		021196031AE0032F00C367C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196021AE0032F00C367C6 /* SystemConfiguration.framework */; };
-		021196051AE0033800C367C6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196041AE0033800C367C6 /* StoreKit.framework */; };
 		021196071AE0034000C367C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196061AE0034000C367C6 /* Security.framework */; };
 		021196091AE0034700C367C6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196081AE0034700C367C6 /* QuartzCore.framework */; };
 		0211960B1AE0035100C367C6 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0211960A1AE0035100C367C6 /* libz.1.1.3.dylib */; };
@@ -45,6 +43,7 @@
 		08C80D6F1AE3DC120033296F /* ReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D6E1AE3DC120033296F /* ReviewCell.m */; };
 		08C80D721AE3DDD40033296F /* IGReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D711AE3DDD40033296F /* IGReview.m */; };
 		08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D771AE3F4650033296F /* ASStarRatingView.m */; };
+		08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D791B51AE6BDBF00E18B8C /* IGAttraction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,11 +61,8 @@
 		021195F81ADFF32D00C367C6 /* AttractionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionsTableViewController.m; sourceTree = "<group>"; };
 		021195FA1ADFF36000C367C6 /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
 		021195FB1ADFF36000C367C6 /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
-		021195FD1ADFF80A00C367C6 /* IGAttraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAttraction.h; sourceTree = "<group>"; };
-		021195FE1ADFF80A00C367C6 /* IGAttraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAttraction.m; sourceTree = "<group>"; };
 		021196001AE0031D00C367C6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		021196021AE0032F00C367C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		021196041AE0033800C367C6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		021196061AE0034000C367C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		021196081AE0034700C367C6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0211960A1AE0035100C367C6 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
@@ -116,6 +112,8 @@
 		08C80D711AE3DDD40033296F /* IGReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReview.m; sourceTree = "<group>"; };
 		08C80D761AE3F4650033296F /* ASStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASStarRatingView.h; sourceTree = "<group>"; };
 		08C80D771AE3F4650033296F /* ASStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASStarRatingView.m; sourceTree = "<group>"; };
+		08D791B41AE6BDBF00E18B8C /* IGAttraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAttraction.h; sourceTree = "<group>"; };
+		08D791B51AE6BDBF00E18B8C /* IGAttraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAttraction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +133,6 @@
 				0211960B1AE0035100C367C6 /* libz.1.1.3.dylib in Frameworks */,
 				021196091AE0034700C367C6 /* QuartzCore.framework in Frameworks */,
 				021196071AE0034000C367C6 /* Security.framework in Frameworks */,
-				021196051AE0033800C367C6 /* StoreKit.framework in Frameworks */,
 				021196031AE0032F00C367C6 /* SystemConfiguration.framework in Frameworks */,
 				021196011AE0031D00C367C6 /* MobileCoreServices.framework in Frameworks */,
 				089486121AE169D600B966E2 /* Bolts.framework in Frameworks */,
@@ -168,7 +165,6 @@
 				0211960A1AE0035100C367C6 /* libz.1.1.3.dylib */,
 				021196081AE0034700C367C6 /* QuartzCore.framework */,
 				021196061AE0034000C367C6 /* Security.framework */,
-				021196041AE0033800C367C6 /* StoreKit.framework */,
 				021196021AE0032F00C367C6 /* SystemConfiguration.framework */,
 				021196001AE0031D00C367C6 /* MobileCoreServices.framework */,
 			);
@@ -201,8 +197,8 @@
 		021196251AE0178C00C367C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				021195FD1ADFF80A00C367C6 /* IGAttraction.h */,
-				021195FE1ADFF80A00C367C6 /* IGAttraction.m */,
+				08D791B41AE6BDBF00E18B8C /* IGAttraction.h */,
+				08D791B51AE6BDBF00E18B8C /* IGAttraction.m */,
 				0822024B1AE2DB2500921149 /* IGCategory.h */,
 				0822024C1AE2DB2500921149 /* IGCategory.m */,
 				08C80D701AE3DDD40033296F /* IGReview.h */,
@@ -338,6 +334,11 @@
 					028F4AB61AD7FD5700C63973 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 5G89KSC622;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					028F4ACF1AD7FD5700C63973 = {
 						CreatedOnToolsVersion = 6.2;
@@ -391,7 +392,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */,
-				021195FF1ADFF80A00C367C6 /* IGAttraction.m in Sources */,
 				028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
 				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
@@ -402,6 +402,7 @@
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
 				08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */,
+				08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */,
 				082202501AE30B1700921149 /* AttractionCell.m in Sources */,
 				08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */,
 				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,
@@ -482,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -517,7 +518,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -528,8 +529,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IntelliGuide",
@@ -538,7 +537,6 @@
 				INFOPLIST_FILE = IntelliGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -546,8 +544,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IntelliGuide",
@@ -556,7 +552,6 @@
 				INFOPLIST_FILE = IntelliGuide/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
