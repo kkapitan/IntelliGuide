@@ -110,7 +110,7 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 -(instancetype)initWithParseObject:(PFObject*)object;
 
 /**
- Used to access internally stored Parse Object (is it really needed? yup)
+ Used to access internally stored Parse Object 
  @return Original, base Parse Object
  */
 -(PFObject*)parseObject;

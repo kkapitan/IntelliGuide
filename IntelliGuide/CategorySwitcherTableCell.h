@@ -29,6 +29,10 @@
 
 @interface CategorySwitcherTableCell : PFTableViewCell
 
+///------
+///@name Fields
+///---
+
 /** IGCategory object storing category to be displayed. */
 
 @property (nonatomic) IGCategory *category;
