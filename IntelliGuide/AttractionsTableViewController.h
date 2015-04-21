@@ -10,7 +10,18 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 
+/**
+ dupa dupa
+ */
 @interface AttractionsTableViewController : PFQueryTableViewController
+
+/**
+ dupa dupa
+ */
 @property (nonatomic) NSDictionary* preferences;
+
+/**
+ dupa dupa
+ */
 @property (nonatomic) BOOL moderationMode;
 @end
