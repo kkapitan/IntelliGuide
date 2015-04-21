@@ -11,8 +11,18 @@
 #import <Parse/Parse.h>
 #import "IGAttraction.h"
 
+/**
+ This view controller querys for attraction's reviews and displays it in table view.
+ */
 @interface AttractionReviewsViewController : PFQueryTableViewController
 
+///------
+///@name Fields
+///------
+
+/**
+ ViewController's query will be setup with data held in this property.
+ */
 @property (nonatomic) IGAttraction *attraction;
 
 @end
