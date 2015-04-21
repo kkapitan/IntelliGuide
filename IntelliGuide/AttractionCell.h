@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "IGAttraction.h"
 
+
+/** Custom TableViewCell used to display attraction. */
+
 @interface AttractionCell : UITableViewCell
 
+
+/** Object of type IGAttraction storing attraction to be displayed. */
 @property (nonatomic) IGAttraction *attraction;
 
 @end

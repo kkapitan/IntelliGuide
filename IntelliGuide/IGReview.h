@@ -10,21 +10,83 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
+/**
+ This is a wrapper class for Parse Object of class "Review".
+ We use wrapper objects for parse data to provide easy access to most important fields,
+ introduce type checking and reduce memory usage (nothing more than needed information are stored).
+ */
+
 @interface IGReview : NSObject
 
+
+///-----
+///@name Constants
+///-----
+
+/**
+ These constants are used to get keys for values stored in Parse objects.
+ This way we can modify those keys in only one place and be sure that all of our code
+ is still working.
+ */
+
 typedef NS_ENUM(NSInteger, IGReviewKey){
-    IGReviewKeyObjectId = 0,
-    IGReviewKeyReviewerName,
+    
+    /**
+     This is constant used to access key for reviewer's name.
+     */
+    IGReviewKeyReviewerName = 0,
+    
+    /**
+     This is constant used to access key for Review content.
+     */
     IGReviewKeyContent,
+
+    /**
+     This is constant used to access key for reviewer's rating.
+     */
     IGReviewKeyRating,
 };
 
+/**
+ NSString that holds original parse object's objectId property. You can use it
+ to recreate Parse Object from IGReview object and update it's data on the backend.
+ */
+
 @property NSString *objectId;
+
+/**
+ NSString that contains reviewer's name.
+ */
+
 @property NSString *reviewerName;
+
+/**
+ NSString that contains review's content.
+ */
+
 @property NSString *content;
+
+/**
+ NSNumber that contains  reviewer's rating.
+ */
+
 @property NSNumber *rating;
 
-+reviewWithParseObject:(PFObject*)object;
+/** Method that is used to create new instance of IGReview from PFObject of class "Review".
+
+@param object PFObject upon which new IGReview object will be based on
+
+@return Newly initialized IGReview object
+*/
+ +reviewWithParseObject:(PFObject*)object;
+
+/** Method that returns string used to access specified field in parse object dictionary.
+ 
+ @param key Constant of type IGReviewKey that specifies what field we want to access
+ 
+ @return NSString that is the key to specified field */
+
+
 +(NSString*)stringForKey:(IGReviewKey)key;
 
 @end

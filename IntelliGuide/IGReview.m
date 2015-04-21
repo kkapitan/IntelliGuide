@@ -30,7 +30,7 @@
     static NSArray *strings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        strings = @[@"objectId",@"username",@"content",@"stars"];
+        strings = @[@"username",@"content",@"stars"];
     });
     return strings[key];
 }

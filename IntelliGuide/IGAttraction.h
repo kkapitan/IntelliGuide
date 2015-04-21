@@ -72,7 +72,7 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
  NSString that holds original parse object's objectId property. You can use it
  to recreate Parse Object from IGAttraction object and update it's data on the backend.
  */
-@property (nonatomic) NSString *objectId;
+@property (nonatomic,readonly) NSString *objectId;
 
 //------
 //@name Class methods
@@ -111,7 +111,6 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 
 /**
  Used to access internally stored Parse Object (is it really needed? yup)
- 
  @return Original, base Parse Object
  */
 -(PFObject*)parseObject;

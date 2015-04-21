@@ -52,18 +52,38 @@ typedef NS_ENUM(NSInteger, IGCategoryKey){
  to recreate Parse Object from IGCategory object and update it's data on the backend.
  */
 
-@property NSString *objectId;
+@property (readonly)NSString *objectId;
+
+/** NSString that contains category name. */
 @property NSString *name;
-@property UIImage *image;
-@property PFObject *parseObject;
+
+
+/** UIImage representing category icon. */
+@property (readonly) UIImage *image;
+
+
+/** Base object that was used to create IGCategory object. */
+@property (readonly )PFObject *parseObject;
 
 ///------
 ///@name Methods
 ///------
 
 
+/** Method used to create IGCategory object using information stored by Parse object.
+ 
+ @param Parse object upon which new instance of IGCategory will be based on
+ 
+ @return Newly initialized IGCategory object */
+
 +(instancetype)categoryWithParseObject:(PFObject*)object;
+
+/** Method that returns string used to access specified field in parse object dictionary.
+
+ @param key Constant of type IGCategoryKey that specifies what field we want to access
+
+ @return NSString that is the key to specified field */
+
 +(NSString*)stringForKey:(IGCategoryKey)key;
--(instancetype)initWithParseObject:(PFObject*)object;
 
 @end
