@@ -27,7 +27,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setAttraction:(Attraction *)attraction {
+- (void)setAttraction:(IGAttraction *)attraction {
     _attraction = attraction;
     _name.text = _attraction.name;
     _categoryIcon.image = _attraction.category.image;

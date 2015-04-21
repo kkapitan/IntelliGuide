@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
-#import "Attraction.h"
+#import "IGAttraction.h"
 
 @interface AttractionReviewsViewController : PFQueryTableViewController
 
-@property (nonatomic) Attraction *attraction;
+@property (nonatomic) IGAttraction *attraction;
 
 @end

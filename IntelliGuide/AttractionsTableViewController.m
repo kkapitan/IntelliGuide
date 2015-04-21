@@ -9,7 +9,7 @@
 #import "AttractionsTableViewController.h"
 #import "AttractionDetailsViewController.h"
 #import "AttractionCell.h"
-#import "Attraction.h"
+#import "IGAttraction.h"
 
 @interface AttractionsTableViewController ()
 
@@ -44,8 +44,8 @@
 
 - (PFQuery *)queryForTable {
     
-    NSString *categoryKey = [Attraction stringForKey:IGAttractionKeyCategory];
-    NSString *verifiedKey = [Attraction stringForKey:IGAttractionKeyVerified];
+    NSString *categoryKey = [IGAttraction stringForKey:IGAttractionKeyCategory];
+    NSString *verifiedKey = [IGAttraction stringForKey:IGAttractionKeyVerified];
     NSString *categoryNameKey = [IGCategory stringForKey:IGCategoryKeyName] ;
     
     PFQuery *categoryQuery = [PFQuery queryWithClassName:@"Category"];
@@ -65,7 +65,7 @@
     
     static NSString *reuseIdentifier = @"AttractionCellReuseIdentifier";
     
-    Attraction *attraction = [Attraction attractionWithParseObject:object];
+    IGAttraction *attraction = [IGAttraction attractionWithParseObject:object];
     
     AttractionCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.attraction = attraction;
