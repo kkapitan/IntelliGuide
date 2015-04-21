@@ -87,15 +87,16 @@
 -(IGAttraction*)buildAttraction{
     
     IGAttraction *attraction = [[IGAttraction alloc] init];
+    NSCharacterSet *characterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     
-    if(self.nameTextField.text){
+    if([[self.nameTextField.text stringByTrimmingCharactersInSet:characterSet] length]){
         attraction.name = self.nameTextField.text;
     }else {
         [self displayAlertWithTitle:@"Błąd" message:@"Pole nazwa nie może być puste"];
         return nil;
     }
     
-    if(self.descriptionTextView.text){
+    if([[self.descriptionTextView.text stringByTrimmingCharactersInSet:characterSet] length]){
         attraction.placeDescription = self.descriptionTextView.text;
     }else {
         [self displayAlertWithTitle:@"Błąd" message:@"Pole opis nie może być puste"];
