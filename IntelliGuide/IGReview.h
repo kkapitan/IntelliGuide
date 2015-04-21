@@ -52,6 +52,12 @@ typedef NS_ENUM(NSInteger, IGReviewKey){
  to recreate Parse Object from IGReview object and update it's data on the backend.
  */
 
+///------
+///@name Fields
+///------
+
+
+
 @property NSString *objectId;
 
 /**
@@ -71,6 +77,11 @@ typedef NS_ENUM(NSInteger, IGReviewKey){
  */
 
 @property NSNumber *rating;
+
+//------
+//@name Class methods
+//------
+
 
 /** Method that is used to create new instance of IGReview from PFObject of class "Review".
 

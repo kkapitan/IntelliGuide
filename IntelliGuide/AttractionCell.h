@@ -14,6 +14,9 @@
 
 @interface AttractionCell : UITableViewCell
 
+///------
+///@name Fields
+///---
 
 /** Object of type IGAttraction storing attraction to be displayed. */
 @property (nonatomic) IGAttraction *attraction;

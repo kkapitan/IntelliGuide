@@ -65,10 +65,9 @@ typedef NS_ENUM(NSInteger, IGCategoryKey){
 /** Base object that was used to create IGCategory object. */
 @property (readonly )PFObject *parseObject;
 
-///------
-///@name Methods
-///------
-
+//------
+//@name Class methods
+//------
 
 /** Method used to create IGCategory object using information stored by Parse object.
  
