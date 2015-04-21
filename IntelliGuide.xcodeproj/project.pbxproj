@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021195F81ADFF32D00C367C6 /* AttractionsTableViewController.m */; };
 		021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021195FB1ADFF36000C367C6 /* PreferencesViewController.m */; };
-		021195FF1ADFF80A00C367C6 /* Attraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 021195FE1ADFF80A00C367C6 /* Attraction.m */; };
 		021196011AE0031D00C367C6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196001AE0031D00C367C6 /* MobileCoreServices.framework */; };
 		021196031AE0032F00C367C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196021AE0032F00C367C6 /* SystemConfiguration.framework */; };
 		021196071AE0034000C367C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196061AE0034000C367C6 /* Security.framework */; };
@@ -22,8 +21,6 @@
 		021196151AE0037300C367C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196141AE0037300C367C6 /* UIKit.framework */; };
 		021196171AE0037A00C367C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 021196161AE0037A00C367C6 /* Foundation.framework */; };
 		0211961F1AE0065D00C367C6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0211961E1AE0065D00C367C6 /* libsqlite3.0.dylib */; };
-		0211962A1AE0197B00C367C6 /* CategorySwitcherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 021196291AE0197B00C367C6 /* CategorySwitcherView.xib */; };
-		0211962D1AE019AD00C367C6 /* CategorySwitcherView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0211962C1AE019AD00C367C6 /* CategorySwitcherView.m */; };
 		021E59171AE40BF30003B6B7 /* CategoryPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E59161AE40BF30003B6B7 /* CategoryPickerTableViewController.m */; };
 		021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E59191AE411260003B6B7 /* NewAttractionViewController.m */; };
 		028F4ABD1AD7FD5700C63973 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABC1AD7FD5700C63973 /* main.m */; };
@@ -46,6 +43,7 @@
 		08C80D6F1AE3DC120033296F /* ReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D6E1AE3DC120033296F /* ReviewCell.m */; };
 		08C80D721AE3DDD40033296F /* IGReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D711AE3DDD40033296F /* IGReview.m */; };
 		08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D771AE3F4650033296F /* ASStarRatingView.m */; };
+		08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D791B51AE6BDBF00E18B8C /* IGAttraction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +61,6 @@
 		021195F81ADFF32D00C367C6 /* AttractionsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionsTableViewController.m; sourceTree = "<group>"; };
 		021195FA1ADFF36000C367C6 /* PreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesViewController.h; sourceTree = "<group>"; };
 		021195FB1ADFF36000C367C6 /* PreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesViewController.m; sourceTree = "<group>"; };
-		021195FD1ADFF80A00C367C6 /* Attraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attraction.h; sourceTree = "<group>"; };
-		021195FE1ADFF80A00C367C6 /* Attraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attraction.m; sourceTree = "<group>"; };
 		021196001AE0031D00C367C6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		021196021AE0032F00C367C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		021196061AE0034000C367C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -77,9 +73,6 @@
 		021196141AE0037300C367C6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		021196161AE0037A00C367C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0211961E1AE0065D00C367C6 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		021196291AE0197B00C367C6 /* CategorySwitcherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherView.xib; sourceTree = "<group>"; };
-		0211962B1AE019AD00C367C6 /* CategorySwitcherView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherView.h; sourceTree = "<group>"; };
-		0211962C1AE019AD00C367C6 /* CategorySwitcherView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherView.m; sourceTree = "<group>"; };
 		021E59151AE40BF30003B6B7 /* CategoryPickerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerTableViewController.h; sourceTree = "<group>"; };
 		021E59161AE40BF30003B6B7 /* CategoryPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerTableViewController.m; sourceTree = "<group>"; };
 		021E59181AE411260003B6B7 /* NewAttractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAttractionViewController.h; sourceTree = "<group>"; };
@@ -119,6 +112,8 @@
 		08C80D711AE3DDD40033296F /* IGReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReview.m; sourceTree = "<group>"; };
 		08C80D761AE3F4650033296F /* ASStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASStarRatingView.h; sourceTree = "<group>"; };
 		08C80D771AE3F4650033296F /* ASStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASStarRatingView.m; sourceTree = "<group>"; };
+		08D791B41AE6BDBF00E18B8C /* IGAttraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAttraction.h; sourceTree = "<group>"; };
+		08D791B51AE6BDBF00E18B8C /* IGAttraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAttraction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,8 +197,8 @@
 		021196251AE0178C00C367C6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				021195FD1ADFF80A00C367C6 /* Attraction.h */,
-				021195FE1ADFF80A00C367C6 /* Attraction.m */,
+				08D791B41AE6BDBF00E18B8C /* IGAttraction.h */,
+				08D791B51AE6BDBF00E18B8C /* IGAttraction.m */,
 				0822024B1AE2DB2500921149 /* IGCategory.h */,
 				0822024C1AE2DB2500921149 /* IGCategory.m */,
 				08C80D701AE3DDD40033296F /* IGReview.h */,
@@ -215,9 +210,6 @@
 		021196261AE0179E00C367C6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				021196291AE0197B00C367C6 /* CategorySwitcherView.xib */,
-				0211962B1AE019AD00C367C6 /* CategorySwitcherView.h */,
-				0211962C1AE019AD00C367C6 /* CategorySwitcherView.m */,
 				085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */,
 				085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */,
 				085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */,
@@ -381,7 +373,6 @@
 				028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */,
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
-				0211962A1AE0197B00C367C6 /* CategorySwitcherView.xib in Resources */,
 				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,18 +392,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */,
-				021195FF1ADFF80A00C367C6 /* Attraction.m in Sources */,
 				028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
 				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
 				08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */,
-				0211962D1AE019AD00C367C6 /* CategorySwitcherView.m in Sources */,
 				021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
 				08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */,
+				08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */,
 				082202501AE30B1700921149 /* AttractionCell.m in Sources */,
 				08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */,
 				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,
