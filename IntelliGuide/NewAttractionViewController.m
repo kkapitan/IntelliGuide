@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UIButton *categoryPickerButton;
 @property (nonatomic) IGCategory* category;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property  (nonatomic) UITapGestureRecognizer* gestureRecognizer;
@@ -55,7 +56,7 @@
 }
 
 -(void)textViewDidBeginEditing:(UITextView *)textView{
-    [self.scrollView setContentOffset:CGPointMake(0,self.descriptionTextView.frame.origin.y) animated:YES];
+    [self.scrollView setContentOffset:CGPointMake(0,self.descriptionLabel.frame.origin.y) animated:YES];
 }
 
 -(void)textViewDidEndEditing:(UITextView *)textView{

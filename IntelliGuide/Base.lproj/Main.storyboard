@@ -206,6 +206,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="categoryPickerButton" destination="0Fm-O0-bgx" id="OMo-Lq-zfe"/>
+                        <outlet property="descriptionLabel" destination="YPf-bt-bIU" id="aOW-aG-m4A"/>
                         <outlet property="descriptionTextView" destination="MOg-8o-06c" id="Sds-Hi-0xN"/>
                         <outlet property="nameTextField" destination="LYc-CI-W7f" id="zFd-Cy-20g"/>
                         <outlet property="scrollView" destination="0EI-WW-4M1" id="Bd2-pe-19A"/>
