@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Attraction.h"
+#import "IGAttraction.h"
 
 @interface AttractionDetailsViewController : UIViewController
 
-@property Attraction *attraction;
+@property IGAttraction *attraction;
 
 @end

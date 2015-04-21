@@ -15,7 +15,7 @@
  We use wrapper objects for parse data to provide easy access to most important fields,
  introduce type checking and reduce memory usage (nothing more than needed information are stored).
  */
-@interface Attraction : NSObject
+@interface IGAttraction : NSObject
 
 ///-----
 ///@name Constants
@@ -70,7 +70,7 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 
 /**
  NSString that holds original parse object's objectId property. You can use it
- to recreate Parse Object from Attraction object and update it's data on the backend.
+ to recreate Parse Object from IGAttraction object and update it's data on the backend.
  */
 @property (nonatomic) NSString *objectId;
 
@@ -79,11 +79,11 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 //------
 
 /**
- Initializes an Attraction object with data contained in parse object.
+ Initializes an IGAttraction object with data contained in parse object.
  
- @param object PFObject upon which Attraction object is going to be based
+ @param object PFObject upon which IGAttraction object is going to be based
  
- @return Newly initialized Category object
+ @return Newly initialized IGAttraction object
  */
 +(instancetype)attractionWithParseObject:(PFObject*)object;
 
@@ -101,16 +101,16 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 //------
 
 /**
- Method that is used to create new instance of Attraction from PFObject of class "Place"
+ Method that is used to create new instance of IGAttraction from PFObject of class "Place"
  
- @param object PFObject upon which new Attraction object will be based on
+ @param object PFObject upon which new IGAttraction object will be based on
  
- @return Newly initialized Attraction object
+ @return Newly initialized IGAttraction object
  */
 -(instancetype)initWithParseObject:(PFObject*)object;
 
 /**
- Used to access internally stored Parse Object (is it really needed?)
+ Used to access internally stored Parse Object (is it really needed? yup)
  
  @return Original, base Parse Object
  */

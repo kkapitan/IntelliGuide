@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Krzysztof Kapitan. All rights reserved.
 //
 
-#import "Attraction.h"
+#import "IGAttraction.h"
 
-@implementation Attraction
+@implementation IGAttraction
 
 -(instancetype)initWithParseObject:(PFObject*)object{
     self = [super init];
@@ -17,10 +17,10 @@
     //PFObject i wywalanie nila w przypadku złej klasy, bo na razie
     //zwróci po prostu nowy obiekt z pustymi polami
     
-    _name = object[[Attraction stringForKey:IGAttractionKeyName]];
-    _placeDescription = object[[Attraction stringForKey:IGAttractionKeyDescription]];
+    _name = object[[IGAttraction stringForKey:IGAttractionKeyName]];
+    _placeDescription = object[[IGAttraction stringForKey:IGAttractionKeyDescription]];
     _category = [IGCategory categoryWithParseObject:
-                 object[[Attraction stringForKey:IGAttractionKeyCategory]]];
+                 object[[IGAttraction stringForKey:IGAttractionKeyCategory]]];
     
     _objectId = object.objectId;
     
@@ -29,7 +29,7 @@
 }
 
 +(instancetype)attractionWithParseObject:(PFObject*)object{
-    return [[Attraction alloc] initWithParseObject:object];
+    return [[IGAttraction alloc] initWithParseObject:object];
 }
 
 +(NSString *)stringForKey:(IGAttractionKey)key{
@@ -46,9 +46,9 @@
     if(self.objectId){
         attraction.objectId = self.objectId;
     }
-    attraction[[Attraction stringForKey:IGAttractionKeyCategory]] = self.category.parseObject;
-    attraction[[Attraction stringForKey:IGAttractionKeyDescription]] = self.placeDescription;
-    attraction[[Attraction stringForKey:IGAttractionKeyName]] = self.name;
+    attraction[[IGAttraction stringForKey:IGAttractionKeyCategory]] = self.category.parseObject;
+    attraction[[IGAttraction stringForKey:IGAttractionKeyDescription]] = self.placeDescription;
+    attraction[[IGAttraction stringForKey:IGAttractionKeyName]] = self.name;
     return attraction;
 }
 

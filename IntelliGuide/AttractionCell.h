@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Attraction.h"
+#import "IGAttraction.h"
 
 @interface AttractionCell : UITableViewCell
 
-@property (nonatomic) Attraction *attraction;
+@property (nonatomic) IGAttraction *attraction;
 
 @end

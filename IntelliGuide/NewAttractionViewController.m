@@ -8,7 +8,7 @@
 
 #import "NewAttractionViewController.h"
 #import "CategoryPickerTableViewController.h"
-#import "Attraction.h"
+#import "IGAttraction.h"
 
 @interface NewAttractionViewController () <CategoryPickerDelegate,UITextViewDelegate>
 
@@ -26,10 +26,10 @@
 
 
 - (IBAction)done:(id)sender {
-    Attraction *attraction = [self buildAttraction];
+    IGAttraction *attraction = [self buildAttraction];
     if(attraction){
         PFObject *attractionObject = [attraction parseObject];
-        attractionObject[[Attraction stringForKey:IGAttractionKeyVerified]] = @NO;
+        attractionObject[[IGAttraction stringForKey:IGAttractionKeyVerified]] = @NO;
         [attractionObject save];
         [self displayAlertWithTitle:@"Dodawanie zakończone!" message:@"Proszę czekać na weryfikację atrakcji przez moderatora"];
         
@@ -84,9 +84,9 @@
     self.category = category;
 }
 
--(Attraction*)buildAttraction{
+-(IGAttraction*)buildAttraction{
     
-    Attraction *attraction = [[Attraction alloc] init];
+    IGAttraction *attraction = [[IGAttraction alloc] init];
     
     if(self.nameTextField.text){
         attraction.name = self.nameTextField.text;
