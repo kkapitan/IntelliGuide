@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "IGAttraction.h"
 
-/**
+/*!
  This view controller is responsible for displaying Attraction name
  and image. It also instantiates and feeds with data it's child view controller,
  PageViewController.
@@ -20,7 +20,7 @@
 ///@name Fields
 ///------
 
-/**
+/*!
  This property holds attraction data that will be displayed.
  */
 @property IGAttraction *attraction;

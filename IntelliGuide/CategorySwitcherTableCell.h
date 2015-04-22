@@ -11,21 +11,21 @@
 #import "IGCategory.h"
 
 
-/** Protocol used to ensure that a CategorySwitcher's delegate implements required callback methods  */
+/*! Protocol used to ensure that a CategorySwitcher's delegate implements required callback methods  */
 
 @protocol CategorySwitcherDelegate <NSObject>
 
-/** Callback method invoked when the user enables given category. */
+/*! Callback method invoked when the user enables given category. */
 -(void)didEnableCategory:(IGCategory*)category;
  
- /** Callback method invoked when the user disables given category. */
+ /*! Callback method invoked when the user disables given category. */
 
 -(void)didDisableCategory:(IGCategory*)category;
 
 @end
 
 
-/** Custom TableViewCell used to display single category and UISwitch allowing user to specify, if the attractions of the given category should be included in search results. */
+/*! Custom TableViewCell used to display single category and UISwitch allowing user to specify, if the attractions of the given category should be included in search results. */
 
 @interface CategorySwitcherTableCell : PFTableViewCell
 
@@ -33,19 +33,19 @@
 ///@name Fields
 ///---
 
-/** IGCategory object storing category to be displayed. */
+/*! IGCategory object storing category to be displayed. */
 
 @property (nonatomic) IGCategory *category;
 
-/** Delegate object, conforming to the CategorySwitcherDelegate protocol, which is notified if the category was enabled/disabled. */
+/*! Delegate object, conforming to the CategorySwitcherDelegate protocol, which is notified if the category was enabled/disabled. */
 
 @property (weak,nonatomic) id<CategorySwitcherDelegate> delegate;
 
-/** UISwitch which is used to enable/disable category. */
+/*! UISwitch which is used to enable/disable category. */
 
 @property (weak, nonatomic) IBOutlet UISwitch *switchControl;
 
-/** UIImageView which is displaying category icon. */
+/*! UIImageView which is displaying category icon. */
 
 @property (weak, nonatomic) IBOutlet UIImageView *categoryImage;
 

@@ -10,7 +10,7 @@
 #import "IGAttraction.h"
 
 
-/** Custom TableViewCell used to display attraction. */
+/*! Custom TableViewCell used to display attraction. */
 
 @interface AttractionCell : UITableViewCell
 
@@ -18,7 +18,7 @@
 ///@name Fields
 ///---
 
-/** Object of type IGAttraction storing attraction to be displayed. */
+/*! Object of type IGAttraction storing attraction to be displayed. */
 @property (nonatomic) IGAttraction *attraction;
 
 @end

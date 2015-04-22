@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**
+/*!
  First view controller that will be displayed after launching application.
  It's responsible for fetching and displaying category list with switches that
  allow user to choose what categories he/she wants to search for.

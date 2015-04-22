@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-/**
+/*!
 This is a wrapper class for Parse Object of class "Category".
 We use wrapper objects for parse data to provide easy access to most important fields,
 introduce type checking and reduce memory usage (nothing more than needed information are stored).
@@ -24,18 +24,18 @@ introduce type checking and reduce memory usage (nothing more than needed inform
 ///@name Constants
 ///-----
 
-/**
+/*!
  These constants are used to get keys for values stored in Parse objects.
  This way we can modify those keys in only one place and be sure that all of our code
  is still working.
  */
 
 typedef NS_ENUM(NSInteger, IGCategoryKey){
-    /**
+    /*!
      This is constant used to access key for Category name.
      */
     IGCategoryKeyName = 0,
-    /**
+    /*!
      This is constant used to access key for Category icon file.
      */
     IGCategoryKeyIcon,
@@ -47,29 +47,29 @@ typedef NS_ENUM(NSInteger, IGCategoryKey){
 ///------
 
 
-/**
+/*!
  NSString that holds original parse object's objectId property. You can use it
  to recreate Parse Object from IGCategory object and update it's data on the backend.
  */
 
 @property (readonly)NSString *objectId;
 
-/** NSString that contains category name. */
+/*! NSString that contains category name. */
 @property NSString *name;
 
 
-/** UIImage representing category icon. */
+/*! UIImage representing category icon. */
 @property (readonly) UIImage *image;
 
 
-/** Base object that was used to create IGCategory object. */
+/*! Base object that was used to create IGCategory object. */
 @property (readonly )PFObject *parseObject;
 
 //------
 //@name Class methods
 //------
 
-/** Method used to create IGCategory object using information stored by Parse object.
+/*! Method used to create IGCategory object using information stored by Parse object.
  
  @param Parse object upon which new instance of IGCategory will be based on
  
@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, IGCategoryKey){
 
 +(instancetype)categoryWithParseObject:(PFObject*)object;
 
-/** Method that returns string used to access specified field in parse object dictionary.
+/*! Method that returns string used to access specified field in parse object dictionary.
 
  @param key Constant of type IGCategoryKey that specifies what field we want to access
 

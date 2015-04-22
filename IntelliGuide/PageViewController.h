@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "IGAttraction.h"
 
-/**
+/*!
  This view controller is responsible for page viewer component in Attraction
  Details screen. Conforms to UIPageViewer DataSource and Delegate protocols.
  
@@ -24,7 +24,7 @@
 ///@name Fields
 ///------
 
-/**
+/*!
  This IGAttraction property will be used to feed child controllers with data.
  */
 @property (nonatomic) IGAttraction *attraction;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-/**
+/*!
  View controller responsible for displaying attraction's description
  in it's TextField.
  */
@@ -18,7 +18,7 @@
 ///@name Fields
 ///------
 
-/**
+/*!
  This NSString will be displayed in VC's TextField.
  */
 @property NSString *descriptionText;

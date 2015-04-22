@@ -42,7 +42,7 @@
     return 1;
 }
 
-/**
+/*!
  This callback method is responsible for creating and configuring query which will be
  used to fetch attraction list. Here we use self.preferences to configure query
  and return it to caller.
@@ -79,7 +79,7 @@
 }
 
 
-/**
+/*!
  Tells view controller whether it should enable swiping on cell to reveal accept/reject buttons.
  */
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

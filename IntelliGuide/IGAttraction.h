@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 #import "IGCategory.h"
 
-/**
+/*!
  This is a wrapper class for Parse Object of class "Place".
  We use wrapper objects for parse data to provide easy access to most important fields,
  introduce type checking and reduce memory usage (nothing more than needed information are stored).
@@ -21,28 +21,28 @@
 ///@name Constants
 ///-----
 
-/**
+/*!
  These constants are used to get keys for values stored in Parse objects.
  This way we can modify those keys in only one place and be sure that all of our code
  is still working.
  */
 typedef NS_ENUM(NSInteger, IGAttractionKey){
-    /**
+    /*!
      This is constant used to access key for Place name.
      */
     IGAttractionKeyName = 0,
     
-    /**
+    /*!
      This constant is used to access key for Place description.
      */
     IGAttractionKeyDescription,
     
-    /**
+    /*!
      This constant is used to access key for Place category.
      */
     IGAttractionKeyCategory,
     
-    /**
+    /*!
      This constant is used to access key for boolean value that tells us whether
      the place has been verified by a moderator.
      */
@@ -53,22 +53,22 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 ///@name Fields
 ///------
 
-/**
+/*!
  NSString that holds name of a place.
  */
 @property (nonatomic) NSString *name;
 
-/**
+/*!
  NSString that holds description of a place.
  */
 @property (nonatomic) NSString *placeDescription;
 
-/**
+/*!
  An IGCategory object that holds information about this place's category.
  */
 @property (nonatomic) IGCategory *category;
 
-/**
+/*!
  NSString that holds original parse object's objectId property. You can use it
  to recreate Parse Object from IGAttraction object and update it's data on the backend.
  */
@@ -80,7 +80,7 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 //@name Class methods
 //------
 
-/**
+/*!
  Initializes an IGAttraction object with data contained in parse object.
  
  @param object PFObject upon which IGAttraction object is going to be based
@@ -89,7 +89,7 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
  */
 +(instancetype)attractionWithParseObject:(PFObject*)object;
 
-/**
+/*!
  Method that returns string used to access specified field in parse object dictionary.
  
  @param key Constant of type IGAttractionKey that specifies what field we want to access
@@ -102,7 +102,7 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 //@name Instance methods
 //------
 
-/**
+/*!
  Method that is used to create new instance of IGAttraction from PFObject of class "Place"
  
  @param object PFObject upon which new IGAttraction object will be based on
@@ -111,7 +111,7 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
  */
 -(instancetype)initWithParseObject:(PFObject*)object;
 
-/**
+/*!
  Used to access internally stored Parse Object 
  @return Original, base Parse Object
  */

@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "IGReview.h"
 
-/** Custom TableViewCell used to display user's review. */
+/*! Custom TableViewCell used to display user's review. */
 @interface ReviewCell : UITableViewCell
 
 ///------
 ///@name Fields
 ///---
 
-/** Object of type IGReview storing review to be displayed. */
+/*! Object of type IGReview storing review to be displayed. */
 @property (nonatomic) IGReview *review;
 
 @end

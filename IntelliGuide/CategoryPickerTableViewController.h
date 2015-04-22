@@ -11,12 +11,12 @@
 #import <ParseUI/ParseUI.h>
 #import "IGCategory.h"
 
-/**
+/*!
  Protocol used to notify it's delegate about chosen IGCategory object
  */
 @protocol CategoryPickerDelegate <NSObject>
 
-/**
+/*!
  Delegate callback that passes chosen category to it.
  
  @param category An IGCategory object that was chosen by user.
@@ -25,7 +25,7 @@
 
 @end
 
-/**
+/*!
  View Controller that displays user available category and lets him/her choose one of them.
  */
 @interface CategoryPickerTableViewController : PFQueryTableViewController
@@ -34,7 +34,7 @@
 ///@name Fields
 ///------
 
-/**
+/*!
  Delegate object, conforming to the CategorySwitcherDelegate protocol, which is notified if the category is choosed.
  */
 @property (nonatomic,weak) id<CategoryPickerDelegate> delegate;
