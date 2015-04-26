@@ -8,7 +8,7 @@
 
 #import "IGCategory.h"
 
-static NSMutableDictionary *storage = nil;
+static NSCache *storage = nil;
 
 @implementation IGCategory
 
@@ -29,9 +29,9 @@ static NSMutableDictionary *storage = nil;
 +categoryWithParseObject:(PFObject*)object {
     NSString *nameString = [IGCategory stringForKey:IGCategoryKeyName];
     
-    if (storage == nil) storage = [NSMutableDictionary new];
-    if (storage[object[nameString]] == nil) [storage setObject:[[IGCategory alloc] initWithParseObject:object] forKey:object[nameString]];
-    return storage[object[nameString]];
+    if (storage == nil) storage = [NSCache new];
+    if ([storage objectForKey:object[nameString]] == nil) [storage setObject:[[IGCategory alloc] initWithParseObject:object] forKey:object[nameString]];
+    return [storage objectForKey:object[nameString]];
 }
 
 +(NSString*)stringForKey:(IGCategoryKey)key{
