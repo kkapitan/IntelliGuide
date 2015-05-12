@@ -23,6 +23,7 @@
 		0211961F1AE0065D00C367C6 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0211961E1AE0065D00C367C6 /* libsqlite3.0.dylib */; };
 		021E59171AE40BF30003B6B7 /* CategoryPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E59161AE40BF30003B6B7 /* CategoryPickerTableViewController.m */; };
 		021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E59191AE411260003B6B7 /* NewAttractionViewController.m */; };
+		0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0230BA6C1B024E2C00B14A6B /* NewReviewViewController.m */; };
 		028F4ABD1AD7FD5700C63973 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABC1AD7FD5700C63973 /* main.m */; };
 		028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABF1AD7FD5700C63973 /* AppDelegate.m */; };
 		028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC41AD7FD5700C63973 /* Main.storyboard */; };
@@ -77,6 +78,8 @@
 		021E59161AE40BF30003B6B7 /* CategoryPickerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerTableViewController.m; sourceTree = "<group>"; };
 		021E59181AE411260003B6B7 /* NewAttractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewAttractionViewController.h; sourceTree = "<group>"; };
 		021E59191AE411260003B6B7 /* NewAttractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAttractionViewController.m; sourceTree = "<group>"; };
+		0230BA6B1B024E2C00B14A6B /* NewReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewReviewViewController.h; sourceTree = "<group>"; };
+		0230BA6C1B024E2C00B14A6B /* NewReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewReviewViewController.m; sourceTree = "<group>"; };
 		028F4AB71AD7FD5700C63973 /* IntelliGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028F4ABB1AD7FD5700C63973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028F4ABC1AD7FD5700C63973 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 				021E59161AE40BF30003B6B7 /* CategoryPickerTableViewController.m */,
 				021E59181AE411260003B6B7 /* NewAttractionViewController.h */,
 				021E59191AE411260003B6B7 /* NewAttractionViewController.m */,
+				0230BA6B1B024E2C00B14A6B /* NewReviewViewController.h */,
+				0230BA6C1B024E2C00B14A6B /* NewReviewViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
+				0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
 				08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */,
 				08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */,

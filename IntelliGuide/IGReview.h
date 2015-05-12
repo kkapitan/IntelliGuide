@@ -100,4 +100,8 @@ typedef NS_ENUM(NSInteger, IGReviewKey){
 
 +(NSString*)stringForKey:(IGReviewKey)key;
 
+
+-(PFObject*)parseObject;
+
+
 @end

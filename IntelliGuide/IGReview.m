@@ -35,4 +35,11 @@
     return strings[key];
 }
 
+-(PFObject *)parseObject{
+    PFObject *object = [PFObject objectWithClassName:@"Review"];
+    object[[IGReview stringForKey:IGReviewKeyRating]] = self.rating;
+    object[[IGReview stringForKey:IGReviewKeyContent]] = self.content;
+    return object;
+}
+
 @end

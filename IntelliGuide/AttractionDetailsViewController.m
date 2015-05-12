@@ -8,6 +8,7 @@
 
 #import "AttractionDetailsViewController.h"
 #import "PageViewController.h"
+#import "NewReviewViewController.h"
 
 @interface AttractionDetailsViewController ()
 
@@ -47,8 +48,12 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    PageViewController *pageViewController = (PageViewController*)[segue destinationViewController];
-    pageViewController.attraction = _attraction;
+    if([segue.identifier isEqualToString:@"addReviewSegue"]){
+        NewReviewViewController *newReviewViewController = segue.destinationViewController;
+        newReviewViewController.attraction = self.attraction;
+    }else{
+        PageViewController *pageViewController = (PageViewController*)[segue destinationViewController];
+        pageViewController.attraction = _attraction;
+    }
 }
-
 @end

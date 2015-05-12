@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rme-PQ-WiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="662" y="905"/>
+            <point key="canvasLocation" x="645" y="973"/>
         </scene>
         <!--Category Picker Table View Controller-->
         <scene sceneID="3CZ-Nq-g7k">
@@ -343,7 +343,13 @@
                             <constraint firstItem="3mp-cX-cv1" firstAttribute="top" secondItem="Gqv-P5-1bt" secondAttribute="bottom" constant="8" id="zmH-cf-Cpj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Attraction Details" id="x3v-fC-jZE"/>
+                    <navigationItem key="navigationItem" title="Attraction Details" id="x3v-fC-jZE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gtm-43-Iy7">
+                            <connections>
+                                <segue destination="0NP-gF-qsh" kind="push" id="Gxw-50-cho"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="attractionImage" destination="3mp-cX-cv1" id="qO9-4s-6KH"/>
                         <outlet property="attractionName" destination="SuP-dx-7V7" id="GcD-Yn-Fbr"/>
@@ -476,6 +482,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5rJ-PC-uDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130" y="250"/>
+        </scene>
+        <!--New Review View Controller-->
+        <scene sceneID="JzC-wn-97A">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0NP-gF-qsh" customClass="NewReviewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dch-Nx-W8I"/>
+                        <viewControllerLayoutGuide type="bottom" id="FVa-P7-Fg1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ESO-0b-BUZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-qu-foB">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocena" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3t-8F-w5X">
+                                        <rect key="frame" x="0.0" y="8" width="320" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="mtZ-25-tr1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opinia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8U-ig-ldB">
+                                        <rect key="frame" x="16" y="132" width="288" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="0Dj-as-k3v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Tu wstaw krótką recenzję odwiedzonego miejsca." translatesAutoresizingMaskIntoConstraints="NO" id="PB9-9v-D3x">
+                                        <rect key="frame" x="16" y="172" width="288" height="210"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="210" id="Jpm-mR-bcV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIQ-IL-OGg" customClass="ASStarRatingView">
+                                        <rect key="frame" x="72" y="47" width="176" height="77"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="176" id="KFd-N9-mOg"/>
+                                            <constraint firstAttribute="height" constant="77" id="M8h-At-W3x"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="b8U-ig-ldB" firstAttribute="leading" secondItem="GBC-qu-foB" secondAttribute="leading" constant="16" id="0hb-bH-TmI"/>
+                                    <constraint firstItem="PB9-9v-D3x" firstAttribute="top" secondItem="b8U-ig-ldB" secondAttribute="bottom" constant="8" id="0vF-FR-FQ5"/>
+                                    <constraint firstItem="VIQ-IL-OGg" firstAttribute="top" secondItem="P3t-8F-w5X" secondAttribute="bottom" constant="7" id="2zU-gZ-a37"/>
+                                    <constraint firstAttribute="trailing" secondItem="b8U-ig-ldB" secondAttribute="trailing" constant="16" id="DPN-bB-qrY"/>
+                                    <constraint firstItem="VIQ-IL-OGg" firstAttribute="leading" secondItem="GBC-qu-foB" secondAttribute="leading" constant="72" id="JMA-6M-Krl"/>
+                                    <constraint firstAttribute="trailing" secondItem="VIQ-IL-OGg" secondAttribute="trailing" constant="72" id="OC1-I3-Bbn"/>
+                                    <constraint firstItem="P3t-8F-w5X" firstAttribute="top" secondItem="GBC-qu-foB" secondAttribute="top" constant="8" id="Owu-zE-GhE"/>
+                                    <constraint firstItem="PB9-9v-D3x" firstAttribute="top" secondItem="VIQ-IL-OGg" secondAttribute="bottom" constant="48" id="VDe-vt-fHg"/>
+                                    <constraint firstItem="b8U-ig-ldB" firstAttribute="top" secondItem="VIQ-IL-OGg" secondAttribute="bottom" constant="8" id="ZaU-PC-gs7"/>
+                                    <constraint firstItem="P3t-8F-w5X" firstAttribute="leading" secondItem="GBC-qu-foB" secondAttribute="leading" id="aQk-1a-0dc"/>
+                                    <constraint firstAttribute="trailing" secondItem="PB9-9v-D3x" secondAttribute="trailing" constant="16" id="jiA-gw-YoP"/>
+                                    <constraint firstItem="PB9-9v-D3x" firstAttribute="leading" secondItem="GBC-qu-foB" secondAttribute="leading" constant="16" id="lcd-r8-kXJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="PB9-9v-D3x" secondAttribute="bottom" constant="122" id="x34-bI-b3j"/>
+                                    <constraint firstAttribute="trailing" secondItem="P3t-8F-w5X" secondAttribute="trailing" id="xHa-qB-PIC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97383840460000004" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="GBC-qu-foB" firstAttribute="top" secondItem="dch-Nx-W8I" secondAttribute="bottom" id="Jf5-Pm-bTg"/>
+                            <constraint firstItem="P3t-8F-w5X" firstAttribute="width" secondItem="ESO-0b-BUZ" secondAttribute="width" id="LiM-82-Ykq"/>
+                            <constraint firstItem="FVa-P7-Fg1" firstAttribute="top" secondItem="GBC-qu-foB" secondAttribute="bottom" constant="-44" id="gB0-OE-Sjp"/>
+                            <constraint firstAttribute="trailing" secondItem="GBC-qu-foB" secondAttribute="trailing" id="qql-ul-NjW"/>
+                            <constraint firstItem="GBC-qu-foB" firstAttribute="leading" secondItem="ESO-0b-BUZ" secondAttribute="leading" id="zz3-BB-Lsu"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="92b-yj-wn6">
+                        <barButtonItem key="rightBarButtonItem" title="Dodaj" id="qvR-wI-vli">
+                            <connections>
+                                <action selector="addReview:" destination="0NP-gF-qsh" id="nr6-rg-zSm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="opinionLabel" destination="b8U-ig-ldB" id="qCq-AE-Icm"/>
+                        <outlet property="reviewTextView" destination="PB9-9v-D3x" id="aDa-Mw-mnR"/>
+                        <outlet property="scrollView" destination="GBC-qu-foB" id="ru0-n2-31P"/>
+                        <outlet property="starsView" destination="VIQ-IL-OGg" id="IZw-eb-kqR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sx4-8Y-kvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1997" y="-180"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
