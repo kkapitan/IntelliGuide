@@ -422,13 +422,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h2-2k-NGv">
-                                            <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                            <rect key="frame" x="8" y="8" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHk-26-hYB">
-                                            <rect key="frame" x="8" y="30" width="40" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHk-26-hYB">
+                                            <rect key="frame" x="8" y="30" width="304" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="304" id="J18-83-9vT"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -448,7 +451,7 @@
                                         <constraint firstItem="1PU-kg-bgb" firstAttribute="leading" secondItem="9h2-2k-NGv" secondAttribute="trailing" constant="13" id="9xk-N7-wpP"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="centerY" secondItem="1PU-kg-bgb" secondAttribute="centerY" id="Zfw-bK-go7"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="top" secondItem="nKV-xP-8tk" secondAttribute="top" constant="8" id="eJm-Ec-lSo"/>
-                                        <constraint firstAttribute="bottom" secondItem="GHk-26-hYB" secondAttribute="bottom" constant="8" id="tDm-mU-JaP"/>
+                                        <constraint firstAttribute="bottom" secondItem="GHk-26-hYB" secondAttribute="bottom" constant="9" id="tDm-mU-JaP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

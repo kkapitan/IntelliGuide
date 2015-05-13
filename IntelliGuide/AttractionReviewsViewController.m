@@ -51,7 +51,6 @@
     return reviewsQuery;
 };
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
     
     static NSString *reuseIdentifier = @"ReviewCell";
@@ -63,7 +62,25 @@
     // Configure the cell...
     cell.review = review;
     
+    NSLog(@"%f",cell.frame.size.height);
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    /*This needs to be improved. Calculating size based on content is much better than doing it by
+    dequeuing cell*/
+    
+    PFObject *object = [self.objects objectAtIndex:indexPath.row];
+    IGReview *review = [IGReview reviewWithParseObject:object];
+    ReviewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReviewCell"];
+    cell.review = review;
+    
+    
+    UILabel *label = (UILabel*)[cell viewWithTag:10];
+    [label sizeToFit];
+    
+    return 30 + label.frame.size.height;
 }
 
 /*
