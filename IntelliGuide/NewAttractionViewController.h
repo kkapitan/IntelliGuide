@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "IGAttraction.h"
 /*! View controller which controls the proces of creating, validating and uploading new attraction. */ 
 
 @interface NewAttractionViewController : UIViewController
-
+@property(nonatomic) IGAttraction* toEdit;
 @end

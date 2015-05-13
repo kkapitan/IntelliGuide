@@ -9,6 +9,7 @@
 #import "AttractionsTableViewController.h"
 #import "AttractionDetailsViewController.h"
 #import "AttractionCell.h"
+#import "NewAttractionViewController.h"
 #import "IGAttraction.h"
 
 @interface AttractionsTableViewController ()
@@ -84,11 +85,15 @@
  */
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return self.moderationMode;
+    //return self.moderationMode;
+    return YES;
 }
 
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewRowAction *discardAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Odrzuć" handler:^(UITableViewRowAction *action,NSIndexPath *indexPath){
+    
+    UITableViewRowAction *discardAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Odrzuć" handler:
+        
+        ^(UITableViewRowAction *action,NSIndexPath *indexPath){
             AttractionCell *cell = (AttractionCell*)[tableView cellForRowAtIndexPath:indexPath];
             PFObject *attractionObject = [cell.attraction parseObject];
             [attractionObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -96,19 +101,31 @@
             }];
         }];
     
-    UITableViewRowAction *acceptAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Akceptuj" handler:^(UITableViewRowAction *action,NSIndexPath *indexPath){
-            AttractionCell *cell = (AttractionCell*)[tableView cellForRowAtIndexPath:indexPath];
-            PFObject *attractionObject = [cell.attraction parseObject];
-            attractionObject[@"verified"] = @YES;
-            [attractionObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if(succeeded)[self loadObjects];
+    UITableViewRowAction *acceptAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Akceptuj" handler:
+            
+            ^(UITableViewRowAction *action,NSIndexPath *indexPath){
+                AttractionCell *cell = (AttractionCell*)[tableView cellForRowAtIndexPath:indexPath];
+                PFObject *attractionObject = [cell.attraction parseObject];
+                attractionObject[@"verified"] = @YES;
+                [attractionObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if(succeeded)[self loadObjects];
             }];
-        
-        
         }];
+    
     acceptAction.backgroundColor = [UIColor greenColor];
     
-    return @[acceptAction,discardAction];
+    
+    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Edytuj" handler:
+                                          
+        ^(UITableViewRowAction *action,NSIndexPath *indexPath){
+            [self performSegueWithIdentifier:@"editAttractionSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
+        }];
+    
+    editAction.backgroundColor = [UIColor greenColor];
+    if(self.moderationMode)
+        return @[acceptAction,discardAction];
+    else
+        return @[editAction];
 }
 
 
@@ -143,10 +160,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //     Get the new view controller using [segue destinationViewController].
 //     Pass the selected object to the new view controller.
-    AttractionCell *senderCell = (AttractionCell*)sender;
-    AttractionDetailsViewController *destinationViewController = [segue destinationViewController];
-    destinationViewController.attraction = senderCell.attraction;
+    if([segue.identifier isEqualToString:@"editAttractionSegue"]){
+        NewAttractionViewController *newAttractionViewController = segue.destinationViewController;
+        AttractionCell *cell = (AttractionCell*)sender;
+        newAttractionViewController.toEdit = cell.attraction;
+    }else{
+        AttractionCell *senderCell = (AttractionCell*)sender;
+        AttractionDetailsViewController *destinationViewController = [segue destinationViewController];
+        destinationViewController.attraction = senderCell.attraction;
+    }
 }
-
 
 @end

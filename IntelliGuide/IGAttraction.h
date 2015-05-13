@@ -47,6 +47,8 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
      the place has been verified by a moderator.
      */
     IGAttractionKeyVerified,
+    
+    IGAttractionKeyImage,
 };
 
 ///------

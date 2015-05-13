@@ -29,8 +29,14 @@
 - (IBAction)done:(id)sender {
     IGAttraction *attraction = [self buildAttraction];
     if(attraction){
+        
         PFObject *attractionObject = [attraction parseObject];
         attractionObject[[IGAttraction stringForKey:IGAttractionKeyVerified]] = @NO;
+        
+        if(self.toEdit){
+            [attractionObject setObjectId:self.toEdit.objectId];
+        }
+        
         [attractionObject save];
         [self displayAlertWithTitle:@"Dodawanie zakończone!" message:@"Proszę czekać na weryfikację atrakcji przez moderatora"];
         
@@ -70,7 +76,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide) name:UIKeyboardWillHideNotification object:nil];
     self.gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTap) ];
-    
+    if(self.toEdit){
+        self.category = self.toEdit.category;
+        [self.categoryPickerButton setTitle:self.category.name forState:UIControlStateNormal];
+        self.descriptionTextView.text = self.toEdit.placeDescription;
+        self.nameTextField.text = self.toEdit.name;
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -110,7 +121,6 @@
         [self displayAlertWithTitle:@"Błąd" message:@"Proszę wybrać kategorię"];
         return nil;
     }
-    
     return attraction;
 }
 

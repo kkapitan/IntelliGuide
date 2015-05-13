@@ -284,6 +284,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Attractions" id="WHv-qB-nYq"/>
+                    <connections>
+                        <segue destination="KyS-Mf-zZg" kind="push" identifier="editAttractionSegue" id="gE7-EN-Sbh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVV-fh-qMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -587,4 +590,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="gE7-EN-Sbh"/>
+    </inferredMetricsTieBreakers>
 </document>
