@@ -73,14 +73,20 @@
     
     PFObject *object = [self.objects objectAtIndex:indexPath.row];
     IGReview *review = [IGReview reviewWithParseObject:object];
-    ReviewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ReviewCell"];
-    cell.review = review;
+    NSString *reviewContent = review.content;
     
+    static ReviewCell* cell;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cell = [tableView dequeueReusableCellWithIdentifier:@"ReviewCell"];
+    });
     
     UILabel *label = (UILabel*)[cell viewWithTag:10];
-    [label sizeToFit];
     
-    return 30 + label.frame.size.height;
+    CGRect rect = [reviewContent boundingRectWithSize:CGSizeMake(label.frame.size.width, 500) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:label.font} context:nil];
+    
+    return 50 + rect.size.height;
+    
 }
 
 /*
