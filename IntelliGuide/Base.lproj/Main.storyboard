@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Preferences View Controller-->
+        <!--User-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="PreferencesViewController" sceneMemberID="viewController">
@@ -82,7 +82,7 @@
                             <constraint firstItem="Nww-Vo-ahQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="z0F-qO-Plf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="H7Q-PS-lyb">
+                    <navigationItem key="navigationItem" title="User" id="H7Q-PS-lyb">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="pZj-hZ-ixr"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="W7f-nt-Out">
                             <connections>
@@ -123,7 +123,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="GRt-aw-d9L" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="pqx-VV-Tk8"/>
+                                    <segue destination="GRt-aw-d9L" kind="custom" identifier="normalPanel" customClass="SWRevealViewControllerSeguePushController" id="pqx-VV-Tk8"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="moderationPanel" textLabel="5Ud-6P-wsK" style="IBUITableViewCellStyleDefault" id="1Pt-W5-hT1">
@@ -140,7 +140,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="GRt-aw-d9L" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="G6X-nT-bnv"/>
+                                    <segue destination="GRt-aw-d9L" kind="custom" identifier="moderationPanel" customClass="SWRevealViewControllerSeguePushController" id="G6X-nT-bnv"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settings" textLabel="Il8-40-NUM" style="IBUITableViewCellStyleDefault" id="y84-yq-4xH">
@@ -983,6 +983,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Ow0-7u-Pby"/>
-        <segue reference="xrg-yU-xwY"/>
+        <segue reference="G6X-nT-bnv"/>
     </inferredMetricsTieBreakers>
 </document>

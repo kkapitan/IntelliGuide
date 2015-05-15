@@ -7,6 +7,7 @@
 //
 
 #import "MenuViewController.h"
+#import "PreferencesViewController.h"
 
 @interface MenuViewController () {
     NSArray *menuItems;
@@ -33,6 +34,22 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"normalPanel"]) {
+        UINavigationController *nav = (UINavigationController*)segue.destinationViewController;
+        PreferencesViewController *controller = (PreferencesViewController*)nav.childViewControllers[0];
+        controller.moderationMode = NO;
+        controller.navigationItem.title = @"User";
+    }
+    
+    if ([segue.identifier isEqualToString:@"moderationPanel"]) {
+        UINavigationController *nav = (UINavigationController*)segue.destinationViewController;
+        PreferencesViewController *controller = (PreferencesViewController*)nav.childViewControllers[0];
+        controller.moderationMode = YES;
+        controller.navigationItem.title = @"Moderator";
+    }
 }
 
 @end

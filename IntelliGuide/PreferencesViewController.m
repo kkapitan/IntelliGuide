@@ -16,7 +16,6 @@
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic) BOOL moderationMode;
 @property (nonatomic) BOOL didShowLogin;
 @property (nonatomic) NSMutableArray *categories;
 @property (nonatomic )NSMutableArray* selectedCategories;
