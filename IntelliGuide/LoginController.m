@@ -33,6 +33,7 @@
 }
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"loggedInSuccessfully" object:nil];
     [self.parentViewController dismissViewControllerAnimated:YES completion:^{
         NSLog(@"did login: %@", user);
     }];
@@ -47,6 +48,7 @@
 }
 
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didSignUpUser:(PFUser *)user {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"signedUpSuccessfully" object:nil];
     [self.parentViewController dismissViewControllerAnimated:YES completion:^{
         NSLog(@"did sign up: %@", user);
         NSLog(@"current user: %@", [PFUser currentUser]);

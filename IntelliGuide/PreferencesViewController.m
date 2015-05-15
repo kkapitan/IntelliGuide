@@ -11,6 +11,7 @@
 #import "CategorySwitcherTableCell.h"
 #import "IGCategory.h"
 #import "LoginController.h"
+#import "SWRevealViewController.h"
 //#import "MBProgressHUD.h"
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
@@ -22,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 @property (strong) LoginController *loginController;
 @property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 - (IBAction)didToggleCustomLocation:(id)sender;
 
@@ -85,11 +87,19 @@
         [self.categoriesTableView reloadData];
     }];
     
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"DownloadedCategoryImage" object:nil];
     
 }
 
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     if (![PFUser currentUser]) {
         if (!_didShowLogin) {
             _didShowLogin = YES;
