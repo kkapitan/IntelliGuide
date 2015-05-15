@@ -24,5 +24,4 @@
  This property holds attraction data that will be displayed.
  */
 @property IGAttraction *attraction;
-
 @end

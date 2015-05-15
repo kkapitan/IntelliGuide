@@ -10,8 +10,8 @@
 #import "AttractionsTableViewController.h"
 #import "CategorySwitcherTableCell.h"
 #import "IGCategory.h"
-#import "MBProgressHUD.h"
 #import "LoginController.h"
+//#import "MBProgressHUD.h"
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -19,8 +19,8 @@
 @property (nonatomic) NSMutableArray *categories;
 @property (nonatomic )NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
-
 @property (strong) LoginController *loginController;
+@property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
 
 - (IBAction)didToggleCustomLocation:(id)sender;
 
@@ -71,7 +71,7 @@
     self.categoriesTableView.dataSource = self;
     [self.categoriesTableView registerNib:[UINib nibWithNibName:@"CategorySwitcherTableCell" bundle:nil] forCellReuseIdentifier:@"CategorySwitcherCell"];
     
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+  //  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     PFQuery *categoriesQuery = [PFQuery queryWithClassName:@"Category"];
     [categoriesQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -79,7 +79,7 @@
             IGCategory *category = [IGCategory categoryWithParseObject:o];
             [self.categories addObject:category];
         }
-        [hud hide:YES];
+     //   [hud hide:YES];
         [self.categoriesTableView reloadData];
     }];
     
@@ -92,6 +92,8 @@
         self.loginController = [[LoginController alloc] init];
         self.loginController.parentViewController = self;
         [self.loginController presentLoginViewController];
+    } else {
+        self.greetingsLabel.text = [NSString stringWithFormat:@"Witaj %@, co chcesz\ndzisiaj zwiedzić?", [[PFUser currentUser] objectForKey:@"username"]];
     }
 }
 

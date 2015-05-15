@@ -34,7 +34,9 @@
 }
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    NSLog(@"did login: %@", user);
+    [self.parentViewController dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"did login: %@", user);
+    }];
 }
 
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
