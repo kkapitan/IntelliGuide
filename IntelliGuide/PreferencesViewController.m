@@ -10,6 +10,7 @@
 #import "AttractionsTableViewController.h"
 #import "CategorySwitcherTableCell.h"
 #import "IGCategory.h"
+#import "LoginController.h"
 //#import "MBProgressHUD.h"
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
@@ -18,6 +19,8 @@
 @property (nonatomic) NSMutableArray *categories;
 @property (nonatomic )NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
+@property (strong) LoginController *loginController;
+@property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
 
 - (IBAction)didToggleCustomLocation:(id)sender;
 
@@ -84,6 +87,15 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (![PFUser currentUser]) {
+        self.loginController = [[LoginController alloc] init];
+        self.loginController.parentViewController = self;
+        [self.loginController presentLoginViewController];
+    } else {
+        self.greetingsLabel.text = [NSString stringWithFormat:@"Witaj %@, co chcesz\ndzisiaj zwiedzić?", [[PFUser currentUser] objectForKey:@"username"]];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
