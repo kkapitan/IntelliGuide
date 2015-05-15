@@ -9,11 +9,13 @@
 #import "PageViewController.h"
 #import "AttractionDescriptionViewController.h"
 #import "AttractionReviewsViewController.h"
+#import "AttractionMenuViewController.h"
+#import "GalleryFetcher.h"
 
 @interface PageViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic) NSArray *myViewControllers;
-
+@property (nonatomic) NSMutableArray *galleryImages;
 @end
 
 @implementation PageViewController
@@ -25,6 +27,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
+    
+    self.galleryImages = [NSMutableArray array];
     self.delegate = self;
     self.dataSource = self;
     
@@ -32,16 +37,25 @@
     vc1.descriptionText = self.attraction.placeDescription;
     AttractionReviewsViewController *vc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionReviewsVC"];
     vc2.attraction = self.attraction;
+    AttractionMenuViewController *vc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionMenuVC"];
+    vc3.attraction = self.attraction;
     
-    self.myViewControllers = @[vc1, vc2];
+    self.myViewControllers = @[vc1, vc2,vc3];
     
     [self setViewControllers:@[vc1] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    
+    [GalleryFetcher fetchGalleryForPlaceWithId:self.attraction.objectId completion:^(NSArray *images) {
+        vc3.galleryImages = images;
+        NSLog(@"lala");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation

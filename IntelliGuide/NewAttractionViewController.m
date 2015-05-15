@@ -8,9 +8,11 @@
 
 #import "NewAttractionViewController.h"
 #import "CategoryPickerTableViewController.h"
+#import "AddGalleryCollectionViewController.h"
 #import "IGAttraction.h"
+#import "GalleryFetcher.h"
 
-@interface NewAttractionViewController () <CategoryPickerDelegate,UITextViewDelegate>
+@interface NewAttractionViewController () <CategoryPickerDelegate,UITextViewDelegate,GalleryDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
@@ -20,6 +22,9 @@
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property  (nonatomic) UITapGestureRecognizer* gestureRecognizer;
+
+@property (nonatomic) NSArray *galleryImages;
+@property (nonatomic) UIImage *mainImage;
 
 @end
 
@@ -37,6 +42,15 @@
             [attractionObject setObjectId:self.toEdit.objectId];
         }
         
+        if(self.galleryImages){
+            NSMutableArray *imageFiles = [NSMutableArray array];
+            for(UIImage *image in self.galleryImages){
+                PFFile *imageFile = [PFFile fileWithData:UIImageJPEGRepresentation(image, 1.0)];
+                [imageFiles addObject:imageFile];
+            }
+            attractionObject[@"gallery"] = imageFiles;
+        }
+    
         [attractionObject save];
         [self displayAlertWithTitle:@"Dodawanie zakończone!" message:@"Proszę czekać na weryfikację atrakcji przez moderatora"];
         
@@ -46,6 +60,13 @@
     }
 }
 
+-(void)didFinishPickingImages:(NSArray *)images{
+    self.galleryImages = images;
+}
+
+-(void)didFinishPickingMainImage:(UIImage *)image{
+    self.mainImage = image;
+}
 
 -(void)keyboardWillShow{
     [self.view addGestureRecognizer:self.gestureRecognizer];
@@ -81,6 +102,11 @@
         [self.categoryPickerButton setTitle:self.category.name forState:UIControlStateNormal];
         self.descriptionTextView.text = self.toEdit.placeDescription;
         self.nameTextField.text = self.toEdit.name;
+        
+        [GalleryFetcher fetchGalleryForPlaceWithId:self.toEdit.objectId completion:^(NSArray *images) {
+            self.galleryImages = images;
+        }];
+        
     }
     // Do any additional setup after loading the view.
 }
@@ -121,6 +147,11 @@
         [self displayAlertWithTitle:@"Błąd" message:@"Proszę wybrać kategorię"];
         return nil;
     }
+    
+    if(self.mainImage){
+        attraction.imageFile = [PFFile fileWithData: UIImageJPEGRepresentation(self.mainImage, 1.0)];
+    }
+    
     return attraction;
 }
 
@@ -138,10 +169,16 @@
     if([segue.identifier isEqual:@"pickCategorySegue"]){
         CategoryPickerTableViewController* destinationViewController = (CategoryPickerTableViewController*)segue.destinationViewController;
         destinationViewController.delegate = self;
+    } else if([segue.identifier isEqualToString:@"createGallerySegue"]){
+        AddGalleryCollectionViewController* destinationViewController = (AddGalleryCollectionViewController*)segue.destinationViewController;
+        destinationViewController.galleryImages = [self.galleryImages mutableCopy];
+        destinationViewController.mainImage = self.mainImage;
+        destinationViewController.delegate = self;
     }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+
 
 
 @end

@@ -20,6 +20,7 @@
 
 @implementation AttractionDetailsViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -35,6 +36,7 @@
             self.placeholderLabel.hidden = YES;
         }
     }];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,12 +50,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if([segue.identifier isEqualToString:@"addReviewSegue"]){
-        NewReviewViewController *newReviewViewController = segue.destinationViewController;
-        newReviewViewController.attraction = self.attraction;
-    }else{
-        PageViewController *pageViewController = (PageViewController*)[segue destinationViewController];
-        pageViewController.attraction = _attraction;
-    }
-}
+    
+    PageViewController *pageViewController = (PageViewController*)[segue destinationViewController];
+    pageViewController.attraction = _attraction;}
 @end
