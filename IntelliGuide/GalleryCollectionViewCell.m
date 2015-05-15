@@ -21,6 +21,10 @@
 
 @implementation GalleryCollectionViewCell
 
+-(void)didMoveToWindow{
+    [self prettify];
+}
+
 -(void)setGalleryImage:(UIImage *)galleryImage{
     _galleryImage = galleryImage;
     _galleryPhotoImageView.image = galleryImage;
@@ -37,6 +41,16 @@
     }
 }
 
+-(void)prettify{
+    self.layer.masksToBounds = NO;
+    self.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.layer.borderWidth = 7.0f;
+    self.layer.contentsScale = [UIScreen mainScreen].scale;
+    self.layer.shadowOpacity = 0.75f;
+    self.layer.shadowRadius = 5.0f;
+    self.layer.shadowOffset = CGSizeZero;
+    self.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
+}
 
 -(void)shake{
 
