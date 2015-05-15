@@ -30,6 +30,7 @@
 		028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC71AD7FD5700C63973 /* Images.xcassets */; };
 		028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC91AD7FD5700C63973 /* LaunchScreen.xib */; };
 		028F4AD71AD7FD5700C63973 /* IntelliGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */; };
+		08038EA91B064B0F0042955B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EA81B064B0F0042955B /* MBProgressHUD.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
@@ -91,6 +92,8 @@
 		028F4AD01AD7FD5700C63973 /* IntelliGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntelliGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		028F4AD51AD7FD5700C63973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntelliGuideTests.m; sourceTree = "<group>"; };
+		08038EA71B064B0F0042955B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		08038EA81B064B0F0042955B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
@@ -233,6 +236,7 @@
 			children = (
 				028F4AB91AD7FD5700C63973 /* IntelliGuide */,
 				021196201AE006A000C367C6 /* Frameworks */,
+				08038EA61B064AFA0042955B /* Libraries */,
 				028F4AD31AD7FD5700C63973 /* IntelliGuideTests */,
 				028F4AB81AD7FD5700C63973 /* Products */,
 			);
@@ -287,6 +291,15 @@
 				028F4AD51AD7FD5700C63973 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		08038EA61B064AFA0042955B /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				08038EA71B064B0F0042955B /* MBProgressHUD.h */,
+				08038EA81B064B0F0042955B /* MBProgressHUD.m */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +416,7 @@
 				08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */,
 				021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
+				08038EA91B064B0F0042955B /* MBProgressHUD.m in Sources */,
 				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */,
