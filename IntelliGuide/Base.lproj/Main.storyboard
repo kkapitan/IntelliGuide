@@ -240,7 +240,7 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cHm-NP-9Lg">
                             <size key="itemSize" width="276" height="215"/>
-                            <size key="headerReferenceSize" width="50" height="164"/>
+                            <size key="headerReferenceSize" width="276" height="166"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                         </collectionViewFlowLayout>
@@ -258,21 +258,11 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gS-XU-Yg0">
                                                     <rect key="frame" x="8" y="8" width="262" height="199"/>
                                                 </imageView>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_x.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qfy-IL-RaQ">
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_x.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qfy-IL-RaQ">
                                                     <rect key="frame" x="247" y="0.0" width="29" height="29"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="29" id="F5o-Lp-66C"/>
-                                                        <constraint firstAttribute="height" constant="29" id="JlI-IK-v1K"/>
-                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Qfy-IL-RaQ" secondAttribute="trailing" id="A1Z-UY-hNX"/>
-                                                <constraint firstAttribute="bottom" secondItem="Qfy-IL-RaQ" secondAttribute="bottom" constant="186" id="eZm-Qk-NwT"/>
-                                                <constraint firstItem="Qfy-IL-RaQ" firstAttribute="leading" secondItem="7gc-iX-x16" secondAttribute="leading" constant="247" id="rhG-bk-LYc"/>
-                                                <constraint firstItem="Qfy-IL-RaQ" firstAttribute="top" secondItem="7gc-iX-x16" secondAttribute="top" id="tVE-ca-cdH"/>
-                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -290,33 +280,29 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryHeader" id="vUq-HB-qJO" customClass="GalleryCollectionReusableView">
-                            <rect key="frame" x="0.0" y="64" width="320" height="164"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="166"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVN-KA-Lar">
-                                    <rect key="frame" x="9" y="0.0" width="302" height="164"/>
+                                <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fVN-KA-Lar">
+                                    <rect key="frame" x="22" y="0.0" width="276" height="164"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NZb-6n-mM6">
-                                            <rect key="frame" x="8" y="7" width="288" height="150"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZb-6n-mM6">
+                                            <rect key="frame" x="8" y="7" width="262" height="150"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="288" id="1Qw-pG-XSZ"/>
-                                                <constraint firstAttribute="height" constant="150" id="Lun-ln-F2Q"/>
-                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="centerY" secondItem="NZb-6n-mM6" secondAttribute="centerY" id="Bvi-Aa-XW2"/>
-                                        <constraint firstAttribute="centerX" secondItem="NZb-6n-mM6" secondAttribute="centerX" constant="-1" id="qKl-AR-DnP"/>
+                                        <constraint firstAttribute="centerY" secondItem="NZb-6n-mM6" secondAttribute="centerY" id="DEw-dN-7pQ"/>
+                                        <constraint firstAttribute="centerX" secondItem="NZb-6n-mM6" secondAttribute="centerX" constant="-1" id="TwE-WH-MYc"/>
                                     </constraints>
                                 </view>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="fVN-KA-Lar" firstAttribute="top" secondItem="vUq-HB-qJO" secondAttribute="topMargin" constant="-8" id="PBE-gr-Tig"/>
-                                <constraint firstAttribute="bottomMargin" secondItem="fVN-KA-Lar" secondAttribute="bottom" constant="-8" id="dhx-F8-D1b"/>
-                                <constraint firstItem="fVN-KA-Lar" firstAttribute="leading" secondItem="vUq-HB-qJO" secondAttribute="leadingMargin" constant="1" id="p7E-fQ-NOf"/>
-                                <constraint firstAttribute="trailingMargin" secondItem="fVN-KA-Lar" secondAttribute="trailing" constant="1" id="pgt-3h-XL9"/>
+                                <constraint firstAttribute="centerX" secondItem="fVN-KA-Lar" secondAttribute="centerX" id="L3e-08-rjs"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="fVN-KA-Lar" secondAttribute="bottom" constant="-6" id="nYv-UF-2sM"/>
+                                <constraint firstItem="fVN-KA-Lar" firstAttribute="top" secondItem="vUq-HB-qJO" secondAttribute="topMargin" constant="-8" id="qMV-OU-ClW"/>
+                                <constraint firstAttribute="centerY" secondItem="fVN-KA-Lar" secondAttribute="centerY" constant="1" id="waV-8o-tDf"/>
                             </constraints>
                             <connections>
                                 <outlet property="headerImageView" destination="NZb-6n-mM6" id="PPg-q0-Zdv"/>
