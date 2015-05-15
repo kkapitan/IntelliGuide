@@ -12,5 +12,5 @@
 
 @property (strong,nonatomic) UIImage *galleryImage;
 
--(void)shake;
+-(void)setDeletable:(BOOL)deletable;
 @end

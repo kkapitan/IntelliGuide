@@ -88,13 +88,13 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    if (![PFUser currentUser]) {
+    /*if (![PFUser currentUser]) {
         self.loginController = [[LoginController alloc] init];
         self.loginController.parentViewController = self;
         [self.loginController presentLoginViewController];
     } else {
         self.greetingsLabel.text = [NSString stringWithFormat:@"Witaj %@, co chcesz\ndzisiaj zwiedzić?", [[PFUser currentUser] objectForKey:@"username"]];
-    }
+    } */
 }
 
 - (void)didReceiveMemoryWarning {
