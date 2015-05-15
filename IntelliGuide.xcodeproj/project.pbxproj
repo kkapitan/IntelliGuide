@@ -261,6 +261,7 @@
 			children = (
 				028F4AB91AD7FD5700C63973 /* IntelliGuide */,
 				021196201AE006A000C367C6 /* Frameworks */,
+				08038EA61B064AFA0042955B /* Libraries */,
 				028F4AD31AD7FD5700C63973 /* IntelliGuideTests */,
 				028F4AB81AD7FD5700C63973 /* Products */,
 			);
@@ -444,6 +445,7 @@
 				021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */,
 				0290415C1B06487E00B2B41E /* AttractionMenuViewController.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
+				08038EA91B064B0F0042955B /* MBProgressHUD.m in Sources */,
 				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */,

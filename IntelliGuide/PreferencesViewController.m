@@ -10,6 +10,7 @@
 #import "AttractionsTableViewController.h"
 #import "CategorySwitcherTableCell.h"
 #import "IGCategory.h"
+#import "MBProgressHUD.h"
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -67,12 +68,15 @@
     self.categoriesTableView.dataSource = self;
     [self.categoriesTableView registerNib:[UINib nibWithNibName:@"CategorySwitcherTableCell" bundle:nil] forCellReuseIdentifier:@"CategorySwitcherCell"];
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     PFQuery *categoriesQuery = [PFQuery queryWithClassName:@"Category"];
     [categoriesQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         for (PFObject *o in objects) {
             IGCategory *category = [IGCategory categoryWithParseObject:o];
             [self.categories addObject:category];
         }
+        [hud hide:YES];
         [self.categoriesTableView reloadData];
     }];
     

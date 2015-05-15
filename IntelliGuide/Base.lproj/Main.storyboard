@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -543,12 +543,13 @@
                                         </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="GHk-26-hYB" firstAttribute="top" secondItem="9h2-2k-NGv" secondAttribute="bottom" constant="8" id="1Ie-3K-RTD"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="8" id="78q-Aw-ayR"/>
                                         <constraint firstItem="GHk-26-hYB" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="8" id="8wh-hp-xhu"/>
-                                        <constraint firstItem="1PU-kg-bgb" firstAttribute="leading" secondItem="9h2-2k-NGv" secondAttribute="trailing" constant="162" id="9xk-N7-wpP"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="centerY" secondItem="1PU-kg-bgb" secondAttribute="centerY" constant="-1.25" id="Zfw-bK-go7"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="top" secondItem="nKV-xP-8tk" secondAttribute="top" constant="15" id="eJm-Ec-lSo"/>
-                                        <constraint firstAttribute="bottom" secondItem="GHk-26-hYB" secondAttribute="bottom" constant="23" id="tDm-mU-JaP"/>
+                                        <constraint firstAttribute="trailing" secondItem="GHk-26-hYB" secondAttribute="trailing" constant="8" id="geL-Gh-Hs9"/>
+                                        <constraint firstAttribute="trailing" secondItem="1PU-kg-bgb" secondAttribute="trailing" constant="8" id="rjC-mZ-ojO"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -806,6 +807,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gE7-EN-Sbh"/>
+        <segue reference="L2f-Lf-pg8"/>
     </inferredMetricsTieBreakers>
 </document>
