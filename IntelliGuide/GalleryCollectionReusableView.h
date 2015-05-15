@@ -10,4 +10,5 @@
 
 @interface GalleryCollectionReusableView : UICollectionReusableView
 @property (strong,nonatomic) UIImage *headerImage;
+
 @end

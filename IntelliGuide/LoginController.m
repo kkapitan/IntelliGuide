@@ -25,7 +25,6 @@
     [logInViewController setFields: PFLogInFieldsDefault | PFLogInFieldsDismissButton];
 //    [logInViewController setFields:PFLogInFieldsFacebook | PFLogInFieldsTwitter | PFLogInFieldsDefault | PFLogInFieldsDismissButton];
 //    [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", @"public_profile", nil]];
-    
     return logInViewController;
 }
 

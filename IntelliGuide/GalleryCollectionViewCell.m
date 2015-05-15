@@ -15,6 +15,7 @@
 
 @interface GalleryCollectionViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *galleryPhotoImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *crossImageView;
 
 @end
 
@@ -25,9 +26,20 @@
     _galleryPhotoImageView.image = galleryImage;
 }
 
+-(void)setDeletable:(BOOL)deletable{
+    if(deletable){
+        [self shake];
+        self.crossImageView.hidden = NO;
+    }else{
+        [self.layer removeAllAnimations];
+        self.transform = CGAffineTransformMakeRotation(0.0);
+        self.crossImageView.hidden = YES;
+    }
+}
+
+
 -(void)shake{
 
-    
     //startJiggling
     
     int count = 1;

@@ -36,6 +36,7 @@
 		0290415C1B06487E00B2B41E /* AttractionMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290415B1B06487E00B2B41E /* AttractionMenuViewController.m */; };
 		0290415F1B064D1200B2B41E /* GalleryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */; };
 		029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 029041621B065DAC00B2B41E /* GalleryFetcher.m */; };
+		029041651B06781300B2B41E /* icon_x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029041641B06781300B2B41E /* icon_x.png */; };
 		08038EB31B0668CF0042955B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB21B0668CF0042955B /* Accounts.framework */; };
 		08038EB51B0668D70042955B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB41B0668D70042955B /* Social.framework */; };
 		08038EB81B0669460042955B /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EB71B0669460042955B /* LoginController.m */; };
@@ -113,6 +114,7 @@
 		0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewController.m; sourceTree = "<group>"; };
 		029041611B065DAC00B2B41E /* GalleryFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryFetcher.h; sourceTree = "<group>"; };
 		029041621B065DAC00B2B41E /* GalleryFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryFetcher.m; sourceTree = "<group>"; };
+		029041641B06781300B2B41E /* icon_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_x.png; sourceTree = "<group>"; };
 		08038EB21B0668CF0042955B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		08038EB41B0668D70042955B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		08038EB61B0669460042955B /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				028F4ABF1AD7FD5700C63973 /* AppDelegate.m */,
 				028F4AC41AD7FD5700C63973 /* Main.storyboard */,
 				028F4AC71AD7FD5700C63973 /* Images.xcassets */,
+				029041641B06781300B2B41E /* icon_x.png */,
 				028F4AC91AD7FD5700C63973 /* LaunchScreen.xib */,
 				028F4ABA1AD7FD5700C63973 /* Supporting Files */,
 				029041601B065D7900B2B41E /* Utilities */,
@@ -435,6 +438,7 @@
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
 				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
+				029041651B06781300B2B41E /* icon_x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

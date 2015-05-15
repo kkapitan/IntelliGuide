@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -252,20 +252,40 @@
                                     <rect key="frame" x="0.0" y="0.0" width="276" height="215"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gc-iX-x16">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gc-iX-x16">
                                             <rect key="frame" x="0.0" y="0.0" width="276" height="215"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gS-XU-Yg0">
                                                     <rect key="frame" x="8" y="8" width="262" height="199"/>
                                                 </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_x.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qfy-IL-RaQ">
+                                                    <rect key="frame" x="247" y="0.0" width="29" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="29" id="F5o-Lp-66C"/>
+                                                        <constraint firstAttribute="height" constant="29" id="JlI-IK-v1K"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Qfy-IL-RaQ" secondAttribute="trailing" id="A1Z-UY-hNX"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qfy-IL-RaQ" secondAttribute="bottom" constant="186" id="eZm-Qk-NwT"/>
+                                                <constraint firstItem="Qfy-IL-RaQ" firstAttribute="leading" secondItem="7gc-iX-x16" secondAttribute="leading" constant="247" id="rhG-bk-LYc"/>
+                                                <constraint firstItem="Qfy-IL-RaQ" firstAttribute="top" secondItem="7gc-iX-x16" secondAttribute="top" id="tVE-ca-cdH"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="7gc-iX-x16" firstAttribute="top" secondItem="p3r-7c-LB5" secondAttribute="topMargin" constant="-8" id="7Ql-a6-ZHr"/>
+                                    <constraint firstItem="7gc-iX-x16" firstAttribute="leading" secondItem="p3r-7c-LB5" secondAttribute="leadingMargin" constant="-8" id="AOs-SW-bH7"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="7gc-iX-x16" secondAttribute="bottom" constant="-8" id="JRk-0F-IEN"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="7gc-iX-x16" secondAttribute="trailing" constant="-8" id="YHp-fn-ej9"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="galleryPhotoImageView" destination="2gS-XU-Yg0" id="4WJ-T8-JO4"/>
+                                    <outlet property="crossImageView" destination="Qfy-IL-RaQ" id="F75-Ju-NXl"/>
+                                    <outlet property="galleryPhotoImageView" destination="2gS-XU-Yg0" id="9tf-Y1-CL6"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -803,6 +823,9 @@
             <point key="canvasLocation" x="2721" y="917"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_x.png" width="100" height="100"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

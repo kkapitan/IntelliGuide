@@ -103,7 +103,7 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     for(NSIndexPath *indexPath in self.collectionView.indexPathsForVisibleItems){
         if(indexPath.row){
             GalleryCollectionViewCell *cell = (GalleryCollectionViewCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
-            [cell shake];
+            [cell setDeletable:YES];
         }
     }
     [self.view addGestureRecognizer:self.tapRecognizer];
@@ -114,10 +114,9 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     NSLog(@"Delete disabled");
     self.deletingItem = NO;
     
-    for(UICollectionViewCell *cell in self.collectionView.visibleCells ){
+    for(GalleryCollectionViewCell *cell in self.collectionView.visibleCells ){
 
-        [cell.layer removeAllAnimations];
-        cell.transform = CGAffineTransformMakeRotation(0.0);
+        [cell setDeletable:NO];
     }
     
     [self.view addGestureRecognizer:self.longPressRecognizer];
@@ -164,7 +163,7 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     // Configure the cell
     if(indexPath.row){
         cell.galleryImage = self.galleryImages[indexPath.row-1];
-        if(self.deletingItem)[cell shake];
+        if(self.deletingItem)[cell setDeletable:YES];
     }
     else
         cell.galleryImage = nil;
