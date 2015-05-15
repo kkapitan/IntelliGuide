@@ -96,16 +96,20 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     
 }
 
--(void)enableDelete:(id)sender{
-    NSLog(@"Delete enabled");
-    self.deletingItem = YES;
-    
+-(void)markDeletable{
     for(NSIndexPath *indexPath in self.collectionView.indexPathsForVisibleItems){
-        if(indexPath.row){
+        if(indexPath.row != self.galleryImages.count){
             GalleryCollectionViewCell *cell = (GalleryCollectionViewCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
             [cell setDeletable:YES];
         }
     }
+}
+
+-(void)enableDelete:(id)sender{
+    NSLog(@"Delete enabled");
+    self.deletingItem = YES;
+    
+    [self markDeletable];
     [self.view addGestureRecognizer:self.tapRecognizer];
     [self.view removeGestureRecognizer:self.longPressRecognizer];
 }
@@ -134,7 +138,7 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     if(self.editingItem){
         NSIndexPath *indexPath = [[self.collectionView indexPathsForSelectedItems] firstObject];
-        self.galleryImages[indexPath.row - 1] = image;
+        self.galleryImages[indexPath.row] = image;
     }else if( self.pickingMainPhoto ){
         self.mainImage = image;
     }
@@ -161,8 +165,8 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     
     
     // Configure the cell
-    if(indexPath.row){
-        cell.galleryImage = self.galleryImages[indexPath.row-1];
+    if(indexPath.row != self.galleryImages.count){
+        cell.galleryImage = self.galleryImages[indexPath.row];
         if(self.deletingItem)[cell setDeletable:YES];
     }
     else
@@ -189,14 +193,14 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     
     if(!self.deletingItem){
         
-        if(indexPath.row)self.editingItem = YES;
+        if(indexPath.row == self.galleryImages.count)self.editingItem = YES;
         [self presentViewController:self.imagePicker animated:YES completion:nil];
    
-    }else if(indexPath.row){
+    }else if(indexPath.row != self.galleryImages.count){
         
-        [self.galleryImages removeObjectAtIndex:indexPath.row - 1];
+        [self.galleryImages removeObjectAtIndex:indexPath.row];
         [collectionView deleteItemsAtIndexPaths:@[indexPath]];
-        
+        [self markDeletable];
     }
 }
 

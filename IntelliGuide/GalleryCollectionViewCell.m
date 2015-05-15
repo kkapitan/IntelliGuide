@@ -23,6 +23,8 @@
 
 -(void)didMoveToWindow{
     [self prettify];
+    self.crossImageView.hidden = YES;
+
 }
 
 -(void)setGalleryImage:(UIImage *)galleryImage{
