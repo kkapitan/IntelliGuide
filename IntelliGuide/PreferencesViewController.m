@@ -11,6 +11,7 @@
 #import "CategorySwitcherTableCell.h"
 #import "IGCategory.h"
 #import "MBProgressHUD.h"
+#import "LoginController.h"
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -18,6 +19,8 @@
 @property (nonatomic) NSMutableArray *categories;
 @property (nonatomic )NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
+
+@property (strong) LoginController *loginController;
 
 - (IBAction)didToggleCustomLocation:(id)sender;
 
@@ -84,6 +87,13 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    if (![PFUser currentUser]) {
+        self.loginController = [[LoginController alloc] init];
+        self.loginController.parentViewController = self;
+        [self.loginController presentLoginViewController];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

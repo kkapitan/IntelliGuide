@@ -31,6 +31,9 @@
 		028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC91AD7FD5700C63973 /* LaunchScreen.xib */; };
 		028F4AD71AD7FD5700C63973 /* IntelliGuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */; };
 		08038EA91B064B0F0042955B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EA81B064B0F0042955B /* MBProgressHUD.m */; };
+		08038EAD1B0663590042955B /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EAC1B0663590042955B /* LoginController.m */; };
+		08038EAF1B0666A10042955B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EAE1B0666A10042955B /* Accounts.framework */; };
+		08038EB11B0666A60042955B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB01B0666A60042955B /* Social.framework */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
@@ -94,6 +97,10 @@
 		028F4AD61AD7FD5700C63973 /* IntelliGuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntelliGuideTests.m; sourceTree = "<group>"; };
 		08038EA71B064B0F0042955B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		08038EA81B064B0F0042955B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		08038EAB1B0663590042955B /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
+		08038EAC1B0663590042955B /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		08038EAE1B0666A10042955B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		08038EB01B0666A60042955B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
@@ -127,6 +134,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08038EB11B0666A60042955B /* Social.framework in Frameworks */,
+				08038EAF1B0666A10042955B /* Accounts.framework in Frameworks */,
 				0211961F1AE0065D00C367C6 /* libsqlite3.0.dylib in Frameworks */,
 				021196171AE0037A00C367C6 /* Foundation.framework in Frameworks */,
 				021196151AE0037300C367C6 /* UIKit.framework in Frameworks */,
@@ -158,6 +167,8 @@
 		021196201AE006A000C367C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08038EB01B0666A60042955B /* Social.framework */,
+				08038EAE1B0666A10042955B /* Accounts.framework */,
 				0894860F1AE169D600B966E2 /* Bolts.framework */,
 				089486101AE169D600B966E2 /* Parse.framework */,
 				089486111AE169D600B966E2 /* ParseUI.framework */,
@@ -261,6 +272,7 @@
 				028F4AC91AD7FD5700C63973 /* LaunchScreen.xib */,
 				028F4ABA1AD7FD5700C63973 /* Supporting Files */,
 				021196251AE0178C00C367C6 /* Model */,
+				08038EAA1B06632D0042955B /* Utils */,
 				021196241AE0178000C367C6 /* ViewControllers */,
 				021196261AE0179E00C367C6 /* Views */,
 			);
@@ -300,6 +312,15 @@
 				08038EA81B064B0F0042955B /* MBProgressHUD.m */,
 			);
 			name = Libraries;
+			sourceTree = "<group>";
+		};
+		08038EAA1B06632D0042955B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				08038EAB1B0663590042955B /* LoginController.h */,
+				08038EAC1B0663590042955B /* LoginController.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,6 +435,7 @@
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
 				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
 				08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */,
+				08038EAD1B0663590042955B /* LoginController.m in Sources */,
 				021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				08038EA91B064B0F0042955B /* MBProgressHUD.m in Sources */,
