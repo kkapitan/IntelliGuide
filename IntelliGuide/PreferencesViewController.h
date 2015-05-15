@@ -17,4 +17,7 @@
  In future it will also get user location or allow him/her to enter custom place.
  */
 @interface PreferencesViewController : UIViewController
+
+@property (nonatomic) BOOL moderationMode;
+
 @end

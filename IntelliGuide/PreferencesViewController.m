@@ -11,16 +11,18 @@
 #import "CategorySwitcherTableCell.h"
 #import "IGCategory.h"
 #import "LoginController.h"
+#import "SWRevealViewController.h"
 //#import "MBProgressHUD.h"
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic) BOOL moderationMode;
+@property (nonatomic) BOOL didShowLogin;
 @property (nonatomic) NSMutableArray *categories;
 @property (nonatomic )NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 @property (strong) LoginController *loginController;
 @property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 - (IBAction)didToggleCustomLocation:(id)sender;
 
@@ -65,6 +67,7 @@
     
     //_categories = @[@"Park",@"Muzeum",@"Zabytek",@"Kino",@"Teatr",@"Cmentarz"];
     
+    self.didShowLogin = NO;
     self.categories = [[NSMutableArray alloc] init];
     self.selectedCategories = [NSMutableArray array];
     self.categoriesTableView.delegate = self;
@@ -83,18 +86,29 @@
         [self.categoriesTableView reloadData];
     }];
     
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"DownloadedCategoryImage" object:nil];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    /*if (![PFUser currentUser]) {
-        self.loginController = [[LoginController alloc] init];
-        self.loginController.parentViewController = self;
-        [self.loginController presentLoginViewController];
+    if (![PFUser currentUser]) {
+        if (!_didShowLogin) {
+            _didShowLogin = YES;
+            self.loginController = [[LoginController alloc] init];
+            self.loginController.parentViewController = self;
+            [self.loginController presentLoginViewController];
+        }
     } else {
         self.greetingsLabel.text = [NSString stringWithFormat:@"Witaj %@, co chcesz\ndzisiaj zwiedzić?", [[PFUser currentUser] objectForKey:@"username"]];
-    } */
+    }
 }
 
 - (void)didReceiveMemoryWarning {

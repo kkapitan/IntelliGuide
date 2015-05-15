@@ -40,6 +40,9 @@
 		08038EB31B0668CF0042955B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB21B0668CF0042955B /* Accounts.framework */; };
 		08038EB51B0668D70042955B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB41B0668D70042955B /* Social.framework */; };
 		08038EB81B0669460042955B /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EB71B0669460042955B /* LoginController.m */; };
+		08038EBB1B067C2D0042955B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EBA1B067C2D0042955B /* SWRevealViewController.m */; };
+		08038EBE1B0683370042955B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EBD1B0683370042955B /* MenuViewController.m */; };
+		08038EC11B06875D0042955B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EC01B06875D0042955B /* SettingsViewController.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
@@ -118,6 +121,12 @@
 		08038EB41B0668D70042955B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		08038EB61B0669460042955B /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
 		08038EB71B0669460042955B /* LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginController.m; sourceTree = "<group>"; };
+		08038EB91B067C2D0042955B /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		08038EBA1B067C2D0042955B /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		08038EBC1B0683370042955B /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		08038EBD1B0683370042955B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		08038EBF1B06875D0042955B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		08038EC01B06875D0042955B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
@@ -184,6 +193,8 @@
 		021196201AE006A000C367C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08038EB91B067C2D0042955B /* SWRevealViewController.h */,
+				08038EBA1B067C2D0042955B /* SWRevealViewController.m */,
 				08038EB41B0668D70042955B /* Social.framework */,
 				08038EB21B0668CF0042955B /* Accounts.framework */,
 				0894860F1AE169D600B966E2 /* Bolts.framework */,
@@ -232,6 +243,10 @@
 				0290415B1B06487E00B2B41E /* AttractionMenuViewController.m */,
 				0290415D1B064D1200B2B41E /* GalleryCollectionViewController.h */,
 				0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */,
+				08038EBC1B0683370042955B /* MenuViewController.h */,
+				08038EBD1B0683370042955B /* MenuViewController.m */,
+				08038EBF1B06875D0042955B /* SettingsViewController.h */,
+				08038EC01B06875D0042955B /* SettingsViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -452,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029041501B0602BC00B2B41E /* AddGalleryCollectionViewController.m in Sources */,
+				08038EBE1B0683370042955B /* MenuViewController.m in Sources */,
 				08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */,
 				028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
@@ -464,6 +480,7 @@
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
+				08038EBB1B067C2D0042955B /* SWRevealViewController.m in Sources */,
 				029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */,
 				0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
@@ -476,6 +493,7 @@
 				085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */,
 				021E59171AE40BF30003B6B7 /* CategoryPickerTableViewController.m in Sources */,
 				08C80D6F1AE3DC120033296F /* ReviewCell.m in Sources */,
+				08038EC11B06875D0042955B /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
