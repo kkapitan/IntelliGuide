@@ -16,6 +16,7 @@
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) BOOL moderationMode;
+@property (nonatomic) BOOL didShowLogin;
 @property (nonatomic) NSMutableArray *categories;
 @property (nonatomic )NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
@@ -65,6 +66,7 @@
     
     //_categories = @[@"Park",@"Muzeum",@"Zabytek",@"Kino",@"Teatr",@"Cmentarz"];
     
+    self.didShowLogin = NO;
     self.categories = [[NSMutableArray alloc] init];
     self.selectedCategories = [NSMutableArray array];
     self.categoriesTableView.delegate = self;
@@ -87,11 +89,14 @@
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     if (![PFUser currentUser]) {
-        self.loginController = [[LoginController alloc] init];
-        self.loginController.parentViewController = self;
-        [self.loginController presentLoginViewController];
+        if (!_didShowLogin) {
+            _didShowLogin = YES;
+            self.loginController = [[LoginController alloc] init];
+            self.loginController.parentViewController = self;
+            [self.loginController presentLoginViewController];
+        }
     } else {
         self.greetingsLabel.text = [NSString stringWithFormat:@"Witaj %@, co chcesz\ndzisiaj zwiedzić?", [[PFUser currentUser] objectForKey:@"username"]];
     }
