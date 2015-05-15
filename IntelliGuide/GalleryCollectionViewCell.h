@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface GalleryCollectionViewCell : UICollectionViewCell
+
 @property (strong,nonatomic) UIImage *galleryImage;
+
+-(void)shake;
 @end

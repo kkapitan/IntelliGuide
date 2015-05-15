@@ -9,6 +9,7 @@
 #import "AddGalleryCollectionViewController.h"
 #import "GalleryCollectionViewCell.h"
 #import "GalleryCollectionReusableView.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface AddGalleryCollectionViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 
@@ -72,7 +73,7 @@ static NSString * const reuseIdentifier = @"GalleryCell";
 - (IBAction)done:(id)sender {
     [self.delegate didFinishPickingMainImage:self.mainImage];
     [self.delegate didFinishPickingImages:self.galleryImages];
-    NSLog(@"lala");
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -98,6 +99,13 @@ static NSString * const reuseIdentifier = @"GalleryCell";
 -(void)enableDelete:(id)sender{
     NSLog(@"Delete enabled");
     self.deletingItem = YES;
+    
+    for(NSIndexPath *indexPath in self.collectionView.indexPathsForVisibleItems){
+        if(indexPath.row){
+            GalleryCollectionViewCell *cell = (GalleryCollectionViewCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
+            [cell shake];
+        }
+    }
     [self.view addGestureRecognizer:self.tapRecognizer];
     [self.view removeGestureRecognizer:self.longPressRecognizer];
 }
@@ -105,6 +113,13 @@ static NSString * const reuseIdentifier = @"GalleryCell";
 -(void)disableDelete:(id)sender{
     NSLog(@"Delete disabled");
     self.deletingItem = NO;
+    
+    for(UICollectionViewCell *cell in self.collectionView.visibleCells ){
+
+        [cell.layer removeAllAnimations];
+        cell.transform = CGAffineTransformMakeRotation(0.0);
+    }
+    
     [self.view addGestureRecognizer:self.longPressRecognizer];
     [self.view removeGestureRecognizer:self.tapRecognizer];
 }
@@ -145,10 +160,12 @@ static NSString * const reuseIdentifier = @"GalleryCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     GalleryCollectionViewCell *cell = (GalleryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-
+    
     // Configure the cell
-    if(indexPath.row)
+    if(indexPath.row){
         cell.galleryImage = self.galleryImages[indexPath.row-1];
+        if(self.deletingItem)[cell shake];
+    }
     else
         cell.galleryImage = nil;
     

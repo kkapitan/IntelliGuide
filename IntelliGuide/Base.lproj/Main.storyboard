@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GRt-aw-d9L">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -33,8 +33,7 @@
                                     <segue destination="xn6-px-oqg" kind="push" identifier="QueryForAttractions" id="4qC-nI-jNW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Witaj &lt;username&gt;, co chcesz
-dziś zwiedzić?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-gc-1Hl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Witaj &lt;username&gt;, co chcesz dziś zwiedzić?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-gc-1Hl">
                                 <rect key="frame" x="47" y="72" width="227" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -75,6 +74,7 @@ dziś zwiedzić?" textAlignment="center" lineBreakMode="tailTruncation" numberOf
                             <constraint firstAttribute="trailing" secondItem="TjD-s6-3uc" secondAttribute="trailing" constant="16" id="J03-wt-XCi"/>
                             <constraint firstItem="TjD-s6-3uc" firstAttribute="top" secondItem="LsR-gc-1Hl" secondAttribute="bottom" constant="8" id="JRK-D4-Ysm"/>
                             <constraint firstItem="LsR-gc-1Hl" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="RXU-nf-1uz"/>
+                            <constraint firstItem="LsR-gc-1Hl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="31" id="SGp-p0-Oq9"/>
                             <constraint firstAttribute="trailing" secondItem="ZwL-DN-O84" secondAttribute="trailing" constant="18" id="Zmm-s2-KK9"/>
                             <constraint firstItem="IGY-DI-1Ot" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="j0o-Tf-VsB"/>
                             <constraint firstAttribute="trailing" secondItem="fmb-l1-i9s" secondAttribute="trailing" constant="16" id="rZM-2R-p74"/>
@@ -269,7 +269,7 @@ dziś zwiedzić?" textAlignment="center" lineBreakMode="tailTruncation" numberOf
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryHeader" id="vUq-HB-qJO" customClass="GalleryCollectionReusableView">
-                            <rect key="frame" x="0.0" y="64" width="320" height="50"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="164"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVN-KA-Lar">
@@ -781,7 +781,7 @@ dziś zwiedzić?" textAlignment="center" lineBreakMode="tailTruncation" numberOf
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sx4-8Y-kvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="-153"/>
+            <point key="canvasLocation" x="3760" y="933"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cLl-AN-8xx">
