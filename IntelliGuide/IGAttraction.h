@@ -49,6 +49,8 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
     IGAttractionKeyVerified,
     
     IGAttractionKeyImage,
+    
+    IGAttractionKeyCreator,
 };
 
 ///------
@@ -77,6 +79,8 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
 @property (nonatomic,readonly) NSString *objectId;
 
 @property PFFile *imageFile;
+
+@property PFUser *creator;
 
 //------
 //@name Class methods

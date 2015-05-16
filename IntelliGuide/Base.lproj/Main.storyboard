@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FB0-Ii-hOf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FB0-Ii-hOf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -86,7 +86,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="pZj-hZ-ixr"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="W7f-nt-Out">
                             <connections>
-                                <segue destination="KyS-Mf-zZg" kind="push" id="Ow0-7u-Pby"/>
+                                <segue destination="KyS-Mf-zZg" kind="push" identifier="newAttractionSegue" id="Ow0-7u-Pby"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -143,12 +143,12 @@
                                     <segue destination="GRt-aw-d9L" kind="custom" identifier="moderationPanel" customClass="SWRevealViewControllerSeguePushController" id="G6X-nT-bnv"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settings" textLabel="Il8-40-NUM" style="IBUITableViewCellStyleDefault" id="y84-yq-4xH">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myAttractions" textLabel="Il8-40-NUM" style="IBUITableViewCellStyleDefault" id="y84-yq-4xH">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y84-yq-4xH" id="FeT-fL-9VM">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ustawienia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Il8-40-NUM">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Moje atrakcje" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Il8-40-NUM">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -157,7 +157,24 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="dcv-vU-Si6" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="EpM-3b-TBB"/>
+                                    <segue destination="GRt-aw-d9L" kind="custom" identifier="myAttractions" customClass="SWRevealViewControllerSeguePushController" id="mHg-RU-pew"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settings" textLabel="K7u-op-6nq" style="IBUITableViewCellStyleDefault" id="ivc-SF-oeE">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ivc-SF-oeE" id="Wfj-Yy-vpC">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ustawienia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K7u-op-6nq">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="dcv-vU-Si6" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Zk8-rK-Dw1"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -329,6 +346,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPhotosButton" destination="dFV-eu-OZ1" id="58m-8I-ZwW"/>
                         <outlet property="categoryPickerButton" destination="0Fm-O0-bgx" id="OMo-Lq-zfe"/>
                         <outlet property="descriptionLabel" destination="YPf-bt-bIU" id="aOW-aG-m4A"/>
                         <outlet property="descriptionTextView" destination="MOg-8o-06c" id="Sds-Hi-0xN"/>
@@ -390,7 +408,7 @@
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryHeader" id="vUq-HB-qJO" customClass="GalleryCollectionReusableView">
-                            <rect key="frame" x="0.0" y="64" width="320" height="166"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="193"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVN-KA-Lar">
@@ -753,8 +771,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-Na-wAr">
-                                <rect key="frame" x="109" y="78" width="102" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUA-Na-wAr">
+                                <rect key="frame" x="109" y="118" width="102" height="30"/>
                                 <state key="normal" title="Dodaj recenzję">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -762,8 +780,8 @@
                                     <segue destination="0NP-gF-qsh" kind="push" identifier="addReviewSegue" id="G0Z-Bv-NPm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfu-N8-1TH">
-                                <rect key="frame" x="89" y="28" width="142" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfu-N8-1TH">
+                                <rect key="frame" x="89" y="72" width="142" height="30"/>
                                 <state key="normal" title="Zobacz galerię zdjęć">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -775,11 +793,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xfu-N8-1TH" firstAttribute="top" secondItem="5Zo-Im-f3C" secondAttribute="bottom" constant="8" id="8CT-DH-rHX"/>
-                            <constraint firstItem="fUA-Na-wAr" firstAttribute="top" secondItem="Xfu-N8-1TH" secondAttribute="bottom" constant="20" id="Fcv-jQ-FHs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fUA-Na-wAr" secondAttribute="trailing" constant="93" id="SRg-Ty-Cy0"/>
-                            <constraint firstItem="fUA-Na-wAr" firstAttribute="leading" secondItem="MIU-xU-OHO" secondAttribute="leadingMargin" constant="93" id="WNs-MQ-nVB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xfu-N8-1TH" secondAttribute="trailing" constant="73" id="eTj-qH-8Qm"/>
-                            <constraint firstItem="Xfu-N8-1TH" firstAttribute="leading" secondItem="MIU-xU-OHO" secondAttribute="leadingMargin" constant="73" id="fWM-si-Fng"/>
+                            <constraint firstAttribute="centerX" secondItem="Xfu-N8-1TH" secondAttribute="centerX" id="94m-fO-ehD"/>
+                            <constraint firstItem="fUA-Na-wAr" firstAttribute="top" secondItem="Xfu-N8-1TH" secondAttribute="bottom" constant="16" id="Fcv-jQ-FHs"/>
+                            <constraint firstAttribute="centerX" secondItem="fUA-Na-wAr" secondAttribute="centerX" id="N3V-ut-pRe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IzN-Lw-xsx"/>
@@ -972,7 +988,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="mHg-RU-pew"/>
         <segue reference="Ow0-7u-Pby"/>
-        <segue reference="G6X-nT-bnv"/>
     </inferredMetricsTieBreakers>
 </document>

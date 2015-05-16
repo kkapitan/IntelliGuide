@@ -59,8 +59,8 @@
     
     PFQuery *attractionQuery = [PFQuery queryWithClassName:@"Place"];
     [attractionQuery includeKey:categoryKey];
-
-    [attractionQuery whereKey:categoryKey matchesQuery:categoryQuery];
+    if (_userAttarctionsMode) [attractionQuery whereKey:@"Creator" equalTo:[PFUser currentUser]];
+    else [attractionQuery whereKey:categoryKey matchesQuery:categoryQuery];
     [attractionQuery whereKey:verifiedKey equalTo:[NSNumber numberWithBool:!self.moderationMode]];
     
     return attractionQuery;

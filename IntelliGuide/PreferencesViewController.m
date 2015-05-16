@@ -12,7 +12,8 @@
 #import "IGCategory.h"
 #import "LoginController.h"
 #import "SWRevealViewController.h"
-//#import "MBProgressHUD.h"
+#import "MBProgressHUD.h"
+#import "NewAttractionViewController.h"
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -74,7 +75,7 @@
     self.categoriesTableView.dataSource = self;
     [self.categoriesTableView registerNib:[UINib nibWithNibName:@"CategorySwitcherTableCell" bundle:nil] forCellReuseIdentifier:@"CategorySwitcherCell"];
     
-  //  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     PFQuery *categoriesQuery = [PFQuery queryWithClassName:@"Category"];
     [categoriesQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -82,7 +83,7 @@
             IGCategory *category = [IGCategory categoryWithParseObject:o];
             [self.categories addObject:category];
         }
-     //   [hud hide:YES];
+        [hud hide:YES];
         [self.categoriesTableView reloadData];
     }];
     
@@ -151,14 +152,35 @@
 
 #pragma mark - Navigation
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"newAttractionSegue"]) {
+        if ([PFUser currentUser]) {
+            return YES;
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Musisz być zalogowany, żeby dodać nową atrakcję" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Zaloguj", nil];
+            [alert show];
+            return NO;
+        }
+    } else {
+        return YES;
+    }
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString: @"QueryForAttractions"]){
-        
         AttractionsTableViewController *destinationViewController = [segue destinationViewController];
         destinationViewController.preferences = [self buildPreferences];
         destinationViewController.moderationMode = self.moderationMode;
+        destinationViewController.userAttarctionsMode = self.userAttractionsMode;
     }
+    
+    
+//        NewAttractionViewController *destinationViewController = [segue destinationViewController];
+//        destinationViewController.preferences = [self buildPreferences];
+//        destinationViewController.moderationMode = NO;
+//        destinationViewController.userAttarctionsMode = YES;
+    
 }
 
 //Cell animation

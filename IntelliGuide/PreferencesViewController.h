@@ -18,6 +18,10 @@
  */
 @interface PreferencesViewController : UIViewController
 
+//TODO zamienić to na jakiegoś enuma
+
 @property (nonatomic) BOOL moderationMode;
+
+@property (nonatomic) BOOL userAttractionsMode;
 
 @end

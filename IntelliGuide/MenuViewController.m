@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "PreferencesViewController.h"
+#import "AttractionsTableViewController.h"
 
 @interface MenuViewController () {
     NSArray *menuItems;
@@ -19,7 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    menuItems = @[@"preferences", @"moderationPanel", @"settings"];
+    menuItems = @[@"preferences", @"moderationPanel", @"myAttractions", @"settings"];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -37,18 +38,26 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    UINavigationController *nav = (UINavigationController*)segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"normalPanel"]) {
-        UINavigationController *nav = (UINavigationController*)segue.destinationViewController;
         PreferencesViewController *controller = (PreferencesViewController*)nav.childViewControllers[0];
+        controller.userAttractionsMode = NO;
         controller.moderationMode = NO;
-        controller.navigationItem.title = @"User";
+        controller.navigationItem.title = @"Accepted";
     }
     
     if ([segue.identifier isEqualToString:@"moderationPanel"]) {
-        UINavigationController *nav = (UINavigationController*)segue.destinationViewController;
         PreferencesViewController *controller = (PreferencesViewController*)nav.childViewControllers[0];
+        controller.userAttractionsMode = NO;
         controller.moderationMode = YES;
         controller.navigationItem.title = @"Moderator";
+    }
+    
+    if ([segue.identifier isEqualToString:@"myAttractions"]) {
+        PreferencesViewController *controller = (PreferencesViewController*)nav.childViewControllers[0];
+        controller.userAttractionsMode = YES;
+        controller.moderationMode = NO;
+        controller.navigationItem.title = @"My Attractions";
     }
 }
 

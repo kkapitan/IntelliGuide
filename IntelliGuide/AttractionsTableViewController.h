@@ -34,4 +34,7 @@
  (possible after swiping left on cell).
  */
 @property (nonatomic) BOOL moderationMode;
+
+@property (nonatomic) BOOL userAttarctionsMode;
+
 @end

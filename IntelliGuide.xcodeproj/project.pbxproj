@@ -50,6 +50,7 @@
 		089486121AE169D600B966E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0894860F1AE169D600B966E2 /* Bolts.framework */; };
 		089486131AE169D600B966E2 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089486101AE169D600B966E2 /* Parse.framework */; };
 		089486141AE169D600B966E2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089486111AE169D600B966E2 /* ParseUI.framework */; };
+		08C7E10B1B074D63006DEEFC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7E10A1B074D63006DEEFC /* MBProgressHUD.m */; };
 		08C80D601AE3C2D10033296F /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D5F1AE3C2D10033296F /* PageViewController.m */; };
 		08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D651AE3C3D20033296F /* AttractionDetailsViewController.m */; };
 		08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D681AE3C4D60033296F /* AttractionDescriptionViewController.m */; };
@@ -137,6 +138,8 @@
 		0894860F1AE169D600B966E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		089486101AE169D600B966E2 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		089486111AE169D600B966E2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		08C7E1091B074D63006DEEFC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		08C7E10A1B074D63006DEEFC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		08C80D5E1AE3C2D10033296F /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		08C80D5F1AE3C2D10033296F /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		08C80D641AE3C3D20033296F /* AttractionDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionDetailsViewController.h; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 		021196201AE006A000C367C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				08C7E1091B074D63006DEEFC /* MBProgressHUD.h */,
+				08C7E10A1B074D63006DEEFC /* MBProgressHUD.m */,
 				08038EB91B067C2D0042955B /* SWRevealViewController.h */,
 				08038EBA1B067C2D0042955B /* SWRevealViewController.m */,
 				08038EB41B0668D70042955B /* Social.framework */,
@@ -474,6 +479,7 @@
 				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
 				08038EB81B0669460042955B /* LoginController.m in Sources */,
 				029041531B0605FA00B2B41E /* GalleryCollectionViewCell.m in Sources */,
+				08C7E10B1B074D63006DEEFC /* MBProgressHUD.m in Sources */,
 				08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */,
 				021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */,
 				0290415C1B06487E00B2B41E /* AttractionMenuViewController.m in Sources */,

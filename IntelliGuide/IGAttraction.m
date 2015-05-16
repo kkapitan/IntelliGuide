@@ -23,6 +23,7 @@
                  object[[IGAttraction stringForKey:IGAttractionKeyCategory]]];
     
     _imageFile = object[[IGAttraction stringForKey:IGAttractionKeyImage]];
+    _creator = object[[IGAttraction stringForKey:IGAttractionKeyCreator]];
     _objectId = object.objectId;
     
     //_categoryName = [category valueForKey:@"name"];
@@ -37,7 +38,7 @@
     static NSArray *strings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        strings = @[@"name",@"description",@"category",@"verified",@"image"];
+        strings = @[@"name",@"description",@"category",@"verified",@"image",@"creator"];
     });
     return strings[key];
 }
@@ -50,6 +51,7 @@
     attraction[[IGAttraction stringForKey:IGAttractionKeyCategory]] = self.category.parseObject;
     attraction[[IGAttraction stringForKey:IGAttractionKeyDescription]] = self.placeDescription;
     attraction[[IGAttraction stringForKey:IGAttractionKeyName]] = self.name;
+    attraction[[IGAttraction stringForKey:IGAttractionKeyCreator]] = self.creator;
     
     if(self.imageFile)
         attraction[[IGAttraction stringForKey:IGAttractionKeyImage]] = self.imageFile;

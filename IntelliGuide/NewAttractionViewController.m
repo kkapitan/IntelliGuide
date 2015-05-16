@@ -11,12 +11,14 @@
 #import "AddGalleryCollectionViewController.h"
 #import "IGAttraction.h"
 #import "GalleryFetcher.h"
+#import "MBProgressHUD.h"
 
 @interface NewAttractionViewController () <CategoryPickerDelegate,UITextViewDelegate,GalleryDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (weak, nonatomic) IBOutlet UIButton *categoryPickerButton;
+@property (weak, nonatomic) IBOutlet UIButton *addPhotosButton;
 @property (nonatomic) IGCategory* category;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
@@ -32,9 +34,9 @@
 
 
 - (IBAction)done:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     IGAttraction *attraction = [self buildAttraction];
     if(attraction){
-        
         PFObject *attractionObject = [attraction parseObject];
         attractionObject[[IGAttraction stringForKey:IGAttractionKeyVerified]] = @NO;
         
@@ -52,17 +54,24 @@
         }
     
         [attractionObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            [[MBProgressHUD HUDForView:self.view] hide:YES];
             [self displayAlertWithTitle:@"Dodawanie zakończone!" message:@"Proszę czekać na weryfikację atrakcji przez moderatora"];
             
             [[NSNotificationCenter defaultCenter] removeObserver:self];
             
             [self.navigationController popViewControllerAnimated:YES];
         }];
+    } else {
+        NSLog(@"error creating attraction");
+        [[MBProgressHUD HUDForView:self.view] hide:YES];
     }
 }
 
 -(void)didFinishPickingImages:(NSArray *)images{
     self.galleryImages = images;
+    
+    NSString *title = [NSString stringWithFormat:@"Dodaj zdjęcia (aktualnie: %d)", (int)self.galleryImages.count+1];
+    [self.addPhotosButton setTitle:title forState:UIControlStateNormal];
 }
 
 -(void)didFinishPickingMainImage:(UIImage *)image{
@@ -158,6 +167,8 @@
     if(self.mainImage){
         attraction.imageFile = [PFFile fileWithData: UIImageJPEGRepresentation(self.mainImage, 1.0)];
     }
+    
+    attraction.creator = [PFUser currentUser];
     
     return attraction;
 }
