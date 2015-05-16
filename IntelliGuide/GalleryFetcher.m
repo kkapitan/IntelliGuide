@@ -17,15 +17,21 @@
     
     [query getObjectInBackgroundWithId:objectId block:^(PFObject *object, NSError *error) {
         if(!error){
+            dispatch_group_t group = dispatch_group_create();
             NSArray *array = (NSArray*)object[@"gallery"];
-            NSMutableArray *images = [NSMutableArray array];
+            __block NSMutableArray *images = [[NSMutableArray alloc] initWithCapacity:array.count];
             for(int i = 0; i < array.count; i++){
                 PFFile *imageFile = array[i];
-                NSData *data = [imageFile getData];
-                if(data)
-                    images[i] = [UIImage imageWithData:data];
+                __block NSData *data = nil;
+                dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                    data = [imageFile getData];
+                    if (data) images[i] = [UIImage imageWithData:data];
+                });
             };
-            block(images);
+            
+            dispatch_group_notify(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                block(images);
+            });
         }
     }];
 }

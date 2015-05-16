@@ -51,12 +51,13 @@
             attractionObject[@"gallery"] = imageFiles;
         }
     
-        [attractionObject save];
-        [self displayAlertWithTitle:@"Dodawanie zakończone!" message:@"Proszę czekać na weryfikację atrakcji przez moderatora"];
-        
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
-        
-        [self.navigationController popViewControllerAnimated:YES];
+        [attractionObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            [self displayAlertWithTitle:@"Dodawanie zakończone!" message:@"Proszę czekać na weryfikację atrakcji przez moderatora"];
+            
+            [[NSNotificationCenter defaultCenter] removeObserver:self];
+            
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
     }
 }
 
@@ -84,10 +85,16 @@
 
 -(void)textViewDidBeginEditing:(UITextView *)textView{
     [self.scrollView setContentOffset:CGPointMake(0,self.descriptionLabel.frame.origin.y) animated:YES];
+    
+    textView.text = @"";
 }
 
 -(void)textViewDidEndEditing:(UITextView *)textView{
     [self.scrollView setContentOffset:CGPointZero animated:YES];
+    
+    if (textView.text.length == 0) {
+        textView.text = @"Tu wstaw krótki opis dodawanego miejsca.";
+    }
 }
 
 - (void)viewDidLoad {

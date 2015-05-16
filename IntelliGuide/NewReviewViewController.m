@@ -57,10 +57,16 @@
 
 -(void)textViewDidBeginEditing:(UITextView *)textView{
     [self.scrollView setContentOffset:CGPointMake(0,self.opinionLabel.frame.origin.y) animated:YES];
+    
+    textView.text = @"";
 }
 
 -(void)textViewDidEndEditing:(UITextView *)textView{
     [self.scrollView setContentOffset:CGPointZero animated:YES];
+    
+    if (textView.text.length == 0) {
+        textView.text = @"Tu wstaw krótki opis dodawanego miejsca.";
+    }
 }
 
 -(void)didTap:(id)sender{

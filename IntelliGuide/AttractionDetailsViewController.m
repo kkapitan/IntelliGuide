@@ -52,5 +52,7 @@
     // Pass the selected object to the new view controller.
     
     PageViewController *pageViewController = (PageViewController*)[segue destinationViewController];
-    pageViewController.attraction = _attraction;}
+    pageViewController.attraction = _attraction;
+}
+
 @end
