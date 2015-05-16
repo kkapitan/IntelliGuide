@@ -9,10 +9,13 @@
 #import "MenuViewController.h"
 #import "PreferencesViewController.h"
 #import "AttractionsTableViewController.h"
+#import "LoginController.h"
 
-@interface MenuViewController () {
+@interface MenuViewController () <UIAlertViewDelegate> {
     NSArray *menuItems;
 }
+
+@property (strong) LoginController *loginController;
 
 @end
 
@@ -37,6 +40,36 @@
     return 1;
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if ([identifier isEqualToString:@"normalPanel"]) {
+        return YES;
+    } else if ([identifier isEqualToString:@"moderationPanel"]) {
+        if ([PFUser currentUser]) {
+            if ([[[PFUser currentUser] objectForKey:@"role"] isEqualToString:@"moderator"]) {
+                return YES;
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie jesteś moderatorem, nie masz dostępu do tej strony" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
+                return NO;
+            }
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie jesteś zalogowany, nie możesz przejść do tej strony" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Zaloguj", nil];
+            [alert show];
+            return NO;
+        }
+    } else if ([identifier isEqualToString:@"myAttractions"]) {
+        if ([PFUser currentUser]) {
+            return YES;
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie jesteś zalogowany, nie możesz przejść do tej strony" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Zaloguj", nil];
+            [alert show];
+            return NO;
+        }
+    } else {
+        return YES;
+    }
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     UINavigationController *nav = (UINavigationController*)segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"normalPanel"]) {
@@ -58,6 +91,18 @@
         controller.userAttractionsMode = YES;
         controller.moderationMode = NO;
         controller.navigationItem.title = @"My Attractions";
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+//        NSLog(@"OK");
+    } else if (buttonIndex == 1) {
+//        NSLog(@"Zaloguj");
+        self.loginController = [[LoginController alloc] init];
+        self.loginController.parentViewController = self;
+        [self.loginController presentLoginViewController];
+        
     }
 }
 

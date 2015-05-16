@@ -587,9 +587,7 @@
                             <constraint firstItem="3mp-cX-cv1" firstAttribute="top" secondItem="Gqv-P5-1bt" secondAttribute="bottom" constant="8" id="zmH-cf-Cpj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Attraction Details" id="x3v-fC-jZE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Gtm-43-Iy7"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Attraction Details" id="x3v-fC-jZE"/>
                     <connections>
                         <outlet property="attractionImage" destination="3mp-cX-cv1" id="qO9-4s-6KH"/>
                         <outlet property="attractionName" destination="SuP-dx-7V7" id="GcD-Yn-Fbr"/>

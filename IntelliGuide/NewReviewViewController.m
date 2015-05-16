@@ -41,7 +41,7 @@
     
     PFObject *reviewObject = review.parseObject;
     //TODO: Dodać użytkownika po zaimplementowaniu logowania.
-    //reviewObject[@"writtenBy"] = [PFUser currentUser];
+    reviewObject[@"writtenBy"] = [PFUser currentUser];
     reviewObject[@"aboutPlace"] = self.attraction.parseObject;
     [reviewObject saveInBackground];
     
@@ -86,7 +86,7 @@
 
 -(IGReview*)buildReview{
     IGReview *review = [[IGReview alloc] init];
-    review.reviewerName =  [[PFUser currentUser] username];
+    review.reviewer =  [PFUser currentUser];
     NSCharacterSet *characterSet = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     if([[self.reviewTextView.text stringByTrimmingCharactersInSet:characterSet] length]){
         review.content = self.reviewTextView.text;

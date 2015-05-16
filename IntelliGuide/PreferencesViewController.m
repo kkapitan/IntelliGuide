@@ -101,12 +101,13 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     if (![PFUser currentUser]) {
-        if (!_didShowLogin) {
-            _didShowLogin = YES;
-            self.loginController = [[LoginController alloc] init];
-            self.loginController.parentViewController = self;
-            [self.loginController presentLoginViewController];
-        }
+//        if (!_didShowLogin) {
+//            _didShowLogin = YES;
+//            self.loginController = [[LoginController alloc] init];
+//            self.loginController.parentViewController = self;
+//            [self.loginController presentLoginViewController];
+//        }
+        self.greetingsLabel.text = @"Witaj, gościu! Co chcesz\ndzisiaj zwiedzić?";
     } else {
         self.greetingsLabel.text = [NSString stringWithFormat:@"Witaj %@, co chcesz\ndzisiaj zwiedzić?", [[PFUser currentUser] objectForKey:@"username"]];
     }

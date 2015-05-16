@@ -156,6 +156,22 @@
 
 #pragma mark - Navigation
 
+//gówno nie działa dla tych przycisków edytuj
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if([identifier isEqualToString:@"editAttractionSegue"]){
+        AttractionCell *cell = (AttractionCell*)sender;
+        if ([PFUser currentUser].objectId == cell.attraction.creator.objectId) {
+            return YES;
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie możesz edytować nieswoją atrakcję." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+            return NO;
+        }
+    } else {
+        return YES;
+    }
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //     Get the new view controller using [segue destinationViewController].

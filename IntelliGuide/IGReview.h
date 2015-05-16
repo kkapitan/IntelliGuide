@@ -64,7 +64,7 @@ typedef NS_ENUM(NSInteger, IGReviewKey){
  NSString that contains reviewer's name.
  */
 
-@property NSString *reviewerName;
+@property PFUser *reviewer;
 
 /*!
  NSString that contains review's content.

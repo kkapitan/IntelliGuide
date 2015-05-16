@@ -32,7 +32,7 @@
 
 - (void)setReview:(IGReview *)review {
     _review = review;
-    _reviewerName.text = review.reviewerName;
+    _reviewerName.text = review.reviewer.username;
     _reviewContent.text = review.content;
     
     _starRatingView.rating = [review.rating floatValue];

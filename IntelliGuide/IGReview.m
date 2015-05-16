@@ -12,10 +12,10 @@
 
 -initWithParseObject:(PFObject*)object {
     self = [super init];
-    PFUser *reviewer = object[@"writtenBy"];
+//    PFUser *reviewer = object[@"writtenBy"];
     
     _objectId = object.objectId;
-    _reviewerName = reviewer[[IGReview stringForKey:IGReviewKeyReviewerName]];
+    _reviewer = object[@"writtenBy"];
     _content = object[[IGReview stringForKey:IGReviewKeyContent]];
     _rating = [NSNumber numberWithFloat:[object[[IGReview stringForKey:IGReviewKeyRating]] floatValue]];
     
@@ -30,7 +30,7 @@
     static NSArray *strings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        strings = @[@"username",@"content",@"stars"];
+        strings = @[@"writtenBy",@"content",@"stars"];
     });
     return strings[key];
 }

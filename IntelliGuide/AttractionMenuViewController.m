@@ -9,8 +9,11 @@
 #import "AttractionMenuViewController.h"
 #import "NewReviewViewController.h"
 #import "GalleryCollectionViewController.h"
+#import "LoginController.h"
 
-@interface AttractionMenuViewController ()
+@interface AttractionMenuViewController () <UIAlertViewDelegate>
+
+@property (strong) LoginController *loginController;
 
 @end
 
@@ -29,6 +32,20 @@
 
 #pragma mark - Navigation
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if([identifier isEqualToString:@"addReviewSegue"]){
+        if ([PFUser currentUser]) {
+            return YES;
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie jesteś zalogowany, nie możesz dodać komentarza" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Zaloguj", nil];
+            [alert show];
+            return NO;
+        }
+    } else {
+        return YES;
+    }
+}
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
@@ -43,5 +60,15 @@
     }
 }
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        
+    } else if (buttonIndex == 1) {
+        self.loginController = [[LoginController alloc] init];
+        self.loginController.parentViewController = self;
+        [self.loginController presentLoginViewController];
+        
+    }
+}
 
 @end
