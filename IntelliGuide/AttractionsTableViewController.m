@@ -29,7 +29,6 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     self.parseClassName = @"Place";
-    NSLog(@"Current user: %@", [PFUser currentUser]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,12 +85,18 @@
  */
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    //return self.moderationMode;
+
     PFObject *currentObject = [self.objects objectAtIndex:indexPath.row];
     IGAttraction *currentAttraction = [IGAttraction attractionWithParseObject:currentObject];
-    NSLog(@"Cell creator: %@", currentAttraction.creator);
-    
-    return YES;
+    if (self.moderationMode) {
+        return YES;
+    } else {
+        if ([[PFUser currentUser].objectId isEqualToString:currentAttraction.creator.objectId]) {
+            return YES;
+        } else {
+            return NO;
+        }
+    }
 }
 
 -(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -126,7 +131,7 @@
             [self performSegueWithIdentifier:@"editAttractionSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
         }];
     
-    editAction.backgroundColor = [UIColor greenColor];
+    editAction.backgroundColor = [UIColor orangeColor];
     if(self.moderationMode)
         return @[acceptAction,discardAction];
     else

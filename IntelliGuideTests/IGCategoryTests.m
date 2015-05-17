@@ -93,4 +93,8 @@
     XCTAssertNil(wrongStringForKey);
 }
 
+- (void) testCache {
+    XCTFail(@"Not implemented.");
+}
+
 @end
