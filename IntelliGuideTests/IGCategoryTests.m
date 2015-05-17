@@ -52,7 +52,7 @@
     id mockPFFile = OCMClassMock([PFFile class]);
     
     OCMStub([mockParseObject objectId]).andReturn(@"abc123");
-    OCMStub(mockParseObject[[IGCategory stringForKey:IGCategoryKeyName]]).andReturn(@"Park Wilsona");
+    OCMStub(mockParseObject[[IGCategory stringForKey:IGCategoryKeyName]]).andReturn(@"Park");
     OCMStub(mockParseObject[[IGCategory stringForKey:IGCategoryKeyIcon]]).andReturn(mockPFFile);
     OCMStub([mockPFFile getDataInBackgroundWithBlock:[OCMArg any]]).andDo(proxyBlock);
     
@@ -61,7 +61,7 @@
     
     //then
     XCTAssertEqualObjects(category.objectId, @"abc123");
-    XCTAssertEqualObjects(category.name, @"Park Wilsona");
+    XCTAssertEqualObjects(category.name, @"Park");
     XCTAssertEqualObjects(category.parseObject, mockParseObject);
     XCTAssertNotNil(category.image);
 }

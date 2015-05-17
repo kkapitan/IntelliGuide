@@ -64,6 +64,7 @@
 		0887DB191B08C31100F2E7F6 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB41B0668D70042955B /* Social.framework */; };
 		0887DB1A1B08C31B00F2E7F6 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB21B0668CF0042955B /* Accounts.framework */; };
 		0887DB1C1B0900AE00F2E7F6 /* IGReviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0887DB1B1B0900AE00F2E7F6 /* IGReviewTests.m */; };
+		0887DB1E1B09113A00F2E7F6 /* IGAttractionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0887DB1D1B09113A00F2E7F6 /* IGAttractionTests.m */; };
 		089486121AE169D600B966E2 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0894860F1AE169D600B966E2 /* Bolts.framework */; };
 		089486141AE169D600B966E2 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089486111AE169D600B966E2 /* ParseUI.framework */; };
 		08C7E10B1B074D63006DEEFC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C7E10A1B074D63006DEEFC /* MBProgressHUD.m */; };
@@ -156,6 +157,7 @@
 		0887DB0D1B08C2C600F2E7F6 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0887DB101B08C2D700F2E7F6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0887DB1B1B0900AE00F2E7F6 /* IGReviewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGReviewTests.m; sourceTree = "<group>"; };
+		0887DB1D1B09113A00F2E7F6 /* IGAttractionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAttractionTests.m; sourceTree = "<group>"; };
 		0894860F1AE169D600B966E2 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		089486111AE169D600B966E2 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		08C7E1091B074D63006DEEFC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				0887DB051B08B5AC00F2E7F6 /* IGCategoryTests.m */,
 				0887DB1B1B0900AE00F2E7F6 /* IGReviewTests.m */,
 				028F4AD41AD7FD5700C63973 /* Supporting Files */,
+				0887DB1D1B09113A00F2E7F6 /* IGAttractionTests.m */,
 			);
 			path = IntelliGuideTests;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0887DB1E1B09113A00F2E7F6 /* IGAttractionTests.m in Sources */,
 				0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */,
 				0887DB1C1B0900AE00F2E7F6 /* IGReviewTests.m in Sources */,
 			);
