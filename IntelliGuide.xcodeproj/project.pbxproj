@@ -24,6 +24,11 @@
 		021E59171AE40BF30003B6B7 /* CategoryPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E59161AE40BF30003B6B7 /* CategoryPickerTableViewController.m */; };
 		021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E59191AE411260003B6B7 /* NewAttractionViewController.m */; };
 		0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0230BA6C1B024E2C00B14A6B /* NewReviewViewController.m */; };
+		0259705A1B0930A8006E5413 /* AttractionCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025970591B0930A8006E5413 /* AttractionCellTests.m */; };
+		0259705C1B0936B5006E5413 /* ReviewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259705B1B0936B5006E5413 /* ReviewCellTests.m */; };
+		0259705E1B093F1A006E5413 /* GalleryCollectionViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259705D1B093F1A006E5413 /* GalleryCollectionViewCellTests.m */; };
+		025970601B094108006E5413 /* GalleryCollectionReusableViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259705F1B094108006E5413 /* GalleryCollectionReusableViewTest.m */; };
+		025970621B094481006E5413 /* CategorySwitcherTableCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025970611B094481006E5413 /* CategorySwitcherTableCellTests.m */; };
 		028F4ABD1AD7FD5700C63973 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABC1AD7FD5700C63973 /* main.m */; };
 		028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABF1AD7FD5700C63973 /* AppDelegate.m */; };
 		028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC41AD7FD5700C63973 /* Main.storyboard */; };
@@ -111,6 +116,11 @@
 		021E59191AE411260003B6B7 /* NewAttractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAttractionViewController.m; sourceTree = "<group>"; };
 		0230BA6B1B024E2C00B14A6B /* NewReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewReviewViewController.h; sourceTree = "<group>"; };
 		0230BA6C1B024E2C00B14A6B /* NewReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewReviewViewController.m; sourceTree = "<group>"; };
+		025970591B0930A8006E5413 /* AttractionCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionCellTests.m; sourceTree = "<group>"; };
+		0259705B1B0936B5006E5413 /* ReviewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCellTests.m; sourceTree = "<group>"; };
+		0259705D1B093F1A006E5413 /* GalleryCollectionViewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewCellTests.m; sourceTree = "<group>"; };
+		0259705F1B094108006E5413 /* GalleryCollectionReusableViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionReusableViewTest.m; sourceTree = "<group>"; };
+		025970611B094481006E5413 /* CategorySwitcherTableCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCellTests.m; sourceTree = "<group>"; };
 		028F4AB71AD7FD5700C63973 /* IntelliGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028F4ABB1AD7FD5700C63973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028F4ABC1AD7FD5700C63973 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -382,6 +392,11 @@
 				0887DB1B1B0900AE00F2E7F6 /* IGReviewTests.m */,
 				028F4AD41AD7FD5700C63973 /* Supporting Files */,
 				0887DB1D1B09113A00F2E7F6 /* IGAttractionTests.m */,
+				025970611B094481006E5413 /* CategorySwitcherTableCellTests.m */,
+				025970591B0930A8006E5413 /* AttractionCellTests.m */,
+				0259705D1B093F1A006E5413 /* GalleryCollectionViewCellTests.m */,
+				0259705F1B094108006E5413 /* GalleryCollectionReusableViewTest.m */,
+				0259705B1B0936B5006E5413 /* ReviewCellTests.m */,
 			);
 			path = IntelliGuideTests;
 			sourceTree = "<group>";
@@ -549,7 +564,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0259705E1B093F1A006E5413 /* GalleryCollectionViewCellTests.m in Sources */,
+				0259705A1B0930A8006E5413 /* AttractionCellTests.m in Sources */,
+				025970621B094481006E5413 /* CategorySwitcherTableCellTests.m in Sources */,
+				025970601B094108006E5413 /* GalleryCollectionReusableViewTest.m in Sources */,
 				0887DB1E1B09113A00F2E7F6 /* IGAttractionTests.m in Sources */,
+				0259705C1B0936B5006E5413 /* ReviewCellTests.m in Sources */,
 				0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */,
 				0887DB1C1B0900AE00F2E7F6 /* IGReviewTests.m in Sources */,
 			);
@@ -665,6 +685,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IntelliGuide",
@@ -681,6 +702,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IntelliGuide",
