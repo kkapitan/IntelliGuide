@@ -29,6 +29,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
     self.parseClassName = @"Place";
+    NSLog(@"Current user: %@", [PFUser currentUser]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -86,6 +87,10 @@
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     //return self.moderationMode;
+    PFObject *currentObject = [self.objects objectAtIndex:indexPath.row];
+    IGAttraction *currentAttraction = [IGAttraction attractionWithParseObject:currentObject];
+    NSLog(@"Cell creator: %@", currentAttraction.creator);
+    
     return YES;
 }
 

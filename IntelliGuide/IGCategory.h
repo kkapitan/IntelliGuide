@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <UIKit/UIKit.h>
 
 /*!
 This is a wrapper class for Parse Object of class "Category".
