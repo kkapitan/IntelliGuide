@@ -15,7 +15,7 @@
 //    PFUser *reviewer = object[@"writtenBy"];
     
     _objectId = object.objectId;
-    _reviewer = object[@"writtenBy"];
+    _reviewer = object[[IGReview stringForKey:IGReviewKeyReviewer]];
     _content = object[[IGReview stringForKey:IGReviewKeyContent]];
     _rating = [NSNumber numberWithFloat:[object[[IGReview stringForKey:IGReviewKeyRating]] floatValue]];
     

@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, IGReviewKey){
     /*!
      This is constant used to access key for reviewer's name.
      */
-    IGReviewKeyReviewerName = 0,
+    IGReviewKeyReviewer = 0,
     
     /*!
      This is constant used to access key for Review content.
