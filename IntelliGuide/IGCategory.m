@@ -14,7 +14,8 @@ static NSCache *storage = nil;
 
 -initWithParseObject:(PFObject*)object {
     self = [super init];
-    _name = [object valueForKey:[IGCategory stringForKey:IGCategoryKeyName]];
+//    _name = [object valueForKey:[IGCategory stringForKey:IGCategoryKeyName]];
+    _name = object[[IGCategory stringForKey:IGCategoryKeyName]];
     _objectId = object.objectId;
     PFFile *iconFile = object[[IGCategory stringForKey:IGCategoryKeyIcon]];
     [iconFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {

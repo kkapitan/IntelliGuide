@@ -29,13 +29,41 @@
 
 - (void)testCreatingObject {
     //given
-    id mockParseObject = [OCMockObject mockForClass:[PFObject class]];
-    [[[mockParseObject stub] andReturn:@"udany"] objectForKey:@"test"];
+    
+    //create image data to pass to mocked getData method
+    NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"icon_x"]);
+    
+    //pure magic
+    //we want to mock method getDataInBackgroundWithBlock which runs block that creates
+    //and sets image property from given data so we can test if this block is OK
+    
+    //to do that first we need to create proxy block that is executed by .andDo() OCMock macro
+    //it passes NSInvocation object as a parameter to that block, second parameter of this NSInvocation
+    //is our block (getDataInBackgroundWithBlock) that is called in real IGCategory object
+    //now we simply invoke our block with imageData
+    //AND IT WORKS
+    void (^proxyBlock)(NSInvocation *) = ^(NSInvocation *invocation) {
+        void (^block)(NSData*, NSError*);
+        [invocation getArgument:&block atIndex:2];
+        block(imageData, nil);
+    };
+    
+    id mockParseObject = OCMClassMock([PFObject class]);
+    id mockPFFile = OCMClassMock([PFFile class]);
+    
+    OCMStub([mockParseObject objectId]).andReturn(@"abc123");
+    OCMStub(mockParseObject[[IGCategory stringForKey:IGCategoryKeyName]]).andReturn(@"Park Wilsona");
+    OCMStub(mockParseObject[[IGCategory stringForKey:IGCategoryKeyIcon]]).andReturn(mockPFFile);
+    OCMStub([mockPFFile getDataInBackgroundWithBlock:[OCMArg any]]).andDo(proxyBlock);
     
     //when
+    IGCategory *category = [IGCategory categoryWithParseObject:mockParseObject];
     
     //then
-    XCTAssertEqualObjects(@"udany", [mockParseObject objectForKey:@"test"]);
+    XCTAssertEqualObjects(category.objectId, @"abc123");
+    XCTAssertEqualObjects(category.name, @"Park Wilsona");
+    XCTAssertEqualObjects(category.parseObject, mockParseObject);
+    XCTAssertNotNil(category.image);
 }
 
 - (void) testStringForKey {
