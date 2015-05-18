@@ -28,11 +28,15 @@
                     if(data)
                         images[i] = [UIImage imageWithData:data];
                 };
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    block(images);
+                });
             });
-            
+            /*
             dispatch_group_notify(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                 block(images);
-            });
+            });*/
         }
     }];
 }

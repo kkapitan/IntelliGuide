@@ -575,9 +575,6 @@
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B13-LK-blw">
                                 <rect key="frame" x="0.0" y="265" width="320" height="303"/>
-                                <connections>
-                                    <segue destination="AQC-tY-cS5" kind="embed" id="U0D-0c-2sU"/>
-                                </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;placeholder for image&gt;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quj-D3-ao8">
                                 <rect key="frame" x="66" y="136" width="188" height="21"/>
@@ -607,6 +604,7 @@
                         <outlet property="attractionImage" destination="3mp-cX-cv1" id="qO9-4s-6KH"/>
                         <outlet property="attractionName" destination="SuP-dx-7V7" id="GcD-Yn-Fbr"/>
                         <outlet property="placeholderLabel" destination="Quj-D3-ao8" id="TnH-EV-zdo"/>
+                        <segue destination="bUt-5v-wUF" kind="push" identifier="showGallerySegue" id="igG-hV-H99"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAt-5V-GrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1004,5 +1002,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="xrg-yU-xwY"/>
         <segue reference="Ow0-7u-Pby"/>
+        <segue reference="igG-hV-H99"/>
     </inferredMetricsTieBreakers>
 </document>

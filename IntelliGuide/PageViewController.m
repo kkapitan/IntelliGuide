@@ -43,11 +43,11 @@
     self.myViewControllers = @[vc1, vc2,vc3];
     
     [self setViewControllers:@[vc1] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-    
+    /*
     [GalleryFetcher fetchGalleryForPlaceWithId:self.attraction.objectId completion:^(NSArray *images) {
         vc3.galleryImages = images;
         NSLog(@"lala");
-    }];
+    }];*/
 }
 
 - (void)didReceiveMemoryWarning {

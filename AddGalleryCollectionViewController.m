@@ -202,7 +202,7 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     
     if(!self.deletingItem){
         
-        if(indexPath.row == self.galleryImages.count)self.editingItem = YES;
+        if(indexPath.row != self.galleryImages.count)self.editingItem = YES;
         [self presentViewController:self.imagePicker animated:YES completion:nil];
    
     }else if(indexPath.row != self.galleryImages.count){
