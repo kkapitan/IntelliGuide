@@ -29,6 +29,7 @@ static NSString * const reuseIdentifier = @"GalleryCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Tryb dodawania";
     
     // Do any additional setup after loading the view.
     
@@ -107,6 +108,8 @@ static NSString * const reuseIdentifier = @"GalleryCell";
 
 -(void)enableDelete:(id)sender{
     NSLog(@"Delete enabled");
+    
+    self.title = @"Tryb usuwania";
     self.deletingItem = YES;
     
     [self markDeletable];
@@ -116,11 +119,13 @@ static NSString * const reuseIdentifier = @"GalleryCell";
 
 -(void)disableDelete:(id)sender{
     NSLog(@"Delete disabled");
+    
+    self.title = @"Tryb dodawania";
     self.deletingItem = NO;
     
     for(GalleryCollectionViewCell *cell in self.collectionView.visibleCells ){
-
-        [cell setDeletable:NO];
+        if([cell.reuseIdentifier isEqualToString:reuseIdentifier])
+            [cell setDeletable:NO];
     }
     
     [self.view addGestureRecognizer:self.longPressRecognizer];
@@ -161,18 +166,22 @@ static NSString * const reuseIdentifier = @"GalleryCell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    GalleryCollectionViewCell *cell = (GalleryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    
+   
     // Configure the cell
-    if(indexPath.row != self.galleryImages.count){
+    if(indexPath.row == self.galleryImages.count){
+        
+        UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"GalleryCellAdd" forIndexPath:indexPath];
+        cell.tintColor = [UIColor clearColor];
+        cell.backgroundColor = [UIColor clearColor];
+        return cell;
+
+    }
+    else{
+        GalleryCollectionViewCell *cell = (GalleryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
         cell.galleryImage = self.galleryImages[indexPath.row];
         if(self.deletingItem)[cell setDeletable:YES];
+        return cell;
     }
-    else
-        cell.galleryImage = nil;
-    
-    return cell;
 }
 
 -(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
