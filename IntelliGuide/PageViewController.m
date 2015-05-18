@@ -27,6 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    NSLog(@"lala");
     
     
     self.galleryImages = [NSMutableArray array];
@@ -37,17 +38,10 @@
     vc1.descriptionText = self.attraction.placeDescription;
     AttractionReviewsViewController *vc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionReviewsVC"];
     vc2.attraction = self.attraction;
-    AttractionMenuViewController *vc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionMenuVC"];
-    vc3.attraction = self.attraction;
     
-    self.myViewControllers = @[vc1, vc2,vc3];
+    self.myViewControllers = @[vc1, vc2];
     
     [self setViewControllers:@[vc1] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
-    /*
-    [GalleryFetcher fetchGalleryForPlaceWithId:self.attraction.objectId completion:^(NSArray *images) {
-        vc3.galleryImages = images;
-        NSLog(@"lala");
-    }];*/
 }
 
 - (void)didReceiveMemoryWarning {
