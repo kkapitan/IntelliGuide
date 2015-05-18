@@ -9,7 +9,6 @@
 #import "PageViewController.h"
 #import "AttractionDescriptionViewController.h"
 #import "AttractionReviewsViewController.h"
-#import "AttractionMenuViewController.h"
 #import "GalleryFetcher.h"
 
 @interface PageViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
