@@ -8,9 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ Custom collection view cell that displays gallery images
+ */
 @interface GalleryCollectionViewCell : UICollectionViewCell
 
+/*!
+ Property holding image to be displayed by cell
+ */
 @property (strong,nonatomic) UIImage *galleryImage;
 
+/*!
+ This method makes deleting this cell possible. Makes cell shake.
+ */
 -(void)setDeletable:(BOOL)deletable;
 @end

@@ -100,7 +100,12 @@ typedef NS_ENUM(NSInteger, IGReviewKey){
 
 +(NSString*)stringForKey:(IGReviewKey)key;
 
-
+/*!
+ Method that created PFObject from data held in this object.
+ Used to save changes to attraction to Parse.
+ 
+ @return PFObject containg data about this review
+ */
 -(PFObject*)parseObject;
 
 
