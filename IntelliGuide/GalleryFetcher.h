@@ -8,8 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ This object fetches gallery images for given objectId.
+ */
 @interface GalleryFetcher : NSObject
 
+/*!
+ This method is responsible for fetching and downloading all image file
+ that are bound with attraction with given objectId.
+ 
+ @param objectId ID of the attraction of which we want images
+ 
+ @param block Completion block that will be executed after successfully fetching images
+ 
+ @return void
+ */
 +(void)fetchGalleryForPlaceWithId:(NSString*)objectId completion:(void (^)(NSArray*))block;
 
 @end

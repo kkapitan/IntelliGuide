@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ This view controller is responsible for populating settings screen with
+ items and handling their usage.
+ */
 @interface SettingsViewController : UITableViewController
 
 @end

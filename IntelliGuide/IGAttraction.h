@@ -48,8 +48,14 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
      */
     IGAttractionKeyVerified,
     
+    /*!
+     This constant is used to access cover image of attraction.
+     */
     IGAttractionKeyImage,
     
+    /*!
+     This constant is used to get PFUser that created attraction
+     */
     IGAttractionKeyCreator,
 };
 
@@ -78,7 +84,15 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
  */
 @property (nonatomic,readonly) NSString *objectId;
 
+
+/*!
+ Property holding cover photo of attraction
+ */
 @property PFFile *imageFile;
+
+/*!
+ Property holding PFUser that is the creator of attraction
+ */
 
 @property PFUser *creator;
 

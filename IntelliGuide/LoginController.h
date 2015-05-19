@@ -11,11 +11,32 @@
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
 
+/*!
+ Object that creates and handles all callbacks from PFLoginViewController
+ */
 @interface LoginController : NSObject
 
+///------
+///@name Fields
+///------
+
+/*!
+ Property holding view controller that creates and wants to present login view controller.
+ */
 @property UIViewController *parentViewController;
 
+/*!
+ Property holding created PFLoginViewController
+ */
 @property (weak, nonatomic) PFLogInViewController* loginViewController;
+
+//------
+//@name Methods
+//------
+
+/*!
+ Method that creates, configures and shows PFLoginViewController from parentViewController
+ */
 - (void) presentLoginViewController;
 
 @end
