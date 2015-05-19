@@ -31,13 +31,6 @@
     vc.number = self.number + 1;
     vc.images = self.images;
     
-    
-    if(vc.number % 2){
-        vc.view.backgroundColor = [UIColor greenColor];
-    }else{
-        vc.view.backgroundColor = [UIColor yellowColor];
-    }
-    
     [self.navigationController pushViewController:vc animated:YES];
 }
 

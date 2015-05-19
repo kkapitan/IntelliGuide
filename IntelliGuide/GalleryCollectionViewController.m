@@ -43,9 +43,9 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     if([segue.identifier isEqualToString:@"presentPhotoSegue"]){
        
         UINavigationController *navVC = (UINavigationController*)segue.destinationViewController;
-        
-        NSIndexPath *ip = [[self.collectionView indexPathsForSelectedItems] firstObject];
         /*
+        NSIndexPath *ip = [[self.collectionView indexPathsForSelectedItems] firstObject];
+        
         for(int i = 0; i < ip.row; i++){
             PresentPhotoViewController* pVC = (PresentPhotoViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"PhotoController"];
             pVC.number = i;
@@ -56,7 +56,7 @@ static NSString * const reuseIdentifier = @"GalleryCell";
         
         PresentPhotoViewController* pVC = (PresentPhotoViewController*)[navVC topViewController];
         
-        pVC.number = ip.row;
+        pVC.number = 0;
         pVC.images = self.galleryImages;
     }
 }
