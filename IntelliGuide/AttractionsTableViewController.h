@@ -35,6 +35,10 @@
  */
 @property (nonatomic) BOOL moderationMode;
 
+/*!
+ Tells the view controller whether it will be displaying user attractions. If it will,
+ then view controller will query only for quests that were created by [PFUser currentUser]
+ */
 @property (nonatomic) BOOL userAttarctionsMode;
 
 @end

@@ -18,10 +18,23 @@
  */
 @interface PreferencesViewController : UIViewController
 
+///------
+///@name Fields
+///------
+
 //TODO zamienić to na jakiegoś enuma
 
+/*!
+ This property is used to indicate that user wants to enter moderation panel.
+ It it is set to YES, then view controller will query only for unverified attractions.
+ */
 @property (nonatomic) BOOL moderationMode;
 
+/*!
+ This property is used to indicate that user wants to display his own quests.
+ It is passed further to AttractionsTableViewController so it knows that it
+ should query only for quests only created by current user.
+ */
 @property (nonatomic) BOOL userAttractionsMode;
 
 @end
