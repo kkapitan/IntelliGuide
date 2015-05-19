@@ -50,7 +50,7 @@
                 <constraint firstAttribute="centerY" secondItem="dx9-tx-18u" secondAttribute="centerY" constant="63" id="r2h-fq-lTY"/>
                 <constraint firstItem="9iX-0H-zR9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="s0x-vZ-WjB"/>
             </constraints>
-            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
