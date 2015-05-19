@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ Purpose of this view controller is to populate sidemenu with menu elements
+ and control whether user is allowed to enter those sections. If not, it offers
+ ability to log in.
+ */
 @interface MenuViewController : UITableViewController
 
 @end

@@ -11,5 +11,14 @@
 /*! View controller which controls the proces of creating, validating and uploading new attraction. */ 
 
 @interface NewAttractionViewController : UIViewController
+
+///------
+///@name Fields
+///------
+
+/*!
+ If we want to edit attraction, then we assign IGAttraction object
+ to this property.
+ */
 @property(nonatomic) IGAttraction* toEdit;
 @end
