@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <ParseUI/ParseUI.h>
+#import <Parse/Parse.h>
 
 @interface LoginController : NSObject
 
 @property UIViewController *parentViewController;
 
+@property (weak, nonatomic) PFLogInViewController* loginViewController;
 - (void) presentLoginViewController;
 
 @end

@@ -47,6 +47,8 @@
 		08038EBB1B067C2D0042955B /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EBA1B067C2D0042955B /* SWRevealViewController.m */; };
 		08038EBE1B0683370042955B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EBD1B0683370042955B /* MenuViewController.m */; };
 		08038EC11B06875D0042955B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EC01B06875D0042955B /* SettingsViewController.m */; };
+		080AB86F1B0B104A00AF027C /* LoginControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB86E1B0B104A00AF027C /* LoginControllerTests.m */; };
+		080AB8711B0B11E300AF027C /* GalleryFetcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
@@ -154,6 +156,8 @@
 		08038EBD1B0683370042955B /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		08038EBF1B06875D0042955B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		08038EC01B06875D0042955B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		080AB86E1B0B104A00AF027C /* LoginControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginControllerTests.m; sourceTree = "<group>"; };
+		080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryFetcherTests.m; sourceTree = "<group>"; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
@@ -390,13 +394,15 @@
 			children = (
 				0887DB051B08B5AC00F2E7F6 /* IGCategoryTests.m */,
 				0887DB1B1B0900AE00F2E7F6 /* IGReviewTests.m */,
-				028F4AD41AD7FD5700C63973 /* Supporting Files */,
 				0887DB1D1B09113A00F2E7F6 /* IGAttractionTests.m */,
 				025970611B094481006E5413 /* CategorySwitcherTableCellTests.m */,
 				025970591B0930A8006E5413 /* AttractionCellTests.m */,
 				0259705D1B093F1A006E5413 /* GalleryCollectionViewCellTests.m */,
 				0259705F1B094108006E5413 /* GalleryCollectionReusableViewTest.m */,
 				0259705B1B0936B5006E5413 /* ReviewCellTests.m */,
+				028F4AD41AD7FD5700C63973 /* Supporting Files */,
+				080AB86E1B0B104A00AF027C /* LoginControllerTests.m */,
+				080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */,
 			);
 			path = IntelliGuideTests;
 			sourceTree = "<group>";
@@ -564,6 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				080AB86F1B0B104A00AF027C /* LoginControllerTests.m in Sources */,
 				0259705E1B093F1A006E5413 /* GalleryCollectionViewCellTests.m in Sources */,
 				0259705A1B0930A8006E5413 /* AttractionCellTests.m in Sources */,
 				025970621B094481006E5413 /* CategorySwitcherTableCellTests.m in Sources */,
@@ -571,6 +578,7 @@
 				0887DB1E1B09113A00F2E7F6 /* IGAttractionTests.m in Sources */,
 				0259705C1B0936B5006E5413 /* ReviewCellTests.m in Sources */,
 				0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */,
+				080AB8711B0B11E300AF027C /* GalleryFetcherTests.m in Sources */,
 				0887DB1C1B0900AE00F2E7F6 /* IGReviewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

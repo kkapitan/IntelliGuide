@@ -7,8 +7,6 @@
 //
 
 #import "LoginController.h"
-#import <ParseUI/ParseUI.h>
-#import <Parse/Parse.h>
 
 @interface LoginController() <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
@@ -22,14 +20,16 @@
     PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
     [signUpViewController setDelegate:self];
     [logInViewController setSignUpController:signUpViewController];
-    [logInViewController setFields: PFLogInFieldsDefault | PFLogInFieldsDismissButton];
+    [logInViewController setFields: PFLogInFieldsDefault];
 //    [logInViewController setFields:PFLogInFieldsFacebook | PFLogInFieldsTwitter | PFLogInFieldsDefault | PFLogInFieldsDismissButton];
 //    [logInViewController setFacebookPermissions:[NSArray arrayWithObjects:@"friends_about_me", @"public_profile", nil]];
+    
+    self.loginViewController = logInViewController;
     return logInViewController;
 }
 
 - (void) presentLoginViewController {
-    [self.parentViewController presentViewController:[self loginViewController] animated:YES completion:NULL];
+    [self.parentViewController presentViewController:[self loginViewController] animated:YES completion:nil];
 }
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
