@@ -29,6 +29,9 @@
 		0259705E1B093F1A006E5413 /* GalleryCollectionViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259705D1B093F1A006E5413 /* GalleryCollectionViewCellTests.m */; };
 		025970601B094108006E5413 /* GalleryCollectionReusableViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259705F1B094108006E5413 /* GalleryCollectionReusableViewTest.m */; };
 		025970621B094481006E5413 /* CategorySwitcherTableCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025970611B094481006E5413 /* CategorySwitcherTableCellTests.m */; };
+		027B25261B0BB7B100C5E43F /* PresentPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 027B25251B0BB7B100C5E43F /* PresentPhotoViewController.m */; };
+		027B25291B0BBE6E00C5E43F /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 027B25281B0BBE6E00C5E43F /* NavigationControllerDelegate.m */; };
+		027B252C1B0BC01000C5E43F /* CircleTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 027B252B1B0BC01000C5E43F /* CircleTransitionAnimator.m */; };
 		028F4ABD1AD7FD5700C63973 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABC1AD7FD5700C63973 /* main.m */; };
 		028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABF1AD7FD5700C63973 /* AppDelegate.m */; };
 		028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC41AD7FD5700C63973 /* Main.storyboard */; };
@@ -123,6 +126,12 @@
 		0259705D1B093F1A006E5413 /* GalleryCollectionViewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewCellTests.m; sourceTree = "<group>"; };
 		0259705F1B094108006E5413 /* GalleryCollectionReusableViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionReusableViewTest.m; sourceTree = "<group>"; };
 		025970611B094481006E5413 /* CategorySwitcherTableCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCellTests.m; sourceTree = "<group>"; };
+		027B25241B0BB7B100C5E43F /* PresentPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentPhotoViewController.h; sourceTree = "<group>"; };
+		027B25251B0BB7B100C5E43F /* PresentPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentPhotoViewController.m; sourceTree = "<group>"; };
+		027B25271B0BBE6E00C5E43F /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		027B25281B0BBE6E00C5E43F /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
+		027B252A1B0BC01000C5E43F /* CircleTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTransitionAnimator.h; sourceTree = "<group>"; };
+		027B252B1B0BC01000C5E43F /* CircleTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTransitionAnimator.m; sourceTree = "<group>"; };
 		028F4AB71AD7FD5700C63973 /* IntelliGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028F4ABB1AD7FD5700C63973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028F4ABC1AD7FD5700C63973 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -303,6 +312,8 @@
 				08038EBD1B0683370042955B /* MenuViewController.m */,
 				08038EBF1B06875D0042955B /* SettingsViewController.h */,
 				08038EC01B06875D0042955B /* SettingsViewController.m */,
+				027B25241B0BB7B100C5E43F /* PresentPhotoViewController.h */,
+				027B25251B0BB7B100C5E43F /* PresentPhotoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -420,6 +431,10 @@
 				029041621B065DAC00B2B41E /* GalleryFetcher.m */,
 				08038EB61B0669460042955B /* LoginController.h */,
 				08038EB71B0669460042955B /* LoginController.m */,
+				027B25271B0BBE6E00C5E43F /* NavigationControllerDelegate.h */,
+				027B25281B0BBE6E00C5E43F /* NavigationControllerDelegate.m */,
+				027B252A1B0BC01000C5E43F /* CircleTransitionAnimator.h */,
+				027B252B1B0BC01000C5E43F /* CircleTransitionAnimator.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -535,8 +550,10 @@
 			files = (
 				029041501B0602BC00B2B41E /* AddGalleryCollectionViewController.m in Sources */,
 				08038EBE1B0683370042955B /* MenuViewController.m in Sources */,
+				027B25291B0BBE6E00C5E43F /* NavigationControllerDelegate.m in Sources */,
 				08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */,
 				028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */,
+				027B25261B0BB7B100C5E43F /* PresentPhotoViewController.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
 				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
 				08038EB81B0669460042955B /* LoginController.m in Sources */,
@@ -550,6 +567,7 @@
 				08038EBB1B067C2D0042955B /* SWRevealViewController.m in Sources */,
 				029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */,
 				0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */,
+				027B252C1B0BC01000C5E43F /* CircleTransitionAnimator.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
 				029041561B06155E00B2B41E /* GalleryCollectionReusableView.m in Sources */,
 				08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */,

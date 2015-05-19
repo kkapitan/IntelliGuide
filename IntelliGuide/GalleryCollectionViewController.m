@@ -8,6 +8,7 @@
 
 #import "GalleryCollectionViewController.h"
 #import "GalleryCollectionViewCell.h"
+#import "PresentPhotoViewController.h"
 
 @interface GalleryCollectionViewController ()
 
@@ -32,15 +33,34 @@ static NSString * const reuseIdentifier = @"GalleryCell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([segue.identifier isEqualToString:@"presentPhotoSegue"]){
+       
+        UINavigationController *navVC = (UINavigationController*)segue.destinationViewController;
+        
+        NSIndexPath *ip = [[self.collectionView indexPathsForSelectedItems] firstObject];
+        /*
+        for(int i = 0; i < ip.row; i++){
+            PresentPhotoViewController* pVC = (PresentPhotoViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"PhotoController"];
+            pVC.number = i;
+            pVC.images = self.galleryImages;
+            [navVC pushViewController:pVC animated:NO];
+        }; */
+        
+        
+        PresentPhotoViewController* pVC = (PresentPhotoViewController*)[navVC topViewController];
+        
+        pVC.number = ip.row;
+        pVC.images = self.galleryImages;
+    }
 }
-*/
+
 
 #pragma mark <UICollectionViewDataSource>
 
