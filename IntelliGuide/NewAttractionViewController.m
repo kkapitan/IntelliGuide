@@ -95,7 +95,9 @@
 -(void)textViewDidBeginEditing:(UITextView *)textView{
     [self.scrollView setContentOffset:CGPointMake(0,self.descriptionLabel.frame.origin.y) animated:YES];
     
-    textView.text = @"";
+    if ([textView.text isEqualToString:@"Tu wstaw krótki opis dodawanego miejsca."]) {
+        textView.text = @"";
+    }
 }
 
 -(void)textViewDidEndEditing:(UITextView *)textView{
@@ -185,6 +187,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if([segue.identifier isEqual:@"pickCategorySegue"]){
+        [self.view endEditing:YES];
         CategoryPickerTableViewController* destinationViewController = (CategoryPickerTableViewController*)segue.destinationViewController;
         destinationViewController.delegate = self;
     } else if([segue.identifier isEqualToString:@"createGallerySegue"]){

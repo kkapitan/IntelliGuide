@@ -58,14 +58,16 @@
 -(void)textViewDidBeginEditing:(UITextView *)textView{
     [self.scrollView setContentOffset:CGPointMake(0,self.opinionLabel.frame.origin.y) animated:YES];
     
-    textView.text = @"";
+    if ([textView.text isEqualToString:@"Tu wstaw krótką recenzję odwiedzonego miejsca."]) {
+        textView.text = @"";
+    }
 }
 
 -(void)textViewDidEndEditing:(UITextView *)textView{
     [self.scrollView setContentOffset:CGPointZero animated:YES];
     
     if (textView.text.length == 0) {
-        textView.text = @"Tu wstaw krótki opis dodawanego miejsca.";
+        textView.text = @"Tu wstaw krótką recenzję odwiedzonego miejsca.";
     }
 }
 
@@ -104,14 +106,14 @@
     [alertView show];
 }
 
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"pickCategorySegue"]) {
+        [self.view endEditing:YES];
+        [self.view resignFirstResponder];
+    }
 }
-*/
+
 
 @end
