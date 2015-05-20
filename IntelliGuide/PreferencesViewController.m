@@ -15,7 +15,7 @@
 #import "MBProgressHUD.h"
 #import "NewAttractionViewController.h"
 
-@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @property (nonatomic) BOOL didShowLogin;
 @property (nonatomic) NSMutableArray *categories;
@@ -205,6 +205,18 @@
     cell.layer.shadowOffset = CGSizeMake(0, 0);
     [UIView commitAnimations];
     
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        //        NSLog(@"OK");
+    } else if (buttonIndex == 1) {
+        //        NSLog(@"Zaloguj");
+        self.loginController = [[LoginController alloc] init];
+        self.loginController.parentViewController = self;
+        [self.loginController presentLoginViewController];
+        
+    }
 }
 
 

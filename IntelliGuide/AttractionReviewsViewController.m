@@ -9,9 +9,11 @@
 #import "AttractionReviewsViewController.h"
 #import "NewReviewViewController.h"
 #import "ReviewCell.h"
+#import "LoginController.h"
 
-@interface AttractionReviewsViewController ()
+@interface AttractionReviewsViewController () <UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *plusImageView;
+@property (strong) LoginController *loginController;
 
 @end
 
@@ -33,7 +35,12 @@
 }
 
 -(void)newReview:(id)sender{
-    [self performSegueWithIdentifier:@"addReviewSegue" sender:self];
+    if ([PFUser currentUser]) {
+        [self performSegueWithIdentifier:@"addReviewSegue" sender:self];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Musisz być zalogowany, żeby dodać nową recenzję" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Zaloguj", nil];
+        [alert show];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +60,7 @@
     PFQuery *reviewsQuery = [PFQuery queryWithClassName:@"Review"];
     PFObject *object = [PFObject objectWithClassName:@"Place"];
     object.objectId = self.attraction.objectId;
+    [reviewsQuery orderByDescending:@"createdAt"];
     [reviewsQuery whereKey:@"aboutPlace" equalTo:object];
     [reviewsQuery includeKey:@"writtenBy"];
     
@@ -110,5 +118,16 @@
     }
 }
 
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        //        NSLog(@"OK");
+    } else if (buttonIndex == 1) {
+        //        NSLog(@"Zaloguj");
+        self.loginController = [[LoginController alloc] init];
+        self.loginController.parentViewController = self;
+        [self.loginController presentLoginViewController];
+        
+    }
+}
 
 @end
