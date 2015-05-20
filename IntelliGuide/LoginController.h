@@ -10,6 +10,8 @@
 #import <UIKit/UIKit.h>
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
+#import "MyPFLoginViewController.h"
+#import "MyPFSingUpViewController.h"
 
 /*!
  Object that creates and handles all callbacks from PFLoginViewController
@@ -28,7 +30,7 @@
 /*!
  Property holding created PFLoginViewController
  */
-@property (weak, nonatomic) PFLogInViewController* loginViewController;
+@property (weak, nonatomic) MyPFLoginViewController* loginViewController;
 
 //------
 //@name Methods

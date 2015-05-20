@@ -15,9 +15,9 @@
 @implementation LoginController
 
 - (PFLogInViewController*) loginViewController {
-    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    MyPFLoginViewController *logInViewController = [[MyPFLoginViewController alloc] init];
     [logInViewController setDelegate:self];
-    PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+    MyPFSingUpViewController *signUpViewController = [[MyPFSingUpViewController alloc] init];
     [signUpViewController setDelegate:self];
     [logInViewController setSignUpController:signUpViewController];
     [logInViewController setFields: PFLogInFieldsDefault];

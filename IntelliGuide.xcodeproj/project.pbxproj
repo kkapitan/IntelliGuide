@@ -86,6 +86,8 @@
 		08C80D721AE3DDD40033296F /* IGReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D711AE3DDD40033296F /* IGReview.m */; };
 		08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08C80D771AE3F4650033296F /* ASStarRatingView.m */; };
 		08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D791B51AE6BDBF00E18B8C /* IGAttraction.m */; };
+		08EA25D21B0C797000ED6EC5 /* MyPFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */; };
+		08EA25D51B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +202,10 @@
 		08C80D771AE3F4650033296F /* ASStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASStarRatingView.m; sourceTree = "<group>"; };
 		08D791B41AE6BDBF00E18B8C /* IGAttraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGAttraction.h; sourceTree = "<group>"; };
 		08D791B51AE6BDBF00E18B8C /* IGAttraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGAttraction.m; sourceTree = "<group>"; };
+		08EA25D01B0C797000ED6EC5 /* MyPFLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPFLoginViewController.h; sourceTree = "<group>"; };
+		08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPFLoginViewController.m; sourceTree = "<group>"; };
+		08EA25D31B0C7BDD00ED6EC5 /* MyPFSingUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPFSingUpViewController.h; sourceTree = "<group>"; };
+		08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPFSingUpViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +353,10 @@
 				08C80D771AE3F4650033296F /* ASStarRatingView.m */,
 				029041541B06155E00B2B41E /* GalleryCollectionReusableView.h */,
 				029041551B06155E00B2B41E /* GalleryCollectionReusableView.m */,
+				08EA25D01B0C797000ED6EC5 /* MyPFLoginViewController.h */,
+				08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */,
+				08EA25D31B0C7BDD00ED6EC5 /* MyPFSingUpViewController.h */,
+				08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -556,6 +566,7 @@
 				027B25261B0BB7B100C5E43F /* PresentPhotoViewController.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
 				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
+				08EA25D21B0C797000ED6EC5 /* MyPFLoginViewController.m in Sources */,
 				08038EB81B0669460042955B /* LoginController.m in Sources */,
 				029041531B0605FA00B2B41E /* GalleryCollectionViewCell.m in Sources */,
 				08C7E10B1B074D63006DEEFC /* MBProgressHUD.m in Sources */,
@@ -569,6 +580,7 @@
 				0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */,
 				027B252C1B0BC01000C5E43F /* CircleTransitionAnimator.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
+				08EA25D51B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m in Sources */,
 				029041561B06155E00B2B41E /* GalleryCollectionReusableView.m in Sources */,
 				08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */,
 				08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */,
