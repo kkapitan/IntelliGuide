@@ -51,8 +51,9 @@
     attraction[[IGAttraction stringForKey:IGAttractionKeyCategory]] = self.category.parseObject;
     attraction[[IGAttraction stringForKey:IGAttractionKeyDescription]] = self.placeDescription;
     attraction[[IGAttraction stringForKey:IGAttractionKeyName]] = self.name;
-    attraction[[IGAttraction stringForKey:IGAttractionKeyCreator]] = self.creator;
-    
+    if(self.creator){
+        attraction[[IGAttraction stringForKey:IGAttractionKeyCreator]] = self.creator;
+    }
     if(self.imageFile)
         attraction[[IGAttraction stringForKey:IGAttractionKeyImage]] = self.imageFile;
     
