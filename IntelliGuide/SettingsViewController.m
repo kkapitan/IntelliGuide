@@ -90,6 +90,8 @@
             }
         }
     }
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void) didFinishLoggingIn {
