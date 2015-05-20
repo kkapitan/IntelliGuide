@@ -996,6 +996,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pec-mI-NhG"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="imageView" destination="zuH-Ir-B7C" id="tLf-WW-K2Y"/>
                     </connections>
@@ -1046,6 +1047,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Gqx-p5-bCu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="alq-LT-rfV"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CIp-gX-cEY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -31,12 +31,20 @@
     vc.number = self.number + 1;
     vc.images = self.images;
     
+    if(vc.number % 2){
+        vc.view.backgroundColor = [UIColor blackColor];
+    }
+    
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipe:)];
     leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
     
