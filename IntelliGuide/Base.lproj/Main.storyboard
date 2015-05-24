@@ -579,6 +579,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <size key="customSize" width="320" height="60"/>
                                 <connections>
                                     <outlet property="categoryIcon" destination="ijC-vb-6Al" id="DPA-EH-b9a"/>
                                     <outlet property="name" destination="8Tf-6R-siz" id="m0u-X4-iuN"/>

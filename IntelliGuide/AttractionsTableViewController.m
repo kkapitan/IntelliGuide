@@ -13,8 +13,9 @@
 #import "IGAttraction.h"
 #import "MBProgressHUD.h"
 
-@interface AttractionsTableViewController ()
+@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong) NSArray *objects;
+@property(nonatomic,strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation AttractionsTableViewController
@@ -28,7 +29,22 @@
     lpgr.delegate = self;
     [self.collectionView addGestureRecognizer:lpgr];
     
+    
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshingAction) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refreshControl];
+    
+    
+    self.collectionView.alwaysBounceVertical = YES;
+    
+    
     [self loadObjects];
+    
+}
+
+-(void)refreshingAction{
+    [self loadObjects];
+    [self.refreshControl endRefreshing];
     
 }
 
@@ -77,6 +93,9 @@
     }];
 }
 
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(self.view.frame.size.width - 10, 60);
+};
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return self.objects.count;
