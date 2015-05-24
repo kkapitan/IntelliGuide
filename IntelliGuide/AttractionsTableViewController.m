@@ -11,9 +11,10 @@
 #import "AttractionCell.h"
 #import "NewAttractionViewController.h"
 #import "IGAttraction.h"
+#import "MBProgressHUD.h"
 
 @interface AttractionsTableViewController ()
-
+@property(nonatomic,strong) NSArray *objects;
 @end
 
 @implementation AttractionsTableViewController
@@ -22,13 +23,13 @@
     [super viewDidLoad];
     
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = .5; //seconds
+    lpgr.delegate = self;
+    [self.collectionView addGestureRecognizer:lpgr];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-    self.parseClassName = @"Place";
+    [self loadObjects];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,12 +37,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
-    return 1;
-}
+#pragma mark - Collection view data source
 
 /*!
  This callback method is responsible for creating and configuring query which will be
@@ -59,7 +55,7 @@
     
     PFQuery *attractionQuery = [PFQuery queryWithClassName:@"Place"];
     [attractionQuery includeKey:categoryKey];
-    if(_userAttarctionsMode)NSLog(@"lala");
+    
     if (_userAttarctionsMode) [attractionQuery whereKey:@"creator" equalTo:[PFUser currentUser]];
     else{
         [attractionQuery whereKey:categoryKey matchesQuery:categoryQuery];
@@ -70,121 +66,110 @@
 };
 
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object{
+- (void)loadObjects{
+    PFQuery *query = [self queryForTable];
     
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        self.objects = objects;
+        [self.collectionView reloadData];
+        [hud hide:YES];
+    }];
+}
+
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.objects.count;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *reuseIdentifier = @"AttractionCellReuseIdentifier";
     
+    PFObject *object = self.objects[indexPath.row];
     IGAttraction *attraction = [IGAttraction attractionWithParseObject:object];
     
-    AttractionCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    AttractionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     cell.attraction = attraction;
     
     return cell;
 }
 
 
+-(UIAlertController*)actionMenuForRowAtIndexPath:(NSIndexPath*)indexPath{
+    
+    AttractionCell *cell = (AttractionCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
+    
+    UIAlertController *menu = [UIAlertController alertControllerWithTitle:cell.attraction.name message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction* discardAction = [UIAlertAction actionWithTitle:@"Odrzuć" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
+        PFObject *attractionObject = [cell.attraction parseObject];
+        [attractionObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(succeeded)[self loadObjects];
+        }];
+
+    }];
+    
+    UIAlertAction* acceptAction = [UIAlertAction actionWithTitle:@"Akceptuj" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        PFObject *attractionObject = [cell.attraction parseObject];
+        attractionObject[@"verified"] = @YES;
+        [attractionObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if(succeeded)[self loadObjects];
+        }];
+    }];
+    
+    UIAlertAction* editAction = [UIAlertAction actionWithTitle:@"Edytuj" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+            [self performSegueWithIdentifier:@"editAttractionSegue" sender:cell];
+    }];
+    
+    UIAlertAction* cancelAction = [UIAlertAction actionWithTitle:@"Anuluj" style:UIAlertActionStyleCancel handler:^(UIAlertAction * action) {
+    }];
+
+    if(self.moderationMode){
+        [menu addAction:acceptAction];
+        [menu addAction:discardAction];
+    }else{
+        [menu addAction:editAction];
+    }
+    [menu addAction:cancelAction];
+    return menu;
+};
+
+-(void)presentActionMenuForRowAtIndexPath:(NSIndexPath*)indexPath{
+    if([self canEditRowAtIndexPath:indexPath]){
+        UIAlertController *menu = [self actionMenuForRowAtIndexPath:indexPath];
+        [self presentViewController:menu animated:YES completion:nil];
+    }
+}
+
+-(void)handleLongPress:(UILongPressGestureRecognizer*)gestureRecognizer{
+    
+    if(gestureRecognizer.state != UIGestureRecognizerStateBegan)return;
+    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
+    if(indexPath){
+        [self presentActionMenuForRowAtIndexPath:indexPath];
+    }
+}
+
 /*!
  Tells view controller whether it should enable swiping on cell to reveal accept/reject buttons.
  */
--(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+
+-(BOOL)canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
 
     PFObject *currentObject = [self.objects objectAtIndex:indexPath.row];
     IGAttraction *currentAttraction = [IGAttraction attractionWithParseObject:currentObject];
-    if (self.moderationMode) {
-        return YES;
-    } else {
-        if ([[PFUser currentUser].objectId isEqualToString:currentAttraction.creator.objectId]) {
-            return YES;
-        } else {
-            return NO;
-        }
-    }
+    if (self.moderationMode) return YES;
+    else if ([[PFUser currentUser].objectId isEqualToString:currentAttraction.creator.objectId])return YES;
+    return NO;
 }
-
--(NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    UITableViewRowAction *discardAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Odrzuć" handler:
-        
-        ^(UITableViewRowAction *action,NSIndexPath *indexPath){
-            AttractionCell *cell = (AttractionCell*)[tableView cellForRowAtIndexPath:indexPath];
-            PFObject *attractionObject = [cell.attraction parseObject];
-            [attractionObject deleteInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if(succeeded)[self loadObjects];
-            }];
-        }];
-    
-    UITableViewRowAction *acceptAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Akceptuj" handler:
-            
-            ^(UITableViewRowAction *action,NSIndexPath *indexPath){
-                AttractionCell *cell = (AttractionCell*)[tableView cellForRowAtIndexPath:indexPath];
-                PFObject *attractionObject = [cell.attraction parseObject];
-                attractionObject[@"verified"] = @YES;
-                [attractionObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                    if(succeeded)[self loadObjects];
-            }];
-        }];
-    
-    acceptAction.backgroundColor = [UIColor greenColor];
-    
-    
-    UITableViewRowAction *editAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Edytuj" handler:
-                                          
-        ^(UITableViewRowAction *action,NSIndexPath *indexPath){
-            [self performSegueWithIdentifier:@"editAttractionSegue" sender:[tableView cellForRowAtIndexPath:indexPath]];
-        }];
-    
-    editAction.backgroundColor = [UIColor orangeColor];
-    if(self.moderationMode)
-        return @[acceptAction,discardAction];
-    else
-        return @[editAction];
-}
-
-
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 
 #pragma mark - Navigation
-
-//gówno nie działa dla tych przycisków edytuj
-- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
-    if([identifier isEqualToString:@"editAttractionSegue"]){
-        AttractionCell *cell = (AttractionCell*)sender;
-        if ([PFUser currentUser].objectId == cell.attraction.creator.objectId) {
-            return YES;
-        } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie możesz edytować nieswoją atrakcję." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-            [alert show];
-            return NO;
-        }
-    } else {
-        return YES;
-    }
-}
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

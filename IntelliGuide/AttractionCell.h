@@ -12,7 +12,7 @@
 
 /*! Custom TableViewCell used to display attraction. */
 
-@interface AttractionCell : UITableViewCell
+@interface AttractionCell : UICollectionViewCell
 
 ///------
 ///@name Fields

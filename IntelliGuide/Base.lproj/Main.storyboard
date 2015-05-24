@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FB0-Ii-hOf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FB0-Ii-hOf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +30,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="xn6-px-oqg" kind="push" identifier="QueryForAttractions" id="4qC-nI-jNW"/>
+                                    <segue destination="1Y3-tK-vXi" kind="push" identifier="QueryForAttractions" id="FQG-cO-I85"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Witaj &lt;username&gt;, co chcesz dziś zwiedzić?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsR-gc-1Hl">
@@ -356,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rme-PQ-WiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="973"/>
+            <point key="canvasLocation" x="496" y="973"/>
         </scene>
         <!--Add Gallery Collection View Controller-->
         <scene sceneID="VK5-Gw-1hk">
@@ -489,7 +489,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOP-Vs-iLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1187" y="973"/>
+            <point key="canvasLocation" x="1277" y="986"/>
         </scene>
         <!--Attractions-->
         <scene sceneID="VbG-PJ-oaQ">
@@ -527,11 +527,6 @@
                                         <constraint firstItem="7Bt-0Z-cGe" firstAttribute="leading" secondItem="g05-Cn-VTb" secondAttribute="trailing" constant="8" id="tyl-Zd-j4N"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="categoryIcon" destination="g05-Cn-VTb" id="9x0-yd-76R"/>
-                                    <outlet property="name" destination="7Bt-0Z-cGe" id="NxI-av-3oT"/>
-                                    <segue destination="9mo-6w-aF3" kind="push" id="jz6-DE-sZu"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -540,13 +535,99 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Attractions" id="WHv-qB-nYq"/>
-                    <connections>
-                        <segue destination="KyS-Mf-zZg" kind="push" identifier="editAttractionSegue" id="gE7-EN-Sbh"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PVV-fh-qMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1127" y="250"/>
+            <point key="canvasLocation" x="73" y="951"/>
+        </scene>
+        <!--Attractions Table View Controller-->
+        <scene sceneID="BsO-6H-VRi">
+            <objects>
+                <collectionViewController id="1Y3-tK-vXi" customClass="AttractionsTableViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="goR-sq-rBx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="25U-aM-JRR">
+                            <size key="itemSize" width="320" height="60"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AttractionCellReuseIdentifier" id="GZM-6P-WGz" customClass="AttractionCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ijC-vb-6Al">
+                                            <rect key="frame" x="8" y="15" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="AoO-vG-7pA"/>
+                                                <constraint firstAttribute="width" constant="30" id="VXG-NB-mdV"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Tf-6R-siz">
+                                            <rect key="frame" x="47" y="19" width="241" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <connections>
+                                    <outlet property="categoryIcon" destination="ijC-vb-6Al" id="DPA-EH-b9a"/>
+                                    <outlet property="name" destination="8Tf-6R-siz" id="m0u-X4-iuN"/>
+                                    <segue destination="9mo-6w-aF3" kind="push" id="qWg-W7-UD4"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="5QV-PL-oUw" customClass="AttractionCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYd-dC-Xfr">
+                                            <rect key="frame" x="8" y="15" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="8Wb-z5-f48"/>
+                                                <constraint firstAttribute="height" constant="30" id="hSM-b7-LG9"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sSA-Yt-3CW">
+                                            <rect key="frame" x="47" y="19" width="241" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <connections>
+                                    <outlet property="categoryIcon" destination="bYd-dC-Xfr" id="mla-C8-ROS"/>
+                                    <outlet property="name" destination="sSA-Yt-3CW" id="eEi-P4-l5z"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="1Y3-tK-vXi" id="8nL-u2-cTj"/>
+                            <outlet property="delegate" destination="1Y3-tK-vXi" id="r6v-bR-UUI"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="B6p-lz-POb"/>
+                    <connections>
+                        <segue destination="KyS-Mf-zZg" kind="push" identifier="editAttractionSegue" id="ddT-qh-rYj"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Lc-Nt-xDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="255"/>
         </scene>
         <!--Attraction Details-->
         <scene sceneID="xfB-64-ZE7">
@@ -1075,8 +1156,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ow0-7u-Pby"/>
         <segue reference="xrg-yU-xwY"/>
+        <segue reference="ddT-qh-rYj"/>
         <segue reference="L4J-wA-2p6"/>
     </inferredMetricsTieBreakers>
 </document>

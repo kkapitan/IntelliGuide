@@ -16,7 +16,7 @@
  in a table view. After clicking on table view element, it instantiates, 
  feeds with data andtriggers segue to Attraction Details view controller.
  */
-@interface AttractionsTableViewController : PFQueryTableViewController
+@interface AttractionsTableViewController : UICollectionViewController<UIGestureRecognizerDelegate>
 
 ///------
 ///@name Fields
