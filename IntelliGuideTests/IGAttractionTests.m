@@ -33,9 +33,9 @@
     mockPFFile = OCMClassMock([PFFile class]);
     mockCategoryParseFile = OCMClassMock([PFObject class]);
     
-    PFObject *categoryObject = [PFObject objectWithClassName:@"Category"];
-    categoryObject[@"name"] = @"Park";
-    categoryObject.objectId = @"abc123";
+//    PFObject *categoryObject = [PFObject objectWithClassName:@"Category"];
+//    categoryObject[@"name"] = @"Park";
+//    categoryObject.objectId = @"abc123";
     
     OCMStub([mockParseObject objectId]).andReturn(@"abc123");
     OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyName]]).andReturn(@"Park Wilsona");
@@ -45,7 +45,7 @@
     OCMStub(mockPFUser[@"username"]).andReturn(@"Pani Krysia");
     OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyCreator]]).andReturn(mockPFUser);
 //    OCMStub(mockCategoryParseFile[[IGCategory stringForKey:IGCategoryKeyName]]).andReturn(@"Park");
-    OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyCategory]]).andReturn(categoryObject);
+//    OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyCategory]]).andReturn(categoryObject);
     
     attraction = [IGAttraction attractionWithParseObject:mockParseObject];
 }
@@ -107,22 +107,22 @@
 //    XCTAssertEqualObjects(NSStringFromClass(attraction.category.class), @"IGCategory");
 }
 
-- (void) testParseObject {
-    PFObject *object = [PFObject objectWithClassName:@"Place"];
-    object.objectId = @"abc123";
-    object[[IGAttraction stringForKey:IGAttractionKeyName]] = @"Park Wilsona";
-    object[[IGAttraction stringForKey:IGAttractionKeyDescription]] = @"Malowniczy park położony w pięknej dolinie";
-    object[[IGAttraction stringForKey:IGAttractionKeyImage]] = mockPFFile;
-    object[[IGAttraction stringForKey:IGAttractionKeyCreator]] = mockPFUser;
-    
-    
-//    XCTAssert([NSStringFromClass([[attraction parseObject] class]) isEqualToString:@"PFObject"]);
-    
-    PFObject *returned = [attraction parseObject];
-    
-    XCTAssertEqualObjects(object.objectId, returned.objectId);
-    XCTAssertEqualObjects(object[[IGAttraction stringForKey:IGAttractionKeyName]], returned[[IGAttraction stringForKey:IGAttractionKeyName]]);
-    XCTAssertEqualObjects(object[[IGAttraction stringForKey:IGAttractionKeyDescription]], returned[[IGAttraction stringForKey:IGAttractionKeyDescription]]);
-}
+//- (void) testParseObject {
+//    PFObject *object = [PFObject objectWithClassName:@"Place"];
+//    object.objectId = @"abc123";
+//    object[[IGAttraction stringForKey:IGAttractionKeyName]] = @"Park Wilsona";
+//    object[[IGAttraction stringForKey:IGAttractionKeyDescription]] = @"Malowniczy park położony w pięknej dolinie";
+//    object[[IGAttraction stringForKey:IGAttractionKeyImage]] = mockPFFile;
+//    object[[IGAttraction stringForKey:IGAttractionKeyCreator]] = mockPFUser;
+//    
+//    
+////    XCTAssert([NSStringFromClass([[attraction parseObject] class]) isEqualToString:@"PFObject"]);
+//    
+//    PFObject *returned = [attraction parseObject];
+//    
+//    XCTAssertEqualObjects(object.objectId, returned.objectId);
+//    XCTAssertEqualObjects(object[[IGAttraction stringForKey:IGAttractionKeyName]], returned[[IGAttraction stringForKey:IGAttractionKeyName]]);
+//    XCTAssertEqualObjects(object[[IGAttraction stringForKey:IGAttractionKeyDescription]], returned[[IGAttraction stringForKey:IGAttractionKeyDescription]]);
+//}
 
 @end
