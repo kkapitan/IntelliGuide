@@ -13,9 +13,18 @@
 #import "IGAttraction.h"
 #import "MBProgressHUD.h"
 
-@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout>
+
+@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout,UISearchBarDelegate>
 @property(nonatomic,strong) NSArray *objects;
+@property(nonatomic,strong) NSArray *originalObjects;
 @property(nonatomic,strong) UIRefreshControl *refreshControl;
+@property(nonatomic) BOOL searchMode;
+@property(nonatomic,strong) UISearchBar *searchBar;
+@property(nonatomic,strong) UIBarButtonItem *searchBarButton;
+@property(nonatomic,strong) UIBarButtonItem *searchBarView;
+@property(nonatomic,strong) UIView *searchBarContainer;
+@property(nonatomic,strong) UITapGestureRecognizer *tapRecognizer;
+
 @end
 
 @implementation AttractionsTableViewController
@@ -23,34 +32,114 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    //Long press recognizer
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
     lpgr.minimumPressDuration = .5; //seconds
     lpgr.delegate = self;
     [self.collectionView addGestureRecognizer:lpgr];
     
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(searchBarLoseFocus)];
+   
     
+    // Refresh control
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refreshingAction) forControlEvents:UIControlEventValueChanged];
     [self.collectionView addSubview:self.refreshControl];
-    
-    
     self.collectionView.alwaysBounceVertical = YES;
     
     
+    //SearchBarButton
+    self.searchBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonOn:)];
+    self.navigationItem.rightBarButtonItem = self.searchBarButton;
+    
+    //SearchBar
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width/1.25, 40)]; //At the begining move it out of screen
+    self.searchBar.delegate = self;
+    self.searchBar.placeholder = @"Wyszukaj po nazwie...";
+    self.searchBar.showsCancelButton = YES;
+    self.searchBar.backgroundImage = [[UIImage alloc] init]; // Clear the background color
+    
+    //SearchBarContainer
+    self.searchBarContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/1.25, 40)];
+    self.searchBarContainer.backgroundColor = [UIColor clearColor];
+    [self.searchBarContainer addSubview:self.searchBar];
+    
+    self.searchBarView = [[UIBarButtonItem alloc] initWithCustomView:self.searchBarContainer];
+
     [self loadObjects];
+}
+#pragma mark - SearchBar
+
+- (void)searchButtonOn:(id)sender {
+    
+    self.navigationItem.rightBarButtonItem = self.searchBarView;
+    [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:1 options:0 animations:^{
+           self.searchBar.frame = CGRectOffset(self.searchBar.frame, -self.view.frame.size.width, 0);
+    } completion:^(BOOL finished) {
+        [self.searchBar becomeFirstResponder];
+    }];
+    
+    /*
+    self.navigationItem.rightBarButtonItem = self.searchBarView;
+    [UIView animateWithDuration:1 animations:^{
+        self.searchBar.frame = CGRectOffset(self.searchBar.frame, -self.view.frame.size.width, 0);
+    } completion:^(BOOL finished) {
+        [self.searchBar becomeFirstResponder];
+    }];
+    */
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+    
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        self.searchBar.frame = CGRectOffset(self.searchBar.frame, self.view.frame.size.width, 0);
+    } completion:^(BOOL finished) {
+        self.navigationItem.rightBarButtonItem = self.searchBarButton;
+        self.searchBar.text = @"";
+        [self.searchBar.delegate searchBar:searchBar textDidChange:self.searchBar.text];
+    }];
     
 }
+
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    if(!self.originalObjects)return;
+    
+    if([searchText isEqualToString:@""]){
+        self.objects = self.originalObjects;
+    }else{
+        [self filterObjectsWithName:searchText];
+    }
+    [self.collectionView reloadData];
+}
+
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+     [self.collectionView addGestureRecognizer:self.tapRecognizer];
+}
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    [self.collectionView removeGestureRecognizer:self.tapRecognizer];
+}
+
+-(void)searchBarLoseFocus{
+    [self.searchBar endEditing:YES];
+}
+
+-(void)filterObjectsWithName:(NSString*)name{
+    NSMutableArray *results = [NSMutableArray array];
+    for(PFObject *object in self.originalObjects){
+        if([object[@"name"] containsString:name])
+            [results addObject:object];
+    }
+    self.objects = results;
+}
+
+#pragma mark - RefreshControl
 
 -(void)refreshingAction{
     [self loadObjects];
     [self.refreshControl endRefreshing];
     
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Collection view data source
@@ -88,6 +177,7 @@
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         self.objects = objects;
+        self.originalObjects = [objects copy];
         [self.collectionView reloadData];
         [hud hide:YES];
     }];
@@ -194,6 +284,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 //     Get the new view controller using [segue destinationViewController].
 //     Pass the selected object to the new view controller.
+    
     if([segue.identifier isEqualToString:@"editAttractionSegue"]){
         NewAttractionViewController *newAttractionViewController = segue.destinationViewController;
         AttractionCell *cell = (AttractionCell*)sender;

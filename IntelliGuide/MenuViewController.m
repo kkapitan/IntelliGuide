@@ -13,6 +13,11 @@
 
 @interface MenuViewController () <UIAlertViewDelegate> {
     NSArray *menuItems;
+    NSArray *userMenuItems;
+    NSArray *redactorMenuItems;
+    NSArray *moderatorMenuItems;
+    NSArray *headerTitles;
+
 }
 
 @property (strong) LoginController *loginController;
@@ -23,21 +28,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    menuItems = @[@"preferences", @"moderationPanel", @"myAttractions", @"settings"];
+    userMenuItems = @[@"preferences",@"settings"];
+    redactorMenuItems = @[@"myAttractions"];
+    moderatorMenuItems = @[@"moderationPanel"];
+    headerTitles = @[@"Użytkownik",@"Redaktor",@"Moderator"];
+    menuItems = @[userMenuItems,redactorMenuItems,moderatorMenuItems];
+    
+    self.tableView.alwaysBounceVertical = NO;
+    //self.tableView.dataSource = nil;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return headerTitles[section];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[menuItems objectAtIndex:indexPath.row]];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[menuItems[indexPath.section] objectAtIndex:indexPath.row]];
     return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return menuItems.count;
+    return [(NSArray*)(menuItems[section]) count];
+}
+
+
+-(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
+    
+    UIView *separator = [[UIView alloc] initWithFrame:CGRectMake(0, view.frame.size.height - 0.5, view.frame.size.width, 1)];
+    UIView *separator2 = [[UIView alloc] initWithFrame:CGRectMake(0, view.frame.size.height - 1.0, view.frame.size.width, 1)];
+    separator.backgroundColor = [UIColor darkGrayColor];
+    separator2.backgroundColor = [UIColor blackColor];
+    [view addSubview:separator];
+    [view addSubview:separator2];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    if([PFUser currentUser]){
+        return menuItems.count;
+    }
+    else return 1;
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {

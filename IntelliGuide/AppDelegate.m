@@ -25,6 +25,8 @@ static NSString* clientKey = @"tt4tGs7mlMYK4g099i7yd8pDMEANXMt9qNbqT57C";
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    
     [Parse setApplicationId:applicationKey clientKey:clientKey];
     return YES;
 }

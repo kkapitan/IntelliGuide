@@ -66,8 +66,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //_categories = @[@"Park",@"Muzeum",@"Zabytek",@"Kino",@"Teatr",@"Cmentarz"];
-    
     self.didShowLogin = NO;
     self.categories = [[NSMutableArray alloc] init];
     self.selectedCategories = [NSMutableArray array];
@@ -96,10 +94,11 @@
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"DownloadedCategoryImage" object:nil];
-    
-}
+    }
 
 - (void)viewDidAppear:(BOOL)animated {
+    
+    
     if (![PFUser currentUser]) {
 //        if (!_didShowLogin) {
 //            _didShowLogin = YES;
