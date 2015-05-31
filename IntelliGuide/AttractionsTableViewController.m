@@ -212,7 +212,7 @@
     
     AttractionCell *cell = (AttractionCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
     
-    UIAlertController *menu = [UIAlertController alertControllerWithTitle:cell.attraction.name message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *menu = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction* discardAction = [UIAlertAction actionWithTitle:@"Odrzuć" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
         PFObject *attractionObject = [cell.attraction parseObject];

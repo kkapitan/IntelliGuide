@@ -32,7 +32,6 @@
 		027B25261B0BB7B100C5E43F /* PresentPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 027B25251B0BB7B100C5E43F /* PresentPhotoViewController.m */; };
 		027B25291B0BBE6E00C5E43F /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 027B25281B0BBE6E00C5E43F /* NavigationControllerDelegate.m */; };
 		027B252C1B0BC01000C5E43F /* CircleTransitionAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 027B252B1B0BC01000C5E43F /* CircleTransitionAnimator.m */; };
-		02884A411B14B5420054D69B /* menucell.png in Resources */ = {isa = PBXBuildFile; fileRef = 02884A401B14B5420054D69B /* menucell.png */; };
 		028F4ABD1AD7FD5700C63973 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABC1AD7FD5700C63973 /* main.m */; };
 		028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 028F4ABF1AD7FD5700C63973 /* AppDelegate.m */; };
 		028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 028F4AC41AD7FD5700C63973 /* Main.storyboard */; };
@@ -43,13 +42,6 @@
 		029041561B06155E00B2B41E /* GalleryCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 029041551B06155E00B2B41E /* GalleryCollectionReusableView.m */; };
 		0290415F1B064D1200B2B41E /* GalleryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */; };
 		029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 029041621B065DAC00B2B41E /* GalleryFetcher.m */; };
-		029041651B06781300B2B41E /* icon_x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029041641B06781300B2B41E /* icon_x.png */; };
-		02BE65381B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65331B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png */; };
-		02BE65391B13D4B000A4D58F /* glyphicons-21-home.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65341B13D4B000A4D58F /* glyphicons-21-home.png */; };
-		02BE653A1B13D4B000A4D58F /* glyphicons-28-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65351B13D4B000A4D58F /* glyphicons-28-search.png */; };
-		02BE653B1B13D4B000A4D58F /* glyphicons-31-pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65361B13D4B000A4D58F /* glyphicons-31-pencil.png */; };
-		02BE653C1B13D4B000A4D58F /* glyphicons-138-cogwheels.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65371B13D4B000A4D58F /* glyphicons-138-cogwheels.png */; };
-		02E5E0011B0A7B0000E09FCA /* add182.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E5E0001B0A7B0000E09FCA /* add182.png */; };
 		08038EB31B0668CF0042955B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB21B0668CF0042955B /* Accounts.framework */; };
 		08038EB51B0668D70042955B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB41B0668D70042955B /* Social.framework */; };
 		08038EB81B0669460042955B /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EB71B0669460042955B /* LoginController.m */; };
@@ -140,7 +132,6 @@
 		027B25281B0BBE6E00C5E43F /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
 		027B252A1B0BC01000C5E43F /* CircleTransitionAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleTransitionAnimator.h; sourceTree = "<group>"; };
 		027B252B1B0BC01000C5E43F /* CircleTransitionAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTransitionAnimator.m; sourceTree = "<group>"; };
-		02884A401B14B5420054D69B /* menucell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menucell.png; sourceTree = "<group>"; };
 		028F4AB71AD7FD5700C63973 /* IntelliGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntelliGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028F4ABB1AD7FD5700C63973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		028F4ABC1AD7FD5700C63973 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -161,13 +152,6 @@
 		0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewController.m; sourceTree = "<group>"; };
 		029041611B065DAC00B2B41E /* GalleryFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryFetcher.h; sourceTree = "<group>"; };
 		029041621B065DAC00B2B41E /* GalleryFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryFetcher.m; sourceTree = "<group>"; };
-		029041641B06781300B2B41E /* icon_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_x.png; sourceTree = "<group>"; };
-		02BE65331B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-14-beach-umbrella.png"; sourceTree = "<group>"; };
-		02BE65341B13D4B000A4D58F /* glyphicons-21-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-21-home.png"; sourceTree = "<group>"; };
-		02BE65351B13D4B000A4D58F /* glyphicons-28-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-28-search.png"; sourceTree = "<group>"; };
-		02BE65361B13D4B000A4D58F /* glyphicons-31-pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-31-pencil.png"; sourceTree = "<group>"; };
-		02BE65371B13D4B000A4D58F /* glyphicons-138-cogwheels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-138-cogwheels.png"; sourceTree = "<group>"; };
-		02E5E0001B0A7B0000E09FCA /* add182.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add182.png; sourceTree = "<group>"; };
 		08038EB21B0668CF0042955B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		08038EB41B0668D70042955B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		08038EB61B0669460042955B /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
@@ -399,14 +383,6 @@
 				028F4ABF1AD7FD5700C63973 /* AppDelegate.m */,
 				028F4AC41AD7FD5700C63973 /* Main.storyboard */,
 				028F4AC71AD7FD5700C63973 /* Images.xcassets */,
-				02E5E0001B0A7B0000E09FCA /* add182.png */,
-				029041641B06781300B2B41E /* icon_x.png */,
-				02BE65331B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png */,
-				02BE65341B13D4B000A4D58F /* glyphicons-21-home.png */,
-				02BE65351B13D4B000A4D58F /* glyphicons-28-search.png */,
-				02BE65361B13D4B000A4D58F /* glyphicons-31-pencil.png */,
-				02BE65371B13D4B000A4D58F /* glyphicons-138-cogwheels.png */,
-				02884A401B14B5420054D69B /* menucell.png */,
 				028F4AC91AD7FD5700C63973 /* LaunchScreen.xib */,
 				028F4ABA1AD7FD5700C63973 /* Supporting Files */,
 				029041601B065D7900B2B41E /* Utilities */,
@@ -553,18 +529,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02884A411B14B5420054D69B /* menucell.png in Resources */,
 				028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */,
-				02BE65381B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png in Resources */,
-				02BE653A1B13D4B000A4D58F /* glyphicons-28-search.png in Resources */,
-				02E5E0011B0A7B0000E09FCA /* add182.png in Resources */,
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
 				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
-				02BE653C1B13D4B000A4D58F /* glyphicons-138-cogwheels.png in Resources */,
-				029041651B06781300B2B41E /* icon_x.png in Resources */,
-				02BE653B1B13D4B000A4D58F /* glyphicons-31-pencil.png in Resources */,
-				02BE65391B13D4B000A4D58F /* glyphicons-21-home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

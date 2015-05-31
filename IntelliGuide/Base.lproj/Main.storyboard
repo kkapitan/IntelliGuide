@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FB0-Ii-hOf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FB0-Ii-hOf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -122,7 +122,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-28-search.png" translatesAutoresizingMaskIntoConstraints="NO" id="QCd-tS-HI7">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-28-search.png" translatesAutoresizingMaskIntoConstraints="NO" id="QCd-tS-HI7">
                                             <rect key="frame" x="13" y="8" width="26" height="26"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-qG-YY0">
@@ -147,7 +147,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Pt-W5-hT1" id="1mr-kz-YWk">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-14-beach-umbrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="sVP-m8-zYf">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-14-beach-umbrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="sVP-m8-zYf">
                                             <rect key="frame" x="13" y="8" width="26" height="26"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Panel moderacji" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvH-bx-vcB">
@@ -185,7 +185,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-21-home.png" translatesAutoresizingMaskIntoConstraints="NO" id="LdT-nB-LyH">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-21-home.png" translatesAutoresizingMaskIntoConstraints="NO" id="LdT-nB-LyH">
                                             <rect key="frame" x="13" y="8" width="26" height="26"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itV-gq-yhA">
@@ -214,7 +214,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-138-cogwheels.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpn-Kn-KGR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-138-cogwheels.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpn-Kn-KGR">
                                             <rect key="frame" x="13" y="8" width="26" height="26"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNq-h5-CsV">
@@ -772,7 +772,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDk-Wf-ZY4">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="8" y="20" width="304" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -781,9 +781,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zDk-Wf-ZY4" secondAttribute="trailing" id="FrP-B4-4ZO"/>
+                            <constraint firstAttribute="trailing" secondItem="zDk-Wf-ZY4" secondAttribute="trailing" constant="8" id="FrP-B4-4ZO"/>
                             <constraint firstItem="zDk-Wf-ZY4" firstAttribute="top" secondItem="VGy-1V-iue" secondAttribute="bottom" id="jIv-YK-KzL"/>
-                            <constraint firstItem="zDk-Wf-ZY4" firstAttribute="leading" secondItem="cRq-jN-rxA" secondAttribute="leading" id="jty-Lc-wrh"/>
+                            <constraint firstItem="zDk-Wf-ZY4" firstAttribute="leading" secondItem="cRq-jN-rxA" secondAttribute="leading" constant="8" id="jty-Lc-wrh"/>
                             <constraint firstItem="Fgf-mR-MFz" firstAttribute="top" secondItem="zDk-Wf-ZY4" secondAttribute="bottom" id="ovC-Bb-11a"/>
                         </constraints>
                     </view>
@@ -829,16 +829,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9h2-2k-NGv">
-                                            <rect key="frame" x="8" y="15" width="42" height="21"/>
+                                            <rect key="frame" x="16" y="15" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHk-26-hYB">
-                                            <rect key="frame" x="8" y="45" width="304" height="21"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="304" id="J18-83-9vT"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHk-26-hYB">
+                                            <rect key="frame" x="16" y="44" width="288" height="21"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -854,11 +851,11 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="GHk-26-hYB" firstAttribute="top" secondItem="9h2-2k-NGv" secondAttribute="bottom" constant="8" id="1Ie-3K-RTD"/>
-                                        <constraint firstItem="9h2-2k-NGv" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="8" id="78q-Aw-ayR"/>
-                                        <constraint firstItem="GHk-26-hYB" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="8" id="8wh-hp-xhu"/>
+                                        <constraint firstItem="9h2-2k-NGv" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="16" id="78q-Aw-ayR"/>
+                                        <constraint firstItem="GHk-26-hYB" firstAttribute="leading" secondItem="nKV-xP-8tk" secondAttribute="leading" constant="16" id="8wh-hp-xhu"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="centerY" secondItem="1PU-kg-bgb" secondAttribute="centerY" constant="-1.25" id="Zfw-bK-go7"/>
                                         <constraint firstItem="9h2-2k-NGv" firstAttribute="top" secondItem="nKV-xP-8tk" secondAttribute="top" constant="15" id="eJm-Ec-lSo"/>
-                                        <constraint firstAttribute="trailing" secondItem="GHk-26-hYB" secondAttribute="trailing" constant="8" id="geL-Gh-Hs9"/>
+                                        <constraint firstAttribute="trailing" secondItem="GHk-26-hYB" secondAttribute="trailing" constant="16" id="geL-Gh-Hs9"/>
                                         <constraint firstAttribute="trailing" secondItem="1PU-kg-bgb" secondAttribute="trailing" constant="8" id="rjC-mZ-ojO"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -986,7 +983,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-qu-foB">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-qu-foB">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocena" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3t-8F-w5X">
@@ -1216,8 +1213,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="G6X-nT-bnv"/>
+        <segue reference="NsH-hH-dNh"/>
         <segue reference="ddT-qh-rYj"/>
-        <segue reference="L4J-wA-2p6"/>
+        <segue reference="G6X-nT-bnv"/>
     </inferredMetricsTieBreakers>
 </document>
