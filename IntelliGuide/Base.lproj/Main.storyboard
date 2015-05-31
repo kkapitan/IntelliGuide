@@ -122,7 +122,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-28-search.png" translatesAutoresizingMaskIntoConstraints="NO" id="QCd-tS-HI7">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-28-search" translatesAutoresizingMaskIntoConstraints="NO" id="QCd-tS-HI7">
                                             <rect key="frame" x="13" y="8" width="26" height="26"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-qG-YY0">
@@ -147,7 +147,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Pt-W5-hT1" id="1mr-kz-YWk">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-14-beach-umbrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="sVP-m8-zYf">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-14-beach-umbrella" translatesAutoresizingMaskIntoConstraints="NO" id="sVP-m8-zYf">
                                             <rect key="frame" x="13" y="8" width="26" height="26"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Panel moderacji" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RvH-bx-vcB">
@@ -185,7 +185,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-21-home.png" translatesAutoresizingMaskIntoConstraints="NO" id="LdT-nB-LyH">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-21-home" translatesAutoresizingMaskIntoConstraints="NO" id="LdT-nB-LyH">
                                             <rect key="frame" x="13" y="8" width="26" height="26"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="itV-gq-yhA">
@@ -214,7 +214,7 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-138-cogwheels.png" translatesAutoresizingMaskIntoConstraints="NO" id="hpn-Kn-KGR">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glyphicons-138-cogwheels" translatesAutoresizingMaskIntoConstraints="NO" id="hpn-Kn-KGR">
                                             <rect key="frame" x="13" y="8" width="26" height="26"/>
                                         </imageView>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hNq-h5-CsV">
@@ -435,7 +435,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="276" height="215"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add182.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZWv-rP-7EE">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="add182" translatesAutoresizingMaskIntoConstraints="NO" id="ZWv-rP-7EE">
                                             <rect key="frame" x="69" y="39" width="138" height="138"/>
                                         </imageView>
                                     </subviews>
@@ -807,7 +807,7 @@
                             <rect key="frame" x="0.0" y="111" width="320" height="57"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add182.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Ss-Qx-GnJ">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add182" translatesAutoresizingMaskIntoConstraints="NO" id="9Ss-Qx-GnJ">
                                     <rect key="frame" x="268" y="8" width="44" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="bpz-We-vCK"/>
@@ -1199,11 +1199,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add182.png" width="256" height="256"/>
-        <image name="glyphicons-138-cogwheels.png" width="34" height="27"/>
-        <image name="glyphicons-14-beach-umbrella.png" width="24" height="24"/>
-        <image name="glyphicons-21-home.png" width="27" height="26"/>
-        <image name="glyphicons-28-search.png" width="24" height="24"/>
+        <image name="add182" width="256" height="256"/>
+        <image name="glyphicons-138-cogwheels" width="34" height="27"/>
+        <image name="glyphicons-14-beach-umbrella" width="24" height="24"/>
+        <image name="glyphicons-21-home" width="27" height="26"/>
+        <image name="glyphicons-28-search" width="24" height="24"/>
         <image name="icon_x.png" width="100" height="100"/>
         <image name="splash_logo" width="1024" height="1024"/>
     </resources>

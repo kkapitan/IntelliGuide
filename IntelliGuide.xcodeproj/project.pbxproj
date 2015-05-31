@@ -50,6 +50,7 @@
 		08038EC11B06875D0042955B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EC01B06875D0042955B /* SettingsViewController.m */; };
 		080AB86F1B0B104A00AF027C /* LoginControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB86E1B0B104A00AF027C /* LoginControllerTests.m */; };
 		080AB8711B0B11E300AF027C /* GalleryFetcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */; };
+		0813F4591B1B69D700623A13 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0813F4581B1B69D700623A13 /* LocationManager.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
@@ -164,6 +165,8 @@
 		08038EC01B06875D0042955B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		080AB86E1B0B104A00AF027C /* LoginControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginControllerTests.m; sourceTree = "<group>"; };
 		080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryFetcherTests.m; sourceTree = "<group>"; };
+		0813F4571B1B69D700623A13 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		0813F4581B1B69D700623A13 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
@@ -439,6 +442,8 @@
 				027B25281B0BBE6E00C5E43F /* NavigationControllerDelegate.m */,
 				027B252A1B0BC01000C5E43F /* CircleTransitionAnimator.h */,
 				027B252B1B0BC01000C5E43F /* CircleTransitionAnimator.m */,
+				0813F4571B1B69D700623A13 /* LocationManager.h */,
+				0813F4581B1B69D700623A13 /* LocationManager.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -558,6 +563,7 @@
 				027B25261B0BB7B100C5E43F /* PresentPhotoViewController.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
 				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
+				0813F4591B1B69D700623A13 /* LocationManager.m in Sources */,
 				08EA25D21B0C797000ED6EC5 /* MyPFLoginViewController.m in Sources */,
 				08038EB81B0669460042955B /* LoginController.m in Sources */,
 				029041531B0605FA00B2B41E /* GalleryCollectionViewCell.m in Sources */,
