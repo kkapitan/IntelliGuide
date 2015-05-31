@@ -57,6 +57,11 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
      This constant is used to get PFUser that created attraction
      */
     IGAttractionKeyCreator,
+    
+    /*!
+     This constant is used to access attraction's location
+     */
+    IGAttractionKeyLocation,
 };
 
 ///------
@@ -95,6 +100,11 @@ typedef NS_ENUM(NSInteger, IGAttractionKey){
  */
 
 @property PFUser *creator;
+
+/*!
+ Property holding attraction's location
+ */
+@property CLLocation *location;
 
 //------
 //@name Class methods

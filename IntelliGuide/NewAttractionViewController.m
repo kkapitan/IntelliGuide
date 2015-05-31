@@ -11,6 +11,7 @@
 #import "AddGalleryCollectionViewController.h"
 #import "IGAttraction.h"
 #import "GalleryFetcher.h"
+#import "LocationManager.h"
 #import "MBProgressHUD.h"
 
 @interface NewAttractionViewController () <CategoryPickerDelegate,UITextViewDelegate,GalleryDelegate>
@@ -126,9 +127,10 @@
         }];
         
     }
+    
+    [[[LocationManager sharedManager] locationManager] startUpdatingLocation];
     // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -170,6 +172,14 @@
         attraction.imageFile = [PFFile fileWithData: UIImageJPEGRepresentation(self.mainImage, 1.0)];
     }
     
+    CLLocation *location = [[LocationManager sharedManager] lastLocation];
+    if (location) {
+        attraction.location = location;
+    } else {
+        [self displayAlertWithTitle:@"Błąd" message:@"Nie można wykryć Twojej lokalizacji"];
+        return nil;
+    }
+    
     attraction.creator = [PFUser currentUser];
     
     return attraction;
@@ -196,8 +206,6 @@
         destinationViewController.mainImage = self.mainImage;
         destinationViewController.delegate = self;
     }
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 

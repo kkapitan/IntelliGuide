@@ -24,6 +24,8 @@
     
     _imageFile = object[[IGAttraction stringForKey:IGAttractionKeyImage]];
     _creator = object[[IGAttraction stringForKey:IGAttractionKeyCreator]];
+    PFGeoPoint *geoPoint = object[[IGAttraction stringForKey:IGAttractionKeyLocation]];
+    _location = [[CLLocation alloc] initWithLatitude:geoPoint.latitude longitude:geoPoint.longitude];
     _objectId = object.objectId;
     
     //_categoryName = [category valueForKey:@"name"];
@@ -38,7 +40,7 @@
     static NSArray *strings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        strings = @[@"name",@"description",@"category",@"verified",@"image",@"creator"];
+        strings = @[@"name",@"description",@"category",@"verified",@"image",@"creator",@"location"];
     });
     return strings[key];
 }
@@ -56,6 +58,10 @@
     }
     if(self.imageFile)
         attraction[[IGAttraction stringForKey:IGAttractionKeyImage]] = self.imageFile;
+    if(self.location) {
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:self.location];
+        attraction[[IGAttraction stringForKey:IGAttractionKeyLocation]] = geoPoint;
+    }
     
     return attraction;
 }
