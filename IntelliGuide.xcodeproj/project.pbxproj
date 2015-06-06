@@ -53,6 +53,8 @@
 		0813F4591B1B69D700623A13 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0813F4581B1B69D700623A13 /* LocationManager.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
+		084458FB1B23461100EC3D6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084458FA1B23461100EC3D6C /* MapKit.framework */; };
+		084458FE1B2346DD00EC3D6C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084458FD1B2346DD00EC3D6C /* MapViewController.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
 		085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */; };
 		0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0887DB051B08B5AC00F2E7F6 /* IGCategoryTests.m */; };
@@ -171,6 +173,9 @@
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
 		0822024F1AE30B1700921149 /* AttractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionCell.m; sourceTree = "<group>"; };
+		084458FA1B23461100EC3D6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		084458FC1B2346DD00EC3D6C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		084458FD1B2346DD00EC3D6C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherTableCell.xib; sourceTree = "<group>"; };
 		085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherTableCell.h; sourceTree = "<group>"; };
 		085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCell.m; sourceTree = "<group>"; };
@@ -212,6 +217,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084458FB1B23461100EC3D6C /* MapKit.framework in Frameworks */,
 				08038EB51B0668D70042955B /* Social.framework in Frameworks */,
 				08038EB31B0668CF0042955B /* Accounts.framework in Frameworks */,
 				0211961F1AE0065D00C367C6 /* libsqlite3.0.dylib in Frameworks */,
@@ -260,6 +266,7 @@
 		021196201AE006A000C367C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				084458FA1B23461100EC3D6C /* MapKit.framework */,
 				0887DB101B08C2D700F2E7F6 /* StoreKit.framework */,
 				0887DB0D1B08C2C600F2E7F6 /* libz.dylib */,
 				0887DB0A1B08BF7100F2E7F6 /* libOCMock.a */,
@@ -319,6 +326,8 @@
 				08038EC01B06875D0042955B /* SettingsViewController.m */,
 				027B25241B0BB7B100C5E43F /* PresentPhotoViewController.h */,
 				027B25251B0BB7B100C5E43F /* PresentPhotoViewController.m */,
+				084458FC1B2346DD00EC3D6C /* MapViewController.h */,
+				084458FD1B2346DD00EC3D6C /* MapViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -582,6 +591,7 @@
 				029041561B06155E00B2B41E /* GalleryCollectionReusableView.m in Sources */,
 				08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */,
 				08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */,
+				084458FE1B2346DD00EC3D6C /* MapViewController.m in Sources */,
 				082202501AE30B1700921149 /* AttractionCell.m in Sources */,
 				0290415F1B064D1200B2B41E /* GalleryCollectionViewController.m in Sources */,
 				08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */,

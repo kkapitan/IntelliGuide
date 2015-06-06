@@ -25,7 +25,7 @@
     _imageFile = object[[IGAttraction stringForKey:IGAttractionKeyImage]];
     _creator = object[[IGAttraction stringForKey:IGAttractionKeyCreator]];
     PFGeoPoint *geoPoint = object[[IGAttraction stringForKey:IGAttractionKeyLocation]];
-    _location = [[CLLocation alloc] initWithLatitude:geoPoint.latitude longitude:geoPoint.longitude];
+    if (geoPoint != nil) _location = [[CLLocation alloc] initWithLatitude:geoPoint.latitude longitude:geoPoint.longitude];
     _objectId = object.objectId;
     
     //_categoryName = [category valueForKey:@"name"];

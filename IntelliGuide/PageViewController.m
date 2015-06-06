@@ -9,6 +9,7 @@
 #import "PageViewController.h"
 #import "AttractionDescriptionViewController.h"
 #import "AttractionReviewsViewController.h"
+#import "MapViewController.h"
 #import "GalleryFetcher.h"
 
 @interface PageViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
@@ -37,8 +38,15 @@
     vc1.descriptionText = self.attraction.placeDescription;
     AttractionReviewsViewController *vc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"AttractionReviewsVC"];
     vc2.attraction = self.attraction;
+    if (self.attraction.location != nil) {
+        MapViewController *vc3 = [self.storyboard instantiateViewControllerWithIdentifier:@"MapVC"];
+        vc3.attraction = self.attraction;
+        self.myViewControllers = @[vc1, vc2, vc3];
+    } else {
+        self.myViewControllers = @[vc1, vc2];
+    }
     
-    self.myViewControllers = @[vc1, vc2];
+    
     
     [self setViewControllers:@[vc1] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
