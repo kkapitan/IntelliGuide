@@ -56,6 +56,7 @@
 		084458FB1B23461100EC3D6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084458FA1B23461100EC3D6C /* MapKit.framework */; };
 		084458FE1B2346DD00EC3D6C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084458FD1B2346DD00EC3D6C /* MapViewController.m */; };
 		084459011B235EFD00EC3D6C /* MapEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084459001B235EFD00EC3D6C /* MapEditViewController.m */; };
+		084459041B2371DE00EC3D6C /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 084459031B2371DE00EC3D6C /* CALayer+XibConfiguration.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
 		085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */; };
 		0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0887DB051B08B5AC00F2E7F6 /* IGCategoryTests.m */; };
@@ -179,6 +180,8 @@
 		084458FD1B2346DD00EC3D6C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		084458FF1B235EFD00EC3D6C /* MapEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapEditViewController.h; sourceTree = "<group>"; };
 		084459001B235EFD00EC3D6C /* MapEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapEditViewController.m; sourceTree = "<group>"; };
+		084459021B2371DE00EC3D6C /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
+		084459031B2371DE00EC3D6C /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
 		085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherTableCell.xib; sourceTree = "<group>"; };
 		085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherTableCell.h; sourceTree = "<group>"; };
 		085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCell.m; sourceTree = "<group>"; };
@@ -458,6 +461,8 @@
 				027B252B1B0BC01000C5E43F /* CircleTransitionAnimator.m */,
 				0813F4571B1B69D700623A13 /* LocationManager.h */,
 				0813F4581B1B69D700623A13 /* LocationManager.m */,
+				084459021B2371DE00EC3D6C /* CALayer+XibConfiguration.h */,
+				084459031B2371DE00EC3D6C /* CALayer+XibConfiguration.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -587,6 +592,7 @@
 				021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
+				084459041B2371DE00EC3D6C /* CALayer+XibConfiguration.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				08038EBB1B067C2D0042955B /* SWRevealViewController.m in Sources */,
 				029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */,
