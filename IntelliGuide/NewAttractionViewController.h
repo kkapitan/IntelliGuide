@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "IGAttraction.h"
+
+@protocol EndEditingProtocol <NSObject>
+
+- (void) didEndEditingAttraction;
+
+@end
+
 /*! View controller which controls the proces of creating, validating and uploading new attraction. */ 
 
 @interface NewAttractionViewController : UIViewController
@@ -21,4 +28,7 @@
  to this property.
  */
 @property(nonatomic) IGAttraction* toEdit;
+
+@property (nonatomic) id<EndEditingProtocol> delegate;
+
 @end

@@ -353,8 +353,18 @@
                                         </connections>
                                     </button>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tbx-JV-qKP">
-                                        <rect key="frame" x="0.0" y="244" width="320" height="260"/>
+                                        <rect key="frame" x="0.0" y="273" width="320" height="231"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="7f4-cS-c5C" appends="YES" id="pUP-D3-VMB"/>
+                                        </connections>
                                     </mapView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch map to edit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5m-Ad-5Aa">
+                                        <rect key="frame" x="94" y="244" width="133" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="MOg-8o-06c" firstAttribute="top" secondItem="YPf-bt-bIU" secondAttribute="bottom" constant="-3" id="5vj-VO-YBI"/>
@@ -366,15 +376,17 @@
                                     <constraint firstItem="LYc-CI-W7f" firstAttribute="leading" secondItem="0EI-WW-4M1" secondAttribute="leading" constant="16" id="JbS-Wk-HId"/>
                                     <constraint firstItem="dFV-eu-OZ1" firstAttribute="leading" secondItem="MOg-8o-06c" secondAttribute="leading" id="S9G-gu-3Ce"/>
                                     <constraint firstItem="0Fm-O0-bgx" firstAttribute="top" secondItem="MOg-8o-06c" secondAttribute="bottom" constant="8" id="SJR-uc-IXs"/>
+                                    <constraint firstItem="tbx-JV-qKP" firstAttribute="top" secondItem="Y5m-Ad-5Aa" secondAttribute="bottom" constant="8" id="UGZ-00-0st"/>
                                     <constraint firstAttribute="bottom" secondItem="tbx-JV-qKP" secondAttribute="bottom" id="VEO-Hr-FId"/>
                                     <constraint firstItem="LYc-CI-W7f" firstAttribute="top" secondItem="yDn-n4-1kX" secondAttribute="bottom" constant="8" id="W4b-1G-AoW"/>
                                     <constraint firstItem="MOg-8o-06c" firstAttribute="leading" secondItem="0EI-WW-4M1" secondAttribute="leading" constant="16" id="Xdk-hd-9G2"/>
-                                    <constraint firstItem="tbx-JV-qKP" firstAttribute="top" secondItem="0Fm-O0-bgx" secondAttribute="bottom" constant="8" id="dAe-Hh-dAo"/>
                                     <constraint firstItem="tbx-JV-qKP" firstAttribute="leading" secondItem="0EI-WW-4M1" secondAttribute="leading" id="dNm-z4-rgS"/>
                                     <constraint firstItem="yDn-n4-1kX" firstAttribute="leading" secondItem="0EI-WW-4M1" secondAttribute="leading" id="dxN-mA-qG1"/>
                                     <constraint firstItem="yDn-n4-1kX" firstAttribute="top" secondItem="0EI-WW-4M1" secondAttribute="top" constant="8" id="nAS-6e-niD"/>
                                     <constraint firstAttribute="trailing" secondItem="yDn-n4-1kX" secondAttribute="trailing" id="nCr-8v-pR0"/>
                                     <constraint firstAttribute="trailing" secondItem="YPf-bt-bIU" secondAttribute="trailing" constant="16" id="ouz-RL-a6Y"/>
+                                    <constraint firstAttribute="centerX" secondItem="Y5m-Ad-5Aa" secondAttribute="centerX" id="qAi-HB-lAt"/>
+                                    <constraint firstItem="Y5m-Ad-5Aa" firstAttribute="top" secondItem="0Fm-O0-bgx" secondAttribute="bottom" constant="8" id="qER-d7-Jz9"/>
                                     <constraint firstAttribute="trailing" secondItem="MOg-8o-06c" secondAttribute="trailing" constant="16" id="vyJ-pt-4JW"/>
                                     <constraint firstAttribute="trailing" secondItem="tbx-JV-qKP" secondAttribute="trailing" id="w6G-ZQ-eas"/>
                                 </constraints>
@@ -402,11 +414,18 @@
                         <outlet property="categoryPickerButton" destination="0Fm-O0-bgx" id="OMo-Lq-zfe"/>
                         <outlet property="descriptionLabel" destination="YPf-bt-bIU" id="aOW-aG-m4A"/>
                         <outlet property="descriptionTextView" destination="MOg-8o-06c" id="Sds-Hi-0xN"/>
+                        <outlet property="doneButton" destination="zl3-Rj-qxS" id="57g-fB-N3J"/>
+                        <outlet property="mapView" destination="tbx-JV-qKP" id="y9k-16-EFD"/>
                         <outlet property="nameTextField" destination="LYc-CI-W7f" id="zFd-Cy-20g"/>
                         <outlet property="scrollView" destination="0EI-WW-4M1" id="Bd2-pe-19A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rme-PQ-WiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7f4-cS-c5C">
+                    <connections>
+                        <segue destination="rJk-Qg-xoP" kind="push" identifier="MapEditSegue" id="2eT-Es-6gA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="496" y="973"/>
         </scene>
@@ -523,6 +542,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7X8-60-vCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1508" y="1744"/>
+        </scene>
+        <!--Map Edit View Controller-->
+        <scene sceneID="6tO-js-zVe">
+            <objects>
+                <viewController id="rJk-Qg-xoP" customClass="MapEditViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lrv-qX-OJe"/>
+                        <viewControllerLayoutGuide type="bottom" id="E3y-U7-Xb5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Vz-JU-Qf0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7tV-ho-7yy">
+                                <rect key="frame" x="0.0" y="101" width="320" height="467"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="KSW-kg-4KF" appends="YES" id="EgQ-ny-qf2"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch map to select location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npU-r6-EfA">
+                                <rect key="frame" x="55" y="72" width="211" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E3y-U7-Xb5" firstAttribute="top" secondItem="7tV-ho-7yy" secondAttribute="bottom" id="FH7-Dt-96y"/>
+                            <constraint firstItem="npU-r6-EfA" firstAttribute="top" secondItem="lrv-qX-OJe" secondAttribute="bottom" constant="8" id="XR7-Ct-Vk2"/>
+                            <constraint firstItem="7tV-ho-7yy" firstAttribute="top" secondItem="npU-r6-EfA" secondAttribute="bottom" constant="8" id="ayJ-yw-jx3"/>
+                            <constraint firstAttribute="trailing" secondItem="7tV-ho-7yy" secondAttribute="trailing" id="bf3-8i-KCd"/>
+                            <constraint firstItem="7tV-ho-7yy" firstAttribute="leading" secondItem="7Vz-JU-Qf0" secondAttribute="leading" id="cHh-Ui-wxV"/>
+                            <constraint firstAttribute="centerX" secondItem="npU-r6-EfA" secondAttribute="centerX" id="nE3-Ke-qwd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Umb-wo-IlH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="hwo-MK-vpP">
+                            <connections>
+                                <action selector="doneTapped:" destination="rJk-Qg-xoP" id="P5g-Uh-487"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="mapView" destination="7tV-ho-7yy" id="nPa-nf-kgv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oF-uG-0cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KSW-kg-4KF">
+                    <connections>
+                        <action selector="mapTapped:" destination="rJk-Qg-xoP" id="WLx-6E-tXp"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="890" y="1110"/>
         </scene>
         <!--Category Picker Table View Controller-->
         <scene sceneID="3CZ-Nq-g7k">

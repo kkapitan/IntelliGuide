@@ -55,6 +55,7 @@
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		084458FB1B23461100EC3D6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084458FA1B23461100EC3D6C /* MapKit.framework */; };
 		084458FE1B2346DD00EC3D6C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084458FD1B2346DD00EC3D6C /* MapViewController.m */; };
+		084459011B235EFD00EC3D6C /* MapEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084459001B235EFD00EC3D6C /* MapEditViewController.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
 		085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */; };
 		0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0887DB051B08B5AC00F2E7F6 /* IGCategoryTests.m */; };
@@ -176,6 +177,8 @@
 		084458FA1B23461100EC3D6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		084458FC1B2346DD00EC3D6C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		084458FD1B2346DD00EC3D6C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		084458FF1B235EFD00EC3D6C /* MapEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapEditViewController.h; sourceTree = "<group>"; };
+		084459001B235EFD00EC3D6C /* MapEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapEditViewController.m; sourceTree = "<group>"; };
 		085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherTableCell.xib; sourceTree = "<group>"; };
 		085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherTableCell.h; sourceTree = "<group>"; };
 		085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCell.m; sourceTree = "<group>"; };
@@ -328,6 +331,8 @@
 				027B25251B0BB7B100C5E43F /* PresentPhotoViewController.m */,
 				084458FC1B2346DD00EC3D6C /* MapViewController.h */,
 				084458FD1B2346DD00EC3D6C /* MapViewController.m */,
+				084458FF1B235EFD00EC3D6C /* MapEditViewController.h */,
+				084459001B235EFD00EC3D6C /* MapEditViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				08038EB81B0669460042955B /* LoginController.m in Sources */,
 				029041531B0605FA00B2B41E /* GalleryCollectionViewCell.m in Sources */,
 				08C7E10B1B074D63006DEEFC /* MBProgressHUD.m in Sources */,
+				084459011B235EFD00EC3D6C /* MapEditViewController.m in Sources */,
 				08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */,
 				021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,

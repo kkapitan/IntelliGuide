@@ -41,10 +41,10 @@
 #pragma mark CLLocation delegate methods
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"DidUpdateLocations" object:self];
-    
     CLLocation *lastLocation = [locations lastObject];
     _lastLocation = lastLocation;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"DidUpdateLocations" object:self];
     
     //    NSLog(@"vertical: %f, horizontal: %f", lastLocation.verticalAccuracy, lastLocation.horizontalAccuracy);
 }
