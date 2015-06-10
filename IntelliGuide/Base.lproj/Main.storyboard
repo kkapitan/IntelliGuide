@@ -1047,7 +1047,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-qu-foB">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-qu-foB">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocena" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3t-8F-w5X">
@@ -1263,12 +1263,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="add182.png" width="256" height="256"/>
+        <image name="add182" width="256" height="256"/>
         <image name="backgroundImage" width="750" height="1334"/>
-        <image name="glyphicons-138-cogwheels.png" width="34" height="27"/>
-        <image name="glyphicons-14-beach-umbrella.png" width="24" height="24"/>
-        <image name="glyphicons-21-home.png" width="27" height="26"/>
-        <image name="glyphicons-28-search.png" width="24" height="24"/>
+        <image name="glyphicons-138-cogwheels" width="34" height="27"/>
+        <image name="glyphicons-14-beach-umbrella" width="24" height="24"/>
+        <image name="glyphicons-21-home" width="27" height="26"/>
+        <image name="glyphicons-28-search" width="24" height="24"/>
         <image name="icon_x.png" width="100" height="100"/>
         <image name="splash_logo" width="1024" height="1024"/>
     </resources>
@@ -1279,7 +1279,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="pqx-VV-Tk8"/>
-        <segue reference="Ow0-7u-Pby"/>
+        <segue reference="ddT-qh-rYj"/>
         <segue reference="L4J-wA-2p6"/>
     </inferredMetricsTieBreakers>
 </document>
