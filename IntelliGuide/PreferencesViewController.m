@@ -14,6 +14,7 @@
 #import "SWRevealViewController.h"
 #import "MBProgressHUD.h"
 #import "NewAttractionViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
@@ -25,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+
 - (IBAction)didToggleCustomLocation:(id)sender;
 
 @end
@@ -34,10 +37,12 @@
 #pragma mark Switches
 
 - (void) didEnableCategory:(IGCategory *)category {
+    [self selectAllCategories:YES];
     [self.selectedCategories addObject:category];
 }
 
 - (void)didDisableCategory:(IGCategory *)category {
+    [self selectAllCategories:NO];
     [self.selectedCategories removeObjectIdenticalTo:category];
 }
 
@@ -47,6 +52,14 @@
         NSLog(@"My location");
     } else {
         NSLog(@"Custom location");
+    }
+}
+
+
+- (void)selectAllCategories:(BOOL)selected{
+    self.selectedCategories = selected ? self.categories : [NSMutableArray array];
+    for(CategorySwitcherTableCell* cell in [self.categoriesTableView visibleCells]){
+        [cell.switchControl setOn:selected animated:YES];
     }
 }
 
@@ -94,10 +107,18 @@
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"DownloadedCategoryImage" object:nil];
-    }
+    
+    
+   
+    
+    //self.view.backgroundColor = [UIColor clearColor];
+    
+}
 
 - (void)viewDidAppear:(BOOL)animated {
     
+    self.navigationController.navigationBar.alpha = 0.8;
+    self.categoriesTableView.layer.cornerRadius = 10;
     
     if (![PFUser currentUser]) {
 //        if (!_didShowLogin) {
