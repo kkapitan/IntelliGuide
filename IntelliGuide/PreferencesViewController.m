@@ -37,12 +37,10 @@
 #pragma mark Switches
 
 - (void) didEnableCategory:(IGCategory *)category {
-    [self selectAllCategories:YES];
     [self.selectedCategories addObject:category];
 }
 
 - (void)didDisableCategory:(IGCategory *)category {
-    [self selectAllCategories:NO];
     [self.selectedCategories removeObjectIdenticalTo:category];
 }
 
