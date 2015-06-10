@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
+#import <MapKit/MapKit.h>
 
 /*!
  This view controller is supposed to query for attraction list based on
@@ -40,5 +41,7 @@
  then view controller will query only for quests that were created by [PFUser currentUser]
  */
 @property (nonatomic) BOOL userAttarctionsMode;
+
+@property (nonatomic) CLLocation* searchCenter;
 
 @end

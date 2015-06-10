@@ -49,5 +49,20 @@
     //    NSLog(@"vertical: %f, horizontal: %f", lastLocation.verticalAccuracy, lastLocation.horizontalAccuracy);
 }
 
++ (CLLocation *)getLocationFromCityName:(NSString *)name {
+    CLGeocoder* gc = [[CLGeocoder alloc] init];
+    [gc geocodeAddressString:name completionHandler:^(NSArray *placemarks, NSError *error)
+    {
+        if ([placemarks count]>0)
+        {
+            // get the first one
+            CLPlacemark* mark = (CLPlacemark*)[placemarks objectAtIndex:0];
+            //mark.location
+        }
+    }];
+    
+    return nil;
+}
+
 
 @end

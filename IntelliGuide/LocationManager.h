@@ -9,11 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
+@protocol FindCityProtocol <NSObject>
+
+- (void) didObtainCityLocation:(CLLocation*)location;
+
+@end
+
 @interface LocationManager : NSObject <CLLocationManagerDelegate>
 
+@property id<FindCityProtocol> delegate;
 @property CLLocationManager *locationManager;
 @property (readonly) CLLocation *lastLocation;
 
 + (id) sharedManager;
++ (CLLocation*) getLocationFromCityName:(NSString*)name;
 
 @end

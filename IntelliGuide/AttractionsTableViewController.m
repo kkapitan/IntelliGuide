@@ -168,9 +168,14 @@
     [attractionQuery includeKey:categoryKey];
     
     if (_userAttarctionsMode) [attractionQuery whereKey:@"creator" equalTo:[PFUser currentUser]];
-    else{
+    else {
         [attractionQuery whereKey:categoryKey matchesQuery:categoryQuery];
         [attractionQuery whereKey:verifiedKey equalTo:[NSNumber numberWithBool:!self.moderationMode]];
+    }
+    
+    if (_searchCenter) {
+        PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:_searchCenter];
+        [attractionQuery whereKey:[IGAttraction stringForKey:IGAttractionKeyLocation] nearGeoPoint:geoPoint];
     }
     
     return attractionQuery;
