@@ -17,10 +17,12 @@
     NSArray *redactorMenuItems;
     NSArray *moderatorMenuItems;
     NSArray *headerTitles;
-
+    NSIndexPath *previouslySelected;
 }
 
 @property (strong) LoginController *loginController;
+
+
 
 @end
 
@@ -44,6 +46,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[menuItems[indexPath.section] objectAtIndex:indexPath.row]];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -51,6 +54,22 @@
     return [(NSArray*)(menuItems[section]) count];
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(previouslySelected){
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:previouslySelected];
+        [UIView animateWithDuration:0.2 animations:^{
+            cell.backgroundColor = [UIColor colorWithRed:52.0/255.0 green:55.0/255.0 blue:60.0/255.0 alpha:1.0];
+        }];
+    }
+    
+   UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+   [UIView animateWithDuration:0.2 animations:^{
+        cell.backgroundColor = [UIColor colorWithRed:36.0/255.0 green:41.0/255.0 blue:44.0/255.0 alpha:1.0];
+    }];
+    
+    previouslySelected = indexPath;
+}
 
 -(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
     
