@@ -78,7 +78,7 @@
     // Configure the cell...
     cell.review = review;
     
-    NSLog(@"%f",cell.frame.size.height);
+//    NSLog(@"%f",cell.frame.size.height);
     return cell;
 }
 

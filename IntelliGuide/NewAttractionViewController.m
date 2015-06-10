@@ -11,9 +11,12 @@
 #import "AddGalleryCollectionViewController.h"
 #import "IGAttraction.h"
 #import "GalleryFetcher.h"
+#import "LocationManager.h"
+#import "MapEditViewController.h"
 #import "MBProgressHUD.h"
+#import <MapKit/MapKit.h>
 
-@interface NewAttractionViewController () <CategoryPickerDelegate,UITextViewDelegate,GalleryDelegate>
+@interface NewAttractionViewController () <CategoryPickerDelegate,UITextViewDelegate,GalleryDelegate, MKMapViewDelegate, EditLocationDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
@@ -21,12 +24,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *addPhotosButton;
 @property (nonatomic) IGCategory* category;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property  (nonatomic) UITapGestureRecognizer* gestureRecognizer;
 
 @property (nonatomic) NSArray *galleryImages;
 @property (nonatomic) UIImage *mainImage;
+@property (nonatomic) CLLocation* attractionLocation;
 
 @end
 
@@ -56,6 +62,9 @@
         [attractionObject saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             [[MBProgressHUD HUDForView:self.view] hide:YES];
             [self displayAlertWithTitle:@"Dodawanie zakończone!" message:@"Proszę czekać na weryfikację atrakcji przez moderatora"];
+            if ([self.delegate respondsToSelector:@selector(didEndEditingAttraction)] && self.toEdit) {
+                [self.delegate didEndEditingAttraction];
+            }
             
             [[NSNotificationCenter defaultCenter] removeObserver:self];
             
@@ -124,11 +133,43 @@
         [GalleryFetcher fetchGalleryForPlaceWithId:self.toEdit.objectId completion:^(NSArray *images) {
             self.galleryImages = images;
         }];
+        if (self.toEdit.location != nil) {
+            _attractionLocation = self.toEdit.location;
+            [self updateAnnotation];
+        }
         
+        [self.doneButton setTitle:@"Aktualizuj"];
+    } else {
+        [[[LocationManager sharedManager] locationManager] startUpdatingLocation];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationUpdate) name:@"DidUpdateLocations" object:nil];
     }
-    // Do any additional setup after loading the view.
+    
+    self.mapView.scrollEnabled = NO;
+    self.mapView.delegate = self;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void) locationUpdate {
+    _attractionLocation = [[LocationManager sharedManager] lastLocation];
+    [self updateAnnotation];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"DidUpdateLocations" object:nil];
+}
+
+- (void) updateAnnotation {
+    MKCoordinateSpan span = MKCoordinateSpanMake(0.01, 0.01);
+    MKCoordinateRegion region = MKCoordinateRegionMake(_attractionLocation.coordinate, span);
+    [self.mapView setRegion:region animated:YES];
+    
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:_attractionLocation.coordinate];
+    
+    [self.mapView addAnnotation:annotation];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -170,6 +211,14 @@
         attraction.imageFile = [PFFile fileWithData: UIImageJPEGRepresentation(self.mainImage, 1.0)];
     }
     
+//    CLLocation *location = [[LocationManager sharedManager] lastLocation];
+    if (_attractionLocation) {
+        attraction.location = _attractionLocation;
+    } else {
+        [self displayAlertWithTitle:@"Błąd" message:@"Nie można wykryć Twojej lokalizacji"];
+        return nil;
+    }
+    
     attraction.creator = [PFUser currentUser];
     
     return attraction;
@@ -195,11 +244,23 @@
         destinationViewController.galleryImages = [self.galleryImages mutableCopy];
         destinationViewController.mainImage = self.mainImage;
         destinationViewController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"MapEditSegue"]) {
+        MapEditViewController *destinationVC = (MapEditViewController*)segue.destinationViewController;
+        destinationVC.delegate = self;
+        destinationVC.initialLocation = _attractionLocation;
     }
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
+- (void)didSelectLocation:(CLLocation *)location {
+    _attractionLocation = location;
+    [self updateAnnotation];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"DidUpdateLocations" object:nil];
+}
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"Pin"];
+    pin.pinColor = MKPinAnnotationColorPurple;
+    return pin;
+}
 
 @end

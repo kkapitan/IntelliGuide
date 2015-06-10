@@ -14,7 +14,7 @@
 #import "MBProgressHUD.h"
 
 
-@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout,UISearchBarDelegate>
+@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout,UISearchBarDelegate, EndEditingProtocol>
 @property(nonatomic,strong) NSArray *objects;
 @property(nonatomic,strong) NSArray *originalObjects;
 @property(nonatomic,strong) UIRefreshControl *refreshControl;
@@ -68,6 +68,12 @@
 
     [self loadObjects];
 }
+
+- (void)didEndEditingAttraction {
+    //TODO to mogłoby modyfikować tylko jeden wpis z całej tablicy zamiast pobierać wszystko od nowa
+    [self loadObjects];
+}
+
 #pragma mark - SearchBar
 
 - (void)searchButtonOn:(id)sender {
@@ -212,7 +218,7 @@
     
     AttractionCell *cell = (AttractionCell*)[self.collectionView cellForItemAtIndexPath:indexPath];
     
-    UIAlertController *menu = [UIAlertController alertControllerWithTitle:cell.attraction.name message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *menu = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction* discardAction = [UIAlertAction actionWithTitle:@"Odrzuć" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * action) {
         PFObject *attractionObject = [cell.attraction parseObject];
@@ -289,6 +295,7 @@
         NewAttractionViewController *newAttractionViewController = segue.destinationViewController;
         AttractionCell *cell = (AttractionCell*)sender;
         newAttractionViewController.toEdit = cell.attraction;
+        newAttractionViewController.delegate = self;
     }else{
         AttractionCell *senderCell = (AttractionCell*)sender;
         AttractionDetailsViewController *destinationViewController = [segue destinationViewController];

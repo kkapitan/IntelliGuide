@@ -26,7 +26,7 @@
     
     if(self.images.count == self.number + 1)return;
     
-    NSLog(@"%d",self.number);
+//    NSLog(@"%d",self.number);
     PresentPhotoViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotoController"];
     vc.number = self.number + 1;
     vc.images = self.images;
@@ -59,7 +59,7 @@
     [self.view addGestureRecognizer:rightSwipe];
     [self.view addGestureRecognizer:downSwipe];
     
-    NSLog(@"%@",self.images);
+//    NSLog(@"%@",self.images);
     
     self.imageView.image = self.images[self.number];
     // Do any additional setup after loading the view.

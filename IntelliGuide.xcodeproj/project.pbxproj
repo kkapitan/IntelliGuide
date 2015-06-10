@@ -44,13 +44,6 @@
 		029041561B06155E00B2B41E /* GalleryCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 029041551B06155E00B2B41E /* GalleryCollectionReusableView.m */; };
 		0290415F1B064D1200B2B41E /* GalleryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */; };
 		029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 029041621B065DAC00B2B41E /* GalleryFetcher.m */; };
-		029041651B06781300B2B41E /* icon_x.png in Resources */ = {isa = PBXBuildFile; fileRef = 029041641B06781300B2B41E /* icon_x.png */; };
-		02BE65381B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65331B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png */; };
-		02BE65391B13D4B000A4D58F /* glyphicons-21-home.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65341B13D4B000A4D58F /* glyphicons-21-home.png */; };
-		02BE653A1B13D4B000A4D58F /* glyphicons-28-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65351B13D4B000A4D58F /* glyphicons-28-search.png */; };
-		02BE653B1B13D4B000A4D58F /* glyphicons-31-pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65361B13D4B000A4D58F /* glyphicons-31-pencil.png */; };
-		02BE653C1B13D4B000A4D58F /* glyphicons-138-cogwheels.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BE65371B13D4B000A4D58F /* glyphicons-138-cogwheels.png */; };
-		02E5E0011B0A7B0000E09FCA /* add182.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E5E0001B0A7B0000E09FCA /* add182.png */; };
 		08038EB31B0668CF0042955B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB21B0668CF0042955B /* Accounts.framework */; };
 		08038EB51B0668D70042955B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB41B0668D70042955B /* Social.framework */; };
 		08038EB81B0669460042955B /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EB71B0669460042955B /* LoginController.m */; };
@@ -59,8 +52,13 @@
 		08038EC11B06875D0042955B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EC01B06875D0042955B /* SettingsViewController.m */; };
 		080AB86F1B0B104A00AF027C /* LoginControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB86E1B0B104A00AF027C /* LoginControllerTests.m */; };
 		080AB8711B0B11E300AF027C /* GalleryFetcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */; };
+		0813F4591B1B69D700623A13 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0813F4581B1B69D700623A13 /* LocationManager.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
+		084458FB1B23461100EC3D6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084458FA1B23461100EC3D6C /* MapKit.framework */; };
+		084458FE1B2346DD00EC3D6C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084458FD1B2346DD00EC3D6C /* MapViewController.m */; };
+		084459011B235EFD00EC3D6C /* MapEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 084459001B235EFD00EC3D6C /* MapEditViewController.m */; };
+		084459041B2371DE00EC3D6C /* CALayer+XibConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 084459031B2371DE00EC3D6C /* CALayer+XibConfiguration.m */; };
 		085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */; };
 		085872541AE1457900DA97AD /* CategorySwitcherTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */; };
 		0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0887DB051B08B5AC00F2E7F6 /* IGCategoryTests.m */; };
@@ -163,13 +161,6 @@
 		0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewController.m; sourceTree = "<group>"; };
 		029041611B065DAC00B2B41E /* GalleryFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryFetcher.h; sourceTree = "<group>"; };
 		029041621B065DAC00B2B41E /* GalleryFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryFetcher.m; sourceTree = "<group>"; };
-		029041641B06781300B2B41E /* icon_x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_x.png; sourceTree = "<group>"; };
-		02BE65331B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-14-beach-umbrella.png"; sourceTree = "<group>"; };
-		02BE65341B13D4B000A4D58F /* glyphicons-21-home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-21-home.png"; sourceTree = "<group>"; };
-		02BE65351B13D4B000A4D58F /* glyphicons-28-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-28-search.png"; sourceTree = "<group>"; };
-		02BE65361B13D4B000A4D58F /* glyphicons-31-pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-31-pencil.png"; sourceTree = "<group>"; };
-		02BE65371B13D4B000A4D58F /* glyphicons-138-cogwheels.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "glyphicons-138-cogwheels.png"; sourceTree = "<group>"; };
-		02E5E0001B0A7B0000E09FCA /* add182.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add182.png; sourceTree = "<group>"; };
 		08038EB21B0668CF0042955B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		08038EB41B0668D70042955B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		08038EB61B0669460042955B /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
@@ -182,10 +173,19 @@
 		08038EC01B06875D0042955B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		080AB86E1B0B104A00AF027C /* LoginControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginControllerTests.m; sourceTree = "<group>"; };
 		080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryFetcherTests.m; sourceTree = "<group>"; };
+		0813F4571B1B69D700623A13 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		0813F4581B1B69D700623A13 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
 		0822024F1AE30B1700921149 /* AttractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionCell.m; sourceTree = "<group>"; };
+		084458FA1B23461100EC3D6C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		084458FC1B2346DD00EC3D6C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		084458FD1B2346DD00EC3D6C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		084458FF1B235EFD00EC3D6C /* MapEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapEditViewController.h; sourceTree = "<group>"; };
+		084459001B235EFD00EC3D6C /* MapEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapEditViewController.m; sourceTree = "<group>"; };
+		084459021B2371DE00EC3D6C /* CALayer+XibConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+XibConfiguration.h"; sourceTree = "<group>"; };
+		084459031B2371DE00EC3D6C /* CALayer+XibConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+XibConfiguration.m"; sourceTree = "<group>"; };
 		085872501AE1455400DA97AD /* CategorySwitcherTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategorySwitcherTableCell.xib; sourceTree = "<group>"; };
 		085872521AE1457900DA97AD /* CategorySwitcherTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategorySwitcherTableCell.h; sourceTree = "<group>"; };
 		085872531AE1457900DA97AD /* CategorySwitcherTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategorySwitcherTableCell.m; sourceTree = "<group>"; };
@@ -227,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084458FB1B23461100EC3D6C /* MapKit.framework in Frameworks */,
 				08038EB51B0668D70042955B /* Social.framework in Frameworks */,
 				08038EB31B0668CF0042955B /* Accounts.framework in Frameworks */,
 				0211961F1AE0065D00C367C6 /* libsqlite3.0.dylib in Frameworks */,
@@ -275,6 +276,7 @@
 		021196201AE006A000C367C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				084458FA1B23461100EC3D6C /* MapKit.framework */,
 				0887DB101B08C2D700F2E7F6 /* StoreKit.framework */,
 				0887DB0D1B08C2C600F2E7F6 /* libz.dylib */,
 				0887DB0A1B08BF7100F2E7F6 /* libOCMock.a */,
@@ -334,6 +336,10 @@
 				08038EC01B06875D0042955B /* SettingsViewController.m */,
 				027B25241B0BB7B100C5E43F /* PresentPhotoViewController.h */,
 				027B25251B0BB7B100C5E43F /* PresentPhotoViewController.m */,
+				084458FC1B2346DD00EC3D6C /* MapViewController.h */,
+				084458FD1B2346DD00EC3D6C /* MapViewController.m */,
+				084458FF1B235EFD00EC3D6C /* MapEditViewController.h */,
+				084459001B235EFD00EC3D6C /* MapEditViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -466,6 +472,10 @@
 				027B25281B0BBE6E00C5E43F /* NavigationControllerDelegate.m */,
 				027B252A1B0BC01000C5E43F /* CircleTransitionAnimator.h */,
 				027B252B1B0BC01000C5E43F /* CircleTransitionAnimator.m */,
+				0813F4571B1B69D700623A13 /* LocationManager.h */,
+				0813F4581B1B69D700623A13 /* LocationManager.m */,
+				084459021B2371DE00EC3D6C /* CALayer+XibConfiguration.h */,
+				084459031B2371DE00EC3D6C /* CALayer+XibConfiguration.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -556,19 +566,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02884A411B14B5420054D69B /* menucell.png in Resources */,
 				028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */,
-				02BE65381B13D4B000A4D58F /* glyphicons-14-beach-umbrella.png in Resources */,
-				02BE653A1B13D4B000A4D58F /* glyphicons-28-search.png in Resources */,
-				02E5E0011B0A7B0000E09FCA /* add182.png in Resources */,
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
 				02884A451B14CF6D0054D69B /* 750x1334.jpg in Resources */,
 				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
-				02BE653C1B13D4B000A4D58F /* glyphicons-138-cogwheels.png in Resources */,
-				029041651B06781300B2B41E /* icon_x.png in Resources */,
-				02BE653B1B13D4B000A4D58F /* glyphicons-31-pencil.png in Resources */,
-				02BE65391B13D4B000A4D58F /* glyphicons-21-home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,14 +596,17 @@
 				027B25261B0BB7B100C5E43F /* PresentPhotoViewController.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
 				08C80D601AE3C2D10033296F /* PageViewController.m in Sources */,
+				0813F4591B1B69D700623A13 /* LocationManager.m in Sources */,
 				08EA25D21B0C797000ED6EC5 /* MyPFLoginViewController.m in Sources */,
 				08038EB81B0669460042955B /* LoginController.m in Sources */,
 				029041531B0605FA00B2B41E /* GalleryCollectionViewCell.m in Sources */,
 				08C7E10B1B074D63006DEEFC /* MBProgressHUD.m in Sources */,
+				084459011B235EFD00EC3D6C /* MapEditViewController.m in Sources */,
 				08C80D691AE3C4D60033296F /* AttractionDescriptionViewController.m in Sources */,
 				021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */,
 				021195F91ADFF32D00C367C6 /* AttractionsTableViewController.m in Sources */,
 				08C80D721AE3DDD40033296F /* IGReview.m in Sources */,
+				084459041B2371DE00EC3D6C /* CALayer+XibConfiguration.m in Sources */,
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				08038EBB1B067C2D0042955B /* SWRevealViewController.m in Sources */,
 				029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */,
@@ -612,6 +617,7 @@
 				029041561B06155E00B2B41E /* GalleryCollectionReusableView.m in Sources */,
 				08C80D781AE3F4650033296F /* ASStarRatingView.m in Sources */,
 				08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */,
+				084458FE1B2346DD00EC3D6C /* MapViewController.m in Sources */,
 				082202501AE30B1700921149 /* AttractionCell.m in Sources */,
 				0290415F1B064D1200B2B41E /* GalleryCollectionViewController.m in Sources */,
 				08C80D661AE3C3D20033296F /* AttractionDetailsViewController.m in Sources */,
