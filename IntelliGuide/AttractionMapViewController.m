@@ -7,9 +7,11 @@
 //
 
 #import "AttractionMapViewController.h"
+#import "IGAttraction.h"
 
-@interface AttractionMapViewController ()
-
+@interface AttractionMapViewController () <MKMapViewDelegate>
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property NSMutableArray *annotations;
 @end
 
 @implementation AttractionMapViewController
@@ -18,7 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@"siemka");
+    self.mapView.delegate = self;
+    self.annotations = [[NSMutableArray alloc] initWithCapacity:_attractions.count];
+    [self addAnnotationsForAttractions:_attractions];
+    [self.mapView showAnnotations:_annotations animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -26,14 +31,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) addAnnotationsForAttractions:(NSArray*)attractions {
+    for (PFObject *attraction in self.attractions) {
+        MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+        IGAttraction *igattraction = [IGAttraction attractionWithParseObject:attraction];
+        annotation.coordinate = igattraction.location.coordinate;
+        [_annotations addObject:annotation];
+    }
+    
+    [self.mapView addAnnotations:_annotations];
 }
-*/
 
 @end

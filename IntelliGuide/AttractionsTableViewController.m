@@ -319,6 +319,7 @@
         destinationViewController.attraction = senderCell.attraction;
     } else if ([segue.identifier isEqualToString:@"AttractionMap"]) {
         AttractionMapViewController *destination = [segue destinationViewController];
+        destination.attractions = self.objects;
     }
 }
 

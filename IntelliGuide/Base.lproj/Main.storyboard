@@ -792,6 +792,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mapa" id="eqB-Oy-Yrt"/>
+                    <connections>
+                        <outlet property="mapView" destination="pCW-k6-12e" id="eUT-4S-pUX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4AG-1P-5mX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
