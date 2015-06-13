@@ -19,7 +19,7 @@
 @interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>
 
 @property (nonatomic) NSMutableArray *categories;
-@property (nonatomic )NSMutableArray* selectedCategories;
+@property (nonatomic) NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 @property (strong) LoginController *loginController;
 @property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 - (IBAction)didToggleCustomLocation:(id)sender;
+- (IBAction)didToggleSelectAll:(id)sender;
 
 @end
 
@@ -64,6 +65,20 @@
             self.customLocationView.alpha = 1;
             [self.view layoutIfNeeded];
         }];
+    }
+}
+
+- (IBAction)didToggleSelectAll:(UISwitch*)sender {
+    if (sender.isOn) {
+        self.selectedCategories = [NSMutableArray arrayWithArray:self.categories];
+        for (CategorySwitcherTableCell *cell in self.categoriesTableView.visibleCells) {
+            [cell.switchControl setOn:YES animated:YES];
+        }
+    } else {
+        self.selectedCategories = nil;
+        for (CategorySwitcherTableCell *cell in self.categoriesTableView.visibleCells) {
+            [cell.switchControl setOn:NO animated:YES];
+        }
     }
 }
 
