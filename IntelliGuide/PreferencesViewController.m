@@ -16,15 +16,19 @@
 #import "NewAttractionViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
-@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
+@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>
 
-@property (nonatomic) BOOL didShowLogin;
 @property (nonatomic) NSMutableArray *categories;
 @property (nonatomic )NSMutableArray* selectedCategories;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 @property (strong) LoginController *loginController;
 @property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *customLocationFieldHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *verticalConstraint;
+@property (weak, nonatomic) IBOutlet UIView *customLocationView;
+@property (weak, nonatomic) IBOutlet UISwitch *customLocationSwitch;
+@property (weak, nonatomic) IBOutlet UITextField *customLocationTextField;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
@@ -47,9 +51,19 @@
 - (IBAction)didToggleCustomLocation:(id)sender {
     UISwitch *locationSwitch = (UISwitch*)sender;
     if (locationSwitch.isOn) {
-        NSLog(@"My location");
+        self.customLocationFieldHeightConstraint.constant = 0;
+        self.verticalConstraint.constant = 0;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.customLocationView.alpha = 0;
+            [self.view layoutIfNeeded];
+        }];
     } else {
-        NSLog(@"Custom location");
+        self.customLocationFieldHeightConstraint.constant = 30;
+        self.verticalConstraint.constant = 8;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.customLocationView.alpha = 1;
+            [self.view layoutIfNeeded];
+        }];
     }
 }
 
@@ -77,11 +91,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.didShowLogin = NO;
     self.categories = [[NSMutableArray alloc] init];
     self.selectedCategories = [NSMutableArray array];
     self.categoriesTableView.delegate = self;
     self.categoriesTableView.dataSource = self;
+    self.customLocationTextField.delegate = self;
     [self.categoriesTableView registerNib:[UINib nibWithNibName:@"CategorySwitcherTableCell" bundle:nil] forCellReuseIdentifier:@"CategorySwitcherCell"];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -107,10 +121,21 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"DownloadedCategoryImage" object:nil];
     
     
-   
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEditing)];
+    tapRecognizer.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tapRecognizer];
     
     //self.view.backgroundColor = [UIColor clearColor];
     
+}
+
+- (void) endEditing {
+    [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -119,12 +144,6 @@
     self.categoriesTableView.layer.cornerRadius = 10;
     
     if (![PFUser currentUser]) {
-//        if (!_didShowLogin) {
-//            _didShowLogin = YES;
-//            self.loginController = [[LoginController alloc] init];
-//            self.loginController.parentViewController = self;
-//            [self.loginController presentLoginViewController];
-//        }
         self.greetingsLabel.text = @"Witaj, gościu! Co chcesz\ndzisiaj zwiedzić?";
     } else {
         self.greetingsLabel.text = [NSString stringWithFormat:@"Witaj %@, co chcesz\ndzisiaj zwiedzić?", [[PFUser currentUser] objectForKey:@"username"]];
@@ -181,6 +200,19 @@
             return NO;
         }
     } else {
+        if ([identifier isEqualToString:@"QueryForAttractions"]) {
+            if (!self.customLocationSwitch.isOn) {
+                if (self.customLocationTextField.text.length == 0) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Wpisz własną lokalizację" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                    return NO;
+                } else {
+                    return YES;
+                }
+            } else {
+                return YES;
+            }
+        }
         return YES;
     }
 }
@@ -193,13 +225,6 @@
         destinationViewController.moderationMode = self.moderationMode;
         destinationViewController.userAttarctionsMode = self.userAttractionsMode;
     }
-    
-    
-//        NewAttractionViewController *destinationViewController = [segue destinationViewController];
-//        destinationViewController.preferences = [self buildPreferences];
-//        destinationViewController.moderationMode = NO;
-//        destinationViewController.userAttarctionsMode = YES;
-    
 }
 
 //Cell animation
