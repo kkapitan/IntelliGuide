@@ -22,6 +22,7 @@
 @property (readonly) CLLocation *lastLocation;
 
 + (id) sharedManager;
-+ (CLLocation*) getLocationFromCityName:(NSString*)name;
+- (CLLocation*) getLocationFromCityName:(NSString*)name;
+- (void) setFindCityDelegate:(id<FindCityProtocol>)delegate;
 
 @end

@@ -15,11 +15,13 @@
 #import "MBProgressHUD.h"
 #import "NewAttractionViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "LocationManager.h"
 
-@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate>
+@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate, FindCityProtocol>
 
 @property (nonatomic) NSMutableArray *categories;
 @property (nonatomic) NSMutableArray* selectedCategories;
+@property (strong, nonatomic) CLLocation *customLocation;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 @property (strong) LoginController *loginController;
 @property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
@@ -136,21 +138,33 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"DownloadedCategoryImage" object:nil];
     
     
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEditing)];
-    tapRecognizer.cancelsTouchesInView = NO;
-    [self.view addGestureRecognizer:tapRecognizer];
+//    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEditing)];
+//    tapRecognizer.cancelsTouchesInView = NO;
+//    [self.view addGestureRecognizer:tapRecognizer];
     
-    //self.view.backgroundColor = [UIColor clearColor];
-    
+    [[LocationManager sharedManager] setFindCityDelegate:self];
 }
 
 - (void) endEditing {
+    [self findCityName];
     [self.view endEditing:YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    [self findCityName];
     return YES;
+}
+
+- (void) findCityName {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Szukanie...";
+    [[LocationManager sharedManager] getLocationFromCityName:self.customLocationTextField.text];
+}
+
+- (void)didObtainCityLocation:(CLLocation *)location {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.customLocation = location;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -222,10 +236,21 @@
                     [alert show];
                     return NO;
                 } else {
-                    return YES;
+                    if (self.customLocation) {
+                        return YES;
+                    } else {
+                        return NO;
+                    }
                 }
             } else {
-                return YES;
+                if ([[LocationManager sharedManager] lastLocation]) {
+                    NSLog(@"%@", [[LocationManager sharedManager] lastLocation]);
+                    return YES;
+                } else {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie można ustalić lokalizacji. Poczekaj chwilę bądź wpisz ją ręcznie." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                    return NO;
+                }
             }
         }
         return YES;
@@ -239,6 +264,12 @@
         destinationViewController.preferences = [self buildPreferences];
         destinationViewController.moderationMode = self.moderationMode;
         destinationViewController.userAttarctionsMode = self.userAttractionsMode;
+        
+        if (self.customLocationSwitch.isOn) {
+            destinationViewController.searchCenter = [[LocationManager sharedManager] lastLocation];
+        } else {
+            destinationViewController.searchCenter = self.customLocation;
+        }
     }
 }
 

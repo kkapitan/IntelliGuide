@@ -66,6 +66,8 @@
     
     self.searchBarView = [[UIBarButtonItem alloc] initWithCustomView:self.searchBarContainer];
 
+    NSLog(@"%@", self.searchCenter);
+    
     [self loadObjects];
 }
 
@@ -175,7 +177,7 @@
     
     if (_searchCenter) {
         PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLocation:_searchCenter];
-        [attractionQuery whereKey:[IGAttraction stringForKey:IGAttractionKeyLocation] nearGeoPoint:geoPoint];
+        [attractionQuery whereKey:[IGAttraction stringForKey:IGAttractionKeyLocation] nearGeoPoint:geoPoint withinKilometers:20];
     }
     
     return attractionQuery;
