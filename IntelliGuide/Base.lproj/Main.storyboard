@@ -719,7 +719,7 @@
                                 <connections>
                                     <outlet property="categoryIcon" destination="ijC-vb-6Al" id="DPA-EH-b9a"/>
                                     <outlet property="name" destination="8Tf-6R-siz" id="m0u-X4-iuN"/>
-                                    <segue destination="9mo-6w-aF3" kind="push" id="qWg-W7-UD4"/>
+                                    <segue destination="9mo-6w-aF3" kind="push" identifier="AttractionDetails" id="qWg-W7-UD4"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="5QV-PL-oUw" customClass="AttractionCell">
@@ -760,11 +760,42 @@
                     <navigationItem key="navigationItem" id="B6p-lz-POb"/>
                     <connections>
                         <segue destination="KyS-Mf-zZg" kind="push" identifier="editAttractionSegue" id="ddT-qh-rYj"/>
+                        <segue destination="umA-6t-kHF" kind="push" identifier="AttractionMap" id="3mW-xg-7iR"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Lc-Nt-xDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1045" y="255"/>
+        </scene>
+        <!--Mapa-->
+        <scene sceneID="4p7-Fl-tdP">
+            <objects>
+                <viewController id="umA-6t-kHF" customClass="AttractionMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aiy-gK-9jw"/>
+                        <viewControllerLayoutGuide type="bottom" id="k6g-pC-c80"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bqk-Db-Emc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pCW-k6-12e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pCW-k6-12e" firstAttribute="top" secondItem="Aiy-gK-9jw" secondAttribute="bottom" id="68w-Pw-wyx"/>
+                            <constraint firstItem="k6g-pC-c80" firstAttribute="top" secondItem="pCW-k6-12e" secondAttribute="bottom" id="Jhc-d6-aWd"/>
+                            <constraint firstAttribute="trailing" secondItem="pCW-k6-12e" secondAttribute="trailing" id="bs5-cs-RGG"/>
+                            <constraint firstItem="pCW-k6-12e" firstAttribute="leading" secondItem="Bqk-Db-Emc" secondAttribute="leading" id="h0o-Sk-I51"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mapa" id="eqB-Oy-Yrt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4AG-1P-5mX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418" y="-437"/>
         </scene>
         <!--Attraction Details-->
         <scene sceneID="xfB-64-ZE7">
@@ -1327,7 +1358,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Ow0-7u-Pby"/>
+        <segue reference="ddT-qh-rYj"/>
         <segue reference="pqx-VV-Tk8"/>
         <segue reference="L4J-wA-2p6"/>
     </inferredMetricsTieBreakers>

@@ -244,7 +244,7 @@
                 }
             } else {
                 if ([[LocationManager sharedManager] lastLocation]) {
-                    NSLog(@"%@", [[LocationManager sharedManager] lastLocation]);
+//                    NSLog(@"%@", [[LocationManager sharedManager] lastLocation]);
                     return YES;
                 } else {
                     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie można ustalić lokalizacji. Poczekaj chwilę bądź wpisz ją ręcznie." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];

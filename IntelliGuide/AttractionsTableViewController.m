@@ -10,6 +10,7 @@
 #import "AttractionDetailsViewController.h"
 #import "AttractionCell.h"
 #import "NewAttractionViewController.h"
+#import "AttractionMapViewController.h"
 #import "IGAttraction.h"
 #import "MBProgressHUD.h"
 
@@ -20,7 +21,9 @@
 @property(nonatomic,strong) UIRefreshControl *refreshControl;
 @property(nonatomic) BOOL searchMode;
 @property(nonatomic,strong) UISearchBar *searchBar;
+@property(nonatomic,strong) NSArray *barButtons;
 @property(nonatomic,strong) UIBarButtonItem *searchBarButton;
+@property(nonatomic,strong) UIBarButtonItem *mapBarButton;
 @property(nonatomic,strong) UIBarButtonItem *searchBarView;
 @property(nonatomic,strong) UIView *searchBarContainer;
 @property(nonatomic,strong) UITapGestureRecognizer *tapRecognizer;
@@ -50,7 +53,12 @@
     
     //SearchBarButton
     self.searchBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonOn:)];
-    self.navigationItem.rightBarButtonItem = self.searchBarButton;
+    UIImageView *mapImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
+    UIImage *image = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
+    self.mapBarButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(mapBarButtonTapped)];
+    self.barButtons = [[NSArray alloc] initWithObjects:self.searchBarButton, self.mapBarButton, nil];
+    self.navigationItem.rightBarButtonItems = self.barButtons;
+//    self.navigationItem.rightBarButtonItem = self.searchBarButton;
     
     //SearchBar
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(self.view.frame.size.width, 0, self.view.frame.size.width/1.25, 40)]; //At the begining move it out of screen
@@ -66,7 +74,7 @@
     
     self.searchBarView = [[UIBarButtonItem alloc] initWithCustomView:self.searchBarContainer];
 
-    NSLog(@"%@", self.searchCenter);
+//    NSLog(@"%@", self.searchCenter);
     
     [self loadObjects];
 }
@@ -80,7 +88,7 @@
 
 - (void)searchButtonOn:(id)sender {
     
-    self.navigationItem.rightBarButtonItem = self.searchBarView;
+    self.navigationItem.rightBarButtonItems = @[self.searchBarView];
     [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:1 options:0 animations:^{
            self.searchBar.frame = CGRectOffset(self.searchBar.frame, -self.view.frame.size.width, 0);
     } completion:^(BOOL finished) {
@@ -97,13 +105,15 @@
     */
 }
 
+- (void) mapBarButtonTapped {
+    [self performSegueWithIdentifier:@"AttractionMap" sender:self];
+}
+
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-    
-    
     [UIView animateWithDuration:0.5 animations:^{
         self.searchBar.frame = CGRectOffset(self.searchBar.frame, self.view.frame.size.width, 0);
     } completion:^(BOOL finished) {
-        self.navigationItem.rightBarButtonItem = self.searchBarButton;
+        self.navigationItem.rightBarButtonItems = self.barButtons;
         self.searchBar.text = @"";
         [self.searchBar.delegate searchBar:searchBar textDidChange:self.searchBar.text];
     }];
@@ -303,10 +313,12 @@
         AttractionCell *cell = (AttractionCell*)sender;
         newAttractionViewController.toEdit = cell.attraction;
         newAttractionViewController.delegate = self;
-    }else{
+    }else if ([segue.identifier isEqualToString:@"AttractionDetails"]) {
         AttractionCell *senderCell = (AttractionCell*)sender;
         AttractionDetailsViewController *destinationViewController = [segue destinationViewController];
         destinationViewController.attraction = senderCell.attraction;
+    } else if ([segue.identifier isEqualToString:@"AttractionMap"]) {
+        AttractionMapViewController *destination = [segue destinationViewController];
     }
 }
 
