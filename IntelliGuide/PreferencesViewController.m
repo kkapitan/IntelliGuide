@@ -142,7 +142,7 @@
 //    tapRecognizer.cancelsTouchesInView = NO;
 //    [self.view addGestureRecognizer:tapRecognizer];
     
-    [[LocationManager sharedManager] setFindCityDelegate:self];
+    [[LocationManager sharedManager] setLocationDelegate:self];
 }
 
 - (void) endEditing {

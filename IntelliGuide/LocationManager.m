@@ -38,8 +38,12 @@
     return sharedSingleton;
 }
 
-- (void) setFindCityDelegate:(id<FindCityProtocol>)delegate {
-    _delegate = delegate;
+- (void) setLocationDelegate:(id<FindCityProtocol>)locationDelegate {
+    _locationDelegate = locationDelegate;
+}
+
+- (void) setAddressDelegate:(id<FindLocationAddressProtocol>)addressDelegate {
+    _addressDelegate = addressDelegate;
 }
 
 #pragma mark CLLocation delegate methods
@@ -53,7 +57,7 @@
     //    NSLog(@"vertical: %f, horizontal: %f", lastLocation.verticalAccuracy, lastLocation.horizontalAccuracy);
 }
 
-- (CLLocation *)getLocationFromCityName:(NSString *)name {
+- (void) getLocationFromCityName:(NSString *)name {
     CLGeocoder* gc = [[CLGeocoder alloc] init];
     [gc geocodeAddressString:name completionHandler:^(NSArray *placemarks, NSError *error)
     {
@@ -61,14 +65,21 @@
         {
             // get the first one
             CLPlacemark* mark = (CLPlacemark*)[placemarks objectAtIndex:0];
-            if ([self.delegate respondsToSelector:@selector(didObtainCityLocation:)]) {
-                [self.delegate didObtainCityLocation:mark.location];
+            if ([self.locationDelegate respondsToSelector:@selector(didObtainCityLocation:)]) {
+                [self.locationDelegate didObtainCityLocation:mark.location];
             }
         }
     }];
-    
-    return nil;
 }
 
+- (void) getAddressFromLocation:(CLLocation*)location {
+    CLGeocoder* gc = [[CLGeocoder alloc] init];
+    [gc reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        CLPlacemark *placemark = [placemarks firstObject];
+        if ([self.addressDelegate respondsToSelector:@selector(didObtainLocationAddress:)]) {
+            [self.addressDelegate didObtainLocationAddress:placemark];
+        }
+    }];
+}
 
 @end

@@ -53,7 +53,6 @@
     
     //SearchBarButton
     self.searchBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonOn:)];
-    UIImageView *mapImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 22, 22)];
     UIImage *image = [[UIImage imageNamed:@"map"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     self.mapBarButton = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(mapBarButtonTapped)];
     self.barButtons = [[NSArray alloc] initWithObjects:self.searchBarButton, self.mapBarButton, nil];

@@ -15,14 +15,23 @@
 
 @end
 
+@protocol FindLocationAddressProtocol <NSObject>
+
+- (void) didObtainLocationAddress:(CLPlacemark*)placemark;
+
+@end
+
 @interface LocationManager : NSObject <CLLocationManagerDelegate>
 
-@property id<FindCityProtocol> delegate;
+@property (nonatomic) id<FindCityProtocol> locationDelegate;
+@property (nonatomic) id<FindLocationAddressProtocol> addressDelegate;
 @property CLLocationManager *locationManager;
 @property (readonly) CLLocation *lastLocation;
 
 + (id) sharedManager;
-- (CLLocation*) getLocationFromCityName:(NSString*)name;
-- (void) setFindCityDelegate:(id<FindCityProtocol>)delegate;
+- (void) getLocationFromCityName:(NSString*)name;
+- (void) getAddressFromLocation:(CLLocation*)location;
+- (void) setLocationDelegate:(id<FindCityProtocol>)locationDelegate;
+- (void) setAddressDelegate:(id<FindLocationAddressProtocol>)addressDelegate;
 
 @end
