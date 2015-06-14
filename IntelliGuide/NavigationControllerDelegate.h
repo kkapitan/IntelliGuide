@@ -11,7 +11,4 @@
 
 @interface NavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
 
-
-
-
 @end

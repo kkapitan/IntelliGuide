@@ -8,6 +8,12 @@
 
 #import "LocationManager.h"
 
+@interface LocationManager()
+
+@property CLLocationManager *locationManager;
+
+@end
+
 @implementation LocationManager
 
 - (instancetype) init {
