@@ -9,7 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/*!
+ */
 @interface CircleTransitionAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 
+///------
+///@name Fields
+///------
+
+/*!
+ */
 @property (nonatomic) BOOL pop;
 @end
