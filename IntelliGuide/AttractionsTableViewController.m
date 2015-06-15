@@ -11,6 +11,7 @@
 #import "AttractionCell.h"
 #import "NewAttractionViewController.h"
 #import "IGAttraction.h"
+#import "CustomRefresh.h"
 #import "MBProgressHUD.h"
 
 
@@ -24,6 +25,7 @@
 @property(nonatomic,strong) UIBarButtonItem *searchBarView;
 @property(nonatomic,strong) UIView *searchBarContainer;
 @property(nonatomic,strong) UITapGestureRecognizer *tapRecognizer;
+@property(nonatomic,strong) CustomRefresh *refreshView;
 
 @end
 
@@ -47,6 +49,13 @@
     [self.collectionView addSubview:self.refreshControl];
     self.collectionView.alwaysBounceVertical = YES;
     
+    NSArray *refreshViewNib = [[NSBundle mainBundle] loadNibNamed:@"RefreshContents" owner:self options:nil];
+    self.refreshView = (CustomRefresh*)[refreshViewNib firstObject];
+    self.refreshView.frame = self.refreshControl.bounds;
+    self.refreshControl.backgroundColor = [UIColor clearColor];
+    //self.refreshControl.tintColor = [UIColor clearColor];
+    //[self.refreshControl addSubview:self.refreshView];
+
     
     //SearchBarButton
     self.searchBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonOn:)];
@@ -65,7 +74,7 @@
     [self.searchBarContainer addSubview:self.searchBar];
     
     self.searchBarView = [[UIBarButtonItem alloc] initWithCustomView:self.searchBarContainer];
-
+    
     [self loadObjects];
 }
 
@@ -144,6 +153,7 @@
 
 -(void)refreshingAction{
     [self loadObjects];
+    [self.refreshView animate];
     [self.refreshControl endRefreshing];
     
 }
