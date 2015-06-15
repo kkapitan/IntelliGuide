@@ -295,6 +295,7 @@
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Log in" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AHo-Ag-bwt">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" label="LogIn"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -1364,7 +1365,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="C5c-rX-ppN"/>
         <segue reference="pqx-VV-Tk8"/>
-        <segue reference="ddT-qh-rYj"/>
+        <segue reference="Ow0-7u-Pby"/>
         <segue reference="L4J-wA-2p6"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -92,6 +92,7 @@
 		08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D791B51AE6BDBF00E18B8C /* IGAttraction.m */; };
 		08EA25D21B0C797000ED6EC5 /* MyPFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */; };
 		08EA25D51B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */; };
+		28B1DFD91B2F73390007DA4B /* IntelliGuideUITests in Resources */ = {isa = PBXBuildFile; fileRef = 28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +220,7 @@
 		08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPFLoginViewController.m; sourceTree = "<group>"; };
 		08EA25D31B0C7BDD00ED6EC5 /* MyPFSingUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPFSingUpViewController.h; sourceTree = "<group>"; };
 		08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPFSingUpViewController.m; sourceTree = "<group>"; };
+		28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IntelliGuideUITests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,6 +387,7 @@
 		028F4AAE1AD7FD5700C63973 = {
 			isa = PBXGroup;
 			children = (
+				28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */,
 				028F4AB91AD7FD5700C63973 /* IntelliGuide */,
 				021196201AE006A000C367C6 /* Frameworks */,
 				028F4AD31AD7FD5700C63973 /* IntelliGuideTests */,
@@ -561,6 +564,7 @@
 				028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */,
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
+				28B1DFD91B2F73390007DA4B /* IntelliGuideUITests in Resources */,
 				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
