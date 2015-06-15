@@ -15,20 +15,27 @@
 #import "MBProgressHUD.h"
 #import "NewAttractionViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "LocationManager.h"
 
-@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
+@interface PreferencesViewController () <CategorySwitcherDelegate, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate, UITextFieldDelegate, FindCityProtocol>
 
-@property (nonatomic) BOOL didShowLogin;
 @property (nonatomic) NSMutableArray *categories;
-@property (nonatomic )NSMutableArray* selectedCategories;
+@property (nonatomic) NSMutableArray* selectedCategories;
+@property (strong, nonatomic) CLLocation *customLocation;
 @property (weak, nonatomic) IBOutlet UITableView *categoriesTableView;
 @property (strong) LoginController *loginController;
 @property (weak, nonatomic) IBOutlet UILabel *greetingsLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *customLocationFieldHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *verticalConstraint;
+@property (weak, nonatomic) IBOutlet UIView *customLocationView;
+@property (weak, nonatomic) IBOutlet UISwitch *customLocationSwitch;
+@property (weak, nonatomic) IBOutlet UITextField *customLocationTextField;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 - (IBAction)didToggleCustomLocation:(id)sender;
+- (IBAction)didToggleSelectAll:(id)sender;
 
 @end
 
@@ -47,9 +54,33 @@
 - (IBAction)didToggleCustomLocation:(id)sender {
     UISwitch *locationSwitch = (UISwitch*)sender;
     if (locationSwitch.isOn) {
-        NSLog(@"My location");
+        self.customLocationFieldHeightConstraint.constant = 0;
+        self.verticalConstraint.constant = 0;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.customLocationView.alpha = 0;
+            [self.view layoutIfNeeded];
+        }];
     } else {
-        NSLog(@"Custom location");
+        self.customLocationFieldHeightConstraint.constant = 30;
+        self.verticalConstraint.constant = 8;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.customLocationView.alpha = 1;
+            [self.view layoutIfNeeded];
+        }];
+    }
+}
+
+- (IBAction)didToggleSelectAll:(UISwitch*)sender {
+    if (sender.isOn) {
+        self.selectedCategories = [NSMutableArray arrayWithArray:self.categories];
+        for (CategorySwitcherTableCell *cell in self.categoriesTableView.visibleCells) {
+            [cell.switchControl setOn:YES animated:YES];
+        }
+    } else {
+        self.selectedCategories = nil;
+        for (CategorySwitcherTableCell *cell in self.categoriesTableView.visibleCells) {
+            [cell.switchControl setOn:NO animated:YES];
+        }
     }
 }
 
@@ -77,11 +108,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.didShowLogin = NO;
     self.categories = [[NSMutableArray alloc] init];
     self.selectedCategories = [NSMutableArray array];
     self.categoriesTableView.delegate = self;
     self.categoriesTableView.dataSource = self;
+    self.customLocationTextField.delegate = self;
     [self.categoriesTableView registerNib:[UINib nibWithNibName:@"CategorySwitcherTableCell" bundle:nil] forCellReuseIdentifier:@"CategorySwitcherCell"];
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -107,10 +138,33 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable) name:@"DownloadedCategoryImage" object:nil];
     
     
-   
+//    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEditing)];
+//    tapRecognizer.cancelsTouchesInView = NO;
+//    [self.view addGestureRecognizer:tapRecognizer];
     
-    //self.view.backgroundColor = [UIColor clearColor];
-    
+    [[LocationManager sharedManager] setLocationDelegate:self];
+}
+
+- (void) endEditing {
+    [self findCityName];
+    [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    [self findCityName];
+    return YES;
+}
+
+- (void) findCityName {
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"Szukanie...";
+    [[LocationManager sharedManager] getLocationFromCityName:self.customLocationTextField.text];
+}
+
+- (void)didObtainCityLocation:(CLLocation *)location {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    self.customLocation = location;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -119,12 +173,6 @@
     self.categoriesTableView.layer.cornerRadius = 10;
     
     if (![PFUser currentUser]) {
-//        if (!_didShowLogin) {
-//            _didShowLogin = YES;
-//            self.loginController = [[LoginController alloc] init];
-//            self.loginController.parentViewController = self;
-//            [self.loginController presentLoginViewController];
-//        }
         self.greetingsLabel.text = @"Witaj, gościu! Co chcesz\ndzisiaj zwiedzić?";
     } else {
         self.greetingsLabel.text = [NSString stringWithFormat:@"Witaj %@, co chcesz\ndzisiaj zwiedzić?", [[PFUser currentUser] objectForKey:@"username"]];
@@ -181,6 +229,30 @@
             return NO;
         }
     } else {
+        if ([identifier isEqualToString:@"QueryForAttractions"]) {
+            if (!self.customLocationSwitch.isOn) {
+                if (self.customLocationTextField.text.length == 0) {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Wpisz własną lokalizację" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                    return NO;
+                } else {
+                    if (self.customLocation) {
+                        return YES;
+                    } else {
+                        return NO;
+                    }
+                }
+            } else {
+                if ([[LocationManager sharedManager] lastLocation]) {
+//                    NSLog(@"%@", [[LocationManager sharedManager] lastLocation]);
+                    return YES;
+                } else {
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Błąd" message:@"Nie można ustalić lokalizacji. Poczekaj chwilę bądź wpisz ją ręcznie." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                    return NO;
+                }
+            }
+        }
         return YES;
     }
 }
@@ -192,14 +264,13 @@
         destinationViewController.preferences = [self buildPreferences];
         destinationViewController.moderationMode = self.moderationMode;
         destinationViewController.userAttarctionsMode = self.userAttractionsMode;
+        
+        if (self.customLocationSwitch.isOn) {
+            destinationViewController.searchCenter = [[LocationManager sharedManager] lastLocation];
+        } else {
+            destinationViewController.searchCenter = self.customLocation;
+        }
     }
-    
-    
-//        NewAttractionViewController *destinationViewController = [segue destinationViewController];
-//        destinationViewController.preferences = [self buildPreferences];
-//        destinationViewController.moderationMode = NO;
-//        destinationViewController.userAttarctionsMode = YES;
-    
 }
 
 //Cell animation

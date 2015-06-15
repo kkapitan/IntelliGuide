@@ -16,8 +16,6 @@ We use wrapper objects for parse data to provide easy access to most important f
 introduce type checking and reduce memory usage (nothing more than needed information are stored).
 */
 
-
-
 @interface IGCategory : NSObject
 
 ///-----

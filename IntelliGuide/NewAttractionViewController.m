@@ -140,7 +140,8 @@
         
         [self.doneButton setTitle:@"Aktualizuj"];
     } else {
-        [[[LocationManager sharedManager] locationManager] startUpdatingLocation];
+//        [[[LocationManager sharedManager] locationManager] startUpdatingLocation];
+        [LocationManager sharedManager];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(locationUpdate) name:@"DidUpdateLocations" object:nil];
     }
     

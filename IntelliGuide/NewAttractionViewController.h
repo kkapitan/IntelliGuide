@@ -9,8 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "IGAttraction.h"
 
+/*!
+ Protocol that is used to notify parent view controller that editing has
+ ended and it can refresh it's contents.
+ */
 @protocol EndEditingProtocol <NSObject>
 
+/*!
+ Method invoked after editing has been finished
+ 
+ @return void
+ */
 - (void) didEndEditingAttraction;
 
 @end
@@ -29,6 +38,10 @@
  */
 @property(nonatomic) IGAttraction* toEdit;
 
+/*!
+ This property holds EndEditingProtocol that wants to be notified
+ when editing has finished.
+ */
 @property (nonatomic) id<EndEditingProtocol> delegate;
 
 @end

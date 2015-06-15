@@ -42,6 +42,10 @@
  */
 @property (nonatomic) BOOL userAttarctionsMode;
 
+/*!
+ If set then controller will search for attractions around this searchCenter.
+ Default radius of search circle: 20 kilometers.
+ */
 @property (nonatomic) CLLocation* searchCenter;
 
 @end

@@ -53,6 +53,7 @@
 		080AB86F1B0B104A00AF027C /* LoginControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB86E1B0B104A00AF027C /* LoginControllerTests.m */; };
 		080AB8711B0B11E300AF027C /* GalleryFetcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */; };
 		0813F4591B1B69D700623A13 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0813F4581B1B69D700623A13 /* LocationManager.m */; };
+		0816DF7B1B2CD22E00A1051A /* AttractionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0816DF7A1B2CD22E00A1051A /* AttractionMapViewController.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		084458FB1B23461100EC3D6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084458FA1B23461100EC3D6C /* MapKit.framework */; };
@@ -93,6 +94,7 @@
 		08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D791B51AE6BDBF00E18B8C /* IGAttraction.m */; };
 		08EA25D21B0C797000ED6EC5 /* MyPFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */; };
 		08EA25D51B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */; };
+		28B1DFD91B2F73390007DA4B /* IntelliGuideUITests in Resources */ = {isa = PBXBuildFile; fileRef = 28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +178,8 @@
 		080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryFetcherTests.m; sourceTree = "<group>"; };
 		0813F4571B1B69D700623A13 /* LocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
 		0813F4581B1B69D700623A13 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		0816DF791B2CD22E00A1051A /* AttractionMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionMapViewController.h; sourceTree = "<group>"; };
+		0816DF7A1B2CD22E00A1051A /* AttractionMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionMapViewController.m; sourceTree = "<group>"; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 		08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPFLoginViewController.m; sourceTree = "<group>"; };
 		08EA25D31B0C7BDD00ED6EC5 /* MyPFSingUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPFSingUpViewController.h; sourceTree = "<group>"; };
 		08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPFSingUpViewController.m; sourceTree = "<group>"; };
+		28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IntelliGuideUITests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +346,8 @@
 				027B25241B0BB7B100C5E43F /* PresentPhotoViewController.h */,
 				084458FF1B235EFD00EC3D6C /* MapEditViewController.h */,
 				084459001B235EFD00EC3D6C /* MapEditViewController.m */,
+				0816DF791B2CD22E00A1051A /* AttractionMapViewController.h */,
+				0816DF7A1B2CD22E00A1051A /* AttractionMapViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -388,6 +395,7 @@
 		028F4AAE1AD7FD5700C63973 = {
 			isa = PBXGroup;
 			children = (
+				28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */,
 				028F4AB91AD7FD5700C63973 /* IntelliGuide */,
 				021196201AE006A000C367C6 /* Frameworks */,
 				028F4AD31AD7FD5700C63973 /* IntelliGuideTests */,
@@ -564,6 +572,7 @@
 				028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */,
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
+				28B1DFD91B2F73390007DA4B /* IntelliGuideUITests in Resources */,
 				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
 				0239ED431B2B564F00E70E1A /* RefreshContents.xib in Resources */,
 			);
@@ -587,6 +596,7 @@
 				08038EBE1B0683370042955B /* MenuViewController.m in Sources */,
 				027B25291B0BBE6E00C5E43F /* NavigationControllerDelegate.m in Sources */,
 				08C80D6C1AE3C4E70033296F /* AttractionReviewsViewController.m in Sources */,
+				0816DF7B1B2CD22E00A1051A /* AttractionMapViewController.m in Sources */,
 				028F4AC01AD7FD5700C63973 /* AppDelegate.m in Sources */,
 				027B25261B0BB7B100C5E43F /* PresentPhotoViewController.m in Sources */,
 				028F4ABD1AD7FD5700C63973 /* main.m in Sources */,
