@@ -8,6 +8,11 @@
 
 #import <ParseUI/ParseUI.h>
 
+/*!
+ This is a subclass of PFLogInViewController. It is used to
+ change default "Parse" label to "IntelliGuide". Other than
+ that nothing is changed.
+ */
 @interface MyPFLoginViewController : PFLogInViewController
 
 @end

@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+/*!
+ */
 @interface NavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
-
-
-
 
 @end

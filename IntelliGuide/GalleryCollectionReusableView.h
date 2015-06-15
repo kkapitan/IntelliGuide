@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+/*!
+ */
 @interface GalleryCollectionReusableView : UICollectionReusableView
+
+///------
+///@name Fields
+///------
+
+/*!
+ */
 @property (strong,nonatomic) UIImage *headerImage;
 
 @end
