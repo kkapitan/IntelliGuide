@@ -33,4 +33,13 @@
     GCRView.headerImage = [UIImage imageNamed:@"icon_x"];
     XCTAssertNotNil(imView.image);
 }
+
+- (void)testPerformanceExample {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        [self testDisplayingInformation];
+    }];
+}
+
+
 @end

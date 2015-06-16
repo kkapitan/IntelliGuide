@@ -93,4 +93,11 @@
     XCTAssertNil(wrongStringForKey);
 }
 
+- (void)testPerformanceExample2 {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        [self testStringForKey];
+    }];
+}
+
 @end

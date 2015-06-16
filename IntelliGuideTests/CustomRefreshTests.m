@@ -35,13 +35,26 @@
     self.customRefresh.delegate = self;
     [self.customRefresh animate];
     XCTAssertTrue(self.customRefresh.isAnimating);
-    //while(self.customRefresh.isAnimating);
-    // This is an example of a functional test case.
     [self waitForExpectationsWithTimeout:5 handler:^(NSError *error) {
         if(error)NSLog(@"%@",error);
     }];
     
 }
+
+- (void)testPerformanceExample {
+        NSArray *customRefreshViewNib = [[NSBundle mainBundle] loadNibNamed:@"RefreshContents" owner:[AttractionsTableViewController class] options:nil];
+    self.customRefresh = [customRefreshViewNib firstObject];
+    self.customRefresh.delegate = self;
+    [self measureBlock:^{
+        self.delegateResponse = [self expectationWithDescription:@"Delegate responds"];
+        [self.customRefresh animate];
+        [self waitForExpectationsWithTimeout:5 handler:^(NSError *error) {
+            if(error)NSLog(@"%@",error);
+        }];
+    }];
+}
+
+
 
 -(void)didEndRefreshing{
     XCTAssertFalse(self.customRefresh.isAnimating);

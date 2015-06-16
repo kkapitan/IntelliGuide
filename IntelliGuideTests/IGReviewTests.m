@@ -98,4 +98,26 @@
     XCTAssertEqualObjects(object[[IGReview stringForKey:IGReviewKeyContent]], returned[[IGReview stringForKey:IGReviewKeyContent]]);
 }
 
+- (void)testPerformanceExample {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        [self testCreatingObject];
+    }];
+}
+
+- (void)testPerformanceExample2 {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        [self testParseObject];
+    }];
+}
+
+- (void)testPerformanceExample3 {
+    // This is an example of a performance test case.
+    [self measureBlock:^{
+        [self testStringForKey];
+    }];
+}
+
+
 @end

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "GalleryFetcher.h"
 
 @interface GalleryFetcherTests : XCTestCase
-
+@property XCTestExpectation *expectation;
 @end
 
 @implementation GalleryFetcherTests
@@ -26,14 +27,21 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    self.expectation = [self expectationWithDescription:@"DownloadGallery"];
+    [GalleryFetcher fetchGalleryForPlaceWithId:@"hhdBdftA4c" completion:^(NSArray *images) {
+        XCTAssertEqual(images.count, 5);
+        [self.expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10 handler:^(NSError *error) {
+        if(error)NSLog(@"%@",error);
+    }];
 }
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+        [self testExample];
     }];
 }
 
