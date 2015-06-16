@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites name="AllTestUnits" tests="15" failures="0" errors="0" time="0.598977">
+    <testsuite tests="15" failures="0" errors="0" time="0.598977" timestamp="2015-06-14T23:54:02GMT+02:00" name="Toplevel Test Suite">
+        <testcase classname="AttractionCellTests" name="testDisplayingInformation" time="0.012036"></testcase>
+        <testcase classname="CategorySwitcherTableCellTests" name="testDisplayingInformation" time="0.008070"></testcase>
+        <testcase classname="GalleryCollectionReusableViewTest" name="testDisplayingInformation" time="0.000415"></testcase>
+        <testcase classname="GalleryCollectionViewCellTests" name="testDisplayingInformation" time="0.000769"></testcase>
+        <testcase classname="GalleryFetcherTests" name="testExample" time="0.000355"></testcase>
+        <testcase classname="GalleryFetcherTests" name="testPerformanceExample" time="0.502089">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryFetcherTests.m:35: Test Case '-[GalleryFetcherTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 178.130%, values: [0.000016, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGAttractionTests" name="testCreatingObject" time="0.016075"></testcase>
+        <testcase classname="IGAttractionTests" name="testStringForKey" time="0.011568"></testcase>
+        <testcase classname="IGCategoryTests" name="testCreatingObject" time="0.013110"></testcase>
+        <testcase classname="IGCategoryTests" name="testStringForKey" time="0.000214"></testcase>
+        <testcase classname="IGReviewTests" name="testCreatingObject" time="0.006945"></testcase>
+        <testcase classname="IGReviewTests" name="testParseObject" time="0.008715"></testcase>
+        <testcase classname="IGReviewTests" name="testStringForKey" time="0.009131"></testcase>
+        <testcase classname="LoginControllerTests" name="testLoginController" time="0.002038"></testcase>
+        <testcase classname="ReviewCellTests" name="testDisplayingInformation" time="0.002235"></testcase>
+    </testsuite>
+</testsuites>
