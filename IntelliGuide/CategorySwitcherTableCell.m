@@ -45,8 +45,4 @@
     self.categoryImage.image = category.image;
 }
 
-- (void) setImage:(UIImage *)image {
-    self.categoryImage.image = image;
-}
-
 @end
