@@ -1,0 +1,2084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="oclint-0.8.1"><file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="27" endcolumn="5" beginline="146" endline="148" priority="3" rule="empty if statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="103" beginline="47" endline="47" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="133" beginline="48" endline="48" priority="5" rule="long line">
+Line with 133 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="112" beginline="62" endline="62" priority="5" rule="long line">
+Line with 112 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="108" beginline="68" endline="68" priority="5" rule="long line">
+Line with 108 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="109" beginline="74" endline="74" priority="5" rule="long line">
+Line with 109 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="125" beginline="76" endline="76" priority="5" rule="long line">
+Line with 125 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="126" beginline="77" endline="77" priority="5" rule="long line">
+Line with 126 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="211" beginline="99" endline="99" priority="5" rule="long line">
+Line with 211 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="222" beginline="104" endline="104" priority="5" rule="long line">
+Line with 222 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="222" beginline="112" endline="112" priority="5" rule="long line">
+Line with 222 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="124" endline="124" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="131" endline="131" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="138" endline="138" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="33" endline="33" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="34" endline="34" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="35" endline="35" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="36" endline="36" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="37" endline="37" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="71" endline="71" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="10" endcolumn="17" beginline="88" endline="88" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="12" endcolumn="5" beginline="116" endline="118" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="16" endcolumn="9" beginline="103" endline="107" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="20" endcolumn="13" beginline="98" endline="102" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="16" endcolumn="9" beginline="111" endline="115" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MenuViewController.m">
+<violation begincolumn="20" endcolumn="34" beginline="145" endline="145" priority="5" rule="unused method parameter">
+The parameter 'alertView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NavigationControllerDelegate.m">
+<violation begincolumn="1" endcolumn="184" beginline="15" endline="15" priority="5" rule="long line">
+Line with 184 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="27" endcolumn="5" beginline="122" endline="124" priority="3" rule="empty if statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="1" endcolumn="109" beginline="29" endline="29" priority="5" rule="long line">
+Line with 109 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="1" endcolumn="126" beginline="31" endline="31" priority="5" rule="long line">
+Line with 126 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="1" endcolumn="211" beginline="41" endline="41" priority="5" rule="long line">
+Line with 211 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="1" endcolumn="129" beginline="70" endline="70" priority="5" rule="long line">
+Line with 129 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="1" endcolumn="108" beginline="76" endline="76" priority="5" rule="long line">
+Line with 108 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="1" endcolumn="198" beginline="102" endline="102" priority="5" rule="long line">
+Line with 198 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="111" endline="111" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="9" endcolumn="66" beginline="116" endline="116" priority="5" rule="long variable name">
+Variable name with 23 characters is longer than the threshold of 20
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="19" endcolumn="22" beginline="37" endline="37" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionReviewsViewController.m">
+<violation begincolumn="20" endcolumn="34" beginline="121" endline="121" priority="5" rule="unused method parameter">
+The parameter 'alertView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="1" endcolumn="114" beginline="45" endline="45" priority="5" rule="long line">
+Line with 114 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="1" endcolumn="127" beginline="53" endline="53" priority="5" rule="long line">
+Line with 127 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="56" endline="56" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="1" endcolumn="109" beginline="60" endline="60" priority="5" rule="long line">
+Line with 109 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="5" endcolumn="53" beginline="55" endline="55" priority="5" rule="short variable name">
+Variable name with 1 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="5" endcolumn="6" beginline="56" endline="59" priority="5" rule="short variable name">
+Variable name with 1 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="9" endcolumn="34" beginline="57" endline="57" priority="5" rule="short variable name">
+Variable name with 1 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="40" endcolumn="49" beginline="34" endline="34" priority="5" rule="unused method parameter">
+The parameter 'attractions' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="32" endcolumn="44" beginline="44" endline="44" priority="5" rule="unused method parameter">
+The parameter 'mapView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="18" endcolumn="30" beginline="53" endline="53" priority="5" rule="unused method parameter">
+The parameter 'mapView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionMapViewController.m">
+<violation begincolumn="109" endcolumn="121" beginline="53" endline="53" priority="5" rule="unused method parameter">
+The parameter 'control' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="1" endcolumn="110" beginline="21" endline="21" priority="5" rule="long line">
+Line with 110 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="1" endcolumn="281" beginline="35" endline="35" priority="5" rule="long line">
+Line with 281 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="1" endcolumn="151" beginline="36" endline="36" priority="5" rule="long line">
+Line with 151 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="1" endcolumn="214" beginline="40" endline="40" priority="5" rule="long line">
+Line with 214 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="1" endcolumn="137" beginline="41" endline="41" priority="5" rule="long line">
+Line with 137 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="1" endcolumn="153" beginline="45" endline="45" priority="5" rule="long line">
+Line with 153 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="1" endcolumn="190" beginline="49" endline="49" priority="5" rule="long line">
+Line with 190 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="1" endcolumn="124" beginline="53" endline="53" priority="5" rule="long line">
+Line with 124 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AppDelegate.m">
+<violation begincolumn="5" endcolumn="58" beginline="28" endline="28" priority="5" rule="unused local variable">
+The local variable 'navBar' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="1" endcolumn="114" beginline="30" endline="30" priority="5" rule="long line">
+Line with 114 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="1" endcolumn="126" beginline="48" endline="48" priority="5" rule="long line">
+Line with 126 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="1" endcolumn="128" beginline="51" endline="51" priority="5" rule="long line">
+Line with 128 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="1" endcolumn="126" beginline="55" endline="55" priority="5" rule="long line">
+Line with 126 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="76" endline="76" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="5" endcolumn="113" beginline="30" endline="30" priority="5" rule="short variable name">
+Variable name with 2 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="20" endcolumn="23" beginline="18" endline="18" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="20" endcolumn="23" beginline="22" endline="22" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PresentPhotoViewController.m">
+<violation begincolumn="21" endcolumn="24" beginline="25" endline="25" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="1" endcolumn="132" beginline="37" endline="37" priority="5" rule="long line">
+Line with 132 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="1" endcolumn="124" beginline="39" endline="39" priority="5" rule="long line">
+Line with 124 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="1" endcolumn="122" beginline="51" endline="51" priority="5" rule="long line">
+Line with 122 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="64" endline="64" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="82" endline="85" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="99" endline="102" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="42" endcolumn="65" beginline="71" endline="71" priority="5" rule="unused method parameter">
+The parameter 'pageViewController' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="42" endcolumn="65" beginline="87" endline="87" priority="5" rule="unused method parameter">
+The parameter 'pageViewController' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="54" endcolumn="77" beginline="105" endline="105" priority="5" rule="unused method parameter">
+The parameter 'pageViewController' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PageViewController.m">
+<violation begincolumn="54" endcolumn="77" beginline="109" endline="109" priority="5" rule="unused method parameter">
+The parameter 'pageViewController' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LocationManager.m">
+<violation begincolumn="1" endcolumn="113" beginline="63" endline="63" priority="5" rule="long line">
+Line with 113 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LocationManager.m">
+<violation begincolumn="5" endcolumn="5" beginline="59" endline="59" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LocationManager.m">
+<violation begincolumn="47" endcolumn="74" beginline="73" endline="73" priority="5" rule="replace with object subscripting">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LocationManager.m">
+<violation begincolumn="5" endcolumn="46" beginline="67" endline="67" priority="5" rule="short variable name">
+Variable name with 2 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LocationManager.m">
+<violation begincolumn="5" endcolumn="46" beginline="82" endline="82" priority="5" rule="short variable name">
+Variable name with 2 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="1" endcolumn="135" beginline="24" endline="24" priority="5" rule="long line">
+Line with 135 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="1" endcolumn="122" beginline="25" endline="25" priority="5" rule="long line">
+Line with 122 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="1" endcolumn="109" beginline="32" endline="32" priority="5" rule="long line">
+Line with 109 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="1" endcolumn="111" beginline="42" endline="42" priority="5" rule="long line">
+Line with 111 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="1" endcolumn="115" beginline="46" endline="46" priority="5" rule="long line">
+Line with 115 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="1" endcolumn="102" beginline="50" endline="50" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="30" endcolumn="54" beginline="35" endline="35" priority="5" rule="unused method parameter">
+The parameter 'logInController' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="30" endcolumn="54" beginline="42" endline="42" priority="5" rule="unused method parameter">
+The parameter 'logInController' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="31" endcolumn="56" beginline="46" endline="46" priority="5" rule="unused method parameter">
+The parameter 'signUpController' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/LoginController.m">
+<violation begincolumn="31" endcolumn="56" beginline="50" endline="50" priority="5" rule="unused method parameter">
+The parameter 'signUpController' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewCell.m">
+<violation begincolumn="1" endcolumn="129" beginline="62" endline="62" priority="5" rule="long line">
+Line with 129 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewCell.m">
+<violation begincolumn="1" endcolumn="130" beginline="63" endline="63" priority="5" rule="long line">
+Line with 130 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewCell.m">
+<violation begincolumn="1" endcolumn="124" beginline="64" endline="64" priority="5" rule="long line">
+Line with 124 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewCell.m">
+<violation begincolumn="1" endcolumn="138" beginline="71" endline="71" priority="5" rule="long line">
+Line with 138 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapEditViewController.m">
+<violation begincolumn="1" endcolumn="121" beginline="50" endline="50" priority="5" rule="long line">
+Line with 121 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapEditViewController.m">
+<violation begincolumn="1" endcolumn="128" beginline="51" endline="51" priority="5" rule="long line">
+Line with 128 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapEditViewController.m">
+<violation begincolumn="1" endcolumn="114" beginline="62" endline="62" priority="5" rule="long line">
+Line with 114 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapEditViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="23" endline="23" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapEditViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="51" endline="51" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapEditViewController.m">
+<violation begincolumn="32" endcolumn="44" beginline="61" endline="61" priority="5" rule="unused method parameter">
+The parameter 'mapView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionDescriptionViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="32" endline="32" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="142" beginline="19" endline="19" priority="5" rule="long line">
+Line with 142 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="136" beginline="64" endline="64" priority="5" rule="long line">
+Line with 136 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="103" beginline="65" endline="65" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="117" beginline="82" endline="82" priority="5" rule="long line">
+Line with 117 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="105" endline="105" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="144" beginline="124" endline="124" priority="5" rule="long line">
+Line with 144 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="144" beginline="125" endline="125" priority="5" rule="long line">
+Line with 144 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="108" beginline="126" endline="126" priority="5" rule="long line">
+Line with 108 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="103" beginline="133" endline="133" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="137" beginline="145" endline="145" priority="5" rule="long line">
+Line with 137 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="101" beginline="159" endline="159" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="101" beginline="212" endline="212" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="146" beginline="229" endline="229" priority="5" rule="long line">
+Line with 146 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="236" endline="236" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="139" beginline="241" endline="241" priority="5" rule="long line">
+Line with 139 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="141" beginline="244" endline="244" priority="5" rule="long line">
+Line with 141 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="103" beginline="249" endline="249" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="101" beginline="258" endline="258" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="1" endcolumn="114" beginline="262" endline="262" priority="5" rule="long line">
+Line with 114 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="9" endcolumn="114" beginline="241" endline="241" priority="5" rule="long variable name">
+Variable name with 25 characters is longer than the threshold of 20
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="9" endcolumn="116" beginline="244" endline="244" priority="5" rule="long variable name">
+Variable name with 25 characters is longer than the threshold of 20
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="13" endcolumn="13" beginline="137" endline="137" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="157" endline="157" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="256" endline="256" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewAttractionViewController.m">
+<violation begincolumn="32" endcolumn="44" beginline="261" endline="261" priority="5" rule="unused method parameter">
+The parameter 'mapView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="121" beginline="18" endline="18" priority="5" rule="long line">
+Line with 121 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="135" beginline="39" endline="39" priority="5" rule="long line">
+Line with 135 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="115" beginline="44" endline="44" priority="5" rule="long line">
+Line with 115 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="120" beginline="49" endline="49" priority="5" rule="long line">
+Line with 120 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="155" beginline="55" endline="55" priority="5" rule="long line">
+Line with 155 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="56" endline="56" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="151" beginline="57" endline="57" priority="5" rule="long line">
+Line with 151 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="101" beginline="58" endline="58" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="176" beginline="63" endline="63" priority="5" rule="long line">
+Line with 176 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="115" beginline="70" endline="70" priority="5" rule="long line">
+Line with 115 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="82" endline="82" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="118" beginline="91" endline="91" priority="5" rule="long line">
+Line with 118 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="101" beginline="92" endline="92" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="115" beginline="176" endline="176" priority="5" rule="long line">
+Line with 115 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="184" endline="184" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="129" beginline="189" endline="189" priority="5" rule="long line">
+Line with 129 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="161" beginline="208" endline="208" priority="5" rule="long line">
+Line with 161 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="105" beginline="212" endline="212" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="124" beginline="220" endline="220" priority="5" rule="long line">
+Line with 124 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="122" beginline="226" endline="226" priority="5" rule="long line">
+Line with 122 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="140" beginline="237" endline="237" priority="5" rule="long line">
+Line with 140 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="148" beginline="239" endline="239" priority="5" rule="long line">
+Line with 148 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="144" beginline="247" endline="247" priority="5" rule="long line">
+Line with 144 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="140" beginline="255" endline="255" priority="5" rule="long line">
+Line with 140 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="141" beginline="259" endline="259" priority="5" rule="long line">
+Line with 141 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="107" beginline="299" endline="299" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="305" endline="305" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="1" endcolumn="103" beginline="317" endline="317" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="9" endcolumn="74" beginline="311" endline="311" priority="5" rule="long variable name">
+Variable name with 27 characters is longer than the threshold of 20
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="9" endcolumn="102" beginline="317" endline="317" priority="5" rule="long variable name">
+Variable name with 25 characters is longer than the threshold of 20
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="5" endcolumn="70" beginline="282" endline="282" priority="5" rule="short variable name">
+Variable name with 1 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="25" endcolumn="28" beginline="88" endline="88" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="19" endcolumn="33" beginline="122" endline="122" priority="5" rule="unused method parameter">
+The parameter 'searchBar' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="38" endcolumn="52" beginline="133" endline="133" priority="5" rule="unused method parameter">
+The parameter 'searchBar' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="36" endcolumn="50" beginline="137" endline="137" priority="5" rule="unused method parameter">
+The parameter 'searchBar' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="26" endcolumn="45" beginline="208" endline="208" priority="5" rule="unused method parameter">
+The parameter 'collectionView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="68" endcolumn="93" beginline="208" endline="208" priority="5" rule="unused method parameter">
+The parameter 'collectionViewLayout' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionsTableViewController.m">
+<violation begincolumn="138" endcolumn="152" beginline="208" endline="208" priority="5" rule="unused method parameter">
+The parameter 'indexPath' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/IGReview.m">
+<violation begincolumn="1" endcolumn="104" beginline="20" endline="20" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/IGCategory.m">
+<violation begincolumn="1" endcolumn="106" beginline="23" endline="23" priority="5" rule="long line">
+Line with 106 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/IGCategory.m">
+<violation begincolumn="1" endcolumn="107" beginline="24" endline="24" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/IGCategory.m">
+<violation begincolumn="1" endcolumn="152" beginline="34" endline="34" priority="5" rule="long line">
+Line with 152 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryFetcher.m">
+<violation begincolumn="1" endcolumn="102" beginline="24" endline="24" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryFetcher.m">
+<violation begincolumn="1" endcolumn="103" beginline="37" endline="37" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewReviewViewController.m">
+<violation begincolumn="1" endcolumn="143" beginline="29" endline="29" priority="5" rule="long line">
+Line with 143 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewReviewViewController.m">
+<violation begincolumn="1" endcolumn="143" beginline="32" endline="32" priority="5" rule="long line">
+Line with 143 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewReviewViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="33" endline="33" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewReviewViewController.m">
+<violation begincolumn="1" endcolumn="146" beginline="105" endline="105" priority="5" rule="long line">
+Line with 146 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewReviewViewController.m">
+<violation begincolumn="16" endcolumn="19" beginline="74" endline="74" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewReviewViewController.m">
+<violation begincolumn="26" endcolumn="29" beginline="78" endline="78" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/NewReviewViewController.m">
+<violation begincolumn="26" endcolumn="29" beginline="82" endline="82" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CircleTransitionAnimator.m">
+<violation begincolumn="1" endcolumn="152" beginline="26" endline="26" priority="5" rule="long line">
+Line with 152 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CircleTransitionAnimator.m">
+<violation begincolumn="1" endcolumn="148" beginline="27" endline="27" priority="5" rule="long line">
+Line with 148 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CircleTransitionAnimator.m">
+<violation begincolumn="1" endcolumn="109" beginline="36" endline="36" priority="5" rule="long line">
+Line with 109 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CircleTransitionAnimator.m">
+<violation begincolumn="1" endcolumn="124" beginline="47" endline="47" priority="5" rule="long line">
+Line with 124 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CircleTransitionAnimator.m">
+<violation begincolumn="1" endcolumn="113" beginline="68" endline="68" priority="5" rule="long line">
+Line with 113 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CircleTransitionAnimator.m">
+<violation begincolumn="5" endcolumn="94" beginline="45" endline="45" priority="5" rule="long variable name">
+Variable name with 21 characters is longer than the threshold of 20
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="27" endcolumn="5" beginline="300" endline="302" priority="3" rule="empty if statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="170" beginline="20" endline="20" priority="5" rule="long line">
+Line with 170 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="153" beginline="116" endline="116" priority="5" rule="long line">
+Line with 153 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="135" beginline="138" endline="138" priority="5" rule="long line">
+Line with 135 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="128" beginline="141" endline="141" priority="5" rule="long line">
+Line with 128 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="155" beginline="178" endline="178" priority="5" rule="long line">
+Line with 155 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="202" endline="202" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="123" beginline="204" endline="204" priority="5" rule="long line">
+Line with 123 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="215" beginline="227" endline="227" priority="5" rule="long line">
+Line with 215 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="186" beginline="235" endline="235" priority="5" rule="long line">
+Line with 186 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="235" beginline="250" endline="250" priority="5" rule="long line">
+Line with 235 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="260" endline="260" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="263" endline="263" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="1" endcolumn="125" beginline="278" endline="278" priority="5" rule="long line">
+Line with 125 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="9" endcolumn="101" beginline="263" endline="263" priority="5" rule="long variable name">
+Variable name with 25 characters is longer than the threshold of 20
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="83" endcolumn="1" beginline="222" endline="258" priority="5" rule="deep nested block">
+Block depth of 6 exceeds limit of 5
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="9" endcolumn="9" beginline="232" endline="255" priority="5" rule="use early exits and continue">
+Use early exit/continue to simplify code and reduce indentation
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="21" endcolumn="21" beginline="239" endline="243" priority="5" rule="redundant if statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="12" endcolumn="5" beginline="231" endline="257" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="16" endcolumn="9" beginline="226" endline="230" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="20" endcolumn="13" beginline="245" endline="254" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="24" endcolumn="17" beginline="238" endline="244" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="28" endcolumn="21" beginline="241" endline="243" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="24" endcolumn="17" beginline="249" endline="253" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="43" endcolumn="57" beginline="194" endline="194" priority="5" rule="unused method parameter">
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="25" endcolumn="39" beginline="198" endline="198" priority="5" rule="unused method parameter">
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="72" endcolumn="82" beginline="198" endline="198" priority="5" rule="unused method parameter">
+The parameter 'section' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="33" endcolumn="47" beginline="202" endline="202" priority="5" rule="unused method parameter">
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="19" endcolumn="33" beginline="278" endline="278" priority="5" rule="unused method parameter">
+The parameter 'tableView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="102" endcolumn="116" beginline="278" endline="278" priority="5" rule="unused method parameter">
+The parameter 'indexPath' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/PreferencesViewController.m">
+<violation begincolumn="20" endcolumn="34" beginline="299" endline="299" priority="5" rule="unused method parameter">
+The parameter 'alertView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="1" endcolumn="123" beginline="98" endline="98" priority="5" rule="long line">
+Line with 123 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="1" endcolumn="108" beginline="105" endline="105" priority="5" rule="long line">
+Line with 108 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="49" endline="49" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="50" endline="50" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="51" endline="51" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="52" endline="52" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="53" endline="53" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="54" endline="54" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="55" endline="55" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="56" endline="56" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="57" endline="57" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="58" endline="58" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="59" endline="59" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="60" endline="60" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="61" endline="61" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="9" endcolumn="9" beginline="114" endline="114" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="143" endline="143" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="13" endcolumn="13" beginline="147" endline="147" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="151" endline="151" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="5" endcolumn="5" beginline="152" endline="152" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/ASStarRatingView.m">
+<violation begincolumn="9" endcolumn="47" beginline="77" endline="77" priority="5" rule="useless parentheses">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/IGAttraction.m">
+<violation begincolumn="1" endcolumn="122" beginline="28" endline="28" priority="5" rule="long line">
+Line with 122 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="29" endline="29" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapViewController.m">
+<violation begincolumn="1" endcolumn="114" beginline="37" endline="37" priority="5" rule="long line">
+Line with 114 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapViewController.m">
+<violation begincolumn="1" endcolumn="115" beginline="52" endline="52" priority="5" rule="long line">
+Line with 115 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapViewController.m">
+<violation begincolumn="32" endcolumn="44" beginline="36" endline="36" priority="5" rule="unused method parameter">
+The parameter 'mapView' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/MapViewController.m">
+<violation begincolumn="61" endcolumn="71" beginline="44" endline="44" priority="5" rule="unused method parameter">
+The parameter 'views' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="39" endline="39" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="152" beginline="50" endline="50" priority="5" rule="long line">
+Line with 152 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="106" beginline="68" endline="68" priority="5" rule="long line">
+Line with 106 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="125" beginline="72" endline="72" priority="5" rule="long line">
+Line with 125 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="133" beginline="73" endline="73" priority="5" rule="long line">
+Line with 133 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="115" beginline="82" endline="82" priority="5" rule="long line">
+Line with 115 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="112" beginline="89" endline="89" priority="5" rule="long line">
+Line with 112 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="142" beginline="95" endline="95" priority="5" rule="long line">
+Line with 142 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="117" beginline="96" endline="96" priority="5" rule="long line">
+Line with 117 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="154" beginline="100" endline="100" priority="5" rule="long line">
+Line with 154 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/GalleryCollectionViewController.m">
+<violation begincolumn="1" endcolumn="151" beginline="104" endline="104" priority="5" rule="long line">
+Line with 151 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionDetailsViewController.m">
+<violation begincolumn="1" endcolumn="128" beginline="43" endline="43" priority="5" rule="long line">
+Line with 128 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionDetailsViewController.m">
+<violation begincolumn="1" endcolumn="103" beginline="56" endline="56" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionDetailsViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="65" endline="65" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionDetailsViewController.m">
+<violation begincolumn="1" endcolumn="112" beginline="70" endline="70" priority="5" rule="long line">
+Line with 112 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionDetailsViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="75" endline="75" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionDetailsViewController.m">
+<violation begincolumn="9" endcolumn="87" beginline="70" endline="70" priority="5" rule="short variable name">
+Variable name with 2 characters is shorter than the threshold of 3
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/AttractionDetailsViewController.m">
+<violation begincolumn="21" endcolumn="24" beginline="53" endline="53" priority="5" rule="unused method parameter">
+The parameter 'sender' is unused.
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategorySwitcherTableCell.m">
+<violation begincolumn="1" endcolumn="120" beginline="22" endline="22" priority="5" rule="long line">
+Line with 120 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="143" beginline="21" endline="21" priority="5" rule="long line">
+Line with 143 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="109" beginline="26" endline="26" priority="5" rule="long line">
+Line with 109 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="129" beginline="47" endline="47" priority="5" rule="long line">
+Line with 129 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="131" beginline="49" endline="49" priority="5" rule="long line">
+Line with 131 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="126" beginline="50" endline="50" priority="5" rule="long line">
+Line with 126 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="110" beginline="57" endline="57" priority="5" rule="long line">
+Line with 110 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="148" beginline="74" endline="74" priority="5" rule="long line">
+Line with 148 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="101" beginline="77" endline="77" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="120" beginline="79" endline="79" priority="5" rule="long line">
+Line with 120 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="131" beginline="86" endline="86" priority="5" rule="long line">
+Line with 131 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="101" endline="101" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/CategoryPickerTableViewController.m">
+<violation begincolumn="6" endcolumn="110" beginline="50" endline="50" priority="5" rule="replace with object subscripting">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="65" endline="73" priority="5" rule="collapsible if statements">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="5" endcolumn="5" beginline="79" endline="92" priority="5" rule="collapsible if statements">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="1" endcolumn="139" beginline="40" endline="40" priority="5" rule="long line">
+Line with 139 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="1" endcolumn="139" beginline="41" endline="41" priority="5" rule="long line">
+Line with 139 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="1" endcolumn="105" beginline="44" endline="44" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="1" endcolumn="104" beginline="62" endline="62" priority="5" rule="long line">
+Line with 104 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="1" endcolumn="115" beginline="68" endline="68" priority="5" rule="long line">
+Line with 115 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="1" endcolumn="189" beginline="83" endline="83" priority="5" rule="long line">
+Line with 189 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="1" endcolumn="102" beginline="104" endline="104" priority="5" rule="long line">
+Line with 102 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuide/SettingsViewController.m">
+<violation begincolumn="12" endcolumn="5" beginline="57" endline="59" priority="5" rule="unnecessary else statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LoginControllerTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="32" endline="47" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 29 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LoginControllerTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="24" endline="24" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LoginControllerTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="28" endline="28" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LoginControllerTests.m">
+<violation begincolumn="1" endcolumn="101" beginline="41" endline="41" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LoginControllerTests.m">
+<violation begincolumn="1" endcolumn="119" beginline="45" endline="45" priority="5" rule="long line">
+Line with 119 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryCollectionViewCellTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="21" endline="21" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryCollectionViewCellTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="25" endline="25" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/AttractionCellTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="22" endline="22" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/AttractionCellTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="26" endline="26" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/CategorySwitcherTableCellTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="22" endline="22" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/CategorySwitcherTableCellTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="26" endline="26" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryCollectionReusableViewTest.m">
+<violation begincolumn="1" endcolumn="105" beginline="21" endline="21" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryCollectionReusableViewTest.m">
+<violation begincolumn="1" endcolumn="107" beginline="25" endline="25" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="58" endline="96" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 36 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="98" endline="108" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 26 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="37" endcolumn="5" beginline="80" endline="82" priority="3" rule="empty catch statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="14" endcolumn="5" beginline="83" endline="85" priority="3" rule="empty finally statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="29" endline="29" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="41" endline="41" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="145" beginline="42" endline="42" priority="5" rule="long line">
+Line with 145 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="101" beginline="43" endline="43" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="101" beginline="44" endline="44" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="103" beginline="46" endline="46" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="101" beginline="47" endline="47" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="110" beginline="48" endline="48" priority="5" rule="long line">
+Line with 110 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="54" endline="54" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="104" endline="104" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="120" beginline="114" endline="114" priority="5" rule="long line">
+Line with 120 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="101" beginline="119" endline="119" priority="5" rule="long line">
+Line with 101 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="144" beginline="124" endline="124" priority="5" rule="long line">
+Line with 144 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="1" endcolumn="158" beginline="125" endline="125" priority="5" rule="long line">
+Line with 158 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="31" endline="31" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="32" endline="32" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="33" endline="33" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="34" endline="34" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="50" endline="50" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/ReviewCellTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="31" endline="56" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 13 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/ReviewCellTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="23" endline="23" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/ReviewCellTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="27" endline="27" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="30" endline="67" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 20 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="69" endline="94" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 16 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m">
+<violation begincolumn="37" endcolumn="5" beginline="83" endline="85" priority="3" rule="empty catch statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m">
+<violation begincolumn="14" endcolumn="5" beginline="86" endline="88" priority="3" rule="empty finally statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="22" endline="22" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="26" endline="26" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m">
+<violation begincolumn="1" endcolumn="103" beginline="41" endline="41" priority="5" rule="long line">
+Line with 103 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryFetcherTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="20" endline="20" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryFetcherTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="24" endline="24" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="45" endline="53" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 21 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="55" endline="84" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 21 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="1" beginline="86" endline="99" priority="3" rule="high cyclomatic complexity">
+Cyclomatic Complexity Number 20 exceeds limit of 10
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="37" endcolumn="5" beginline="71" endline="73" priority="3" rule="empty catch statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="14" endcolumn="5" beginline="74" endline="76" priority="3" rule="empty finally statement">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="26" endline="26" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="133" beginline="32" endline="32" priority="5" rule="long line">
+Line with 133 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="41" endline="41" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="106" beginline="89" endline="89" priority="5" rule="long line">
+Line with 106 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="134" beginline="96" endline="96" priority="5" rule="long line">
+Line with 134 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="130" beginline="97" endline="97" priority="5" rule="long line">
+Line with 130 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="1" endcolumn="132" beginline="98" endline="98" priority="5" rule="long line">
+Line with 132 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="28" endline="28" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="29" endline="29" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="37" endline="37" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+</pmd>

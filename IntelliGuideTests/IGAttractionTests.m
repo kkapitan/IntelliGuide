@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "IGAttraction.h"
 #import <OCMock/OCMock.h>
+#import <MapKit/MapKit.h>
 
 @interface IGAttractionTests : XCTestCase
 
@@ -32,6 +33,7 @@
     mockPFUser = OCMClassMock([PFUser class]);
     mockPFFile = OCMClassMock([PFFile class]);
     mockCategoryParseFile = OCMClassMock([PFObject class]);
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:52.2 longitude:16.5];
     
 //    PFObject *categoryObject = [PFObject objectWithClassName:@"Category"];
 //    categoryObject[@"name"] = @"Park";
@@ -42,6 +44,7 @@
     OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyDescription]]).andReturn(@"Malowniczy park położony w pięknej dolinie");
     OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyVerified]]).andReturn(@"true");
     OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyImage]]).andReturn(mockPFFile);
+    OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyLocation]]).andReturn(geoPoint);
     OCMStub(mockPFUser[@"username"]).andReturn(@"Pani Krysia");
     OCMStub(mockParseObject[[IGAttraction stringForKey:IGAttractionKeyCreator]]).andReturn(mockPFUser);
 //    OCMStub(mockCategoryParseFile[[IGCategory stringForKey:IGCategoryKeyName]]).andReturn(@"Park");
@@ -63,6 +66,7 @@
     NSInteger categoryKey4 = IGAttractionKeyCategory;
     NSInteger categoryKey5 = IGAttractionKeyImage;
     NSInteger categoryKey6 = IGAttractionKeyVerified;
+    NSInteger categoryKey7 = IGAttractionKeyLocation;
     NSInteger wrongCategoryKey = 69;
     
     //when
@@ -72,6 +76,7 @@
     NSString *stringForKey4 = [IGAttraction stringForKey:categoryKey4];
     NSString *stringForKey5 = [IGAttraction stringForKey:categoryKey5];
     NSString *stringForKey6 = [IGAttraction stringForKey:categoryKey6];
+    NSString *stringForKey7 = [IGAttraction stringForKey:categoryKey7];
     NSString *wrongStringForKey;
     @try {
         wrongStringForKey = [IGAttraction stringForKey:wrongCategoryKey];
@@ -91,6 +96,7 @@
     XCTAssertEqualObjects(stringForKey4, @"category");
     XCTAssertEqualObjects(stringForKey5, @"image");
     XCTAssertEqualObjects(stringForKey6, @"verified");
+    XCTAssertEqualObjects(stringForKey7, @"location");
     
     XCTAssertNil(wrongStringForKey);
 }
@@ -103,6 +109,9 @@
     XCTAssertEqualObjects(attraction.name, @"Park Wilsona");
     XCTAssertEqualObjects(attraction.placeDescription, @"Malowniczy park położony w pięknej dolinie");
     XCTAssertEqualObjects(attraction.creator[@"username"], @"Pani Krysia");
+    CLLocationCoordinate2D coords = CLLocationCoordinate2DMake(52.2, 16.5);
+    XCTAssertEqual(attraction.location.coordinate.latitude, coords.latitude);
+    XCTAssertEqual(attraction.location.coordinate.longitude, coords.longitude);
     XCTAssertEqualObjects(NSStringFromClass(attraction.imageFile.class), @"PFFile");
 //    XCTAssertEqualObjects(NSStringFromClass(attraction.category.class), @"IGCategory");
 }

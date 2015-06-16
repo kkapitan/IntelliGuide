@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites name="AllTestUnits" tests="17" failures="1" errors="0" time="0.731174">
+    <testsuite tests="17" failures="1" errors="0" time="0.731174" timestamp="2015-06-16T15:15:27GMT+02:00" name="Toplevel Test Suite">
+        <testcase classname="AttractionCellTests" name="testDisplayingInformation" time="0.008015"></testcase>
+        <testcase classname="CategorySwitcherTableCellTests" name="testDisplayingInformation" time="0.003560"></testcase>
+        <testcase classname="CustomRefreshTests" name="testExample" time="0.000146"></testcase>
+        <testcase classname="CustomRefreshTests" name="testPerformanceExample" time="0.312458">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/CustomRefreshTests.m:35: Test Case '-[CustomRefreshTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 81.770%, values: [0.000005, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="GalleryCollectionReusableViewTest" name="testDisplayingInformation" time="0.000492"></testcase>
+        <testcase classname="GalleryCollectionViewCellTests" name="testDisplayingInformation" time="0.001418"></testcase>
+        <testcase classname="GalleryFetcherTests" name="testExample" time="0.000137"></testcase>
+        <testcase classname="GalleryFetcherTests" name="testPerformanceExample" time="0.309836">
+            <system-out>2015-06-16 15:15:27.172 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.173 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.173 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.174 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.174 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.177 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.178 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.178 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.179 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.180 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.187 IntelliGuide[3347:25056] Cache for name
+2015-06-16 15:15:27.188 IntelliGuide[3347:25056] Cache for name
+/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryFetcherTests.m:35: Test Case '-[GalleryFetcherTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 56.332%, values: [0.000004, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGAttractionTests" name="testCreatingObject" time="0.019606">
+            <system-out>2015-06-16 15:15:27.393 IntelliGuide[3347:25056] Cache for name
+</system-out>
+        </testcase>
+        <testcase classname="IGAttractionTests" name="testStringForKey" time="0.015592">
+            <system-out>2015-06-16 15:15:27.409 IntelliGuide[3347:25056] Cache for name
+</system-out>
+        </testcase>
+        <testcase classname="IGCategoryTests" name="testCreatingObject" time="0.019699">
+            <failure type="Failure" message="((category.objectId) equal to (@&quot;abc123&quot;)) failed: (&quot;5DeCjb6evY&quot;) is not equal to (&quot;abc123&quot;)">/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m:63</failure>
+            <failure type="Failure" message="((category.parseObject) equal to (mockParseObject)) failed: (&quot;&lt;Category: 0x7c20c120, objectId: 5DeCjb6evY, localId: (null)&gt; {
+    icon = &quot;&lt;PFFile: 0x7ae21160&gt;&quot;;
+    name = Park;
+}&quot;) is not equal to (&quot;OCMockObject(PFObject)&quot;)">/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m:65</failure>
+            <failure type="Failure" message="((category.image) != nil) failed">/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m:66</failure>
+        </testcase>
+        <testcase classname="IGCategoryTests" name="testStringForKey" time="0.000215"></testcase>
+        <testcase classname="IGReviewTests" name="testCreatingObject" time="0.007882"></testcase>
+        <testcase classname="IGReviewTests" name="testParseObject" time="0.011945"></testcase>
+        <testcase classname="IGReviewTests" name="testStringForKey" time="0.009957"></testcase>
+        <testcase classname="LoginControllerTests" name="testLoginController" time="0.001593"></testcase>
+        <testcase classname="ReviewCellTests" name="testDisplayingInformation" time="0.002122"></testcase>
+    </testsuite>
+</testsuites>
