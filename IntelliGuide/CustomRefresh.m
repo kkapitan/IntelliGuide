@@ -38,12 +38,12 @@
 }
 
 -(void)animateLetter{
-    [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+    [UIView animateWithDuration:0.10 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
         UILabel *currentLetter = (UILabel*)self.letters[self.currentIndex];
         currentLetter.transform = CGAffineTransformRotate(CGAffineTransformIdentity, 45.0);
         currentLetter.textColor = [self nextColor];
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:0.05 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             UILabel *currentLetter = (UILabel*)self.letters[self.currentIndex];
             currentLetter.transform = CGAffineTransformIdentity;
             currentLetter.textColor = [UIColor blackColor];
@@ -70,7 +70,7 @@
             currentLetter.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.5, 1.5);
         }
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             for(UILabel *currentLetter in self.letters){
                 currentLetter.transform = CGAffineTransformIdentity;
             }
@@ -79,6 +79,7 @@
             for(UILabel *currentLetter in self.letters){
                 currentLetter.transform = CGAffineTransformIdentity;
             }
+            [self.delegate didEndRefreshing];
         }];
     }];
 }

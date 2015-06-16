@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CustomRefreshProtocol <NSObject>
+
+-(void)didEndRefreshing;
+
+@end
+
+
 @interface CustomRefresh : UIView
+
 -(void)animate;
 @property BOOL isAnimating;
+@property (nonatomic,weak) id<CustomRefreshProtocol> delegate;
 @end

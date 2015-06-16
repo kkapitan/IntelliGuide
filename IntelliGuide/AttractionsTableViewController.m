@@ -16,7 +16,7 @@
 #import "MBProgressHUD.h"
 
 
-@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout,UISearchBarDelegate, EndEditingProtocol>
+@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout,UISearchBarDelegate, EndEditingProtocol, CustomRefreshProtocol>
 @property(nonatomic,strong) NSArray *objects;
 @property(nonatomic,strong) NSArray *originalObjects;
 @property(nonatomic,strong) UIRefreshControl *refreshControl;
@@ -56,8 +56,9 @@
     self.refreshView = (CustomRefresh*)[refreshViewNib firstObject];
     self.refreshView.frame = self.refreshControl.bounds;
     self.refreshControl.backgroundColor = [UIColor clearColor];
-    //self.refreshControl.tintColor = [UIColor clearColor];
-    //[self.refreshControl addSubview:self.refreshView];
+    self.refreshControl.tintColor = [UIColor clearColor];
+    self.refreshView.delegate = self;
+    [self.refreshControl addSubview:self.refreshView];
 
     
     //SearchBarButton
@@ -161,10 +162,14 @@
 #pragma mark - RefreshControl
 
 -(void)refreshingAction{
+    if(!self.refreshView.isAnimating){
+        [self.refreshView animate];
+    }
+}
+
+-(void)didEndRefreshing{
     [self loadObjects];
-    [self.refreshView animate];
     [self.refreshControl endRefreshing];
-    
 }
 
 #pragma mark - Collection view data source
