@@ -16,7 +16,7 @@ static NSCache *storage = nil;
     self = [super init];
 //    _name = [object valueForKey:[IGCategory stringForKey:IGCategoryKeyName]];
     _name = object[[IGCategory stringForKey:IGCategoryKeyName]];
-    _objectId = object.objectId;
+    _objectId = [object objectId];
     PFFile *iconFile = object[[IGCategory stringForKey:IGCategoryKeyIcon]];
     [iconFile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
         _image = [UIImage imageWithData:data];
@@ -31,10 +31,7 @@ static NSCache *storage = nil;
     NSString *nameString = [IGCategory stringForKey:IGCategoryKeyName];
     
     if (storage == nil) storage = [NSCache new];
-    if ([storage objectForKey:object[nameString]] == nil){
-        NSLog(@"Cache for %@",nameString);
-        [storage setObject:[[IGCategory alloc] initWithParseObject:object] forKey:object[nameString]];
-    }
+    if ([storage objectForKey:object[nameString]] == nil) [storage setObject:[[IGCategory alloc] initWithParseObject:object] forKey:object[nameString]];
     return [storage objectForKey:object[nameString]];
 }
 
