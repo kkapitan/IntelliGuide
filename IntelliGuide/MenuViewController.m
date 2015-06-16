@@ -40,6 +40,11 @@
     //self.tableView.dataSource = nil;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     return headerTitles[section];
 }
@@ -82,6 +87,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    NSLog(@"lalal");
     if([PFUser currentUser]){
         return menuItems.count;
     }

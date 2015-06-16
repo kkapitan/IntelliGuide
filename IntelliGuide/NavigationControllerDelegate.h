@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 /*!
+ This class is used as a delegate for navigation controller. It tells the navigation controller, what type of animation it should use while transitioning.
  */
 @interface NavigationControllerDelegate : NSObject <UINavigationControllerDelegate>
 

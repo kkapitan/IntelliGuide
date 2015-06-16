@@ -24,6 +24,8 @@
 		021E59171AE40BF30003B6B7 /* CategoryPickerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E59161AE40BF30003B6B7 /* CategoryPickerTableViewController.m */; };
 		021E591A1AE411260003B6B7 /* NewAttractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 021E59191AE411260003B6B7 /* NewAttractionViewController.m */; };
 		0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0230BA6C1B024E2C00B14A6B /* NewReviewViewController.m */; };
+		0239ED411B2B51A400E70E1A /* CustomRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0239ED401B2B51A400E70E1A /* CustomRefresh.m */; };
+		0239ED431B2B564F00E70E1A /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0239ED421B2B564F00E70E1A /* RefreshContents.xib */; };
 		0259705A1B0930A8006E5413 /* AttractionCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 025970591B0930A8006E5413 /* AttractionCellTests.m */; };
 		0259705C1B0936B5006E5413 /* ReviewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259705B1B0936B5006E5413 /* ReviewCellTests.m */; };
 		0259705E1B093F1A006E5413 /* GalleryCollectionViewCellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0259705D1B093F1A006E5413 /* GalleryCollectionViewCellTests.m */; };
@@ -42,6 +44,7 @@
 		029041561B06155E00B2B41E /* GalleryCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 029041551B06155E00B2B41E /* GalleryCollectionReusableView.m */; };
 		0290415F1B064D1200B2B41E /* GalleryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */; };
 		029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 029041621B065DAC00B2B41E /* GalleryFetcher.m */; };
+		02E2F0A51B3051DD00FDB5D1 /* CustomRefreshTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E2F0A41B3051DD00FDB5D1 /* CustomRefreshTests.m */; };
 		08038EB31B0668CF0042955B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB21B0668CF0042955B /* Accounts.framework */; };
 		08038EB51B0668D70042955B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08038EB41B0668D70042955B /* Social.framework */; };
 		08038EB81B0669460042955B /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08038EB71B0669460042955B /* LoginController.m */; };
@@ -92,6 +95,7 @@
 		08D791B61AE6BDBF00E18B8C /* IGAttraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 08D791B51AE6BDBF00E18B8C /* IGAttraction.m */; };
 		08EA25D21B0C797000ED6EC5 /* MyPFLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */; };
 		08EA25D51B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */; };
+		28B1DFD91B2F73390007DA4B /* IntelliGuideUITests in Resources */ = {isa = PBXBuildFile; fileRef = 28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +131,9 @@
 		021E59191AE411260003B6B7 /* NewAttractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewAttractionViewController.m; sourceTree = "<group>"; };
 		0230BA6B1B024E2C00B14A6B /* NewReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewReviewViewController.h; sourceTree = "<group>"; };
 		0230BA6C1B024E2C00B14A6B /* NewReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewReviewViewController.m; sourceTree = "<group>"; };
+		0239ED3F1B2B51A400E70E1A /* CustomRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRefresh.h; sourceTree = "<group>"; };
+		0239ED401B2B51A400E70E1A /* CustomRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRefresh.m; sourceTree = "<group>"; };
+		0239ED421B2B564F00E70E1A /* RefreshContents.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 		025970591B0930A8006E5413 /* AttractionCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionCellTests.m; sourceTree = "<group>"; };
 		0259705B1B0936B5006E5413 /* ReviewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCellTests.m; sourceTree = "<group>"; };
 		0259705D1B093F1A006E5413 /* GalleryCollectionViewCellTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewCellTests.m; sourceTree = "<group>"; };
@@ -158,6 +165,7 @@
 		0290415E1B064D1200B2B41E /* GalleryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryCollectionViewController.m; sourceTree = "<group>"; };
 		029041611B065DAC00B2B41E /* GalleryFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryFetcher.h; sourceTree = "<group>"; };
 		029041621B065DAC00B2B41E /* GalleryFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryFetcher.m; sourceTree = "<group>"; };
+		02E2F0A41B3051DD00FDB5D1 /* CustomRefreshTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomRefreshTests.m; sourceTree = "<group>"; };
 		08038EB21B0668CF0042955B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		08038EB41B0668D70042955B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		08038EB61B0669460042955B /* LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginController.h; sourceTree = "<group>"; };
@@ -219,6 +227,7 @@
 		08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPFLoginViewController.m; sourceTree = "<group>"; };
 		08EA25D31B0C7BDD00ED6EC5 /* MyPFSingUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPFSingUpViewController.h; sourceTree = "<group>"; };
 		08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPFSingUpViewController.m; sourceTree = "<group>"; };
+		28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = IntelliGuideUITests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,10 +342,10 @@
 				08038EBD1B0683370042955B /* MenuViewController.m */,
 				08038EBF1B06875D0042955B /* SettingsViewController.h */,
 				08038EC01B06875D0042955B /* SettingsViewController.m */,
-				027B25241B0BB7B100C5E43F /* PresentPhotoViewController.h */,
 				027B25251B0BB7B100C5E43F /* PresentPhotoViewController.m */,
 				084458FC1B2346DD00EC3D6C /* MapViewController.h */,
 				084458FD1B2346DD00EC3D6C /* MapViewController.m */,
+				027B25241B0BB7B100C5E43F /* PresentPhotoViewController.h */,
 				084458FF1B235EFD00EC3D6C /* MapEditViewController.h */,
 				084459001B235EFD00EC3D6C /* MapEditViewController.m */,
 				0816DF791B2CD22E00A1051A /* AttractionMapViewController.h */,
@@ -378,6 +387,9 @@
 				08EA25D11B0C797000ED6EC5 /* MyPFLoginViewController.m */,
 				08EA25D31B0C7BDD00ED6EC5 /* MyPFSingUpViewController.h */,
 				08EA25D41B0C7BDD00ED6EC5 /* MyPFSingUpViewController.m */,
+				0239ED421B2B564F00E70E1A /* RefreshContents.xib */,
+				0239ED3F1B2B51A400E70E1A /* CustomRefresh.h */,
+				0239ED401B2B51A400E70E1A /* CustomRefresh.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -385,6 +397,7 @@
 		028F4AAE1AD7FD5700C63973 = {
 			isa = PBXGroup;
 			children = (
+				28B1DFD81B2F73390007DA4B /* IntelliGuideUITests */,
 				028F4AB91AD7FD5700C63973 /* IntelliGuide */,
 				021196201AE006A000C367C6 /* Frameworks */,
 				028F4AD31AD7FD5700C63973 /* IntelliGuideTests */,
@@ -441,6 +454,7 @@
 				028F4AD41AD7FD5700C63973 /* Supporting Files */,
 				080AB86E1B0B104A00AF027C /* LoginControllerTests.m */,
 				080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */,
+				02E2F0A41B3051DD00FDB5D1 /* CustomRefreshTests.m */,
 			);
 			path = IntelliGuideTests;
 			sourceTree = "<group>";
@@ -561,7 +575,9 @@
 				028F4AC61AD7FD5700C63973 /* Main.storyboard in Resources */,
 				028F4ACB1AD7FD5700C63973 /* LaunchScreen.xib in Resources */,
 				028F4AC81AD7FD5700C63973 /* Images.xcassets in Resources */,
+				28B1DFD91B2F73390007DA4B /* IntelliGuideUITests in Resources */,
 				085872511AE1455400DA97AD /* CategorySwitcherTableCell.xib in Resources */,
+				0239ED431B2B564F00E70E1A /* RefreshContents.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +618,7 @@
 				0822024D1AE2DB2500921149 /* IGCategory.m in Sources */,
 				08038EBB1B067C2D0042955B /* SWRevealViewController.m in Sources */,
 				029041631B065DAC00B2B41E /* GalleryFetcher.m in Sources */,
+				0239ED411B2B51A400E70E1A /* CustomRefresh.m in Sources */,
 				0230BA6D1B024E2C00B14A6B /* NewReviewViewController.m in Sources */,
 				027B252C1B0BC01000C5E43F /* CircleTransitionAnimator.m in Sources */,
 				021195FC1ADFF36000C367C6 /* PreferencesViewController.m in Sources */,
@@ -632,6 +649,7 @@
 				0887DB1E1B09113A00F2E7F6 /* IGAttractionTests.m in Sources */,
 				0259705C1B0936B5006E5413 /* ReviewCellTests.m in Sources */,
 				0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */,
+				02E2F0A51B3051DD00FDB5D1 /* CustomRefreshTests.m in Sources */,
 				080AB8711B0B11E300AF027C /* GalleryFetcherTests.m in Sources */,
 				0887DB1C1B0900AE00F2E7F6 /* IGReviewTests.m in Sources */,
 			);

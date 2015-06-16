@@ -12,10 +12,11 @@
 #import "NewAttractionViewController.h"
 #import "AttractionMapViewController.h"
 #import "IGAttraction.h"
+#import "CustomRefresh.h"
 #import "MBProgressHUD.h"
 
 
-@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout,UISearchBarDelegate, EndEditingProtocol>
+@interface AttractionsTableViewController () <UICollectionViewDelegateFlowLayout,UISearchBarDelegate, EndEditingProtocol, CustomRefreshProtocol>
 @property(nonatomic,strong) NSArray *objects;
 @property(nonatomic,strong) NSArray *originalObjects;
 @property(nonatomic,strong) UIRefreshControl *refreshControl;
@@ -27,6 +28,7 @@
 @property(nonatomic,strong) UIBarButtonItem *searchBarView;
 @property(nonatomic,strong) UIView *searchBarContainer;
 @property(nonatomic,strong) UITapGestureRecognizer *tapRecognizer;
+@property(nonatomic,strong) CustomRefresh *refreshView;
 
 @end
 
@@ -50,6 +52,14 @@
     [self.collectionView addSubview:self.refreshControl];
     self.collectionView.alwaysBounceVertical = YES;
     
+    NSArray *refreshViewNib = [[NSBundle mainBundle] loadNibNamed:@"RefreshContents" owner:self options:nil];
+    self.refreshView = (CustomRefresh*)[refreshViewNib firstObject];
+    self.refreshView.frame = self.refreshControl.bounds;
+    self.refreshControl.backgroundColor = [UIColor clearColor];
+    self.refreshControl.tintColor = [UIColor clearColor];
+    self.refreshView.delegate = self;
+    [self.refreshControl addSubview:self.refreshView];
+
     
     //SearchBarButton
     self.searchBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtonOn:)];
@@ -72,8 +82,6 @@
     [self.searchBarContainer addSubview:self.searchBar];
     
     self.searchBarView = [[UIBarButtonItem alloc] initWithCustomView:self.searchBarContainer];
-
-//    NSLog(@"%@", self.searchCenter);
     
     [self loadObjects];
 }
@@ -154,9 +162,14 @@
 #pragma mark - RefreshControl
 
 -(void)refreshingAction{
+    if(!self.refreshView.isAnimating){
+        [self.refreshView animate];
+    }
+}
+
+-(void)didEndRefreshing{
     [self loadObjects];
     [self.refreshControl endRefreshing];
-    
 }
 
 #pragma mark - Collection view data source

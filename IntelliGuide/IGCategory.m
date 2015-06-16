@@ -31,7 +31,10 @@ static NSCache *storage = nil;
     NSString *nameString = [IGCategory stringForKey:IGCategoryKeyName];
     
     if (storage == nil) storage = [NSCache new];
-    if ([storage objectForKey:object[nameString]] == nil) [storage setObject:[[IGCategory alloc] initWithParseObject:object] forKey:object[nameString]];
+    if ([storage objectForKey:object[nameString]] == nil){
+        NSLog(@"Cache for %@",nameString);
+        [storage setObject:[[IGCategory alloc] initWithParseObject:object] forKey:object[nameString]];
+    }
     return [storage objectForKey:object[nameString]];
 }
 

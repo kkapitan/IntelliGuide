@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /*!
+ Custom collection view header that displays main photo of the attraction.
  */
 @interface GalleryCollectionReusableView : UICollectionReusableView
 
@@ -17,6 +18,7 @@
 ///------
 
 /*!
+ Property that holds an image displayed as the attraction's main photo.
  */
 @property (strong,nonatomic) UIImage *headerImage;
 
