@@ -2021,26 +2021,62 @@ Line with 103 characters exceeds limit of 100
 </violation>
 </file>
 
-<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/CustomRefreshTests.m">
-<violation begincolumn="1" endcolumn="105" beginline="20" endline="20" priority="5" rule="long line">
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LocationManagerTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="25" endline="25" priority="5" rule="long line">
 Line with 105 characters exceeds limit of 100
 </violation>
 </file>
 
-<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/CustomRefreshTests.m">
-<violation begincolumn="1" endcolumn="107" beginline="24" endline="24" priority="5" rule="long line">
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LocationManagerTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="29" endline="29" priority="5" rule="long line">
 Line with 107 characters exceeds limit of 100
 </violation>
 </file>
 
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LocationManagerTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="46" endline="46" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/LocationManagerTests.m">
+<violation begincolumn="5" endcolumn="5" beginline="64" endline="64" priority="3" rule="ivar assignment outside accessors or init">
+
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/CustomRefreshTests.m">
+<violation begincolumn="1" endcolumn="105" beginline="23" endline="23" priority="5" rule="long line">
+Line with 105 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/CustomRefreshTests.m">
+<violation begincolumn="1" endcolumn="107" beginline="27" endline="27" priority="5" rule="long line">
+Line with 107 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/CustomRefreshTests.m">
+<violation begincolumn="1" endcolumn="149" beginline="33" endline="33" priority="5" rule="long line">
+Line with 149 characters exceeds limit of 100
+</violation>
+</file>
+
+<file name="/Users/krystian/IntelliGuide/IntelliGuideTests/CustomRefreshTests.m">
+<violation begincolumn="1" endcolumn="153" beginline="45" endline="45" priority="5" rule="long line">
+Line with 153 characters exceeds limit of 100
+</violation>
+</file>
+
 <file name="/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryFetcherTests.m">
-<violation begincolumn="1" endcolumn="105" beginline="20" endline="20" priority="5" rule="long line">
+<violation begincolumn="1" endcolumn="105" beginline="21" endline="21" priority="5" rule="long line">
 Line with 105 characters exceeds limit of 100
 </violation>
 </file>
 
 <file name="/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryFetcherTests.m">
-<violation begincolumn="1" endcolumn="107" beginline="24" endline="24" priority="5" rule="long line">
+<violation begincolumn="1" endcolumn="107" beginline="25" endline="25" priority="5" rule="long line">
 Line with 107 characters exceeds limit of 100
 </violation>
 </file>

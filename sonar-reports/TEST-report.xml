@@ -1,1 +1,87 @@
-<?xml version='1.0' encoding='UTF-8' standalone='yes'?><testsuites name='AllTestUnits'></testsuites>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<testsuites name="AllTestUnits" tests="33" failures="0" errors="0" time="6.273068">
+    <testsuite tests="33" failures="0" errors="0" time="6.273068" timestamp="2015-06-16T18:53:41GMT+02:00" name="Toplevel Test Suite">
+        <testcase classname="AttractionCellTests" name="testDisplayingInformation" time="0.027706"></testcase>
+        <testcase classname="AttractionCellTests" name="testPerformanceExample" time="0.313725">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/AttractionCellTests.m:53: Test Case '-[AttractionCellTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 44.961%, values: [0.000681, 0.000310, 0.000245, 0.000240, 0.000260, 0.000238, 0.000237, 0.000237, 0.000237, 0.000238], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="CategorySwitcherTableCellTests" name="testDisplayingInformation" time="0.001639"></testcase>
+        <testcase classname="CategorySwitcherTableCellTests" name="testPerformanceExample" time="0.255865">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/CategorySwitcherTableCellTests.m:52: Test Case '-[CategorySwitcherTableCellTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 32.403%, values: [0.000673, 0.000325, 0.000307, 0.000303, 0.000303, 0.000302, 0.000300, 0.000299, 0.000301, 0.000304], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="CustomRefreshTests" name="testAnimation" time="0.015146">
+            <system-out>2015-06-16 18:53:35.982 IntelliGuide[27479:215288] Awake from nib
+</system-out>
+        </testcase>
+        <testcase classname="CustomRefreshTests" name="testPerformanceExample" time="0.295017">
+            <system-out>2015-06-16 18:53:35.992 IntelliGuide[27479:215288] Awake from nib
+/Users/krystian/IntelliGuide/IntelliGuideTests/CustomRefreshTests.m:48: Test Case '-[CustomRefreshTests testPerformanceExample]' measured [Time, seconds] average: 0.004, relative standard deviation: 6.992%, values: [0.004596, 0.004365, 0.004065, 0.003813, 0.003934, 0.003815, 0.003768, 0.003805, 0.003747, 0.003757], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="GalleryCollectionReusableViewTest" name="testDisplayingInformation" time="0.000482"></testcase>
+        <testcase classname="GalleryCollectionReusableViewTest" name="testPerformanceExample" time="0.254826">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryCollectionReusableViewTest.m:39: Test Case '-[GalleryCollectionReusableViewTest testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 35.944%, values: [0.000361, 0.000173, 0.000165, 0.000163, 0.000165, 0.000175, 0.000152, 0.000137, 0.000135, 0.000135], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="GalleryCollectionViewCellTests" name="testDisplayingInformation" time="0.000638"></testcase>
+        <testcase classname="GalleryCollectionViewCellTests" name="testPerformanceExample" time="0.255364">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryCollectionViewCellTests.m:41: Test Case '-[GalleryCollectionViewCellTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 53.488%, values: [0.000679, 0.000420, 0.000343, 0.000196, 0.000195, 0.000196, 0.000250, 0.000194, 0.000184, 0.000182], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="GalleryFetcherTests" name="testExample" time="0.173118"></testcase>
+        <testcase classname="GalleryFetcherTests" name="testPerformanceExample" time="1.808391">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/GalleryFetcherTests.m:43: Test Case '-[GalleryFetcherTests testPerformanceExample]' measured [Time, seconds] average: 0.156, relative standard deviation: 14.113%, values: [0.134167, 0.145978, 0.164091, 0.155144, 0.189506, 0.138501, 0.132753, 0.199161, 0.137609, 0.159725], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGAttractionTests" name="testCreatingObject" time="0.021511"></testcase>
+        <testcase classname="IGAttractionTests" name="testPerformanceExample" time="0.300757">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m:140: Test Case '-[IGAttractionTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 56.050%, values: [0.000092, 0.000033, 0.000028, 0.000027, 0.000028, 0.000026, 0.000026, 0.000028, 0.000028, 0.000026], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGAttractionTests" name="testPerformanceExample2" time="0.263812">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/IGAttractionTests.m:147: Test Case '-[IGAttractionTests testPerformanceExample2]' measured [Time, seconds] average: 0.000, relative standard deviation: 91.438%, values: [0.000189, 0.000040, 0.000036, 0.000035, 0.000034, 0.000035, 0.000034, 0.000034, 0.000034, 0.000035], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGAttractionTests" name="testStringForKey" time="0.025934"></testcase>
+        <testcase classname="IGCategoryTests" name="testCreatingObject" time="0.009183"></testcase>
+        <testcase classname="IGCategoryTests" name="testPerformanceExample2" time="0.255684">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/IGCategoryTests.m:98: Test Case '-[IGCategoryTests testPerformanceExample2]' measured [Time, seconds] average: 0.000, relative standard deviation: 70.385%, values: [0.000129, 0.000036, 0.000032, 0.000031, 0.000031, 0.000032, 0.000031, 0.000031, 0.000031, 0.000031], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGCategoryTests" name="testStringForKey" time="0.000161"></testcase>
+        <testcase classname="IGReviewTests" name="testCreatingObject" time="0.007256"></testcase>
+        <testcase classname="IGReviewTests" name="testParseObject" time="0.010097"></testcase>
+        <testcase classname="IGReviewTests" name="testPerformanceExample" time="0.272398">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m:103: Test Case '-[IGReviewTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 68.572%, values: [0.000103, 0.000023, 0.000036, 0.000020, 0.000019, 0.000018, 0.000035, 0.000045, 0.000020, 0.000034], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGReviewTests" name="testPerformanceExample2" time="0.267085">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m:110: Test Case '-[IGReviewTests testPerformanceExample2]' measured [Time, seconds] average: 0.000, relative standard deviation: 95.226%, values: [0.000503, 0.000206, 0.001308, 0.000205, 0.000280, 0.000205, 0.000197, 0.000196, 0.000197, 0.000192], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGReviewTests" name="testPerformanceExample3" time="0.262801">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/IGReviewTests.m:117: Test Case '-[IGReviewTests testPerformanceExample3]' measured [Time, seconds] average: 0.000, relative standard deviation: 68.972%, values: [0.000130, 0.000037, 0.000032, 0.000032, 0.000033, 0.000032, 0.000031, 0.000032, 0.000032, 0.000031], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="IGReviewTests" name="testStringForKey" time="0.008036"></testcase>
+        <testcase classname="LocationManagerTests" name="testAddressDelegate" time="0.255234"></testcase>
+        <testcase classname="LocationManagerTests" name="testLocationDelegate" time="0.088177"></testcase>
+        <testcase classname="LocationManagerTests" name="testPerformanceExample" time="0.253314">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/LocationManagerTests.m:79: Test Case '-[LocationManagerTests testPerformanceExample]' measured [Time, seconds] average: 0.000, relative standard deviation: 58.385%, values: [0.000004, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001, 0.000001], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="LocationManagerTests" name="testSingleton" time="0.000214"></testcase>
+        <testcase classname="LoginControllerTests" name="testLoginController" time="0.001612"></testcase>
+        <testcase classname="LoginControllerTests" name="testPerformanceExample" time="0.262120">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/LoginControllerTests.m:51: Test Case '-[LoginControllerTests testPerformanceExample]' measured [Time, seconds] average: 0.001, relative standard deviation: 6.664%, values: [0.001010, 0.000837, 0.000827, 0.000823, 0.000817, 0.000824, 0.000817, 0.000815, 0.000819, 0.000852], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+        <testcase classname="ReviewCellTests" name="testDisplayingInformation" time="0.002421"></testcase>
+        <testcase classname="ReviewCellTests" name="testPerformanceExample" time="0.261923">
+            <system-out>/Users/krystian/IntelliGuide/IntelliGuideTests/ReviewCellTests.m:60: Test Case '-[ReviewCellTests testPerformanceExample]' measured [Time, seconds] average: 0.001, relative standard deviation: 41.093%, values: [0.001391, 0.000829, 0.000748, 0.000765, 0.000744, 0.000775, 0.000742, 0.000768, 0.000839, 0.002005], performanceMetricID:com.apple.XCTPerformanceMetric_WallClockTime, baselineName: "", baselineAverage: , maxPercentRegression: 10.000%, maxPercentRelativeStandardDeviation: 10.000%, maxRegression: 0.100, maxStandardDeviation: 0.100
+</system-out>
+        </testcase>
+    </testsuite>
+</testsuites>

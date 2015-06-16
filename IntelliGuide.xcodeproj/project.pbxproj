@@ -55,6 +55,7 @@
 		080AB8711B0B11E300AF027C /* GalleryFetcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */; };
 		0813F4591B1B69D700623A13 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0813F4581B1B69D700623A13 /* LocationManager.m */; };
 		0816DF7B1B2CD22E00A1051A /* AttractionMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0816DF7A1B2CD22E00A1051A /* AttractionMapViewController.m */; };
+		08208FEF1B30854700473932 /* LocationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 08208FEE1B30854700473932 /* LocationManagerTests.m */; };
 		0822024D1AE2DB2500921149 /* IGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024C1AE2DB2500921149 /* IGCategory.m */; };
 		082202501AE30B1700921149 /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0822024F1AE30B1700921149 /* AttractionCell.m */; };
 		084458FB1B23461100EC3D6C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 084458FA1B23461100EC3D6C /* MapKit.framework */; };
@@ -182,6 +183,7 @@
 		0813F4581B1B69D700623A13 /* LocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		0816DF791B2CD22E00A1051A /* AttractionMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionMapViewController.h; sourceTree = "<group>"; };
 		0816DF7A1B2CD22E00A1051A /* AttractionMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionMapViewController.m; sourceTree = "<group>"; };
+		08208FEE1B30854700473932 /* LocationManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManagerTests.m; sourceTree = "<group>"; };
 		0822024B1AE2DB2500921149 /* IGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCategory.h; sourceTree = "<group>"; };
 		0822024C1AE2DB2500921149 /* IGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCategory.m; sourceTree = "<group>"; };
 		0822024E1AE30B1700921149 /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 				080AB86E1B0B104A00AF027C /* LoginControllerTests.m */,
 				080AB8701B0B11E300AF027C /* GalleryFetcherTests.m */,
 				02E2F0A41B3051DD00FDB5D1 /* CustomRefreshTests.m */,
+				08208FEE1B30854700473932 /* LocationManagerTests.m */,
 			);
 			path = IntelliGuideTests;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				0887DB1E1B09113A00F2E7F6 /* IGAttractionTests.m in Sources */,
 				0259705C1B0936B5006E5413 /* ReviewCellTests.m in Sources */,
 				0887DB061B08B5AC00F2E7F6 /* IGCategoryTests.m in Sources */,
+				08208FEF1B30854700473932 /* LocationManagerTests.m in Sources */,
 				02E2F0A51B3051DD00FDB5D1 /* CustomRefreshTests.m in Sources */,
 				080AB8711B0B11E300AF027C /* GalleryFetcherTests.m in Sources */,
 				0887DB1C1B0900AE00F2E7F6 /* IGReviewTests.m in Sources */,
