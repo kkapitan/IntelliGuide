@@ -12,6 +12,7 @@
 
 @interface ParsePerformanceTests : XCTestCase
 
+@property XCTestExpectation *expectation;
 @property BOOL stop;
 
 @end
@@ -46,18 +47,37 @@ static NSString* clientKey = @"tt4tGs7mlMYK4g099i7yd8pDMEANXMt9qNbqT57C";
 }
 
 - (void) testOneRequest {
+    self.expectation = [self expectationWithDescription:@"OneRequest"];
+    
     [self measureBlock:^{
         PFQuery *query = [PFQuery queryWithClassName:@"Place"];
-        [query findObjectsInBackground];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            [self.expectation fulfill];
+        }];
+    }];
+    
+    [self waitForExpectationsWithTimeout:20 handler:^(NSError *error) {
+        if(error)NSLog(@"%@",error);
     }];
 }
 
 - (void) testHundredRequest {
+    self.expectation = [self expectationWithDescription:@"HundredRequests"];
+    __block NSInteger count = 0;
+    
+    
     [self measureBlock:^{
         for (NSInteger i = 0; i < 100; i++) {
             PFQuery *query = [PFQuery queryWithClassName:@"Place"];
-            [query findObjectsInBackground];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                count++;
+                if (count == 100) [self.expectation fulfill];
+            }];
         }
+    }];
+    
+    [self waitForExpectationsWithTimeout:20 handler:^(NSError *error) {
+        if(error)NSLog(@"%@",error);
     }];
 }
 
