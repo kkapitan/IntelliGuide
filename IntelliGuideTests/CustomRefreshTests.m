@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "CustomRefresh.h"
+#import "AttractionsTableViewController.h"
 
-@interface CustomRefreshTests : XCTestCase
-
+@interface CustomRefreshTests : XCTestCase <CustomRefreshProtocol>
+@property CustomRefresh *customRefresh;
+@property XCTestExpectation *delegateResponse;
 @end
 
 @implementation CustomRefreshTests
@@ -25,16 +28,25 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testAnimation {
+    self.delegateResponse = [self expectationWithDescription:@"Delegate responds"];
+    NSArray *customRefreshViewNib = [[NSBundle mainBundle] loadNibNamed:@"RefreshContents" owner:[AttractionsTableViewController class] options:nil];
+    self.customRefresh = [customRefreshViewNib firstObject];
+    self.customRefresh.delegate = self;
+    [self.customRefresh animate];
+    XCTAssertTrue(self.customRefresh.isAnimating);
+    //while(self.customRefresh.isAnimating);
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    [self waitForExpectationsWithTimeout:5 handler:^(NSError *error) {
+        if(error)NSLog(@"%@",error);
+    }];
+    
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+-(void)didEndRefreshing{
+    XCTAssertFalse(self.customRefresh.isAnimating);
+    [self.delegateResponse fulfill];
 }
+
 
 @end
