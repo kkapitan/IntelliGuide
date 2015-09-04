@@ -56,7 +56,11 @@
 }
 
 - (void)didObtainLocationAddress:(CLPlacemark *)placemark {
-    XCTAssertEqualObjects(placemark.addressDictionary[@"City"], @"Poznan");
+//    NSString *unfilteredString = placemark.addressDictionary[@"City"];
+//    NSCharacterSet *notAllowedChars = [[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"] invertedSet];
+//    NSString *resultString = [[unfilteredString componentsSeparatedByCharactersInSet:notAllowedChars] componentsJoinedByString:@""];
+    
+    XCTAssertEqualObjects(placemark.addressDictionary[@"City"], @"Poznań");
     [self.expectation fulfill];
 }
 

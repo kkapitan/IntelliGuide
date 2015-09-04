@@ -12,7 +12,7 @@
 
 @interface ParsePerformanceTests : XCTestCase
 
-@property XCTestExpectation *expectation;
+//@property XCTestExpectation *expectation;
 @property BOOL stop;
 
 @end
@@ -34,71 +34,66 @@ static NSString* clientKey = @"tt4tGs7mlMYK4g099i7yd8pDMEANXMt9qNbqT57C";
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
+//- (void)testPerformanceExample {
+//    // This is an example of a performance test case.
+//    [self measureBlock:^{
+//        // Put the code you want to measure the time of here.
+//    }];
+//}
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
+//- (void) testOneRequest {
+//    XCTestExpectation *expectation = [self expectationWithDescription:@"OneRequest"];
+//    
+//    [self measureBlock:^{
+//        PFQuery *query = [PFQuery queryWithClassName:@"Place"];
+//        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//            [expectation fulfill];
+//        }];
+//    }];
+//    
+//    [self waitForExpectationsWithTimeout:20 handler:^(NSError *error) {
+//        if(error)NSLog(@"%@",error);
+//    }];
+//}
 
-- (void) testOneRequest {
-    self.expectation = [self expectationWithDescription:@"OneRequest"];
-    
-    [self measureBlock:^{
-        PFQuery *query = [PFQuery queryWithClassName:@"Place"];
-        [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            [self.expectation fulfill];
-        }];
-    }];
-    
-    [self waitForExpectationsWithTimeout:20 handler:^(NSError *error) {
-        if(error)NSLog(@"%@",error);
-    }];
-}
+//- (void) testHundredRequest {
+//    XCTestExpectation *expectation = [self expectationWithDescription:@"HundredRequests"];
+//    __block NSInteger count = 0;
+//    
+//    
+//    [self measureBlock:^{
+//        for (NSInteger i = 0; i < 100; i++) {
+//            PFQuery *query = [PFQuery queryWithClassName:@"Place"];
+//            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//                count++;
+//                if (count == 100) [expectation fulfill];
+//            }];
+//        }
+//    }];
+//    
+//    [self waitForExpectationsWithTimeout:20 handler:^(NSError *error) {
+//        if(error)NSLog(@"%@",error);
+//    }];
+//}
 
-- (void) testHundredRequest {
-    self.expectation = [self expectationWithDescription:@"HundredRequests"];
-    __block NSInteger count = 0;
-    
-    
-    [self measureBlock:^{
-        for (NSInteger i = 0; i < 100; i++) {
-            PFQuery *query = [PFQuery queryWithClassName:@"Place"];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                count++;
-                if (count == 100) [self.expectation fulfill];
-            }];
-        }
-    }];
-    
-    [self waitForExpectationsWithTimeout:20 handler:^(NSError *error) {
-        if(error)NSLog(@"%@",error);
-    }];
-}
-
-- (void) testForTenSeconds {
-    _stop = NO;
-    NSDate *start = [NSDate date];
-    __block NSTimeInterval executionTime;
-    __block NSInteger count = 0;
-    
-    [self measureBlock:^{
-        while (true) {
-            count++;
-            NSDate *methodFinish = [NSDate date];
-            executionTime = [methodFinish timeIntervalSinceDate:start];
-            if (executionTime > 10) break;
-            PFQuery *query = [PFQuery queryWithClassName:@"Place"];
-            [query findObjectsInBackground];
-        }
-    }];
-    
-    NSLog(@"requests: %lu", count);
-}
+//- (void) testForTenSeconds {
+//    _stop = NO;
+//    NSDate *start = [NSDate date];
+//    __block NSTimeInterval executionTime;
+//    __block NSInteger count = 0;
+//    
+//    [self measureBlock:^{
+//        while (true) {
+//            count++;
+//            NSDate *methodFinish = [NSDate date];
+//            executionTime = [methodFinish timeIntervalSinceDate:start];
+//            if (executionTime > 10) break;
+//            PFQuery *query = [PFQuery queryWithClassName:@"Place"];
+//            [query findObjectsInBackground];
+//        }
+//    }];
+//    
+//    NSLog(@"requests: %lu", count);
+//}
 
 @end
